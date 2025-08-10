@@ -1,0 +1,2513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleJavaBasics">
+                <h3>1. Java Basics</h3>
+              
+                <!-- 1. Java Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-basics" aria-expanded="false" aria-controls="flush-java-basics">
+                      1. Java Basics
+                    </button>
+                  </h2>
+                  <div id="flush-java-basics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Java is a popular, platform-independent, object-oriented programming language.</li>
+                        <li>Write once, run anywhere (thanks to JVM).</li>
+                        <li>Strongly typed and compiled to bytecode.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. History & Features of Java -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-history" aria-expanded="false" aria-controls="flush-java-history">
+                      2. History & Features of Java
+                    </button>
+                  </h2>
+                  <div id="flush-java-history" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Created by Sun Microsystems in 1995.</li>
+                        <li>Features:
+                          <ul>
+                            <li>Object-oriented</li>
+                            <li>Platform-independent (JVM)</li>
+                            <li>Automatic memory management (Garbage Collection)</li>
+                            <li>Multi-threading support</li>
+                            <li>Rich standard library</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. JVM, JRE, JDK — Differences & Roles -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-jvm" aria-expanded="false" aria-controls="flush-java-jvm">
+                      3. JVM, JRE, JDK — Differences & Roles
+                    </button>
+                  </h2>
+                  <div id="flush-java-jvm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>JVM (Java Virtual Machine):</strong> Runs Java bytecode on any platform.</li>
+                        <li><strong>JRE (Java Runtime Environment):</strong> JVM + libraries needed to run Java apps.</li>
+                        <li><strong>JDK (Java Development Kit):</strong> JRE + tools to develop Java apps (compiler, debugger).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Java Program Structure & Compilation Process -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-structure" aria-expanded="false" aria-controls="flush-java-structure">
+                      4. Java Program Structure & Compilation Process
+                    </button>
+                  </h2>
+                  <div id="flush-java-structure" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <p>Java source code (<code>.java</code>) → compiled by <code>javac</code> → bytecode (<code>.class</code>) → run by JVM.</p>
+                      <p>Structure:</p>
+                      <pre><code>public class Main {
+                  public static void main(String[] args) {
+                      System.out.println("Hello, world!");
+                  }
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Data Types, Variables, and Literals -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-data-types" aria-expanded="false" aria-controls="flush-java-data-types">
+                      5. Data Types, Variables, and Literals
+                    </button>
+                  </h2>
+                  <div id="flush-java-data-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Primitive types: <code>int</code>, <code>byte</code>, <code>short</code>, <code>long</code>, <code>float</code>, <code>double</code>, <code>char</code>, <code>boolean</code>.</li>
+                        <li>Variables: Named storage for data, must declare type.</li>
+                        <li>Literals: Fixed values in code, e.g., <code>10</code>, <code>'A'</code>, <code>true</code>, <code>"hello"</code>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Operators -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-operators" aria-expanded="false" aria-controls="flush-java-operators">
+                      6. Operators
+                    </button>
+                  </h2>
+                  <div id="flush-java-operators" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Arithmetic: <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, <code>%</code></li>
+                        <li>Relational: <code>==</code>, <code>!=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></li>
+                        <li>Logical: <code>&&</code>, <code>||</code>, <code>!</code></li>
+                        <li>Bitwise: <code>&amp;</code>, <code>|</code>, <code>^</code>, <code>~</code>, <code>&lt;&lt;</code>, <code>&gt;&gt;</code>, <code>&gt;&gt;&gt;</code></li>
+                        <li>Assignment: <code>=</code>, <code>+=</code>, <code>-=</code>, etc.</li>
+                        <li>Unary: <code>++</code>, <code>--</code>, <code>+</code>, <code>-</code>, <code>!</code></li>
+                        <li>Ternary: <code>condition ? expr1 : expr2</code></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. Control Flow Statements -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-control-flow" aria-expanded="false" aria-controls="flush-java-control-flow">
+                      7. Control Flow Statements
+                    </button>
+                  </h2>
+                  <div id="flush-java-control-flow" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>If, Else If, Switch</strong>
+                          <ul>
+                            <li><code>if</code> checks condition, executes block if true.</li>
+                            <li><code>else if</code> for multiple conditions.</li>
+                            <li><code>switch</code> matches value with cases, good for discrete values.</li>
+                          </ul>
+                          <pre><code>switch(day) {
+                case 1: System.out.println("Monday"); break;
+                default: System.out.println("Other day");
+              }</code></pre>
+                        </li>
+              
+                        <li><strong>Loops: For, While, Do-While, Enhanced For</strong>
+                          <ul>
+                            <li><code>for</code>: Loop with init, condition, update.</li>
+                            <li><code>while</code>: Loops while condition is true.</li>
+                            <li><code>do-while</code>: Executes once, then repeats while condition true.</li>
+                            <li>Enhanced For: For iterating collections/arrays easily.</li>
+                          </ul>
+                          <pre><code>for(String s : list) { System.out.println(s); }</code></pre>
+                        </li>
+              
+                        <li><strong>Break, Continue, Return</strong>
+                          <ul>
+                            <li><code>break</code>: Exits loop or switch.</li>
+                            <li><code>continue</code>: Skips current iteration, goes to next.</li>
+                            <li><code>return</code>: Exits method and optionally returns value.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 8. Input & Output -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-io" aria-expanded="false" aria-controls="flush-java-io">
+                      8. Input & Output
+                    </button>
+                  </h2>
+                  <div id="flush-java-io" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Scanner</strong>: Simplest way to read input from console.
+                          <pre><code>Scanner sc = new Scanner(System.in);
+              int num = sc.nextInt();</code></pre>
+                        </li>
+                        <li><strong>BufferedReader</strong>: Older, faster way to read input line-by-line.
+                          <pre><code>BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+              String line = br.readLine();</code></pre>
+                        </li>
+                        <li><strong>Command-Line Arguments</strong>: Passed as <code>String[] args</code> in <code>main</code> method, used to pass inputs when starting program.</li>
+                        <li><strong>Printing with System.out and printf</strong>:
+                          <ul>
+                            <li><code>System.out.println("Hello")</code> — prints with newline.</li>
+                            <li><code>System.out.print("Hello")</code> — prints without newline.</li>
+                            <li><code>System.out.printf("Hello %s", name)</code> — formatted printing (like C’s printf).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleOOP">
+                <h3>2. OOP Principles</h3>
+              
+                <!-- 1. OOP Principles -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-principles" aria-expanded="false" aria-controls="flush-oop-principles">
+                      1. OOP Principles
+                    </button>
+                  </h2>
+                  <div id="flush-oop-principles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Core concepts:
+                          <ul>
+                            <li>Encapsulation</li>
+                            <li>Inheritance</li>
+                            <li>Polymorphism</li>
+                            <li>Abstraction</li>
+                          </ul>
+                        </li>
+                        <li>These principles help design modular, reusable, and maintainable code.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Encapsulation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-encapsulation" aria-expanded="false" aria-controls="flush-oop-encapsulation">
+                      2. Encapsulation
+                    </button>
+                  </h2>
+                  <div id="flush-oop-encapsulation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <p>Wrapping data (variables) and methods that operate on data into a single unit (class).</p>
+                      <p>Use private fields and provide public getters/setters to control access.</p>
+                      <p>Benefits: Data hiding, protects object state.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Inheritance -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-inheritance" aria-expanded="false" aria-controls="flush-oop-inheritance">
+                      3. Inheritance
+                    </button>
+                  </h2>
+                  <div id="flush-oop-inheritance" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <p>Mechanism where one class (child/subclass) inherits fields and methods of another (parent/superclass).</p>
+                      <p>Types:</p>
+                      <ul>
+                        <li>Single: One parent, one child.</li>
+                        <li>Multilevel: Chain of inheritance (grandparent → parent → child).</li>
+                        <li>Hierarchical: One parent, multiple children.</li>
+                      </ul>
+                      <p>Syntax:</p>
+                      <pre><code>class Parent { ... }
+              class Child extends Parent { ... }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Polymorphism -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-polymorphism" aria-expanded="false" aria-controls="flush-oop-polymorphism">
+                      4. Polymorphism
+                    </button>
+                  </h2>
+                  <div id="flush-oop-polymorphism" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <p>Ability to take many forms.</p>
+                      <p>Types:</p>
+                      <ul>
+                        <li>Compile-time polymorphism (Method Overloading): Same method name, different parameters.</li>
+                        <li>Runtime polymorphism (Method Overriding): Child class provides specific implementation of a method defined in parent.</li>
+                      </ul>
+                      <p>Example Overloading:</p>
+                      <pre><code>void print(int a) { }
+              void print(String s) { }</code></pre>
+                      <p>Example Overriding:</p>
+                      <pre><code>@Override
+              void print() { System.out.println("Child"); }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Abstraction -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-abstraction" aria-expanded="false" aria-controls="flush-oop-abstraction">
+                      5. Abstraction
+                    </button>
+                  </h2>
+                  <div id="flush-oop-abstraction" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <p>Hiding internal details and showing only essential features.</p>
+                      <p>Implemented using:</p>
+                      <ul>
+                        <li>Abstract Classes: Can have abstract (no body) and concrete methods. Cannot be instantiated directly.</li>
+                        <li>Interfaces: Only method signatures (Java 8+ allows default methods).</li>
+                        <li>Sealed Classes (Java 15+): Restrict which classes can extend a class.</li>
+                      </ul>
+                      <p>Example:</p>
+                      <pre><code>abstract class Animal { abstract void sound(); }
+              interface Flyable { void fly(); }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Class & Object -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-class-object" aria-expanded="false" aria-controls="flush-oop-class-object">
+                      6. Class & Object
+                    </button>
+                  </h2>
+                  <div id="flush-oop-class-object" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Class: Blueprint/template for creating objects.</li>
+                        <li>Object: Instance of a class with actual data.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. Constructors -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-constructors" aria-expanded="false" aria-controls="flush-oop-constructors">
+                      7. Constructors
+                    </button>
+                  </h2>
+                  <div id="flush-oop-constructors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <p>Special methods to initialize objects.</p>
+                      <p>Types:</p>
+                      <ul>
+                        <li>Default: No-argument constructor (auto-provided if none defined).</li>
+                        <li>Parameterized: Accept arguments to initialize fields.</li>
+                        <li>Copy constructor: Create new object as a copy of existing one (not built-in in Java but can be defined).</li>
+                      </ul>
+                      <p>Example:</p>
+                      <pre><code>public class Book {
+                public Book() { }  // Default
+                public Book(String title) { }  // Parameterized
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 8. this & super Keywords -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-this-super" aria-expanded="false" aria-controls="flush-oop-this-super">
+                      8. this & super Keywords
+                    </button>
+                  </h2>
+                  <div id="flush-oop-this-super" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><code>this</code> → Refers to current object instance. Used to resolve naming conflicts or call other constructors.</li>
+                        <li><code>super</code> → Refers to parent class. Used to call parent constructor or overridden methods.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 9. Access Modifiers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-access-modifiers" aria-expanded="false" aria-controls="flush-oop-access-modifiers">
+                      9. Access Modifiers
+                    </button>
+                  </h2>
+                  <div id="flush-oop-access-modifiers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><code>public:</code> Accessible everywhere.</li>
+                        <li><code>private:</code> Accessible only within the class.</li>
+                        <li><code>protected:</code> Accessible within package and subclasses.</li>
+                        <li>default (package-private): Accessible only within the package (no modifier).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 10. Nested & Inner Classes -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-oop-nested-classes" aria-expanded="false" aria-controls="flush-oop-nested-classes">
+                      10. Nested & Inner Classes
+                    </button>
+                  </h2>
+                  <div id="flush-oop-nested-classes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Static Nested Class:</strong> Defined with static keyword inside another class. Does not have access to outer class’s instance members.</li>
+                        <li><strong>Non-static Inner Class:</strong> Tied to instance of outer class. Has access to outer instance members.</li>
+                        <li><strong>Local Inner Class:</strong> Defined inside a method. Limited to method scope.</li>
+                        <li><strong>Anonymous Inner Class:</strong> No class name; defined and instantiated in one expression, typically for implementing interfaces or extending classes on the fly.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleJavaKeywords">
+              <h3>3. Language Features</h3>
+            
+              <!-- 1. Static Keyword -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-static" aria-expanded="false" aria-controls="flush-static">
+                    1. Static Keyword
+                  </button>
+                </h2>
+                <div id="flush-static" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaKeywords">
+                  <div class="accordion-body">
+                    <p>The <code>static</code> keyword makes a member (variable, method, block) belong to the class rather than a specific object.</p>
+                    <ul>
+                      <li><strong>Static variables:</strong> Shared among all objects of the class.<br>
+                      Example: <code>static int count;</code> — one count for all instances.</li>
+                      <li><strong>Static methods:</strong> Can be called without creating an object.<br>
+                      Example: <code>Math.max(3, 5)</code> — <code>max</code> is static.</li>
+                      <li><strong>Static blocks:</strong> Run once when the class is loaded, usually for initializing static data.<br>
+                      Example:
+                      <pre><code>static {
+    System.out.println("Class loaded!");
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Final Keyword -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-final" aria-expanded="false" aria-controls="flush-final">
+                    2. Final Keyword
+                  </button>
+                </h2>
+                <div id="flush-final" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaKeywords">
+                  <div class="accordion-body">
+                    <p><code>final</code> means cannot be changed (in different contexts):</p>
+                    <ul>
+                      <li><strong>Final variables:</strong> Once assigned, value cannot change (constant).<br>
+                      Example: <code>final int x = 10;</code></li>
+                      <li><strong>Final methods:</strong> Cannot be overridden in subclasses.<br>
+                      Example:
+                      <pre><code>final void show() { }</code></pre></li>
+                      <li><strong>Final classes:</strong> Cannot be extended.<br>
+                      Example: <code>public final class String { ... }</code></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Enums & Records -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-enums-records" aria-expanded="false" aria-controls="flush-enums-records">
+                    3. Enums & Records (Java 14+)
+                  </button>
+                </h2>
+                <div id="flush-enums-records" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaKeywords">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Enums:</strong> Represent a fixed set of constants.<br>
+                      Example:
+                      <pre><code>enum Day { MONDAY, TUESDAY, WEDNESDAY }</code></pre>
+                      Use for predefined values like days, directions, status codes.</li>
+                      <li><strong>Records:</strong> Immutable data classes that store values without boilerplate code.<br>
+                      Example:
+                      <pre><code>record Person(String name, int age) {}</code></pre>
+                      Automatically provides constructor, getters, <code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code>.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Var Keyword -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-var" aria-expanded="false" aria-controls="flush-var">
+                    4. Var Keyword (Java 10)
+                  </button>
+                </h2>
+                <div id="flush-var" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaKeywords">
+                  <div class="accordion-body">
+                    <p>Allows local variable type inference — Java figures out the type from the value assigned.</p>
+                    <ul>
+                      <li>Works only for local variables (inside methods, loops, etc.), not fields or method parameters.</li>
+                    </ul>
+                    <p>Example:</p>
+                    <pre><code>var name = "John"; // String
+var age = 25;      // int</code></pre>
+                    <p>Improves readability when the type is obvious.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Sealed Classes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sealed" aria-expanded="false" aria-controls="flush-sealed">
+                    5. Sealed Classes (Java 17)
+                  </button>
+                </h2>
+                <div id="flush-sealed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaKeywords">
+                  <div class="accordion-body">
+                    <p>Restrict which classes can extend or implement them. Improves security and control over class hierarchy.</p>
+                    <p>Example:</p>
+                    <pre><code>public sealed class Shape permits Circle, Square {}
+public final class Circle extends Shape {}
+public final class Square extends Shape {}</code></pre>
+                    <p>Only <code>Circle</code> and <code>Square</code> can extend <code>Shape</code>.</p>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushCollections">
+              <h3>4. Collections Framework</h3>
+          
+              <!-- Collection Interfaces -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-interfaces" aria-expanded="false" aria-controls="flush-interfaces">
+                          1. Collection Interfaces
+                      </button>
+                  </h2>
+                  <div id="flush-interfaces" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          The Collections Framework provides a standard set of interfaces to store and manipulate groups of objects:
+                          <ul>
+                              <li><strong>List</strong> – Ordered collection, allows duplicates.</li>
+                              <li><strong>Set</strong> – Unordered collection, no duplicates.</li>
+                              <li><strong>Queue</strong> – FIFO (First-In-First-Out) structure, for processing in order.</li>
+                              <li><strong>Deque</strong> – Double-ended queue, allows adding/removing at both ends.</li>
+                              <li><strong>Map</strong> – Key-value pairs (keys are unique, values can repeat).</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Implementations -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-implementations" aria-expanded="false" aria-controls="flush-implementations">
+                          2. Implementations
+                      </button>
+                  </h2>
+                  <div id="flush-implementations" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          <strong>List Implementations:</strong>
+                          <ul>
+                              <li><strong>ArrayList</strong> – Dynamic array, fast random access, slower insert/remove in middle.</li>
+                              <li><strong>LinkedList</strong> – Doubly linked list, faster insert/remove in middle, slower random access.</li>
+                          </ul>
+                          <strong>Set Implementations:</strong>
+                          <ul>
+                              <li><strong>HashSet</strong> – Unordered, uses hashing for fast lookups.</li>
+                              <li><strong>LinkedHashSet</strong> – Maintains insertion order.</li>
+                              <li><strong>TreeSet</strong> – Sorted set using natural order or custom comparator.</li>
+                          </ul>
+                          <strong>Map Implementations:</strong>
+                          <ul>
+                              <li><strong>HashMap</strong> – Unordered, fast lookups via hashing.</li>
+                              <li><strong>LinkedHashMap</strong> – Maintains insertion order.</li>
+                              <li><strong>TreeMap</strong> – Sorted map by keys.</li>
+                              <li><strong>ConcurrentHashMap</strong> – Thread-safe, high-performance map for concurrent access.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Utility Classes -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-utilities" aria-expanded="false" aria-controls="flush-utilities">
+                          3. Utility Classes
+                      </button>
+                  </h2>
+                  <div id="flush-utilities" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Collections</strong> – Static methods for operations like sorting, searching, reversing, synchronizing, creating unmodifiable collections.</li>
+                              <li><strong>Arrays</strong> – Static methods for array operations like sorting, searching, copying, filling.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Comparable vs Comparator -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-comparable" aria-expanded="false" aria-controls="flush-comparable">
+                          4. Comparable vs Comparator
+                      </button>
+                  </h2>
+                  <div id="flush-comparable" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Comparable</strong> – Natural ordering of objects. Implemented in the class itself via <code>compareTo()</code>.</li>
+                              <li><strong>Comparator</strong> – External ordering logic, can define multiple sorting criteria using <code>compare()</code>.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Iterators -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-iterators" aria-expanded="false" aria-controls="flush-iterators">
+                          5. Iterators
+                      </button>
+                  </h2>
+                  <div id="flush-iterators" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Iterator</strong> – Traverse collections forward only, can remove elements during iteration.</li>
+                              <li><strong>ListIterator</strong> – Traverse lists both forward and backward.</li>
+                              <li><strong>For-each loop</strong> – Simplified iteration, cannot remove elements.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Immutable Collections -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-immutable" aria-expanded="false" aria-controls="flush-immutable">
+                          6. Immutable Collections (Java 9+)
+                      </button>
+                  </h2>
+                  <div id="flush-immutable" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollections">
+                      <div class="accordion-body">
+                          Created using <code>List.of()</code>, <code>Set.of()</code>, <code>Map.of()</code> methods.<br>
+                          Cannot be modified after creation (add/remove/update operations throw exceptions).<br>
+                          Useful for read-only data.
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExceptions">
+              <h3>5. Exception Handling</h3>
+          
+              <!-- Try, Catch, Finally -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-try-catch" aria-expanded="false" aria-controls="flush-try-catch">
+                          1. Try, Catch, Finally
+                      </button>
+                  </h2>
+                  <div id="flush-try-catch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>
+                              <strong>try</strong> – Block of code that might throw an exception.<br>
+                              <strong>catch</strong> – Handles the exception if it occurs.<br>
+                              <strong>finally</strong> – Always runs after try/catch, often used to close resources.
+                          </p>
+          <pre><code class="language-java">
+try {
+    int result = 10 / 0; // Throws ArithmeticException
+} catch (ArithmeticException e) {
+    System.out.println("Cannot divide by zero");
+} finally {
+    System.out.println("This will always run");
+}
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Throw vs Throws -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-throw-throws" aria-expanded="false" aria-controls="flush-throw-throws">
+                          2. Throw vs Throws
+                      </button>
+                  </h2>
+                  <div id="flush-throw-throws" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>
+                              <strong>throw</strong> – Actually throws an exception object.<br>
+                              <strong>throws</strong> – Declares that a method may throw exceptions.
+                          </p>
+          <pre><code class="language-java">
+void checkAge(int age) throws Exception { // 'throws' declaration
+    if (age < 18) {
+        throw new Exception("Underage not allowed"); // 'throw' usage
+    }
+}
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Checked vs Unchecked -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-checked-unchecked" aria-expanded="false" aria-controls="flush-checked-unchecked">
+                          3. Checked vs Unchecked Exceptions
+                      </button>
+                  </h2>
+                  <div id="flush-checked-unchecked" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>
+                              <strong>Checked</strong> – Checked at compile time; must be handled or declared (e.g., IOException).<br>
+                              <strong>Unchecked</strong> – Checked at runtime; usually programming errors (e.g., NullPointerException).
+                          </p>
+          <pre><code class="language-java">
+// Checked
+FileReader fr = new FileReader("file.txt"); // Must handle IOException
+          
+// Unchecked
+String s = null;
+System.out.println(s.length()); // NullPointerException at runtime
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Custom Exceptions -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-custom-exceptions" aria-expanded="false" aria-controls="flush-custom-exceptions">
+                          4. Custom Exceptions
+                      </button>
+                  </h2>
+                  <div id="flush-custom-exceptions" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>You can create your own exception classes for specific scenarios.</p>
+                          <p>Extend <code>Exception</code> for checked exceptions, <code>RuntimeException</code> for unchecked.</p>
+          <pre><code class="language-java">
+class InvalidInputException extends Exception {
+    public InvalidInputException(String message) {
+        super(message);
+    }
+}
+          
+void validate(int value) throws InvalidInputException {
+    if (value < 0) throw new InvalidInputException("Negative not allowed");
+}
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Multi-Catch Block -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-multi-catch" aria-expanded="false" aria-controls="flush-multi-catch">
+                          5. Multi-Catch Block (Java 7+)
+                      </button>
+                  </h2>
+                  <div id="flush-multi-catch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>Allows catching multiple exception types in a single catch using <code>|</code>.</p>
+          <pre><code class="language-java">
+try {
+    String text = null;
+    System.out.println(text.length());
+} catch (NullPointerException | ArithmeticException e) {
+    System.out.println("Caught exception: " + e.getClass().getSimpleName());
+}
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Try-with-Resources -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-try-with-resources" aria-expanded="false" aria-controls="flush-try-with-resources">
+                          6. Try-with-Resources (Java 7+)
+                      </button>
+                  </h2>
+                  <div id="flush-try-with-resources" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExceptions">
+                      <div class="accordion-body">
+                          <p>Automatically closes resources (files, DB connections) after use.</p>
+          <pre><code class="language-java">
+try (FileReader fr = new FileReader("data.txt");
+      BufferedReader br = new BufferedReader(fr)) {
+    System.out.println(br.readLine());
+} catch (IOException e) {
+    e.printStackTrace();
+}
+          </code></pre>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushIO">
+              <h3>6. I/O & File Handling</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-usage" aria-expanded="false" aria-controls="flush-byte-streams">
+                    1. Usage
+                  </button>
+                </h2>
+                <div id="flush-usage" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Java provides APIs to read/write data from different sources (files, network, memory, etc.). These APIs are mainly in:</p>
+                    <ul>
+                      <li><code>java.io</code> package → Traditional I/O (byte streams & character streams)</li>
+                      <li><code>java.nio</code> and <code>java.nio.file</code> → New I/O with better performance and features (introduced in Java 1.4 & enhanced in Java 7)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- 1. Byte Streams -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-byte-streams" aria-expanded="false" aria-controls="flush-byte-streams">
+                    2. Byte Streams (InputStream, OutputStream)
+                  </button>
+                </h2>
+                <div id="flush-byte-streams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Used for binary data like images, audio, PDFs.</p>
+                    <ul>
+                      <li><b>InputStream</b> → Reads bytes from a source.</li>
+                      <li><b>OutputStream</b> → Writes bytes to a destination.</li>
+                      <li>Deals with raw bytes, not characters.</li>
+                    </ul>
+                    <p><b>Example: Copy a binary file</b></p>
+            <pre><code class="language-java">
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+            
+public class ByteStreamExample {
+    public static void main(String[] args) {
+        try (FileInputStream in = new FileInputStream("input.jpg");
+              FileOutputStream out = new FileOutputStream("output.jpg")) {
+            
+            int byteData;
+            while ((byteData = in.read()) != -1) {
+                out.write(byteData);
+            }
+            System.out.println("File copied successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+            </code></pre>
+                    <p><b>When to use:</b> Binary files (images, videos, audio).</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Character Streams -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-character-streams" aria-expanded="false" aria-controls="flush-character-streams">
+                    3. Character Streams (Reader, Writer)
+                  </button>
+                </h2>
+                <div id="flush-character-streams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Used for text data (characters). Automatically handles character encoding (UTF-8, etc.).</p>
+                    <ul>
+                      <li><b>Reader</b> → Reads characters.</li>
+                      <li><b>Writer</b> → Writes characters.</li>
+                    </ul>
+            <pre><code class="language-java">
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+            
+public class CharacterStreamExample {
+    public static void main(String[] args) {
+        // Write to file
+        try (FileWriter writer = new FileWriter("data.txt")) {
+            writer.write("Hello Java I/O");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+            
+        // Read from file
+        try (FileReader reader = new FileReader("data.txt")) {
+            int ch;
+            while ((ch = reader.read()) != -1) {
+                System.out.print((char) ch);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+            </code></pre>
+                    <p><b>When to use:</b> Plain text files.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Buffered Streams -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-buffered-streams" aria-expanded="false" aria-controls="flush-buffered-streams">
+                    4. Buffered Streams (BufferedReader, BufferedWriter)
+                  </button>
+                </h2>
+                <div id="flush-buffered-streams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Wraps around character or byte streams to improve performance by reading/writing chunks instead of single characters/bytes.</p>
+                    <ul>
+                      <li><b>BufferedReader</b> → Efficient reading (also provides <code>readLine()</code>).</li>
+                      <li><b>BufferedWriter</b> → Efficient writing.</li>
+                    </ul>
+            <pre><code class="language-java">
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+            
+public class BufferedStreamExample {
+    public static void main(String[] args) {
+        try (BufferedReader br = new BufferedReader(new FileReader("data.txt"))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+            </code></pre>
+                    <p><b>When to use:</b> Large text files or frequent read/write operations.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. File API -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-file-api" aria-expanded="false" aria-controls="flush-file-api">
+                    5. File API (java.io.File)
+                  </button>
+                </h2>
+                <div id="flush-file-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Represents file/directory pathnames, not file content. Can create, delete, rename, and check file properties.</p>
+            <pre><code class="language-java">
+import java.io.File;
+import java.io.IOException;
+            
+public class FileAPIExample {
+    public static void main(String[] args) {
+        File file = new File("example.txt");
+            
+        try {
+            if (file.createNewFile()) {
+                 System.out.println("File created: " + file.getName());
+            } else {
+                System.out.println("File already exists.");
+            }
+            
+            System.out.println("Path: " + file.getAbsolutePath());
+            System.out.println("Writable: " + file.canWrite());
+            System.out.println("Readable: " + file.canRead());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
+            </code></pre>
+                    <p><b>When to use:</b> Managing file/directory metadata.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. NIO & NIO.2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nio" aria-expanded="false" aria-controls="flush-nio">
+                    6. NIO & NIO.2 (java.nio.file.*)
+                  </button>
+                </h2>
+                <div id="flush-nio" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIO">
+                  <div class="accordion-body">
+                    <p>Modern and efficient file handling introduced in Java 1.4, with enhancements in Java 7.</p>
+                    <ul>
+                      <li><b>Path</b> → Modern file path replacement for <code>File</code>.</li>
+                      <li><b>Files</b> utility class → Easy read/write/copy/move/delete operations.</li>
+                    </ul>
+            <pre><code class="language-java">
+import java.nio.file.*;
+            
+public class NIOExample {
+    public static void main(String[] args) {
+        Path path = Paths.get("nio_example.txt");
+            
+        try {
+            // Write to file
+            Files.write(path, "Hello NIO.2".getBytes());
+            
+            // Read file
+            String content = Files.readString(path);
+            System.out.println(content);
+            
+            // Copy file
+            Files.copy(path, Paths.get("nio_copy.txt"), StandardCopyOption.REPLACE_EXISTING);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+            </code></pre>
+                    <p><b>When to use:</b> Modern and efficient file handling with more utilities than <code>java.io.File</code>.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushGenerics">
+              <h3>7. Generics</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-generic-uages" aria-expanded="false" aria-controls="flush-generic-uages">
+                    1. Usage
+                  </button>
+                </h2>
+                <div id="flush-generic-uages" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGenerics">
+                  <div class="accordion-body">
+                    <p>Generics let you parameterize types (classes, interfaces, methods) so you get compile-time type safety and reusable code without casts.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- 1. Generic Methods & Classes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-generic-methods" aria-expanded="false" aria-controls="flush-generic-methods">
+                    2. Generic Methods & Classes
+                  </button>
+                </h2>
+                <div id="flush-generic-methods" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGenerics">
+                  <div class="accordion-body">
+                    <p><b>What:</b> Generic classes take type parameters (e.g. <code>Box&lt;T&gt;</code>). Generic methods declare their own type parameters and can be used even in non-generic classes.</p>
+                    <p><b>Why:</b> Reuse code with different types while avoiding casts.</p>
+            
+                    <p><b>Example: Generic Class</b></p>
+            <pre><code class="language-java">
+public class Box&lt;T&gt; {
+    private T value;
+    public Box(T value) { this.value = value; }
+    public T get() { return value; }
+    public void set(T v) { value = v; }
+}
+            
+// usage
+Box&lt;String&gt; b = new Box&lt;&gt;("hello");
+String s = b.get(); // no cast
+            </code></pre>
+            
+                    <p><b>Example: Generic Method</b></p>
+            <pre><code class="language-java">
+public class Utils {
+    public static &lt;T&gt; T pickFirst(T[] arr) {
+        return arr.length == 0 ? null : arr[0];
+    }
+            
+    // bounded generic method
+    public static &lt;T extends Comparable&lt;T&gt;&gt; T max(T a, T b) {
+        return a.compareTo(b) &gt;= 0 ? a : b;
+    }
+}
+            
+// usage
+Integer[] nums = {1, 2, 3};
+Integer first = Utils.pickFirst(nums);
+Integer m = Utils.max(4, 7);
+            </code></pre>
+                    <p><b>Note:</b> Method type parameters (<code>&lt;T&gt;</code>) are declared before the return type.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Bounded Type Parameters -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bounded-types" aria-expanded="false" aria-controls="flush-bounded-types">
+                    3. Bounded Type Parameters
+                  </button>
+                </h2>
+                <div id="flush-bounded-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGenerics">
+                  <div class="accordion-body">
+                    <p><b>What:</b> Restrict type parameters with <code>extends</code> so you can use methods of that bound.</p>
+                    <p><b>Syntax:</b> <code>&lt;T extends SomeClassOrInterface&gt;</code></p>
+                    <p>You can have multiple bounds: <code>&lt;T extends ClassA &amp; InterfaceB&gt;</code> (class bound must come first).</p>
+            
+            <pre><code class="language-java">
+// Upper bound with Number
+public class NumericBox&lt;T extends Number&gt; {
+    private T value;
+    public NumericBox(T v) { value = v; }
+    public double doubleValue() { return value.doubleValue(); }
+}
+            
+            // Multiple bounds: class + interface
+public class Bounded&lt;T extends Number &amp; Comparable&lt;T&gt;&gt; {
+    public boolean greater(T a, T b) {
+        return a.compareTo(b) &gt; 0;
+    }
+}
+            </code></pre>
+                    <p><b>Rule:</b> <code>extends</code> is also used for interfaces in bounds (it means “is-a” or “implements”).</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Wildcards -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-wildcards" aria-expanded="false" aria-controls="flush-wildcards">
+                    4. Wildcards (?, ? extends, ? super)
+                  </button>
+                </h2>
+                <div id="flush-wildcards" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGenerics">
+                  <div class="accordion-body">
+                    <p><b>What:</b> Wildcards make APIs flexible by allowing "some unknown type" rather than a concrete type parameter.</p>
+                    <ul>
+                      <li><code>List&lt;?&gt;</code> — list of some unknown type (read-only except <code>null</code>).</li>
+                      <li><code>List&lt;? extends T&gt;</code> — list of some subtype of T (read as T, cannot add T).</li>
+                      <li><code>List&lt;? super T&gt;</code> — list of some supertype of T (can add T, reading yields Object or the supertype).</li>
+                    </ul>
+                    <p><b>PECS Rule:</b> Producer Extends, Consumer Super.</p>
+            
+            <pre><code class="language-java">
+List&lt;Integer&gt; ints = List.of(1,2,3);
+List&lt;? extends Number&gt; nums = ints;
+Number n = nums.get(0); // OK
+// nums.add(10); // ERROR
+            
+List&lt;Object&gt; objects = new ArrayList&lt;&gt;();
+List&lt;? super Integer&gt; ints2 = objects;
+ints2.add(10);          // OK
+Object o = ints2.get(0);// yields Object
+            
+// Copy method using PECS
+public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;? extends T&gt; src) {
+    for (T item : src) dest.add(item);
+}
+            </code></pre>
+                    <p><b>Avoid:</b> Raw types (e.g. <code>List</code>) — they disable generics checks and cause unsafe casts.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Type Erasure -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-type-erasure" aria-expanded="false" aria-controls="flush-type-erasure">
+                    5. Type Erasure Concept
+                  </button>
+                </h2>
+                <div id="flush-type-erasure" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGenerics">
+                  <div class="accordion-body">
+                    <p><b>What:</b> Java generics are implemented via type erasure — type parameters exist only at compile time.</p>
+                    <ul>
+                      <li><code>List&lt;String&gt;</code> and <code>List&lt;Integer&gt;</code> are the same class at runtime.</li>
+                      <li>Cannot do <code>new T[]</code> or <code>instanceof List&lt;String&gt;</code>.</li>
+                      <li>Cannot create <code>new T()</code>.</li>
+                      <li>Static members cannot use the class type parameter.</li>
+                    </ul>
+            
+            <pre><code class="language-java">
+List&lt;String&gt; ls = new ArrayList&lt;&gt;();
+List&lt;Integer&gt; li = new ArrayList&lt;&gt;();
+System.out.println(ls.getClass() == li.getClass()); // true
+            
+// Illegal:
+// T[] arr = new T[10];
+// if (obj instanceof List&lt;String&gt;) {}
+            </code></pre>
+                    <p><b>Why:</b> Backwards compatibility — generics were added after many APIs existed, so erasure allowed old and new code to work together.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushConcurrency">
+              <h3>8. Concurrency & Multithreading</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading1">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-thread-lifecycle" aria-expanded="false" aria-controls="flush-thread-lifecycle">
+                    1. Thread Lifecycle & States
+                  </button>
+                </h2>
+                <div id="flush-thread-lifecycle" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>A thread goes through these states (from <code>Thread.State</code> enum):</p>
+                    <table class="table table-bordered table-sm">
+                      <thead><tr><th>State</th><th>Meaning</th></tr></thead>
+                      <tbody>
+                        <tr><td>NEW</td><td>Thread object created, not started yet (<code>new Thread()</code>).</td></tr>
+                        <tr><td>RUNNABLE</td><td>Ready to run, waiting for CPU.</td></tr>
+                        <tr><td>RUNNING*</td><td>(Not actual enum) Part of RUNNABLE, actually executing.</td></tr>
+                        <tr><td>BLOCKED</td><td>Waiting to acquire a lock.</td></tr>
+                        <tr><td>WAITING</td><td>Waiting indefinitely for another thread’s signal (<code>wait()</code>).</td></tr>
+                        <tr><td>TIMED_WAITING</td><td>Waiting for a fixed time (<code>sleep(ms)</code>, <code>join(ms)</code>).</td></tr>
+                        <tr><td>TERMINATED</td><td>Thread finished execution.</td></tr>
+                      </tbody>
+                    </table>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>Thread t = new Thread(() -> System.out.println("Running"));
+System.out.println(t.getState()); // NEW
+t.start();
+System.out.println(t.getState()); // RUNNABLE or RUNNING
+            </code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-creating-threads" aria-expanded="false" aria-controls="flush-creating-threads">
+                    2. Creating Threads (Thread class, Runnable interface)
+                  </button>
+                </h2>
+                <div id="flush-creating-threads" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p><strong>Using Thread class:</strong></p>
+                    <pre><code>class MyThread extends Thread {
+    public void run() { System.out.println("Thread running"); }
+}
+new MyThread().start();
+            </code></pre>
+            
+                    <p><strong>Using Runnable interface (preferred):</strong></p>
+                    <pre><code>Runnable task = () -> System.out.println("Runnable running");
+new Thread(task).start();
+            </code></pre>
+                    <p><em>Why Runnable is better:</em> Allows extending other classes and separates task from execution thread.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-synchronization-locks" aria-expanded="false" aria-controls="flush-synchronization-locks">
+                    3. Synchronization & Locks
+                  </button>
+                </h2>
+                <div id="flush-synchronization-locks" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Prevents race conditions by ensuring only one thread accesses a block at a time.</p>
+                    <p><strong>Synchronized method:</strong></p>
+                    <pre><code>synchronized void increment() { count++; }</code></pre>
+                    <p><strong>Synchronized block:</strong></p>
+                    <pre><code>void increment() {
+    synchronized(this) { count++; }
+}</code></pre>
+                    <p><strong>Explicit Locks (ReentrantLock):</strong></p>
+                    <pre><code>import java.util.concurrent.locks.ReentrantLock;
+ReentrantLock lock = new ReentrantLock();
+lock.lock();
+try { count++; } finally { lock.unlock(); }</code></pre>
+                    <p><em>Best practice:</em> Use locks only where needed to avoid performance bottlenecks.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading4">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-volatile" aria-expanded="false" aria-controls="flush-volatile">
+                    4. Volatile Keyword
+                  </button>
+                </h2>
+                <div id="flush-volatile" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Ensures visibility of changes to a variable across threads. Without <code>volatile</code>, threads may read cached values. Does NOT provide atomicity.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>volatile boolean running = true;
+            
+public void run() {
+    while (running) { }
+}</code></pre>
+                    <p>If another thread sets <code>running = false;</code>, this change is immediately visible.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading5">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-thread-pools" aria-expanded="false" aria-controls="flush-thread-pools">
+                    5. Thread Pools & Executors
+                  </button>
+                </h2>
+                <div id="flush-thread-pools" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Creating many threads manually is costly. Executors manage thread pools to reuse threads efficiently.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import java.util.concurrent.*;
+            
+ExecutorService executor = Executors.newFixedThreadPool(3);
+executor.submit(() -> System.out.println("Task"));
+executor.shutdown();
+            </code></pre>
+                    <p><strong>Common factory methods:</strong></p>
+                    <ul>
+                      <li><code>newFixedThreadPool(n)</code> — fixed number of threads</li>
+                      <li><code>newCachedThreadPool()</code> — expands/shrinks dynamically</li>
+                      <li><code>newSingleThreadExecutor()</code> — single thread only</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading6">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-callable-future" aria-expanded="false" aria-controls="flush-callable-future">
+                    6. Callable & Future
+                  </button>
+                </h2>
+                <div id="flush-callable-future" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p><code>Runnable</code> returns nothing and can't throw checked exceptions. <code>Callable&lt;T&gt;</code> returns a value and can throw exceptions. <code>Future&lt;T&gt;</code> represents the result of async computation.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>Callable&lt;Integer&gt; task = () -> 5 + 5;
+ExecutorService ex = Executors.newSingleThreadExecutor();
+Future&lt;Integer&gt; future = ex.submit(task);
+System.out.println(future.get()); // blocks until result ready
+ex.shutdown();
+            </code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading7">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-forkjoinpool" aria-expanded="false" aria-controls="flush-forkjoinpool">
+                    7. ForkJoinPool (Java 7+)
+                  </button>
+                </h2>
+                <div id="flush-forkjoinpool" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Specialized pool for divide-and-conquer parallelism using work-stealing. Uses <code>RecursiveTask&lt;V&gt;</code> (returns result) or <code>RecursiveAction</code> (no result).</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import java.util.concurrent.*;
+            
+class SumTask extends RecursiveTask&lt;Integer&gt; {
+    int[] arr; int start, end;
+    SumTask(int[] arr, int start, int end) { this.arr = arr; this.start = start; this.end = end; }
+    protected Integer compute() {
+        if (end - start &lt;= 2) {
+            int sum = 0; for (int i = start; i &lt; end; i++) sum += arr[i];
+            return sum;
+        }
+        int mid = (start + end) / 2;
+        SumTask left = new SumTask(arr, start, mid);
+        SumTask right = new SumTask(arr, mid, end);
+        left.fork();
+        return right.compute() + left.join();
+    }
+}
+            
+ForkJoinPool pool = new ForkJoinPool();
+int sum = pool.invoke(new SumTask(new int[]{1,2,3,4}, 0, 4));
+System.out.println(sum);
+            </code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading8">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-completablefuture" aria-expanded="false" aria-controls="flush-completablefuture">
+                    8. CompletableFuture (Java 8+)
+                  </button>
+                </h2>
+                <div id="flush-completablefuture" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Asynchronous computation with chaining and combining results without blocking.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import java.util.concurrent.*;
+            
+CompletableFuture.supplyAsync(() -> "Hello")
+    .thenApply(str -> str + " World")
+    .thenAccept(System.out::println); // prints Hello World
+            </code></pre>
+                    <p><strong>Features:</strong></p>
+                    <ul>
+                      <li>Non-blocking async execution.</li>
+                      <li>Combine multiple futures: <code>thenCombine()</code>, <code>allOf()</code>, <code>anyOf()</code>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading9">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-parallel-streams" aria-expanded="false" aria-controls="flush-parallel-streams">
+                    9. Parallel Streams
+                  </button>
+                </h2>
+                <div id="flush-parallel-streams" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionFlushConcurrency">
+                  <div class="accordion-body">
+                    <p>Java 8+ streams can run in parallel to utilize multiple CPU cores.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import java.util.stream.IntStream;
+            
+int sum = IntStream.range(1, 1000)
+                    .parallel()
+                    .sum();
+System.out.println(sum);
+            </code></pre>
+                    <p><strong>Notes:</strong></p>
+                    <ul>
+                      <li>Internally uses ForkJoinPool.</li>
+                      <li>Good for CPU-bound tasks but be cautious with shared mutable state.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleFunctionalProgramming">
+              <h3>9. Functional Programming</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-lambda">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-lambda" aria-expanded="false" aria-controls="flush-collapse-lambda">
+                    1. Lambda Expressions
+                  </button>
+                </h2>
+                <div id="flush-collapse-lambda" class="accordion-collapse collapse" aria-labelledby="flush-heading-lambda" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Anonymous functions (functions without a name).</li>
+                      <li>Used to provide implementations of functional interfaces (interfaces with a single abstract method).</li>
+                      <li><strong>Syntax:</strong> (parameters) -&gt; expression or (parameters) -&gt; { statements; }</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>Runnable r = () -&gt; System.out.println("Hello from lambda");
+r.run();</code></pre>
+                      <li>Lambdas replace verbose anonymous inner classes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-functional-interface">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-functional-interface" aria-expanded="false" aria-controls="flush-collapse-functional-interface">
+                    2. Functional Interfaces (@FunctionalInterface)
+                  </button>
+                </h2>
+                <div id="flush-collapse-functional-interface" class="accordion-collapse collapse" aria-labelledby="flush-heading-functional-interface" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Interfaces with only one abstract method.</li>
+                      <li>Optionally marked with <code>@FunctionalInterface</code> annotation to help compiler checks.</li>
+                      <li>Examples: <code>Runnable</code>, <code>Callable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code>, and custom ones.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>@FunctionalInterface
+interface MyFunc {
+    void execute(String s);
+}
+            
+MyFunc func = s -&gt; System.out.println(s.toUpperCase());
+func.execute("hello");</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-method-references">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-method-references" aria-expanded="false" aria-controls="flush-collapse-method-references">
+                    3. Method References
+                  </button>
+                </h2>
+                <div id="flush-collapse-method-references" class="accordion-collapse collapse" aria-labelledby="flush-heading-method-references" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Shorter way to write lambdas calling existing methods.</li>
+                      <li><strong>Syntax:</strong></li>
+                      <ul>
+                        <li><code>ClassName::staticMethod</code></li>
+                        <li><code>instance::instanceMethod</code></li>
+                        <li><code>ClassName::instanceMethod</code> (for instance methods on parameters)</li>
+                      </ul>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>List&lt;String&gt; list = List.of("a", "b", "c");
+list.forEach(System.out::println); // method reference instead of lambda (s -&gt; System.out.println(s))</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-streams-api">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-streams-api" aria-expanded="false" aria-controls="flush-collapse-streams-api">
+                    4. Streams API (Intermediate &amp; Terminal Operations)
+                  </button>
+                </h2>
+                <div id="flush-collapse-streams-api" class="accordion-collapse collapse" aria-labelledby="flush-heading-streams-api" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Streams represent sequences of data with operations that can be lazy and chained.</li>
+                      <li><strong>Intermediate operations:</strong> return a stream (e.g. <code>filter()</code>, <code>map()</code>) and are lazy.</li>
+                      <li><strong>Terminal operations:</strong> produce a result or side-effect (e.g. <code>collect()</code>, <code>forEach()</code>, <code>count()</code>) and trigger execution.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>List&lt;String&gt; names = List.of("John", "Jane", "Jack");
+long count = names.stream()
+                  .filter(s -&gt; s.startsWith("J"))  // intermediate
+                  .count();                        // terminal
+System.out.println(count); // 3</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-optional-class">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-optional-class" aria-expanded="false" aria-controls="flush-collapse-optional-class">
+                    5. Optional Class
+                  </button>
+                </h2>
+                <div id="flush-collapse-optional-class" class="accordion-collapse collapse" aria-labelledby="flush-heading-optional-class" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Container for optional (possibly missing) values.</li>
+                      <li>Avoids <code>NullPointerException</code> and explicit null checks.</li>
+                      <li>Common methods: <code>of()</code>, <code>ofNullable()</code>, <code>isPresent()</code>, <code>orElse()</code>, <code>ifPresent()</code>.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>Optional&lt;String&gt; opt = Optional.ofNullable(null);
+System.out.println(opt.orElse("default")); // prints "default"
+            
+opt.ifPresent(System.out::println); // no output since empty</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-functional-interfaces">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-functional-interfaces" aria-expanded="false" aria-controls="flush-collapse-functional-interfaces">
+                    6. Predicate, Function, Consumer, Supplier Interfaces
+                  </button>
+                </h2>
+                <div id="flush-collapse-functional-interfaces" class="accordion-collapse collapse" aria-labelledby="flush-heading-functional-interfaces" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Common built-in functional interfaces in <code>java.util.function</code>.</li>
+                      <li><strong>Interface / Method / Purpose / Example</strong></li>
+                      <ul>
+                        <li><code>Predicate&lt;T&gt;</code> - <code>boolean test(T t)</code> - Tests a condition - <code>x -&gt; x &gt; 10</code></li>
+                        <li><code>Function&lt;T,R&gt;</code> - <code>R apply(T t)</code> - Transforms input to output - <code>s -&gt; s.length()</code></li>
+                        <li><code>Consumer&lt;T&gt;</code> - <code>void accept(T t)</code> - Performs side-effects on input - <code>s -&gt; System.out.println(s)</code></li>
+                        <li><code>Supplier&lt;T&gt;</code> - <code>T get()</code> - Supplies/creates a value (no input) - <code>() -&gt; Math.random()</code></li>
+                      </ul>
+                      <li><strong>Examples:</strong></li>
+                      <pre><code>Predicate&lt;Integer&gt; isEven = x -&gt; x % 2 == 0;
+System.out.println(isEven.test(4)); // true
+            
+Function&lt;String, Integer&gt; toLength = s -&gt; s.length();
+System.out.println(toLength.apply("hello")); // 5
+            
+Consumer&lt;String&gt; printer = System.out::println;
+printer.accept("Hi!");
+            
+Supplier&lt;Double&gt; randomSupplier = () -&gt; Math.random();
+System.out.println(randomSupplier.get());</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleModernJava">
+              <h3>10. 8+ Features</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-default-static">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-default-static" aria-expanded="false" aria-controls="flush-collapse-default-static">
+                    1. Default &amp; Static Methods in Interfaces (Java 8)
+                  </button>
+                </h2>
+                <div id="flush-collapse-default-static" class="accordion-collapse collapse" aria-labelledby="flush-heading-default-static" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Default methods allow adding method implementations in interfaces without breaking existing classes.</li>
+                      <li>Static methods in interfaces behave like utility methods related to that interface.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>interface Vehicle {
+    void move();
+            
+    default void honk() {
+        System.out.println("Beep beep!");
+    }
+            
+    static void info() {
+        System.out.println("Vehicle interface");
+    }
+}
+            
+class Car implements Vehicle {
+    public void move() {
+        System.out.println("Car is moving");
+    }
+}
+            
+public class Test {
+    public static void main(String[] args) {
+        Car c = new Car();
+        c.move();          // Car is moving
+        c.honk();          // Beep beep!
+        Vehicle.info();    // Vehicle interface
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-localdate">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-localdate" aria-expanded="false" aria-controls="flush-collapse-localdate">
+                    2. LocalDate, LocalTime, LocalDateTime (java.time API - Java 8)
+                  </button>
+                </h2>
+                <div id="flush-collapse-localdate" class="accordion-collapse collapse" aria-labelledby="flush-heading-localdate" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Modern date/time API replacing old <code>Date</code> and <code>Calendar</code>.</li>
+                      <li>Immutable and thread-safe.</li>
+                      <li><code>LocalDate</code> = date only, <code>LocalTime</code> = time only, <code>LocalDateTime</code> = both.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>import java.time.*;
+            
+public class DateTimeExample {
+    public static void main(String[] args) {
+        LocalDate date = LocalDate.now();
+        LocalTime time = LocalTime.of(14, 30);
+        LocalDateTime dateTime = LocalDateTime.now();
+            
+        System.out.println(date);      // e.g., 2025-08-10
+        System.out.println(time);      // 14:30
+        System.out.println(dateTime);  // 2025-08-10T14:30:15.123
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-collectors">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-collectors" aria-expanded="false" aria-controls="flush-collapse-collectors">
+                    3. New Collectors in Streams (Java 8+)
+                  </button>
+                </h2>
+                <div id="flush-collapse-collectors" class="accordion-collapse collapse" aria-labelledby="flush-heading-collectors" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>New collector methods like <code>Collectors.teeing()</code>, <code>filtering()</code>, <code>flatMapping()</code> added in Java 9+ onwards.</li>
+                      <li>Used for advanced data grouping, filtering, and transformation in streams.</li>
+                      <li><strong>Example (partitioningBy):</strong></li>
+                      <pre><code>import java.util.*;
+import java.util.stream.*;
+            
+public class CollectorExample {
+    public static void main(String[] args) {
+        List<String> names = List.of("Anna", "Bob", "Alice", "Brian");
+            
+        Map&lt;Boolean, List&lt;String&gt;&gt; result = names.stream()
+            .collect(Collectors.partitioningBy(name -&gt; name.startsWith("A")));
+            
+        System.out.println(result);
+        // Output: {false=[Bob, Brian], true=[Anna, Alice]}
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-var">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-var" aria-expanded="false" aria-controls="flush-collapse-var">
+                    4. var Keyword (Java 10)
+                  </button>
+                </h2>
+                <div id="flush-collapse-var" class="accordion-collapse collapse" aria-labelledby="flush-heading-var" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Local variable type inference.</li>
+                      <li>Compiler infers the type from the assigned value.</li>
+                      <li>Only for local variables (inside methods, loops, etc.).</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>public class VarExample {
+    public static void main(String[] args) {
+        var message = "Hello, Java 10!";
+        var count = 100;
+            
+        System.out.println(message);
+        System.out.println(count);
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-records">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-records" aria-expanded="false" aria-controls="flush-collapse-records">
+                    5. Records (Java 14)
+                  </button>
+                </h2>
+                <div id="flush-collapse-records" class="accordion-collapse collapse" aria-labelledby="flush-heading-records" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Compact syntax for immutable data classes.</li>
+                      <li>Automatically generates constructor, getters, <code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code>.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>public record Person(String name, int age) {}
+            
+public class RecordExample {
+    public static void main(String[] args) {
+        Person p = new Person("John", 30);
+        System.out.println(p.name()); // John
+        System.out.println(p);        // Person[name=John, age=30]
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-switch-expressions">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-switch-expressions" aria-expanded="false" aria-controls="flush-collapse-switch-expressions">
+                    6. Switch Expressions (Java 14+)
+                  </button>
+                </h2>
+                <div id="flush-collapse-switch-expressions" class="accordion-collapse collapse" aria-labelledby="flush-heading-switch-expressions" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>switch</code> can now return a value.</li>
+                      <li>Supports new case syntax with <code>-&gt;</code> and multiple labels.</li>
+                      <li>No fall-through by default.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>public class SwitchExpressionExample {
+    public static void main(String[] args) {
+        int day = 3;
+        String dayName = switch (day) {
+            case 1 -&gt; "Monday";
+            case 2 -&gt; "Tuesday";
+            case 3, 4, 5 -&gt; "Midweek";
+            default -&gt; "Weekend";
+        };
+        System.out.println(dayName);  // Midweek
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-pattern-matching">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-pattern-matching" aria-expanded="false" aria-controls="flush-collapse-pattern-matching">
+                    7. Pattern Matching for instanceof (Java 16)
+                  </button>
+                </h2>
+                <div id="flush-collapse-pattern-matching" class="accordion-collapse collapse" aria-labelledby="flush-heading-pattern-matching" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Simplifies casting after <code>instanceof</code>.</li>
+                      <li>Declare a variable inside the <code>instanceof</code> check, avoiding explicit cast.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>public class PatternMatchingExample {
+    public static void main(String[] args) {
+        Object obj = "Hello";
+            
+        if (obj instanceof String s) {
+            System.out.println(s.toUpperCase());  // HELLO
+        }
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-sealed-classes">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-sealed-classes" aria-expanded="false" aria-controls="flush-collapse-sealed-classes">
+                    8. Sealed Classes (Java 17)
+                  </button>
+                </h2>
+                <div id="flush-collapse-sealed-classes" class="accordion-collapse collapse" aria-labelledby="flush-heading-sealed-classes" data-bs-parent="#accordionFlushExampleModernJava">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Restricts which classes can extend or implement a class/interface.</li>
+                      <li>Improves security and maintainability by controlling class hierarchy.</li>
+                      <li><strong>Example:</strong></li>
+                      <pre><code>public abstract sealed class Shape permits Circle, Rectangle {}
+final class Circle extends Shape {}
+final class Rectangle extends Shape {}
+// Other subclasses not allowed
+            
+public class SealedExample {
+    public static void main(String[] args) {
+        Shape shape = new Circle();
+        System.out.println(shape.getClass().getSimpleName()); // Circle
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleMemoryManagement">
+              <h3>11. Memory Management</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-heap-stack">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-heap-stack" aria-expanded="false" aria-controls="flush-collapse-heap-stack">
+                    1. Heap &amp; Stack Memory
+                  </button>
+                </h2>
+                <div id="flush-collapse-heap-stack" class="accordion-collapse collapse" aria-labelledby="flush-heading-heap-stack" data-bs-parent="#accordionFlushExampleMemoryManagement">
+                  <div class="accordion-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Memory Type</th>
+                          <th>Purpose</th>
+                          <th>Characteristics</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Heap</td>
+                          <td>Stores objects and instance variables</td>
+                          <td>Shared among all threads, larger, managed by GC</td>
+                        </tr>
+                        <tr>
+                          <td>Stack</td>
+                          <td>Stores method calls, local variables, and references</td>
+                          <td>Each thread has its own stack, stores primitive variables and references, follows LIFO</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p><strong>Stack:</strong> Fast, stores method calls &amp; primitives like int, double, and references to objects.</p>
+                    <p><strong>Heap:</strong> Stores actual objects created by <code>new</code>. GC cleans unused objects here.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>public class MemoryExample {
+    public static void main(String[] args) {
+        int x = 10;               // stored in stack
+        String str = new String("Hello");  // str reference in stack, "Hello" object in heap
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-gc-basics">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-gc-basics" aria-expanded="false" aria-controls="flush-collapse-gc-basics">
+                    2. Garbage Collection Basics
+                  </button>
+                </h2>
+                <div id="flush-collapse-gc-basics" class="accordion-collapse collapse" aria-labelledby="flush-heading-gc-basics" data-bs-parent="#accordionFlushExampleMemoryManagement">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Java automatically frees heap memory for objects no longer referenced.</li>
+                      <li>Garbage Collector (GC) runs periodically.</li>
+                      <li>GC algorithms include mark-and-sweep, generational, etc.</li>
+                      <li>You can suggest GC with <code>System.gc()</code> (not guaranteed).</li>
+                      <li><strong>What GC does:</strong>
+                        <ul>
+                          <li>Finds objects no longer reachable.</li>
+                          <li>Frees their memory.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-reference-types">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-reference-types" aria-expanded="false" aria-controls="flush-collapse-reference-types">
+                    3. Reference Types in Java
+                  </button>
+                </h2>
+                <div id="flush-collapse-reference-types" class="accordion-collapse collapse" aria-labelledby="flush-heading-reference-types" data-bs-parent="#accordionFlushExampleMemoryManagement">
+                  <div class="accordion-body">
+                    <table class="table table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Reference Type</th>
+                          <th>Behavior</th>
+                          <th>Use Case</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Strong</td>
+                          <td>Default reference; object won’t be collected if referenced</td>
+                          <td>Normal objects</td>
+                        </tr>
+                        <tr>
+                          <td>Soft</td>
+                          <td>GC collects if memory is low</td>
+                          <td>Caches</td>
+                        </tr>
+                        <tr>
+                          <td>Weak</td>
+                          <td>GC collects when no strong references exist</td>
+                          <td>WeakHashMap keys</td>
+                        </tr>
+                        <tr>
+                          <td>Phantom</td>
+                          <td>Used to schedule cleanup after GC collects object</td>
+                          <td>Advanced cleanup, finalize alternatives</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <p><strong>Example: WeakReference</strong></p>
+                    <pre><code>import java.lang.ref.WeakReference;
+            
+public class WeakRefExample {
+    public static void main(String[] args) {
+        String strong = new String("Strong");
+        WeakReference&lt;String&gt; weak = new WeakReference&lt;&gt;(strong);
+            
+        strong = null;  // now only weak references the object
+        System.gc();
+            
+        System.out.println("Weak reference: " + weak.get()); // may print null if GC collected
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-cleaner-api">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-cleaner-api" aria-expanded="false" aria-controls="flush-collapse-cleaner-api">
+                    4. Finalization &amp; Cleaner API
+                  </button>
+                </h2>
+                <div id="flush-collapse-cleaner-api" class="accordion-collapse collapse" aria-labelledby="flush-heading-cleaner-api" data-bs-parent="#accordionFlushExampleMemoryManagement">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Finalization (<code>finalize()</code> method) was used to clean resources before GC but is deprecated and unpredictable.</li>
+                      <li>Cleaner API (Java 9+) is a better alternative for resource cleanup.</li>
+                      <li><strong>Cleaner example:</strong></li>
+                      <pre><code>import java.lang.ref.Cleaner;
+            
+public class CleanerExample {
+    static class State implements Runnable {
+        public void run() {
+            System.out.println("Cleaning resources...");
+        }
+    }
+            
+    static class Resource {
+        private static final Cleaner cleaner = Cleaner.create();
+        private final Cleaner.Cleanable cleanable;
+            
+        Resource() {
+            State state = new State();
+            cleanable = cleaner.register(this, state);
+        }
+            
+        public void close() {
+            cleanable.clean();
+        }
+    }
+            
+    public static void main(String[] args) {
+        Resource r = new Resource();
+        r.close();  // manually trigger cleaning
+    }
+}</code></pre>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleNetworking">
+              <h3>12. Networking</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-sockets">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-sockets" aria-expanded="false" aria-controls="flush-collapse-sockets">
+                    1. Sockets (TCP &amp; UDP)
+                  </button>
+                </h2>
+                <div id="flush-collapse-sockets" class="accordion-collapse collapse" aria-labelledby="flush-heading-sockets" data-bs-parent="#accordionFlushExampleNetworking">
+                  <div class="accordion-body">
+                    <p>Socket: Endpoint for communication between two machines.</p>
+                    <p>Java supports two main protocols:</p>
+                    <ul>
+                      <li><strong>TCP</strong> (Transmission Control Protocol): Connection-oriented, reliable, stream-based.</li>
+                      <li><strong>UDP</strong> (User Datagram Protocol): Connectionless, unreliable, packet-based, faster.</li>
+                    </ul>
+                    <p><strong>TCP Socket Example (Client &amp; Server)</strong></p>
+                    <p><em>Server:</em></p>
+                    <pre><code>import java.net.*;
+import java.io.*;
+            
+public class TCPServer {
+    public static void main(String[] args) throws IOException {
+        ServerSocket serverSocket = new ServerSocket(1234);
+        System.out.println("Server waiting for connection...");
+        Socket clientSocket = serverSocket.accept();
+        BufferedReader in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+        String message = in.readLine();
+        System.out.println("Received: " + message);
+        serverSocket.close();
+    }
+}</code></pre>
+            
+                    <p><em>Client:</em></p>
+                    <pre><code>import java.net.*;
+import java.io.*;
+            
+public class TCPClient {
+    public static void main(String[] args) throws IOException {
+        Socket socket = new Socket("localhost", 1234);
+        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
+        out.println("Hello Server");
+        socket.close();
+    }
+}</code></pre>
+            
+                    <p><strong>UDP Example (Sender &amp; Receiver)</strong></p>
+                    <p><em>Receiver:</em></p>
+                    <pre><code>import java.net.*;
+            
+public class UDPReceiver {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket socket = new DatagramSocket(9876);
+        byte[] buffer = new byte[1024];
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length);
+        socket.receive(packet);
+        String received = new String(packet.getData(), 0, packet.getLength());
+        System.out.println("Received: " + received);
+        socket.close();
+    }
+}</code></pre>
+            
+                    <p><em>Sender:</em></p>
+                    <pre><code>import java.net.*;
+            
+public class UDPSender {
+    public static void main(String[] args) throws Exception {
+        DatagramSocket socket = new DatagramSocket();
+        byte[] buffer = "Hello UDP".getBytes();
+        InetAddress address = InetAddress.getByName("localhost");
+        DatagramPacket packet = new DatagramPacket(buffer, buffer.length, address, 9876);
+        socket.send(packet);
+        socket.close();
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-url-http">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-url-http" aria-expanded="false" aria-controls="flush-collapse-url-http">
+                    2. URL &amp; HttpURLConnection
+                  </button>
+                </h2>
+                <div id="flush-collapse-url-http" class="accordion-collapse collapse" aria-labelledby="flush-heading-url-http" data-bs-parent="#accordionFlushExampleNetworking">
+                  <div class="accordion-body">
+                    <p><strong>URL</strong> represents a web address.</p>
+                    <p><strong>HttpURLConnection</strong> allows sending HTTP requests and reading responses (GET, POST, etc.).</p>
+                    <p>Works well for simple HTTP communication (before Java 11).</p>
+                    <p><strong>Example: HTTP GET Request</strong></p>
+                    <pre><code>import java.net.*;
+import java.io.*;
+            
+public class HttpURLConnectionExample {
+    public static void main(String[] args) throws IOException {
+        URL url = new URL("https://jsonplaceholder.typicode.com/posts/1");
+        HttpURLConnection con = (HttpURLConnection) url.openConnection();
+        con.setRequestMethod("GET");
+            
+        int status = con.getResponseCode();
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+        String inputLine;
+        StringBuilder content = new StringBuilder();
+            
+        while ((inputLine = in.readLine()) != null) {
+            content.append(inputLine);
+        }
+        in.close();
+        con.disconnect();
+            
+        System.out.println("Status: " + status);
+        System.out.println("Response: " + content);
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-http-client">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-http-client" aria-expanded="false" aria-controls="flush-collapse-http-client">
+                    3. Java 11 HTTP Client API
+                  </button>
+                </h2>
+                <div id="flush-collapse-http-client" class="accordion-collapse collapse" aria-labelledby="flush-heading-http-client" data-bs-parent="#accordionFlushExampleNetworking">
+                  <div class="accordion-body">
+                    <p>Modern, easy-to-use API for HTTP requests.</p>
+                    <p>Supports HTTP/2, async calls, and better configuration.</p>
+                    <p>Part of <code>java.net.http</code> package.</p>
+                    <p><strong>Example: HTTP GET with Java 11 HttpClient</strong></p>
+                    <pre><code>import java.net.URI;
+import java.net.http.*;
+            
+public class HttpClientExample {
+    public static void main(String[] args) throws Exception {
+        HttpClient client = HttpClient.newHttpClient();
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create("https://jsonplaceholder.typicode.com/posts/1"))
+                .build();
+            
+        HttpResponse&lt;String&gt; response = client.send(request, HttpResponse.BodyHandlers.ofString());
+            
+        System.out.println("Status code: " + response.statusCode());
+        System.out.println("Body: " + response.body());
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleBestPractices">
+              <h3>13. Best Practices</h3>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-code-style">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-code-style" aria-expanded="false" aria-controls="flush-collapse-code-style">
+                    1. Code Style &amp; Naming Conventions
+                  </button>
+                </h2>
+                <div id="flush-collapse-code-style" class="accordion-collapse collapse" aria-labelledby="flush-heading-code-style" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Classes &amp; Interfaces:</strong> Use PascalCase (e.g., <code>MyClass</code>, <code>Runnable</code>).</li>
+                      <li><strong>Methods &amp; Variables:</strong> Use camelCase (e.g., <code>calculateSum()</code>, <code>totalCount</code>).</li>
+                      <li><strong>Constants:</strong> Use UPPER_SNAKE_CASE (e.g., <code>MAX_SIZE</code>).</li>
+                      <li><strong>Indentation:</strong> Use 4 spaces per level, no tabs.</li>
+                      <li><strong>Braces:</strong> Use K&amp;R style (opening brace on the same line).</li>
+                      <li>Write meaningful, descriptive names.</li>
+                      <li>Keep methods short and focused on one task.</li>
+                    </ul>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>// Good naming
+public class UserAccount {
+    private String userName;
+            
+    public void calculateBalance() {
+        // logic
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-immutability">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-immutability" aria-expanded="false" aria-controls="flush-collapse-immutability">
+                    2. Immutability Principles
+                  </button>
+                </h2>
+                <div id="flush-collapse-immutability" class="accordion-collapse collapse" aria-labelledby="flush-heading-immutability" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <p>Make objects immutable when possible for thread safety and simplicity.</p>
+                    <ul>
+                      <li>Use <code>final</code> fields, no setters.</li>
+                      <li>Create new objects on changes instead of modifying existing ones.</li>
+                    </ul>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>public final class ImmutableUser {
+    private final String name;
+    private final int age;
+            
+    public ImmutableUser(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+            
+    public String getName() { return name; }
+    public int getAge() { return age; }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-defensive-copying">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-defensive-copying" aria-expanded="false" aria-controls="flush-collapse-defensive-copying">
+                    3. Defensive Copying
+                  </button>
+                </h2>
+                <div id="flush-collapse-defensive-copying" class="accordion-collapse collapse" aria-labelledby="flush-heading-defensive-copying" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <p>Protect internal state when passing or returning mutable objects.</p>
+                    <p>Return copies to prevent external modification.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import java.util.*;
+            
+public class SafeClass {
+    private final List<String> list;
+            
+    public SafeClass(List<String> input) {
+        this.list = new ArrayList<>(input);  // defensive copy
+    }
+            
+    public List<String> getList() {
+        return new ArrayList<>(list);        // return copy
+    }
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-memory-leaks">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-memory-leaks" aria-expanded="false" aria-controls="flush-collapse-memory-leaks">
+                    4. Avoiding Memory Leaks
+                  </button>
+                </h2>
+                <div id="flush-collapse-memory-leaks" class="accordion-collapse collapse" aria-labelledby="flush-heading-memory-leaks" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Nullify references if object is no longer needed and lifecycle is long.</li>
+                      <li>Be careful with static collections holding references.</li>
+                      <li>Use weak references or proper caches if applicable.</li>
+                      <li>Close resources like files, sockets, database connections.</li>
+                      <li>Avoid inner classes holding implicit references to outer classes unnecessarily.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-data-structures">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-data-structures" aria-expanded="false" aria-controls="flush-collapse-data-structures">
+                    5. Using Proper Data Structures
+                  </button>
+                </h2>
+                <div id="flush-collapse-data-structures" class="accordion-collapse collapse" aria-labelledby="flush-heading-data-structures" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <p>Choose data structures based on usage:</p>
+                    <ul>
+                      <li>Use <code>ArrayList</code> for fast random access.</li>
+                      <li>Use <code>LinkedList</code> for fast insertions/removals.</li>
+                      <li>Use <code>HashMap</code> for fast key-based lookups.</li>
+                      <li>Use <code>TreeMap</code> when sorted order is required.</li>
+                      <li>Avoid overusing collections; pick the simplest one that meets the need.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-exception-handling">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-exception-handling" aria-expanded="false" aria-controls="flush-collapse-exception-handling">
+                    6. Exception Handling Best Practices
+                  </button>
+                </h2>
+                <div id="flush-collapse-exception-handling" class="accordion-collapse collapse" aria-labelledby="flush-heading-exception-handling" data-bs-parent="#accordionFlushExampleBestPractices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Use checked exceptions for recoverable conditions.</li>
+                      <li>Use unchecked exceptions (<code>RuntimeException</code>) for programming errors.</li>
+                      <li>Always catch the most specific exception you can.</li>
+                      <li>Avoid empty catch blocks.</li>
+                      <li>Log exceptions or rethrow with meaningful messages.</li>
+                      <li>Clean up resources in <code>finally</code> block or use try-with-resources.</li>
+                    </ul>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))) {
+    String line = br.readLine();
+} catch (IOException e) {
+    e.printStackTrace();  // or proper logging
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleBuildDeploy">
+              <h3>14. Build &amp; Deployment</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-maven-gradle">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-maven-gradle" aria-expanded="false" aria-controls="flush-collapse-maven-gradle">
+                    1. Maven / Gradle Basics
+                  </button>
+                </h2>
+                <div id="flush-collapse-maven-gradle" class="accordion-collapse collapse" aria-labelledby="flush-heading-maven-gradle" data-bs-parent="#accordionFlushExampleBuildDeploy">
+                  <div class="accordion-body">
+                    <p>Maven and Gradle are popular build tools to automate compiling, testing, packaging, and managing dependencies.</p>
+                    <table class="table table-sm">
+                      <thead>
+                        <tr>
+                          <th>Feature</th>
+                          <th>Maven</th>
+                          <th>Gradle</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Build file</td>
+                          <td><code>pom.xml</code> (XML)</td>
+                          <td><code>build.gradle</code> (Groovy/Kotlin DSL)</td>
+                        </tr>
+                        <tr>
+                          <td>Dependency Management</td>
+                          <td>Declarative with versions in POM</td>
+                          <td>More flexible with scripting support</td>
+                        </tr>
+                        <tr>
+                          <td>Popularity</td>
+                          <td>More traditional, widely used</td>
+                          <td>Newer, faster, more customizable</td>
+                        </tr>
+                      </tbody>
+                    </table>
+            
+                    <p><strong>Simple Maven <code>pom.xml</code> example:</strong></p>
+                    <pre><code>&lt;project&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+  &lt;groupId&gt;com.example&lt;/groupId&gt;
+  &lt;artifactId&gt;demo-app&lt;/artifactId&gt;
+  &lt;version&gt;1.0&lt;/version&gt;
+  &lt;dependencies&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+      &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+      &lt;version&gt;3.12.0&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+&lt;/project&gt;</code></pre>
+            
+                    <p><strong>Simple Gradle <code>build.gradle</code> example:</strong></p>
+                    <pre><code>plugins {
+    id 'java'
+}
+            
+repositories {
+    mavenCentral()
+}
+            
+dependencies {
+    implementation 'org.apache.commons:commons-lang3:3.12.0'
+}</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-jar-war-ear">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-jar-war-ear" aria-expanded="false" aria-controls="flush-collapse-jar-war-ear">
+                    2. JAR, WAR, EAR Files
+                  </button>
+                </h2>
+                <div id="flush-collapse-jar-war-ear" class="accordion-collapse collapse" aria-labelledby="flush-heading-jar-war-ear" data-bs-parent="#accordionFlushExampleBuildDeploy">
+                  <div class="accordion-body">
+                    <table class="table table-sm">
+                      <thead>
+                        <tr>
+                          <th>File Type</th>
+                          <th>Purpose</th>
+                          <th>Contents</th>
+                          <th>Use Case</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>JAR</td>
+                          <td>Java ARchive for Java classes</td>
+                          <td><code>.class</code> files + resources</td>
+                          <td>Standalone Java apps/libs</td>
+                        </tr>
+                        <tr>
+                          <td>WAR</td>
+                          <td>Web Application Archive</td>
+                          <td>JAR + web components (HTML, JSP, servlets)</td>
+                          <td>Java web apps (for servers like Tomcat)</td>
+                        </tr>
+                        <tr>
+                          <td>EAR</td>
+                          <td>Enterprise Application Archive</td>
+                          <td>Multiple JARs &amp; WARs</td>
+                          <td>Java EE applications with multiple modules</td>
+                        </tr>
+                      </tbody>
+                    </table>
+            
+                    <p><strong>Example: Build a JAR with Maven</strong></p>
+                    <pre><code>mvn clean package
+# This creates a .jar file in the target/ directory.</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-heading-modular-programming">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-modular-programming" aria-expanded="false" aria-controls="flush-collapse-modular-programming">
+                    3. Modular Programming (Java 9+)
+                  </button>
+                </h2>
+                <div id="flush-collapse-modular-programming" class="accordion-collapse collapse" aria-labelledby="flush-heading-modular-programming" data-bs-parent="#accordionFlushExampleBuildDeploy">
+                  <div class="accordion-body">
+                    <p>Introduced the Java Platform Module System (JPMS).</p>
+                    <p>Allows splitting apps into modules with explicit dependencies and visibility.</p>
+                    <p>Defined in <code>module-info.java</code> file.</p>
+            
+                    <p><strong>Example <code>module-info.java</code>:</strong></p>
+                    <pre><code>module com.example.myapp {
+    requires java.sql;
+    exports com.example.myapp.api;
+}</code></pre>
+            
+                    <p><strong>Explanation:</strong></p>
+                    <ul>
+                      <li><code>requires</code>: module dependencies</li>
+                      <li><code>exports</code>: packages visible outside the module</li>
+                    </ul>
+            
+                    <p><strong>Benefits:</strong></p>
+                    <ul>
+                      <li>Better encapsulation</li>
+                      <li>Smaller runtime images (via jlink)</li>
+                      <li>Clearer dependency management</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            
+          
+            
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

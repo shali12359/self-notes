@@ -1,0 +1,2085 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container my-5">
+          <div class="container">
+              <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. SQL Basics</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        1. What is SQL?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>SQL (Structured Query Language) is a standard language used to store, manipulate, and retrieve data from databases.                            </li>
+                            <li>Divided into categories</li>
+                        </ul>
+                        <table class="table table-bordered table-hover table-striped align-middle my-2">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Full Form</th>
+                                    <th>Purpose</th>
+                                    <th>Examples</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DDL</td>
+                                    <td>Data Definition Language</td>
+                                    <td>Defines and manages structure of database objects</td>
+                                    <td>CREATE, ALTER, DROP, TRUNCATE</td>
+                                </tr>
+                                <tr>
+                                    <td>DML</td>
+                                    <td>Data Manipulation Language</td>
+                                    <td>Handles the data inside tables</td>
+                                    <td>SELECT, INSERT, UPDATE, DELETE</td>
+                                </tr>
+                                <tr>
+                                    <td>DCL</td>
+                                    <td>Data Control Language</td>
+                                    <td>Controls access and permissions</td>
+                                    <td>GRANT, REVOKE</td>
+                                </tr>
+                                <tr>
+                                    <td>TCL</td>
+                                    <td>Transaction Control Language</td>
+                                    <td>Manages transactions in a DB</td>
+                                    <td>COMMIT, ROLLBACK, SAVEPOINT</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        2. SQL Syntax Rules
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <strong>Case-insensitive keywords:</strong> <code>SELECT</code>, <code>FROM</code>, <code>WHERE</code> can be written as <code>select</code>, <code>from</code>, <code>where</code>.
+                            </li>
+                            <li>
+                                <strong>End statements</strong> with <code>;</code> (some systems require it).
+                            </li>
+                            <li>
+                                <strong>String literals</strong> → use single quotes <code>'John'</code> not double quotes (double quotes are for identifiers in some DBs).
+                            </li>
+                            <li>
+                                <strong>Identifiers</strong> (table/column names) → avoid reserved words, can use underscores (e.g., <code>user_name</code>).
+                            </li>
+                            <li>
+                                <strong>Whitespace</strong> → ignored, but formatting improves readability.
+                            </li>
+                        </ul>   
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        3. Database vs Schema vs Table
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <strong>Database</strong> → The container for all data (like a big warehouse).
+                            </li>
+                            <li>
+                                <strong>Schema</strong> → A logical grouping of tables and objects inside a database (like sections in a warehouse).
+                            </li>
+                            <li>
+                                In some systems (<strong>MySQL</strong>), <code>schema</code> = <code>database</code>.
+                            </li>
+                            <li>
+                                <strong>Table</strong> → The actual structure holding rows &amp; columns (like shelves storing items).
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                        4. Data Types
+                    </button>
+                    </h2>
+                    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <strong>Common SQL data type categories:</strong>
+                                <ul>
+                                    <li>
+                                        <strong>Numeric</strong> — 
+                                        <code>INT</code> (whole numbers), 
+                                        <code>DECIMAL(10,2)</code> (fixed-point), 
+                                        <code>FLOAT</code> (approximate values)
+                                    </li>
+                                    <li>
+                                        <strong>Text</strong> — 
+                                        <code>CHAR(n)</code> (fixed length), 
+                                        <code>VARCHAR(n)</code> (variable length), 
+                                        <code>TEXT</code> (large text)
+                                    </li>
+                                    <li>
+                                        <strong>Date/Time</strong> — 
+                                        <code>DATE</code>, 
+                                        <code>TIME</code>, 
+                                        <code>DATETIME</code>, 
+                                        <code>TIMESTAMP</code>
+                                    </li>
+                                    <li>
+                                        <strong>Boolean</strong> — 
+                                        <code>BOOLEAN</code> or <code>BIT</code> (true/false — stored as 1 or 0 internally in some DBs)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                       
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                        5. NULL Handling
+                    </button>
+                    </h2>
+                    <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <strong>NULL</strong> = Unknown / Missing value
+                            </li>
+                            <li>
+                                It’s not <code>0</code> and not <code>''</code> (empty string).
+                            </li>
+                            <li>
+                                Comparisons with <code>NULL</code> always return <strong>UNKNOWN</strong>, not true or false.
+                            </li>
+                            <li>
+                                Use <code>IS NULL</code> or <code>IS NOT NULL</code> instead of <code>=</code>.
+                            </li>
+                        </ul>                                               
+                      </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                        6. SQL Operators
+                    </button>
+                    </h2>
+                    <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                      <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <strong>A) Arithmetic Operators</strong>
+                                <ul>
+                                    <li><code>+</code> — Example: <code>2 + 3</code> → Result: <code>5</code></li>
+                                    <li><code>-</code> — Example: <code>5 - 2</code> → Result: <code>3</code></li>
+                                    <li><code>*</code> — Example: <code>4 * 2</code> → Result: <code>8</code></li>
+                                    <li><code>/</code> — Example: <code>10 / 2</code> → Result: <code>5</code></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>B) Comparison Operators</strong>
+                                <ul>
+                                    <li><code>=</code> — equal</li>
+                                    <li><code>!=</code> or <code>&lt;&gt;</code> — not equal</li>
+                                    <li><code>&lt;</code> — less than</li>
+                                    <li><code>&gt;</code> — greater than</li>
+                                    <li><code>&lt;=</code> — less than or equal</li>
+                                    <li><code>&gt;=</code> — greater than or equal</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>C) Logical Operators</strong>
+                                <ul>
+                                    <li><strong>AND</strong> — both conditions must be true</li>
+                                    <li><strong>OR</strong> — at least one condition must be true</li>
+                                    <li><strong>NOT</strong> — reverses the result</li>
+                                    <li>Example:
+                                        <pre><code>SELECT * FROM products WHERE price &gt; 100 AND stock &gt; 10;</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <strong>D) Special Operators</strong>
+                                <ul>
+                                    <li><strong>BETWEEN</strong> — Checks if a value is within a range (inclusive).
+                                        <pre><code>WHERE price BETWEEN 100 AND 500;</code></pre>
+                                    </li>
+                                    <li><strong>IN</strong> — Matches against a list of values.
+                                        <pre><code>WHERE country IN ('USA', 'Canada', 'UK');</code></pre>
+                                    </li>
+                                    <li><strong>LIKE</strong> — Pattern matching with wildcards: <code>%</code> (any number of chars), <code>_</code> (single char).
+                                        <pre><code>WHERE name LIKE 'J%n'; -- John, Jason</code></pre>
+                                    </li>
+                                    <li><strong>IS NULL</strong> — Checks if value is NULL.
+                                        <pre><code>WHERE manager_id IS NULL;</code></pre>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>                                                                      
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExample2">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Data Definition Language (DDL)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group-1" aria-label="Vertical radio toggle button group-1">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vbtn-radio-1" id="vbtn-radio1-1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio-1" id="vbtn-radio2-1" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-1"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio-1" id="vbtn-radio3-1" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-1"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-7" aria-expanded="false" aria-controls="flush-7">
+                      1. Usage
+                    </button>
+                  </h2>
+                  <div id="flush-7" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Purpose:</strong> DDL commands define or modify the structure of database objects (tables, schemas, indexes, etc.).</li>
+                            <li><strong>Key points:</strong>
+                                <ul>
+                                    <li>They work on schemas/structure, not the data inside.</li>
+                                    <li>They are auto-committed in most databases (changes can’t be rolled back easily).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Examples:</strong> <code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code></li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-8" aria-expanded="false" aria-controls="flush-8">
+                       2. CREATE TABLE 
+                    </button>
+                  </h2>
+                  <div id="flush-8" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Purpose:</strong> Creates a new table with specified columns, data types, and constraints.</li>
+                            <li><strong>Syntax:</strong>
+                                <pre><code>CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    salary DECIMAL(10,2),
+    hire_date DATE);</code></pre>
+                            </li>
+                            <li><strong>Key notes:</strong>
+                                <ul>
+                                    <li>Define data type for each column.</li>
+                                    <li>Use constraints like <code>PRIMARY KEY</code>, <code>NOT NULL</code>, <code>UNIQUE</code>, <code>FOREIGN KEY</code>.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-9" aria-expanded="false" aria-controls="flush-9">
+                        3. ALTER TABLE
+                    </button>
+                  </h2>
+                  <div id="flush-9" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                    <div class="accordion-body">
+                        <ul>
+                            <li><strong>Purpose:</strong> Changes the structure of an existing table.</li>
+                            <li><strong>a) Add a column</strong>
+                                <pre><code>ALTER TABLE employees ADD department VARCHAR(30);</code></pre>
+                            </li>
+                            <li><strong>b) Modify (change type or constraints)</strong>
+                                <pre><code>ALTER TABLE employees MODIFY salary DECIMAL(12,2);</code></pre>
+                            </li>
+                            <li><strong>c) Drop a column</strong>
+                                <pre><code>ALTER TABLE employees DROP COLUMN department;</code></pre>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-10" aria-expanded="false" aria-controls="flush-10">
+                        4. DROP TABLE
+                      </button>
+                    </h2>
+                    <div id="flush-10" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">
+                        <ul>
+                            <li><strong>Purpose:</strong> Deletes the table structure and all its data permanently.</li>
+                            <li><strong>Syntax:</strong>
+                                <pre><code>DROP TABLE employees;</code></pre>
+                            </li>
+                            <li><strong>Key notes:</strong>
+                                <ul>
+                                    <li>Cannot be rolled back in most DBs.</li>
+                                    <li>Removes indexes, constraints, and triggers associated with the table.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-11" aria-expanded="false" aria-controls="flush-11">
+                        5. TRUNCATE
+                      </button>
+                    </h2>
+                    <div id="flush-11" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">
+                        <ul>
+                            <li><strong>Purpose:</strong> Removes all rows from a table but keeps the structure.</li>
+                            <li><strong>Syntax:</strong>
+                                <pre><code>TRUNCATE TABLE employees;</code></pre>
+                            </li>
+                            <li><strong>Differences from DELETE:</strong></li>
+                            <table class="table table-bordered table-hover table-striped align-middle my-2">
+                                <thead class="table-dark">
+                                    <tr>
+                                        <th>TRUNCATE</th>
+                                        <th>DELETE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Removes all rows instantly</td>
+                                        <td>Can remove specific rows with WHERE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Cannot use WHERE</td>
+                                        <td>Can use WHERE</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Resets auto-increment counter (in most DBs)</td>
+                                        <td>Does not reset</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Faster, minimal logging</td>
+                                        <td>Slower, logs each row</td>
+                                    </tr>
+                                    <tr>
+                                        <td>DDL command</td>
+                                        <td>DML command</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExample3">
+                <h3>3. Data Manipulation Language (DML)</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dml-usage" aria-expanded="false" aria-controls="flush-dml-usage">
+                        1. Usage
+                      </button>
+                    </h2>
+                    <div id="flush-dml-usage" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
+                      <div class="accordion-body">
+                        <ul>
+                          <li><strong>Purpose:</strong> DML commands manipulate the data stored inside database tables.</li>
+                          <li><strong>Key points:</strong>
+                            <ul>
+                              <li>They operate on data records, not the database structure.</li>
+                              <li>DML changes can be rolled back if used within transactions.</li>
+                              <li>Commonly used in applications to insert, update, or delete data.</li>
+                            </ul>
+                          </li>
+                          <li><strong>Examples:</strong> <code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>SELECT</code></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>                  
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-insert" aria-expanded="false" aria-controls="flush-insert">
+                      2. INSERT (single & multiple rows)
+                    </button>
+                  </h2>
+                  <div id="flush-insert" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Adds new rows into a table.</li>
+                        <li><strong>Single row insert</strong>
+                          <pre><code>INSERT INTO table_name (column1, column2) VALUES (value1, value2);</code></pre>
+                        </li>
+                        <li><strong>Multiple rows insert</strong>
+                          <pre><code>INSERT INTO table_name (column1, column2) VALUES (value1, value2), (value3, value4), (value5, value6);</code></pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-update" aria-expanded="false" aria-controls="flush-update">
+                      3. UPDATE (with and without WHERE)
+                    </button>
+                  </h2>
+                  <div id="flush-update" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Modifies existing rows in a table.</li>
+                        <li><strong>With WHERE clause (safe, updates specific rows)</strong>
+                          <pre><code>UPDATE table_name SET column1 = value1 WHERE condition;</code></pre>
+                        </li>
+                        <li><strong>Without WHERE clause (updates all rows)</strong>
+                          <pre><code>UPDATE table_name SET column1 = value1;</code></pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-delete" aria-expanded="false" aria-controls="flush-delete">
+                      4. DELETE (with and without WHERE)
+                    </button>
+                  </h2>
+                  <div id="flush-delete" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample3">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Removes rows from a table.</li>
+                        <li><strong>With WHERE clause (deletes specific rows)</strong>
+                          <pre><code>DELETE FROM table_name WHERE condition;</code></pre>
+                        </li>
+                        <li><strong>Without WHERE clause (deletes all rows)</strong>
+                          <pre><code>DELETE FROM table_name;</code></pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExample4">
+                <h3>4. Basic Queries</h3>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-select" aria-expanded="false" aria-controls="flush-select">
+                      1. SELECT (single & multiple columns)
+                    </button>
+                  </h2>
+                  <div id="flush-select" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> SELECT is used to retrieve data from a database table.</li>
+                        <li>You can select one column or multiple columns.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li>Single column: <code>SELECT name FROM employees;</code></li>
+                            <li>Multiple columns: <code>SELECT name, salary FROM employees;</code></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-alias" aria-expanded="false" aria-controls="flush-alias">
+                      2. Column aliases (AS)
+                    </button>
+                  </h2>
+                  <div id="flush-alias" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Aliases give temporary names to columns or expressions in the result for better readability.</li>
+                        <li>The keyword <code>AS</code> is used to assign an alias.</li>
+                        <li><strong>Example:</strong> <code>SELECT name AS employee_name FROM employees;</code></li>
+                        <li>The alias only affects the output, not the actual column name in the database.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-where" aria-expanded="false" aria-controls="flush-where">
+                      3. Filtering with WHERE
+                    </button>
+                  </h2>
+                  <div id="flush-where" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>The <code>WHERE</code> clause filters rows based on a condition.</li>
+                        <li>Only rows meeting the condition will be returned.</li>
+                        <li><strong>Example:</strong> <code>SELECT * FROM employees WHERE salary &gt; 50000;</code></li>
+                        <li>You can use operators like =, &gt;, &lt;, IN, LIKE, etc., in conditions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-orderby" aria-expanded="false" aria-controls="flush-orderby">
+                      4. Sorting with ORDER BY (ASC/DESC)
+                    </button>
+                  </h2>
+                  <div id="flush-orderby" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><code>ORDER BY</code> sorts the result set by one or more columns.</li>
+                        <li><strong>ASC:</strong> Ascending order (default).</li>
+                        <li><strong>DESC:</strong> Descending order.</li>
+                        <li><strong>Example:</strong> <code>SELECT * FROM employees ORDER BY salary DESC;</code> (highest salary first)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-limit" aria-expanded="false" aria-controls="flush-limit">
+                      5. Limiting results (LIMIT / TOP)
+                    </button>
+                  </h2>
+                  <div id="flush-limit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample4">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Limits how many rows are returned by the query.</li>
+                        <li>In MySQL/PostgreSQL use <code>LIMIT</code>.</li>
+                        <li>In SQL Server use <code>TOP</code>.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li>MySQL: <code>SELECT * FROM employees LIMIT 10;</code> (first 10 rows)</li>
+                            <li>SQL Server: <code>SELECT TOP 10 * FROM employees;</code> (first 10 rows)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExample5">
+                <h3>5. Aggregate Functions</h3>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-intro" aria-expanded="false" aria-controls="flush-intro">
+                        1. Usage
+                      </button>
+                    </h2>
+                    <div id="flush-intro" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                      <div class="accordion-body">
+                        <ul>
+                            <li>Perform calculations on a set of values and return a single value. They are often used in SQL queries to summarize data.                            </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-count" aria-expanded="false" aria-controls="flush-count">
+                      2. COUNT()
+                    </button>
+                  </h2>
+                  <div id="flush-count" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Counts the number of rows or non-null values in a column.</li>
+                        <li><code>COUNT(*)</code> counts all rows including NULLs.</li>
+                        <li><code>COUNT(column_name)</code> counts rows where the column is NOT NULL.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li><code>SELECT COUNT(*) FROM employees;</code> – counts all employees.</li>
+                            <li><code>SELECT COUNT(salary) FROM employees;</code> – counts employees with a salary value.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sum" aria-expanded="false" aria-controls="flush-sum">
+                      3. SUM()
+                    </button>
+                  </h2>
+                  <div id="flush-sum" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Adds up all numeric values in a column.</li>
+                        <li>Only works with numeric data types.</li>
+                        <li><strong>Example:</strong> <code>SELECT SUM(salary) FROM employees;</code> – total of all salaries.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-avg" aria-expanded="false" aria-controls="flush-avg">
+                      4. AVG()
+                    </button>
+                  </h2>
+                  <div id="flush-avg" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Calculates the average (mean) of numeric values in a column.</li>
+                        <li>Ignores NULL values.</li>
+                        <li><strong>Example:</strong> <code>SELECT AVG(salary) FROM employees;</code> – average salary.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-minmax" aria-expanded="false" aria-controls="flush-minmax">
+                      5. MIN(), MAX()
+                    </button>
+                  </h2>
+                  <div id="flush-minmax" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Return the smallest (<code>MIN()</code>) or largest (<code>MAX()</code>) value in a column.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li><code>SELECT MIN(salary) FROM employees;</code> – lowest salary.</li>
+                            <li><code>SELECT MAX(salary) FROM employees;</code> – highest salary.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-groupby" aria-expanded="false" aria-controls="flush-groupby">
+                      6. Using aggregates with GROUP BY
+                    </button>
+                  </h2>
+                  <div id="flush-groupby" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Groups rows by one or more columns so aggregates can be calculated per group.</li>
+                        <li>Every selected column must be either in <code>GROUP BY</code> or aggregated.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li><code>SELECT department, AVG(salary) FROM employees GROUP BY department;</code> – average salary per department.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-having" aria-expanded="false" aria-controls="flush-having">
+                      7. Using aggregates with HAVING
+                    </button>
+                  </h2>
+                  <div id="flush-having" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample5">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Filters groups after aggregation, based on aggregate conditions.</li>
+                        <li><code>WHERE</code> filters rows before grouping; <code>HAVING</code> filters groups after.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li><code>SELECT department, AVG(salary) FROM employees GROUP BY department HAVING AVG(salary) &gt; 50000;</code> – only departments with average salary above 50,000.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExampleJoins">
+                <h3>6. Joins</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-inner-join" aria-expanded="false" aria-controls="flush-inner-join">
+                      1. INNER JOIN
+                    </button>
+                  </h2>
+                  <div id="flush-inner-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> Returns only rows where there is a match between two tables based on the join condition.</li>
+                        <li><strong>Example:</strong> Joining <code>Employees</code> and <code>Departments</code> on <code>DepartmentID</code> returns only employees who belong to a department.</li>
+                        <li><strong>Summary:</strong> Returns matching rows only.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-left-join" aria-expanded="false" aria-controls="flush-left-join">
+                      2. LEFT JOIN (LEFT OUTER JOIN)
+                    </button>
+                  </h2>
+                  <div id="flush-left-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> Returns all rows from the <em>left</em> table, and matched rows from the right table. If no match, right table columns show <code>NULL</code>.</li>
+                        <li><strong>Example:</strong> LEFT JOIN <code>Employees</code> to <code>Departments</code> returns all employees, even if they don’t belong to a department.</li>
+                        <li><strong>Summary:</strong> All left table rows + matching right table rows (or <code>NULL</code>).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-right-join" aria-expanded="false" aria-controls="flush-right-join">
+                      3. RIGHT JOIN (RIGHT OUTER JOIN)
+                    </button>
+                  </h2>
+                  <div id="flush-right-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> Returns all rows from the <em>right</em> table, and matched rows from the left table. If no match, left table columns show <code>NULL</code>.</li>
+                        <li><strong>Example:</strong> RIGHT JOIN <code>Employees</code> to <code>Departments</code> returns all departments, even if no employees belong to them.</li>
+                        <li><strong>Summary:</strong> All right table rows + matching left table rows (or <code>NULL</code>).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-full-outer-join" aria-expanded="false" aria-controls="flush-full-outer-join">
+                      4. FULL OUTER JOIN
+                    </button>
+                  </h2>
+                  <div id="flush-full-outer-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> Returns all rows where there is a match in either left or right table. Non-matching rows appear with <code>NULL</code> in the other table’s columns.</li>
+                        <li><strong>Example:</strong> Combines results of LEFT JOIN and RIGHT JOIN, showing all employees and all departments, matched or not.</li>
+                        <li><strong>Summary:</strong> All rows from both tables + matches; unmatched parts filled with <code>NULL</code>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cross-join" aria-expanded="false" aria-controls="flush-cross-join">
+                      5. CROSS JOIN
+                    </button>
+                  </h2>
+                  <div id="flush-cross-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> Returns the Cartesian product of the two tables — every row of the first table joined with every row of the second table.</li>
+                        <li><strong>Example:</strong> If <code>Employees</code> has 3 rows and <code>Departments</code> has 2 rows, result has 3 × 2 = 6 rows.</li>
+                        <li><strong>Summary:</strong> All possible combinations of rows (no join condition).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-self-join" aria-expanded="false" aria-controls="flush-self-join">
+                      6. Self-join
+                    </button>
+                  </h2>
+                  <div id="flush-self-join" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it does:</strong> A table joins with itself to compare rows within the same table. Uses table aliases to differentiate.</li>
+                        <li><strong>Example:</strong> Find pairs of employees where one is a manager of another within the same <code>Employees</code> table.</li>
+                        <li><strong>Summary:</strong> Join a table to itself to find relationships within the same table.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-join-conditions" aria-expanded="false" aria-controls="flush-join-conditions">
+                      7. Join conditions (ON vs USING)
+                    </button>
+                  </h2>
+                  <div id="flush-join-conditions" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJoins">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>ON:</strong> Specify any condition to match rows, usually column equality. Requires qualifying column names if ambiguous.</li>
+                        <li><strong>USING:</strong> Shortcut for joining on columns with the same name in both tables. No need to qualify columns. Only works with equality.</li>
+                        <li><strong>Example ON:</strong> <code>ON A.id = B.id</code></li>
+                        <li><strong>Example USING:</strong> <code>USING (id)</code></li>
+                        <li><strong>Summary:</strong> <code>ON</code> is more flexible; <code>USING</code> is simpler but limited.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExampleSubqueries">
+                <h3>7. Subqueries</h3>
+              
+                <!-- 1. Single-row subquery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-single-row" aria-expanded="false" aria-controls="flush-single-row">
+                      1. Single-row subquery
+                    </button>
+                  </h2>
+                  <div id="flush-single-row" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSubqueries">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> A subquery that returns exactly <strong>one row</strong> of results, used with operators like <code>=</code>, <code>&lt;</code>, <code>&gt;</code>, etc.</li>
+                        <li><strong>Example:</strong>
+                          <pre><code>SELECT first_name, salary
+FROM employees
+WHERE salary &gt; (
+    SELECT salary
+    FROM employees
+    WHERE first_name = 'John');</code></pre>
+                        </li>
+                        <li><strong>Summary:</strong> Compares a value from the outer query to a single value returned by the inner query.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Multi-row subquery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-multi-row" aria-expanded="false" aria-controls="flush-multi-row">
+                      2. Multi-row subquery (IN, ANY, ALL)
+                    </button>
+                  </h2>
+                  <div id="flush-multi-row" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSubqueries">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> A subquery that returns <strong>multiple rows</strong>, used with operators like <code>IN</code>, <code>ANY</code>, and <code>ALL</code>.</li>
+                        <li><strong>IN Example:</strong>
+                          <pre><code>SELECT first_name
+FROM employees
+WHERE department_id IN (
+    SELECT department_id
+    FROM departments
+    WHERE location_id = 1700);</code></pre>
+                        </li>
+                        <li><strong>ANY Example:</strong>
+                          <pre><code>SELECT first_name, salary
+FROM employees
+WHERE salary &gt; ANY (
+    SELECT salary
+    FROM employees
+    WHERE department_id = 50);</code></pre>
+                        </li>
+                        <li><strong>ALL Example:</strong>
+                          <pre><code>SELECT first_name, salary
+FROM employees
+WHERE salary &gt; ALL (
+    SELECT salary
+    FROM employees
+    WHERE department_id = 50);</code></pre>
+                        </li>
+                        <li><strong>Summary:</strong>
+                          <ul>
+                            <li><strong>IN:</strong> Matches any value in the list.</li>
+                            <li><strong>ANY:</strong> Compares to at least one value from the list.</li>
+                            <li><strong>ALL:</strong> Compares to every value from the list.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Correlated subquery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-correlated" aria-expanded="false" aria-controls="flush-correlated">
+                      3. Correlated subquery
+                    </button>
+                  </h2>
+                  <div id="flush-correlated" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSubqueries">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> A subquery that depends on values from the outer query, executing once for each outer row.</li>
+                        <li><strong>Example:</strong>
+                          <pre><code>SELECT e.first_name, e.salary
+FROM employees e
+WHERE e.salary &gt; (
+    SELECT AVG(salary)
+    FROM employees
+    WHERE department_id = e.department_id);</code></pre>
+                        </li>
+                        <li><strong>Summary:</strong> Useful for row-by-row comparisons but can be slower due to multiple executions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Subqueries in SELECT, FROM, WHERE -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-subquery-clauses" aria-expanded="false" aria-controls="flush-subquery-clauses">
+                      4. Subqueries in SELECT, FROM, and WHERE clauses
+                    </button>
+                  </h2>
+                  <div id="flush-subquery-clauses" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSubqueries">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>In SELECT:</strong> Used to add computed values.
+                          <pre><code>SELECT first_name,
+    (SELECT department_name
+    FROM departments
+    WHERE department_id = e.department_id) AS department
+FROM employees e;</code></pre>
+                        </li>
+                        <li><strong>In FROM:</strong> Used as a derived table.
+                          <pre><code>SELECT dept_id, avg_salary
+FROM (
+    SELECT department_id AS dept_id, AVG(salary) AS avg_salary
+    FROM employees
+    GROUP BY department_id
+) dept_avg
+WHERE avg_salary &gt; 5000;</code></pre>
+                        </li>
+                        <li><strong>In WHERE:</strong> Used to filter rows.
+                          <pre><code>SELECT first_name
+FROM employees
+WHERE department_id IN (
+    SELECT department_id
+    FROM departments
+    WHERE location_id = 1700);</code></pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExampleSetOps">
+                <h3>8. Set Operations</h3>
+              
+                <!-- 1. UNION vs UNION ALL -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-union" aria-expanded="false" aria-controls="flush-union">
+                      1. UNION vs UNION ALL
+                    </button>
+                  </h2>
+                  <div id="flush-union" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSetOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Combines results of two queries. <code>UNION</code> removes duplicates, while <code>UNION ALL</code> keeps them.</li>
+                        <li><strong>Performance:</strong> <code>UNION ALL</code> is faster since it doesn’t remove duplicates.</li>
+                        <li><strong>Example:</strong></li>
+                        <pre><code>SELECT city FROM customers
+UNION
+SELECT city FROM suppliers;
+                                        
+SELECT city FROM customers
+UNION ALL
+SELECT city FROM suppliers;</code></pre>
+                      </ul>
+                      
+                      <p><strong>Comparison Table:</strong></p>
+                      <table class="table table-bordered table-striped">
+                        <thead>
+                          <tr>
+                            <th>Feature</th>
+                            <th>UNION</th>
+                            <th>UNION ALL</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Duplicates</td>
+                            <td>Removed</td>
+                            <td>Kept</td>
+                          </tr>
+                          <tr>
+                            <td>Performance</td>
+                            <td>Slower (due to sorting)</td>
+                            <td>Faster (no duplicate check)</td>
+                          </tr>
+                          <tr>
+                            <td>Use Case</td>
+                            <td>Need unique results</td>
+                            <td>Need all results including duplicates</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. INTERSECT -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-intersect" aria-expanded="false" aria-controls="flush-intersect">
+                      2. INTERSECT
+                    </button>
+                  </h2>
+                  <div id="flush-intersect" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSetOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Returns only rows present in both queries (common rows).</li>
+                        <li><strong>Duplicates:</strong> Automatically removed.</li>
+                        <li><strong>Example:</strong></li>
+                        <pre><code>SELECT city FROM customers
+INTERSECT
+SELECT city FROM suppliers;</code></pre>
+<p><strong>Note:</strong> Not supported by MySQL natively — use <code>INNER JOIN</code> or <code>IN</code> instead.</p>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. EXCEPT / MINUS -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-except" aria-expanded="false" aria-controls="flush-except">
+                      3. EXCEPT / MINUS
+                    </button>
+                  </h2>
+                  <div id="flush-except" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSetOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Returns rows from the first query that are not in the second query.</li>
+                        <li><strong>Keywords:</strong> <code>EXCEPT</code> (SQL standard) in PostgreSQL &amp; SQL Server, <code>MINUS</code> in Oracle.</li>
+                        <li><strong>Duplicates:</strong> Automatically removed.</li>
+                        <li><strong>Example:</strong></li>
+                        <pre><code>SELECT city FROM customers
+EXCEPT
+SELECT city FROM suppliers;</code></pre>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush my-3" id="accordionFlushExampleConstraints">
+                <h3>9. Constraints</h3>
+            
+                <!-- PRIMARY KEY -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-primary-key" aria-expanded="false" aria-controls="flush-primary-key">
+                            1. PRIMARY KEY
+                        </button>
+                    </h2>
+                    <div id="flush-primary-key" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> A column (or set of columns) that uniquely identifies each row in a table.</li>
+                                <li><strong>Key Points:</strong> Cannot have duplicate values or NULL, only one primary key per table, can be composite.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Users (
+    user_id INT PRIMARY KEY,
+    username VARCHAR(50));</code></pre>
+                                </li>
+                                <li>Here, user_id uniquely identifies each user.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- FOREIGN KEY -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-foreign-key" aria-expanded="false" aria-controls="flush-foreign-key">
+                            2. FOREIGN KEY
+                        </button>
+                    </h2>
+                    <div id="flush-foreign-key" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> A column in one table that refers to the PRIMARY KEY in another table.</li>
+                                <li><strong>Key Points:</strong> Ensures referential integrity, prevents invalid references, supports ON DELETE/ON UPDATE rules.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id));</code></pre>
+                                </li>
+                                <li>Here, every user_id in Orders must exist in Users.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- UNIQUE -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unique" aria-expanded="false" aria-controls="flush-unique">
+                            3. UNIQUE
+                        </button>
+                    </h2>
+                    <div id="flush-unique" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> Ensures all values in a column are different.</li>
+                                <li><strong>Key Points:</strong> Allows one NULL (in most DBs), multiple unique constraints possible.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Employees (
+    emp_id INT PRIMARY KEY,
+    email VARCHAR(100) UNIQUE);</code></pre>
+                                </li>
+                                <li>Here, no two employees can have the same email.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- NOT NULL -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-not-null" aria-expanded="false" aria-controls="flush-not-null">
+                            4. NOT NULL
+                        </button>
+                    </h2>
+                    <div id="flush-not-null" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> Ensures a column must have a value, cannot be NULL.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Products (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(100) NOT NULL);</code></pre>
+                                </li>
+                                <li>Every product must have a name.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- CHECK -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-check" aria-expanded="false" aria-controls="flush-check">
+                            5. CHECK
+                        </button>
+                    </h2>
+                    <div id="flush-check" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> Ensures values meet a condition.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Accounts (
+    account_id INT PRIMARY KEY,
+    balance DECIMAL(10,2) CHECK (balance >= 0));</code></pre>
+                                </li>
+                                <li>This prevents negative balances.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- DEFAULT -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-default" aria-expanded="false" aria-controls="flush-default">
+                            6. DEFAULT
+                        </button>
+                    </h2>
+                    <div id="flush-default" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConstraints">
+                        <div class="accordion-body">
+                            <ul>
+                                <li><strong>Definition:</strong> Assigns a value when none is provided.</li>
+                                <li><strong>Example:</strong>
+                                    <pre><code>CREATE TABLE Customers (
+    customer_id INT PRIMARY KEY,
+    country VARCHAR(50) DEFAULT 'USA');</code></pre>
+                                </li>
+                                <li>If no country is given, 'USA' is automatically used.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleIndexes">
+              <h3>10. Indexes</h3>
+            
+              <!-- 1. What is an index? -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-what-is-index" aria-expanded="false" aria-controls="flush-what-is-index">
+                    1. What is an index?
+                  </button>
+                </h2>
+                <div id="flush-what-is-index" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> A database object that stores a sorted copy of selected column(s) along with a pointer to the actual data in the table.</li>
+                      <li><strong>Purpose:</strong> Speeds up <code>SELECT</code> queries by reducing the number of rows scanned.</li>
+                      <li><strong>Trade-off:</strong> Uses extra storage and can slow down <code>INSERT</code>, <code>UPDATE</code>, and <code>DELETE</code>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Clustered vs Non-clustered -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-clustered-vs-nonclustered" aria-expanded="false" aria-controls="flush-clustered-vs-nonclustered">
+                    2. Clustered vs Non-clustered
+                  </button>
+                </h2>
+                <div id="flush-clustered-vs-nonclustered" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
+                  <div class="accordion-body">
+                    <table class="table table-bordered table-striped">
+                      <thead>
+                        <tr>
+                          <th>Feature</th>
+                          <th>Clustered Index</th>
+                          <th>Non-clustered Index</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Definition</td>
+                          <td>Sorts and stores the actual data rows in the table according to the index key.</td>
+                          <td>Stores a separate structure with the index key and a pointer to the data row.</td>
+                        </tr>
+                        <tr>
+                          <td>Data storage</td>
+                          <td>Table data is physically ordered by the clustered index.</td>
+                          <td>Data remains in the table; index just points to it.</td>
+                        </tr>
+                        <tr>
+                          <td>Number allowed</td>
+                          <td>Only 1 per table.</td>
+                          <td>Many per table (DBMS dependent).</td>
+                        </tr>
+                        <tr>
+                          <td>Access speed</td>
+                          <td>Faster for range queries.</td>
+                          <td>Slightly slower (extra lookup step).</td>
+                        </tr>
+                        <tr>
+                          <td>Example</td>
+                          <td>Primary key often defaults to clustered index.</td>
+                          <td>Index on a <code>name</code> column.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Creating and dropping indexes -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-creating-dropping" aria-expanded="false" aria-controls="flush-creating-dropping">
+                    3. Creating and dropping indexes
+                  </button>
+                </h2>
+                <div id="flush-creating-dropping" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
+                  <div class="accordion-body">
+                    <p><strong>Creating an index:</strong></p>
+                    <ul>
+                      <li><strong>Non-clustered index</strong></li>
+                      <pre><code>CREATE INDEX idx_customer_name
+ON Customers (LastName);</code></pre>
+                      <li><strong>Clustered index</strong></li>
+                      <pre><code>CREATE CLUSTERED INDEX idx_customer_id
+ON Customers (CustomerID);</code></pre>
+                    </ul>
+                    <p><strong>Dropping an index:</strong></p>
+                    <ul>
+                      <li><pre><code>DROP INDEX idx_customer_name ON Customers;</code></pre></li>
+                    </ul>
+                    <p><em>Note:</em> Some DBMS automatically create indexes for primary keys and unique constraints.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. When to use indexes (and when not to) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-when-to-use" aria-expanded="false" aria-controls="flush-when-to-use">
+                    4. When to use indexes (and when not to)
+                  </button>
+                </h2>
+                <div id="flush-when-to-use" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
+                  <div class="accordion-body">
+                    <p><strong>Use indexes when:</strong></p>
+                    <ul>
+                      <li>Columns are frequently used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code>, or <code>GROUP BY</code>.</li>
+                      <li>Querying large tables for fast lookups.</li>
+                      <li>Column has high cardinality (many unique values).</li>
+                    </ul>
+                    <p><strong>Avoid or limit indexes when:</strong></p>
+                    <ul>
+                      <li>Table is small.</li>
+                      <li>Column has low cardinality (few distinct values).</li>
+                      <li>Data changes often.</li>
+                      <li>You already have many indexes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Index impact on performance -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-performance-impact" aria-expanded="false" aria-controls="flush-performance-impact">
+                    5. Index impact on performance
+                  </button>
+                </h2>
+                <div id="flush-performance-impact" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Positive:</strong> Speeds up retrieval, reduces disk I/O.</li>
+                      <li><strong>Negative:</strong> Slows down writes (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>), consumes extra storage, unused indexes still cost resources.</li>
+                    </ul>
+                    <p><strong>Key Insight:</strong> Indexes are a trade-off — optimize reads at the cost of slower writes and extra storage.</p>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleViews">
+              <h3>11. Views</h3>
+          
+              <!-- 1. Creating a View -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-creating-view" aria-expanded="false" aria-controls="flush-creating-view">
+                          1. Creating a View
+                      </button>
+                  </h2>
+                  <div id="flush-creating-view" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleViews">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Definition:</strong> A view is a saved SQL query that acts as a virtual table. It doesn’t store data itself; it pulls from base tables when queried.</li>
+                              <li><strong>Syntax:</strong> <pre><code>CREATE VIEW view_name AS
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;</code></pre></li>
+                              <li><strong>Example:</strong> <pre><code>CREATE VIEW active_employees AS
+SELECT employee_id, first_name, last_name, department
+FROM employees
+WHERE status = 'Active';</code></pre></li>
+                              <li><strong>Benefits:</strong>
+                                  <ul>
+                                      <li>Simplifies complex queries</li>
+                                      <li>Improves security by limiting data access</li>
+                                      <li>Ensures consistency in logic</li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- 2. Updating Through a View (and Limitations) -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-updating-view" aria-expanded="false" aria-controls="flush-updating-view">
+                          2. Updating Through a View (and Limitations)
+                      </button>
+                  </h2>
+                  <div id="flush-updating-view" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleViews">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Definition:</strong> You can update data through a view if it’s updatable — meaning changes can be mapped directly to a single row in a single base table.</li>
+                              <li><strong>Updatable View Rules:</strong>
+                                  <ul>
+                                      <li>Must be based on <strong>one</strong> table</li>
+                                      <li>No aggregations (<code>SUM</code>, <code>COUNT</code>, etc.)</li>
+                                      <li>No <code>GROUP BY</code>, <code>DISTINCT</code>, <code>UNION</code>, or calculated columns</li>
+                                  </ul>
+                              </li>
+                              <li><strong>Example (Valid Update):</strong> <pre><code>CREATE VIEW employee_contact AS
+SELECT employee_id, email
+FROM employees
+WHERE status = 'Active';
+          
+UPDATE employee_contact
+SET email = 'new_email@example.com'
+WHERE employee_id = 101;</code></pre></li>
+                              <li><strong>Example (Not Updatable):</strong> <pre><code>CREATE VIEW department_summary AS
+SELECT department_id, COUNT(*) AS total_employees
+FROM employees
+GROUP BY department_id;
+          
+-- This fails:
+UPDATE department_summary
+SET total_employees = 20;</code></pre>
+                              </li>
+                              <li><strong>Reason for Limitation:</strong> The database can’t map changes from aggregated or derived data back to individual rows in the base table.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleTransactions">
+              <h3>12. Transactions</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-usage" aria-expanded="false" aria-controls="flush-usage">
+                    1. Usage
+                  </button>
+                </h2>
+                <div id="flush-usage" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> A transaction is a sequence of one or more SQL operations executed as a single unit of work.</li>
+                      <li><strong>Key Idea:</strong> Either all operations succeed (<code>COMMIT</code>) or none take effect (<code>ROLLBACK</code>).</li>
+                      <li><strong>Purpose:</strong> Helps maintain data integrity and consistency.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-begin" aria-expanded="false" aria-controls="flush-begin">
+                    2. BEGIN / START TRANSACTION
+                  </button>
+                </h2>
+                <div id="flush-begin" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Purpose:</strong> Marks the start of a transaction. All changes are temporary until committed.</li>
+                      <li><strong>Syntax:</strong> <code>BEGIN;</code> or <code>START TRANSACTION;</code></li>
+                      <li><strong>Example:</strong>
+                        <pre><code>START TRANSACTION;
+UPDATE accounts SET balance = balance - 100 WHERE account_id = 1;
+UPDATE accounts SET balance = balance + 100 WHERE account_id = 2;
+            </code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-commit" aria-expanded="false" aria-controls="flush-commit">
+                    3. COMMIT
+                  </button>
+                </h2>
+                <div id="flush-commit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Purpose:</strong> Permanently saves all changes made in the transaction.</li>
+                      <li><strong>Syntax:</strong> <code>COMMIT;</code></li>
+                      <li><strong>Example:</strong>
+                        <pre><code>COMMIT; -- Finalizes the money transfer
+            </code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rollback" aria-expanded="false" aria-controls="flush-rollback">
+                    4. ROLLBACK
+                  </button>
+                </h2>
+                <div id="flush-rollback" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Purpose:</strong> Undoes all changes in the current transaction.</li>
+                      <li><strong>Syntax:</strong> <code>ROLLBACK;</code></li>
+                      <li><strong>Example:</strong>
+                        <pre><code>ROLLBACK; -- Cancels the transfer if one update fails
+            </code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-savepoints" aria-expanded="false" aria-controls="flush-savepoints">
+                    5. Savepoints
+                  </button>
+                </h2>
+                <div id="flush-savepoints" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Purpose:</strong> Creates a checkpoint in a transaction to roll back partially.</li>
+                      <li><strong>Syntax:</strong>
+                        <ul>
+                          <li><code>SAVEPOINT savepoint_name;</code></li>
+                          <li><code>ROLLBACK TO savepoint_name;</code></li>
+                          <li><code>RELEASE SAVEPOINT savepoint_name;</code></li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong>
+                        <pre><code>START TRANSACTION;
+UPDATE products SET stock = stock - 5 WHERE id = 1;
+SAVEPOINT sp1;
+UPDATE products SET stock = stock - 3 WHERE id = 2;
+ROLLBACK TO sp1;  -- Undo only the second update
+COMMIT;
+            </code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-acid" aria-expanded="false" aria-controls="flush-acid">
+                    6. ACID Properties
+                  </button>
+                </h2>
+                <div id="flush-acid" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTransactions">
+                  <div class="accordion-body">
+                    <table class="table table-bordered table-hover table-striped align-middle">
+                      <thead class="table-light">
+                        <tr>
+                          <th>Property</th>
+                          <th>Meaning</th>
+                          <th>Example</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><strong>Atomicity</strong></td>
+                          <td>All steps succeed or none do.</td>
+                          <td>Money transfer: deduct and add must both succeed.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Consistency</strong></td>
+                          <td>Moves DB from one valid state to another, following rules.</td>
+                          <td>No negative balances allowed.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Isolation</strong></td>
+                          <td>Transactions don't interfere with each other's intermediate states.</td>
+                          <td>Two people booking the same seat won't overwrite each other.</td>
+                        </tr>
+                        <tr>
+                          <td><strong>Durability</strong></td>
+                          <td>Once committed, changes survive system failures.</td>
+                          <td>Data after <code>COMMIT</code> remains even after a crash.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushPerformance">
+              <h3>13. Performance Optimization</h3>
+            
+              <!-- 1. Query Execution Plans -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-query-exec" aria-expanded="false" aria-controls="flush-query-exec">
+                    1. Query execution plans
+                  </button>
+                </h2>
+                <div id="flush-query-exec" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> A plan (output of <code>EXPLAIN</code> / <code>EXPLAIN ANALYZE</code>) showing how the DB will execute a query — which indexes it uses, join order, scans, and row estimates.</li>
+                      <li><strong>Why it matters:</strong> Reveals costly operations (full table scans, expensive joins) so you can target optimizations.</li>
+                      <li><strong>Key points:</strong> Look for sequential scans, nested loop joins on large sets, and high estimated vs actual row counts.</li>
+                      <li><strong>Example action:</strong> If plan shows full table scan on a large table, consider adding an index or rewriting the query.</li>
+                      <li><strong>Summary:</strong> Use execution plans to find where the database spends time and guide fixes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Analyzing Slow Queries -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-analyze-slow" aria-expanded="false" aria-controls="flush-analyze-slow">
+                    2. Analyzing slow queries
+                  </button>
+                </h2>
+                <div id="flush-analyze-slow" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> The process of identifying and diagnosing queries that take too long to run.</li>
+                      <li><strong>How to start:</strong> Enable slow query logging (e.g., MySQL <code>slow_query_log</code>) or use DB monitoring tools to collect offenders.</li>
+                      <li><strong>Things to check:</strong> Execution plan, I/O, CPU, row counts, use of indexes, and whether the query returns more data than needed (e.g., <code>SELECT *</code>).</li>
+                      <li><strong>Common causes:</strong> missing/unused indexes, expensive joins/subqueries, functions on indexed columns, or network/locking issues.</li>
+                      <li><strong>Summary:</strong> Combine logs, profiling, and execution plans to find root causes and prioritize fixes.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Using Indexes Effectively -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-indexes" aria-expanded="false" aria-controls="flush-indexes">
+                    3. Using indexes effectively
+                  </button>
+                </h2>
+                <div id="flush-indexes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> Indexes are data structures that speed up lookups (like a book index) so queries can find rows without scanning the whole table.</li>
+                      <li><strong>Best practices:</strong> Index columns used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code>, and frequently filtered columns. Use composite indexes when multiple columns are commonly queried together (order matters).</li>
+                      <li><strong>Trade-offs:</strong> Indexes improve read performance but increase storage and slow writes (INSERT/UPDATE/DELETE).</li>
+                      <li><strong>Types to know:</strong> B-Tree (general), Hash (equality), Full-text (text search), and specialized index types depending on DBMS.</li>
+                      <li><strong>Summary:</strong> Add well-chosen indexes, avoid over-indexing, and monitor index usage via execution plans and DB stats.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Denormalization for Read-Heavy Workloads -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-denorm" aria-expanded="false" aria-controls="flush-denorm">
+                    4. Denormalization for read-heavy workloads
+                  </button>
+                </h2>
+                <div id="flush-denorm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> Intentionally duplicating or restructuring data (reducing normalization) to avoid expensive joins and speed up read queries.</li>
+                      <li><strong>Why use it:</strong> For systems where reads vastly outnumber writes, denormalization reduces join cost and simplifies queries.</li>
+                      <li><strong>Trade-offs:</strong> More storage, potential data inconsistency, and more complex write/update logic (you must update multiple places).</li>
+                      <li><strong>Example:</strong> Store customer name in <code>orders</code> to avoid joining <code>orders</code> to <code>customers</code> for every read.</li>
+                      <li><strong>Summary:</strong> Use denormalization selectively for read-heavy paths; pair with careful update strategies or background jobs to keep data consistent.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleDBDesign">
+              <h3>14. Database Design Concepts</h3>
+          
+              <!-- Normalization -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-normalization" aria-expanded="false" aria-controls="flush-normalization">
+                          1. Normalization (1NF, 2NF, 3NF, BCNF)
+                      </button>
+                  </h2>
+                  <div id="flush-normalization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDBDesign">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Purpose:</strong> Organize data to reduce redundancy and improve integrity.</li>
+                              <li><strong>1NF:</strong> Each column holds atomic values; no repeating groups or arrays.</li>
+                              <li><strong>2NF:</strong> In 1NF and all non-key columns depend on the entire primary key (no partial dependency).</li>
+                              <li><strong>3NF:</strong> In 2NF and no transitive dependencies; non-key columns depend only on the key.</li>
+                              <li><strong>BCNF:</strong> Stricter than 3NF; every determinant must be a candidate key.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Denormalization -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-denormalization" aria-expanded="false" aria-controls="flush-denormalization">
+                          2. Denormalization
+                      </button>
+                  </h2>
+                  <div id="flush-denormalization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDBDesign">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Purpose:</strong> Intentionally add redundancy to improve read performance.</li>
+                              <li><strong>Use Case:</strong> High-read workloads where joins are expensive.</li>
+                              <li><strong>Trade-off:</strong> Faster reads but slower writes and possible inconsistency.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- ER Diagrams -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-er-diagrams" aria-expanded="false" aria-controls="flush-er-diagrams">
+                          3. ER Diagrams
+                      </button>
+                  </h2>
+                  <div id="flush-er-diagrams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDBDesign">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Purpose:</strong> Visual representation of database structure.</li>
+                              <li><strong>Components:</strong> 
+                                  <ul>
+                                      <li><strong>Entities:</strong> Tables (e.g., <code>Customer</code>, <code>Order</code>).</li>
+                                      <li><strong>Attributes:</strong> Columns (e.g., <code>name</code>, <code>order_date</code>).</li>
+                                      <li><strong>Relationships:</strong> Links between entities.</li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Relationships -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-relationships" aria-expanded="false" aria-controls="flush-relationships">
+                          4. Relationships (One-to-One, One-to-Many, Many-to-Many)
+                      </button>
+                  </h2>
+                  <div id="flush-relationships" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDBDesign">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>One-to-One:</strong> Each record in one table relates to exactly one in another. Example: <code>User</code> ↔ <code>UserProfile</code>.</li>
+                              <li><strong>One-to-Many:</strong> One record in a table can relate to many in another. Example: <code>Customer</code> → <code>Orders</code>.</li>
+                              <li><strong>Many-to-Many:</strong> Records in both tables can relate to many in the other; requires a junction table. Example: <code>Students</code> ↔ <code>Courses</code> via <code>StudentCourse</code>.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- Surrogate Keys vs Natural Keys -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-keys" aria-expanded="false" aria-controls="flush-keys">
+                          5. Surrogate Keys vs Natural Keys
+                      </button>
+                  </h2>
+                  <div id="flush-keys" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDBDesign">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Surrogate Key:</strong> Artificial key (e.g., auto-increment ID) with no business meaning.</li>
+                              <li><strong>Natural Key:</strong> Real-world business identifier (e.g., email, SSN).</li>
+                          </ul>
+                          <table class="table table-bordered table-sm mt-3">
+                              <thead>
+                                  <tr>
+                                      <th>Aspect</th>
+                                      <th>Surrogate Key</th>
+                                      <th>Natural Key</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td>Stability</td>
+                                      <td>Stable</td>
+                                      <td>May change if business rules change</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Size</td>
+                                      <td>Usually small</td>
+                                      <td>Can be long</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Performance</td>
+                                      <td>Fast joins</td>
+                                      <td>Slower joins</td>
+                                  </tr>
+                                  <tr>
+                                      <td>Meaning</td>
+                                      <td>None</td>
+                                      <td>Has business meaning</td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleSecurity">
+              <h3>15. Security & Access Control</h3>
+          
+              <!-- 1. User Roles & Privileges -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-user-roles" aria-expanded="false" aria-controls="flush-user-roles">
+                          1. User Roles & Privileges
+                      </button>
+                  </h2>
+                  <div id="flush-user-roles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Definition:</strong> 
+                                  <ul>
+                                      <li><strong>Roles:</strong> Groups of permissions assigned to users to simplify management.</li>
+                                      <li><strong>Privileges:</strong> Specific rights to perform certain actions in the database (e.g., <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>).</li>
+                                  </ul>
+                              </li>
+                              <li><strong>Types of privileges:</strong>
+                                  <ul>
+                                      <li><strong>System privileges:</strong> Database-wide actions like <code>CREATE USER</code>, <code>BACKUP DATABASE</code>.</li>
+                                      <li><strong>Object privileges:</strong> Access to specific database objects (tables, views, etc.).</li>
+                                  </ul>
+                              </li>
+                              <li><strong>Example:</strong>
+                                  <pre><code>CREATE ROLE reporting_user;
+          GRANT SELECT ON sales TO reporting_user;
+          GRANT reporting_user TO john_doe;</code></pre>
+                              </li>
+                              <li><strong>Key point:</strong> Roles make privilege management easier by assigning to multiple users at once.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- 2. GRANT & REVOKE -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-grant-revoke" aria-expanded="false" aria-controls="flush-grant-revoke">
+                          2. GRANT & REVOKE
+                      </button>
+                  </h2>
+                  <div id="flush-grant-revoke" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>Purpose:</strong> 
+                                  <ul>
+                                      <li><code>GRANT</code>: Give a user or role specific privileges.</li>
+                                      <li><code>REVOKE</code>: Remove previously granted privileges.</li>
+                                  </ul>
+                              </li>
+                              <li><strong>Example:</strong>
+                                  <pre><code>GRANT SELECT, INSERT ON employees TO user1;
+          REVOKE INSERT ON employees FROM user1;</code></pre>
+                              </li>
+                              <li><strong>With grant option:</strong> Allows a user to grant the same privilege to others.
+                                  <pre><code>GRANT SELECT ON employees TO user1 WITH GRANT OPTION;</code></pre>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          
+              <!-- 3. SQL Injection Prevention (Prepared Statements) -->
+              <div class="accordion-item">
+                  <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sql-injection" aria-expanded="false" aria-controls="flush-sql-injection">
+                          3. SQL Injection Prevention (Prepared Statements)
+                      </button>
+                  </h2>
+                  <div id="flush-sql-injection" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                      <div class="accordion-body">
+                          <ul>
+                              <li><strong>SQL Injection:</strong> A vulnerability where attackers inject malicious SQL to manipulate database queries.</li>
+                              <li><strong>Example of a vulnerable query:</strong>
+                                  <pre><code>"SELECT * FROM users WHERE username = '" + userInput + "';"</code></pre>
+                              </li>
+                              <li><strong>Prepared statements solution:</strong>
+                                  <ul>
+                                      <li>Use placeholders instead of string concatenation.</li>
+                                      <li>Database treats input as data, not executable SQL.</li>
+                                  </ul>
+                              </li>
+                              <li><strong>Why it works:</strong> Prevents malicious input from altering query structure and improves performance.</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleSQLBackend">
+              <h3>16. SQL in Backend Development</h3>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingParamQueries">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseParamQueries" aria-expanded="false" aria-controls="collapseParamQueries">
+                    1. Writing parameterized queries in Java (JDBC, Spring Data JPA)
+                  </button>
+                </h2>
+                <div id="collapseParamQueries" class="accordion-collapse collapse" aria-labelledby="headingParamQueries" data-bs-parent="#accordionFlushExampleSQLBackend">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> SQL statements using placeholders instead of direct values.</li>
+                      <li><strong>Why use them:</strong> Prevent SQL injection, improve query reuse, boost performance.</li>
+                      <li><strong>JDBC Example:</strong> 
+                        <pre><code>String sql = "SELECT * FROM users WHERE email = ?";
+PreparedStatement stmt = connection.prepareStatement(sql);
+stmt.setString(1, "user@example.com");
+ResultSet rs = stmt.executeQuery();</code></pre>
+                      </li>
+                      <li><strong>Spring Data JPA Example (Named parameter):</strong> 
+                        <pre><code>@Query("SELECT u FROM User u WHERE u.email = :email")
+User findByEmail(@Param("email") String email);</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNamedQueries">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNamedQueries" aria-expanded="false" aria-controls="collapseNamedQueries">
+                    2. Named queries
+                  </button>
+                </h2>
+                <div id="collapseNamedQueries" class="accordion-collapse collapse" aria-labelledby="headingNamedQueries" data-bs-parent="#accordionFlushExampleSQLBackend">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Predefined, reusable queries declared with a name.</li>
+                      <li><strong>Why use them:</strong> Centralized query management, cleaner code, better readability.</li>
+                      <li><strong>Example in Entity class:</strong>
+                        <pre><code>@NamedQuery(
+name = "User.findByEmail",
+query = "SELECT u FROM User u WHERE u.email = :email")</code></pre>
+                      </li>
+                      <li><strong>Usage:</strong>
+                        <pre><code>entityManager.createNamedQuery("User.findByEmail", User.class)
+.setParameter("email", "user@example.com")
+.getResultList();</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingCriteriaAPI">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseCriteriaAPI" aria-expanded="false" aria-controls="collapseCriteriaAPI">
+                    3. Criteria API
+                  </button>
+                </h2>
+                <div id="collapseCriteriaAPI" class="accordion-collapse collapse" aria-labelledby="headingCriteriaAPI" data-bs-parent="#accordionFlushExampleSQLBackend">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Java-based, type-safe dynamic query builder.</li>
+                      <li><strong>Why use it:</strong> Handles dynamic filters, avoids string query typos.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>CriteriaBuilder cb = entityManager.getCriteriaBuilder();
+CriteriaQuery<User> cq = cb.createQuery(User.class);
+Root<User> root = cq.from(User.class);
+cq.where(cb.equal(root.get("email"), "user@example.com"));
+List<User> users = entityManager.createQuery(cq).getResultList();</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTransactions">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTransactions" aria-expanded="false" aria-controls="collapseTransactions">
+                    4. Transactions in Spring Boot (@Transactional)
+                  </button>
+                </h2>
+                <div id="collapseTransactions" class="accordion-collapse collapse" aria-labelledby="headingTransactions" data-bs-parent="#accordionFlushExampleSQLBackend">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Unit of work ensuring all DB operations succeed or all fail.</li>
+                      <li><strong>Why use it:</strong> Maintains data consistency, prevents partial updates.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>@Transactional
+public void placeOrder(Order order, Payment payment) {
+    orderRepository.save(order);
+    paymentRepository.save(payment);
+}</code></pre>
+                      </li>
+                      <li><strong>Key points:</strong> Automatic rollback on exceptions, supports isolation and propagation settings.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNestSQL">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNestSQL" aria-expanded="false" aria-controls="collapseNestSQL">
+                    5. SQL in NestJS (TypeORM / Prisma)
+                  </button>
+                </h2>
+                <div id="collapseNestSQL" class="accordion-collapse collapse" aria-labelledby="headingNestSQL" data-bs-parent="#accordionFlushExampleSQLBackend">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>TypeORM:</strong> ORM for TypeScript, supports repositories and query builders.</li>
+                      <li><strong>TypeORM Repository Example:</strong>
+                        <pre><code>this.userRepo.findOne({ where: { email } });</code></pre>
+                      </li>
+                      <li><strong>TypeORM Query Builder Example:</strong>
+                        <pre><code>this.userRepo.createQueryBuilder("user")
+.where("user.email = :email", { email: "test@example.com" })
+.getOne();</code></pre>
+                      </li>
+                      <li><strong>Prisma:</strong> Next-gen TypeScript ORM with autogenerated types, simple CRUD.</li>
+                      <li><strong>Prisma Example:</strong>
+                        <pre><code>prisma.user.findUnique({
+  where: { email: "test@example.com" }
+});</code></pre>
+                      </li>
+                      <li><strong>Use in NestJS:</strong> Both integrate easily; TypeORM offers more control, Prisma offers fast development with type safety.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleRestBasics">
+                <h3>1. REST Basics</h3>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-rest">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rest" aria-expanded="false" aria-controls="flush-rest">
+                      1. What is REST? (Representational State Transfer)
+                    </button>
+                  </h2>
+                  <div id="flush-rest" class="accordion-collapse collapse" aria-labelledby="flush-heading-rest" data-bs-parent="#accordionFlushExampleRestBasics">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <p>REST is an architectural style for designing networked applications, especially web services. It defines a set of principles for creating scalable, simple, and flexible APIs. RESTful APIs use standard HTTP methods and work with resources identified by URLs (Uniform Resource Locators). Each resource can have multiple representations (like JSON, XML, HTML).</p>
+                            </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-rest-constraints">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rest-constraints" aria-expanded="false" aria-controls="flush-rest-constraints">
+                      2. REST Constraints
+                    </button>
+                  </h2>
+                  <div id="flush-rest-constraints" class="accordion-collapse collapse" aria-labelledby="flush-heading-rest-constraints" data-bs-parent="#accordionFlushExampleRestBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Client-Server Separation:</strong> The client (frontend) and server (backend) are separate entities. The client is responsible for the user interface and user experience, while the server handles data storage and business logic. This separation allows each to evolve independently.</li>
+                        <li><strong>Statelessness:</strong> Every HTTP request must contain all information needed to understand and process it. The server does not store client context between requests, improving scalability and simplicity.</li>
+                        <li><strong>Cacheable Responses:</strong> Server responses specify whether they are cacheable, allowing clients or intermediaries to reuse responses and improve performance.</li>
+                        <li><strong>Layered System:</strong> The architecture can include multiple intermediaries (proxies, gateways) between client and server, without client awareness. This improves scalability and security.</li>
+                        <li><strong>Uniform Interface:</strong> Interaction between client and server is standardized and consistent, involving resource identification, manipulation through representations, self-descriptive messages, and optionally hypermedia (HATEOAS).</li>
+                        <li><strong>Optional: Code on Demand:</strong> Servers can optionally send executable code (like JavaScript) to clients to extend functionality temporarily.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-rest-vs-soap">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rest-vs-soap" aria-expanded="false" aria-controls="flush-rest-vs-soap">
+                      3. REST vs SOAP
+                    </button>
+                  </h2>
+                  <div id="flush-rest-vs-soap" class="accordion-collapse collapse" aria-labelledby="flush-heading-rest-vs-soap" data-bs-parent="#accordionFlushExampleRestBasics">
+                    <div class="accordion-body">
+                      <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th>Aspect</th>
+                            <th>REST</th>
+                            <th>SOAP</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Protocol</td>
+                            <td>Uses HTTP, URL, and other protocols</td>
+                            <td>Uses only XML-based messaging over HTTP, SMTP, etc.</td>
+                          </tr>
+                          <tr>
+                            <td>Message Format</td>
+                            <td>Flexible (JSON, XML, HTML, plain text)</td>
+                            <td>Strict XML</td>
+                          </tr>
+                          <tr>
+                            <td>Complexity</td>
+                            <td>Simpler, lightweight</td>
+                            <td>More complex with strict standards</td>
+                          </tr>
+                          <tr>
+                            <td>State</td>
+                            <td>Stateless by design</td>
+                            <td>Can be stateless or stateful</td>
+                          </tr>
+                          <tr>
+                            <td>Performance</td>
+                            <td>Faster due to lighter payloads</td>
+                            <td>Slower due to heavy XML processing</td>
+                          </tr>
+                          <tr>
+                            <td>Use Case</td>
+                            <td>Web and mobile APIs</td>
+                            <td>Enterprise applications needing high security and transactional reliability</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-heading-http-methods">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-http-methods" aria-expanded="false" aria-controls="flush-http-methods">
+                      4. HTTP Methods &amp; Their Purpose
+                    </button>
+                  </h2>
+                  <div id="flush-http-methods" class="accordion-collapse collapse" aria-labelledby="flush-heading-http-methods" data-bs-parent="#accordionFlushExampleRestBasics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>GET:</strong> Retrieve data from the server. Should not modify data. Idempotent and safe.</li>
+                        <li><strong>POST:</strong> Create a new resource or submit data to the server. Not idempotent.</li>
+                        <li><strong>PUT:</strong> Update or replace an existing resource completely. Idempotent.</li>
+                        <li><strong>PATCH:</strong> Partially update an existing resource. Not necessarily idempotent.</li>
+                        <li><strong>DELETE:</strong> Remove a resource. Idempotent.</li>
+                        <li><strong>OPTIONS:</strong> Request information about communication options available for a resource (e.g., supported methods). Useful for CORS preflight.</li>
+                        <li><strong>HEAD:</strong> Similar to GET but only retrieves headers, no body. Useful to check if resource exists or for metadata without full content transfer.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleAPI">
+                <h3>2. API Endpoints &amp; Naming Conventions</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-resource-naming" aria-expanded="false" aria-controls="flush-resource-naming">
+                      1. Resource Naming Best Practices
+                    </button>
+                  </h2>
+                  <div id="flush-resource-naming" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAPI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Use Nouns, Not Verbs</strong><br>
+                          Endpoints should represent resources (things or entities), not actions. Use nouns to describe what the API exposes.<br>
+                          <em>Example:</em> Use <code>/users</code> instead of <code>/getUsers</code> or <code>/createUser</code>.
+                        </li>
+                        <li><strong>Use Plural Names</strong><br>
+                          Use plural nouns to represent collections of resources. This keeps naming consistent and clear.<br>
+                          <em>Example:</em> <code>/products</code> for a list of products, <code>/orders</code> for multiple orders.
+                        </li>
+                        <li><strong>Use Nested Resources for Relationships</strong><br>
+                          When resources are logically related, nest the dependent resource under the parent resource to show hierarchy.<br>
+                          <em>Example:</em> <code>/users/{id}/orders</code> to represent orders belonging to a specific user.
+                        </li>
+                        <li><strong>Use Query Parameters for Filtering and Sorting</strong><br>
+                          Use query parameters to filter, sort, or paginate collections without adding complexity to the path.<br>
+                          <em>Example:</em> <code>/products?category=books&amp;sort=price</code> filters products by category and sorts by price.
+                        </li>
+                        <li><strong>Use Path Parameters to Identify Specific Resources</strong><br>
+                          Use path parameters to specify individual resources clearly.<br>
+                          <em>Example:</em> <code>/users/{id}</code> where <code>{id}</code> is a placeholder for the user ID.
+                        </li>
+                        <li><strong>Avoid Deep Nesting</strong><br>
+                          Deeply nested URLs can become hard to read and maintain. Limit nesting to 2 levels generally. If more complex relationships exist, consider other approaches like query parameters or separate endpoints.<br>
+                          <em>Example:</em> Avoid <code>/users/{userId}/orders/{orderId}/items/{itemId}</code> if possible.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-versioning-strategies" aria-expanded="false" aria-controls="flush-versioning-strategies">
+                      2. Versioning Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-versioning-strategies" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAPI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>URI Versioning</strong><br>
+                          Include the API version in the URI path to clearly separate versions. Easy to understand and use.<br>
+                          <em>Example:</em> <code>/v1/users</code>, <code>/v2/users</code>
+                        </li>
+                        <li><strong>Header-Based Versioning</strong><br>
+                          Specify the version in a custom request header (e.g., Accept header). Keeps URLs clean but requires clients to manage headers correctly.<br>
+                          <em>Example:</em> <code>Accept: application/vnd.example.v1+json</code>
+                        </li>
+                        <li><strong>Query Parameter Versioning</strong><br>
+                          Pass the version as a query parameter in the URL. Simple but less explicit than URI versioning.<br>
+                          <em>Example:</em> <code>/users?version=1</code>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleHTTPStatus">
+                <h3>3. HTTP Status Codes</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-2xx-success" aria-expanded="false" aria-controls="flush-2xx-success">
+                      1. 2xx Success
+                    </button>
+                  </h2>
+                  <div id="flush-2xx-success" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> The client’s request was successfully received, understood, and accepted.</li>
+                        <li><strong>Common Examples:</strong>
+                          <ul>
+                            <li><code>200 OK</code>: Request succeeded and response contains requested data.</li>
+                            <li><code>201 Created</code>: Resource successfully created (usually after POST).</li>
+                            <li><code>204 No Content</code>: Request succeeded but no content to return (e.g., after DELETE).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-3xx-redirection" aria-expanded="false" aria-controls="flush-3xx-redirection">
+                      2. 3xx Redirection
+                    </button>
+                  </h2>
+                  <div id="flush-3xx-redirection" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Further action needed by the client to complete the request, usually to follow a redirect.</li>
+                        <li><strong>Common Examples:</strong>
+                          <ul>
+                            <li><code>301 Moved Permanently</code>: Resource permanently moved to new URL.</li>
+                            <li><code>302 Found</code>: Resource temporarily resides under a different URL.</li>
+                            <li><code>304 Not Modified</code>: Resource has not changed; client can use cached version.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-4xx-client-errors" aria-expanded="false" aria-controls="flush-4xx-client-errors">
+                      3. 4xx Client Errors
+                    </button>
+                  </h2>
+                  <div id="flush-4xx-client-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Errors caused by invalid or incorrect client requests.</li>
+                        <li><strong>Common Examples:</strong>
+                          <ul>
+                            <li><code>400 Bad Request</code>: Invalid syntax in request.</li>
+                            <li><code>401 Unauthorized</code>: Authentication required or failed.</li>
+                            <li><code>403 Forbidden</code>: Authenticated but no permission.</li>
+                            <li><code>404 Not Found</code>: Resource does not exist.</li>
+                            <li><code>409 Conflict</code>: Request conflicts with current resource state.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-5xx-server-errors" aria-expanded="false" aria-controls="flush-5xx-server-errors">
+                      4. 5xx Server Errors
+                    </button>
+                  </h2>
+                  <div id="flush-5xx-server-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Server failed to fulfill a valid request due to internal issues.</li>
+                        <li><strong>Common Examples:</strong>
+                          <ul>
+                            <li><code>500 Internal Server Error</code>: Generic unexpected server error.</li>
+                            <li><code>502 Bad Gateway</code>: Invalid response from upstream server.</li>
+                            <li><code>503 Service Unavailable</code>: Server overloaded or down for maintenance.</li>
+                            <li><code>504 Gateway Timeout</code>: No timely response from upstream server.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleRequestResponse">
+                <h3>4. Request &amp; Response Formats</h3>
+              
+                <!-- JSON as Standard Format -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-json-format" aria-expanded="false" aria-controls="flush-json-format">
+                      1. JSON as Standard Format
+                    </button>
+                  </h2>
+                  <div id="flush-json-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> JSON (JavaScript Object Notation) is the most common format for sending and receiving data in REST APIs.</li>
+                        <li><strong>Why it’s used:</strong> Lightweight, human-readable, easy for machines to parse, supported by most programming languages.</li>
+                        <li><strong>Example:</strong>
+                          <pre><code>{
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@example.com"
+}</code></pre>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- XML (Optional) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-xml-format" aria-expanded="false" aria-controls="flush-xml-format">
+                     2. XML (Optional)
+                    </button>
+                  </h2>
+                  <div id="flush-xml-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> XML (Extensible Markup Language) is another format for data exchange.</li>
+                        <li><strong>Why it’s used:</strong> Useful for integrating with legacy systems or systems requiring structured markup.</li>
+                        <li><strong>Example:</strong>
+                          <pre><code>&lt;user&gt;
+    &lt;id&gt;1&lt;/id&gt;
+    &lt;name&gt;John Doe&lt;/name&gt;
+    &lt;email&gt;john@example.com&lt;/email&gt;
+&lt;/user&gt;</code></pre>
+                        </li>
+                        <li><strong>Note:</strong> JSON is preferred today, but XML support can be optional.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Headers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-headers" aria-expanded="false" aria-controls="flush-headers">
+                      3. Headers
+                    </button>
+                  </h2>
+                  <div id="flush-headers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Content-Type:</strong> Tells the server the format of the request body.
+                          <br><em>Example:</em> <code>Content-Type: application/json</code>, <code>Content-Type: application/xml</code>
+                        </li>
+                        <li><strong>Accept:</strong> Tells the server the format expected in the response.
+                          <br><em>Example:</em> <code>Accept: application/json</code>, <code>Accept: application/xml</code>
+                        </li>
+                        <li><strong>Authorization:</strong> Sends authentication credentials so the API can verify the client.
+                          <br><em>Example:</em> <code>Authorization: Bearer &lt;token&gt;</code>, <code>Authorization: Basic &lt;base64encoded&gt;</code>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Response Structure -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-response-structure" aria-expanded="false" aria-controls="flush-response-structure">
+                      4. Response Structure
+                    </button>
+                  </h2>
+                  <div id="flush-response-structure" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Pagination Formats:</strong> Manage large datasets by splitting them into smaller chunks.</li>
+                        <li><strong>Limit &amp; Offset:</strong>
+                          <br><em>Definition:</em> <code>limit</code> = number of items to return, <code>offset</code> = how many items to skip.
+                          <br><em>Example:</em> <code>/products?limit=10&amp;offset=20</code> → 10 products starting from the 21st.
+                        </li>
+                        <li><strong>Page &amp; Size:</strong>
+                          <br><em>Definition:</em> <code>page</code> = which page of results, <code>size</code> = number of items per page.
+                          <br><em>Example:</em> <code>/products?page=3&amp;size=10</code> → 10 products from page 3.
+                        </li>
+                        <li><strong>Best Practice:</strong> Always return pagination metadata (total items, total pages, current page).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleErrorHandling">
+                <h3>5. Error Handling</h3>
+              
+                <!-- Consistent Error Response Format -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-consistent-error-format" aria-expanded="false" aria-controls="flush-consistent-error-format">
+                      1. Consistent Error Response Format
+                    </button>
+                  </h2>
+                  <div id="flush-consistent-error-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> All API error responses should follow a standard structure so clients can easily parse and handle them.</li>
+                        <li><strong>Example:</strong>
+                          <pre><code>{
+    "timestamp": "2025-08-09T12:34:56Z",
+    "status": 400,
+    "error": "Bad Request",
+    "message": "Invalid email format",
+    "path": "/users"
+}</code></pre>
+                        </li>
+                        <li><strong>Why:</strong> Improves debugging, ensures predictable client-side behavior, and makes integration smoother.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Custom Exception Classes -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-custom-exception-classes" aria-expanded="false" aria-controls="flush-custom-exception-classes">
+                      2. Custom Exception Classes
+                    </button>
+                  </h2>
+                  <div id="flush-custom-exception-classes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Create specific exception classes to represent different error scenarios in your application.</li>
+                        <li><strong>Why:</strong> Helps differentiate between types of errors (e.g., <code>UserNotFoundException</code>, <code>InvalidInputException</code>) and makes code more readable and maintainable.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Validation Errors (400 Bad Request) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-validation-errors" aria-expanded="false" aria-controls="flush-validation-errors">
+                      3. Validation Errors (400 Bad Request)
+                    </button>
+                  </h2>
+                  <div id="flush-validation-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Returned when the client sends data that fails validation rules.</li>
+                        <li><strong>Example:</strong> Missing required fields, invalid formats, or out-of-range values.</li>
+                        <li><strong>Why:</strong> Clearly informs the client what’s wrong so they can fix the request.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Global Exception Handlers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-global-exception-handlers" aria-expanded="false" aria-controls="flush-global-exception-handlers">
+                      4. Global Exception Handlers
+                    </button>
+                  </h2>
+                  <div id="flush-global-exception-handlers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Spring Boot: <code>@ControllerAdvice</code></strong>
+                          <br><em>Definition:</em> A class annotated with <code>@ControllerAdvice</code> can catch and handle exceptions globally across all controllers.
+                          <br><em>Why:</em> Centralizes error handling, avoids duplicate try/catch blocks.
+                        </li>
+                        <li><strong>NestJS: <code>ExceptionFilter</code></strong>
+                          <br><em>Definition:</em> A class implementing <code>ExceptionFilter</code> can intercept and format exceptions across the application.
+                          <br><em>Why:</em> Ensures consistent error responses and clean controller code.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleAuth">
+                <h3>6. Authentication & Authorization</h3>
+            
+                <!-- Token-based authentication -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-token-auth" aria-expanded="false" aria-controls="flush-token-auth">
+                            1. Token-based authentication
+                        </button>
+                    </h2>
+                    <div id="flush-token-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
+                        <div class="accordion-body">
+                            Authentication method where the server issues a token after verifying user credentials.
+                            <ul>
+                                <li>Token is sent in subsequent requests, usually in the Authorization header.</li>
+                                <li>Stateless – server does not store session data.</li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    1. JWT (JSON Web Token)
+                                    <ul>
+                                        <li>A compact, URL-safe token format containing claims about the user.</li>
+                                        <li>Structure: Header, Payload, Signature.</li>
+                                        <li>Commonly used for API authentication.</li>
+                                        <li>Signed to ensure integrity, can be verified without contacting the issuer.</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    2. Refresh tokens
+                                    <ul>
+                                        <li>Used to obtain a new access token without re-authenticating the user.</li>
+                                        <li>Stored securely (not in local storage).</li>
+                                        <li>Helps maintain long-lived sessions.</li>
+                                        <li>Usually has longer expiration than access tokens.</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- OAuth2 basics -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-oauth2" aria-expanded="false" aria-controls="flush-oauth2">
+                            2. OAuth2 basics
+                        </button>
+                    </h2>
+                    <div id="flush-oauth2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
+                        <div class="accordion-body">
+                            Open standard for delegated authorization.
+                            <ul>
+                                <li>Allows applications to access resources on behalf of a user.</li>
+                                <li>Common flows: Authorization Code, Client Credentials, Implicit, Password.</li>
+                                <li>Used by platforms like Google, Facebook for third-party login.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- API keys -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-api-keys" aria-expanded="false" aria-controls="flush-api-keys">
+                            3. API keys
+                        </button>
+                    </h2>
+                    <div id="flush-api-keys" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
+                        <div class="accordion-body">
+                            Simple token used to identify and authenticate an application or user.
+                            <ul>
+                                <li>Often sent in request headers or query parameters.</li>
+                                <li>Should be kept secret and rotated periodically.</li>
+                                <li>Not as secure as JWT or OAuth2 if exposed.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- RBAC -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-rbac" aria-expanded="false" aria-controls="flush-rbac">
+                            4. Role-based access control (RBAC)
+                        </button>
+                    </h2>
+                    <div id="flush-rbac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
+                        <div class="accordion-body">
+                            Access control method based on user roles.
+                            <ul>
+                                <li>Roles define permissions to perform certain actions.</li>
+                                <li>Common in enterprise applications.</li>
+                                <li>Example: Admin can delete users, while User cannot.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            
+                <!-- CORS -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-cors" aria-expanded="false" aria-controls="flush-cors">
+                            5. CORS handling (Access-Control-Allow-Origin)
+                        </button>
+                    </h2>
+                    <div id="flush-cors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
+                        <div class="accordion-body">
+                            Mechanism to allow restricted resources on a web page to be accessed from another domain.
+                            <ul>
+                                <li><code>Access-Control-Allow-Origin</code> specifies allowed origins.</li>
+                                <li>Prevents unauthorized cross-domain requests.</li>
+                                <li>Important for securing APIs consumed by browsers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExamplePagination">
+              <h3>7. API Pagination, Sorting, Filtering & HATEOAS</h3>
+            
+              <!-- 1. Query parameters for pagination -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-pagination" aria-expanded="false" aria-controls="flush-pagination">
+                    1. Query parameters for pagination (page, size)
+                  </button>
+                </h2>
+                <div id="flush-pagination" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Pagination means splitting large sets of results into smaller, more manageable pages.</li>
+                      <li><strong>How it works:</strong> Send query parameters in the request URL to control which page and how many items per page are returned.</li>
+                      <li><strong>Common parameters:</strong>
+                        <ul>
+                          <li><code>page</code> → Which page to fetch (starting from 1 or 0 depending on design).</li>
+                          <li><code>size</code> → Number of items per page.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong> <code>GET /products?page=2&size=20</code> → Fetch the second page of products, each page having 20 items.</li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Reduces server load and response size.</li>
+                          <li>Improves client performance.</li>
+                          <li>Helps in infinite scrolling or "load more" patterns.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Sorting -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sorting" aria-expanded="false" aria-controls="flush-sorting">
+                    2. Sorting (sort=field,asc)
+                  </button>
+                </h2>
+                <div id="flush-sorting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Sorting controls the order of returned results.</li>
+                      <li><strong>How it works:</strong> Pass a sort parameter in <code>field,direction</code> format.</li>
+                      <li><strong>Direction options:</strong>
+                        <ul>
+                          <li><code>asc</code> → Ascending order</li>
+                          <li><code>desc</code> → Descending order</li>
+                        </ul>
+                      </li>
+                      <li><strong>Examples:</strong>
+                        <ul>
+                          <li><code>GET /products?sort=price,asc</code> → Products sorted by price ascending.</li>
+                          <li><code>GET /users?sort=lastName,desc</code> → Users sorted by last name descending.</li>
+                          <li><code>GET /products?sort=category,asc&sort=price,desc</code> → Multiple sorting fields.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Filtering -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-filtering" aria-expanded="false" aria-controls="flush-filtering">
+                    3. Filtering (status=active, category=books)
+                  </button>
+                </h2>
+                <div id="flush-filtering" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Filtering lets clients narrow results to only those matching specific criteria.</li>
+                      <li><strong>How it works:</strong> Query parameters represent filters, with each filter key matching a field in the dataset.</li>
+                      <li><strong>Examples:</strong>
+                        <ul>
+                          <li><code>GET /orders?status=active</code> → Only active orders.</li>
+                          <li><code>GET /products?category=books&priceLessThan=20</code> → Books under $20.</li>
+                          <li><code>GET /users?ageGt=18&country=US</code> → Advanced filtering with operators like <code>gt</code>, <code>lt</code>, <code>in</code>.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. HATEOAS -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-hateoas" aria-expanded="false" aria-controls="flush-hateoas">
+                    4. HATEOAS (Hypermedia as the Engine of Application State)
+                  </button>
+                </h2>
+                <div id="flush-hateoas" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> A REST principle where the API provides links in responses to guide the client on possible next actions.</li>
+                      <li><strong>Why:</strong> Makes APIs more discoverable and removes the need for clients to hardcode URL paths.</li>
+                      <li><strong>How it works:</strong> The API returns hypermedia links (often in <code>_links</code> field) along with resource data.</li>
+                      <li><strong>Example response:</strong>
+                        <pre><code>{
+  "id": 123,
+  "title": "REST API Design",
+  "status": "active",
+  "_links": {
+    "self": { "href": "/books/123" },
+    "update": { "href": "/books/123", "method": "PUT" },
+    "delete": { "href": "/books/123", "method": "DELETE" }
+  }
+}</code></pre>
+                      </li>
+                      <li><strong>Benefit:</strong> Clients can follow these links to navigate or perform actions without knowing endpoint structure in advance.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleCaching">
+              <h3>8. HTTP Caching Concepts</h3>
+            
+              <!-- 1. HTTP caching headers -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-http-caching-headers" aria-expanded="false" aria-controls="flush-http-caching-headers">
+                    1. HTTP caching headers
+                  </button>
+                </h2>
+                <div id="flush-http-caching-headers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>HTTP provides headers to control how responses are cached by browsers, proxies, and CDNs.</li>
+                      <li><strong>Main ones include:</strong>
+                        <ul>
+                          <li><code>Cache-Control</code></li>
+                          <li><code>ETag</code> / <code>If-None-Match</code></li>
+                          <li><code>Last-Modified</code> / <code>If-Modified-Since</code></li>
+                        </ul>
+                      </li>
+                      <li>Benefits: Improves performance, reduces bandwidth, and lowers server load.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Cache-Control -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cache-control" aria-expanded="false" aria-controls="flush-cache-control">
+                    2. Cache-Control
+                  </button>
+                </h2>
+                <div id="flush-cache-control" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Purpose:</strong> Specifies caching rules for browsers and intermediaries (like CDNs).</li>
+                      <li><strong>Common directives:</strong>
+                        <ul>
+                          <li><code>max-age=3600</code> → Cache for 3600 seconds (1 hour).</li>
+                          <li><code>no-cache</code> → Must validate with server before using cached copy.</li>
+                          <li><code>no-store</code> → Don’t store at all (e.g., sensitive data).</li>
+                          <li><code>public</code> → Can be cached by anyone.</li>
+                          <li><code>private</code> → Cache only for a single user (browser only).</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong> <code>Cache-Control: public, max-age=86400</code> → Publicly cacheable for 1 day.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. ETag / If-None-Match -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-etag" aria-expanded="false" aria-controls="flush-etag">
+                    3. ETag / If-None-Match
+                  </button>
+                </h2>
+                <div id="flush-etag" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>ETag:</strong> A unique identifier (hash or version) for a specific version of a resource.</li>
+                      <li>Sent in the response header by the server:
+                        <pre><code>ETag: "abc123"</code></pre>
+                      </li>
+                      <li><strong>If-None-Match:</strong> Sent by the client on the next request to check if the resource changed:
+                        <pre><code>If-None-Match: "abc123"</code></pre>
+                      </li>
+                      <li>If unchanged → server returns <code>304 Not Modified</code> (no body sent).</li>
+                      <li><strong>Benefit:</strong> Saves bandwidth by only sending data when it’s changed.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Last-Modified / If-Modified-Since -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-last-modified" aria-expanded="false" aria-controls="flush-last-modified">
+                    4. Last-Modified / If-Modified-Since
+                  </button>
+                </h2>
+                <div id="flush-last-modified" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Last-Modified:</strong> Server sends the last modified date of the resource:
+                        <pre><code>Last-Modified: Wed, 07 Aug 2024 12:34:56 GMT</code></pre>
+                      </li>
+                      <li><strong>If-Modified-Since:</strong> Client sends this date in the next request:
+                        <pre><code>If-Modified-Since: Wed, 07 Aug 2024 12:34:56 GMT</code></pre>
+                      </li>
+                      <li>If not changed → <code>304 Not Modified</code>.</li>
+                      <li><strong>Key difference vs ETag:</strong>
+                        <ul>
+                          <li>Last-Modified is date-based, ETag is version/hash-based.</li>
+                          <li>ETag is more precise (good for small changes).</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Client-side vs server-side caching -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-client-vs-server" aria-expanded="false" aria-controls="flush-client-vs-server">
+                    5. Client-side vs server-side caching
+                  </button>
+                </h2>
+                <div id="flush-client-vs-server" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Client-side caching:</strong>
+                        <ul>
+                          <li>Happens in the browser.</li>
+                          <li>Uses <code>Cache-Control</code>, <code>ETag</code>, <code>Last-Modified</code>.</li>
+                          <li>Improves page load speed for the end-user.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Server-side caching:</strong>
+                        <ul>
+                          <li>Caches data at the server or application layer (e.g., Redis, Memcached).</li>
+                          <li>Reduces database calls and processing time.</li>
+                          <li>Used for dynamic data that’s expensive to compute.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. CDN caching basics -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cdn-caching" aria-expanded="false" aria-controls="flush-cdn-caching">
+                    6. CDN caching basics
+                  </button>
+                </h2>
+                <div id="flush-cdn-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>CDN (Content Delivery Network):</strong> A network of servers worldwide that caches static and sometimes dynamic content.</li>
+                      <li>Delivers content from the nearest location to the user, reducing latency.</li>
+                      <li><strong>How it works:</strong>
+                        <ul>
+                          <li>CDNs respect HTTP cache headers (<code>Cache-Control</code>, <code>ETag</code>, etc.).</li>
+                          <li>Can have their own TTL (Time-To-Live) rules.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong> Images, videos, CSS, JS served via Cloudflare, AWS CloudFront, Akamai, etc.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleRateLimiting">
+              <h3>9. Rate Limiting & Throttling</h3>
+            
+              <!-- 1. Purpose & need (prevent abuse) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-purpose-need" aria-expanded="false" aria-controls="flush-purpose-need">
+                    1. Purpose & need (prevent abuse)
+                  </button>
+                </h2>
+                <div id="flush-purpose-need" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRateLimiting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong>
+                        <ul>
+                          <li>Rate limiting controls how many requests a client can make in a given time period.</li>
+                          <li>Throttling slows down request processing after a limit is reached.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Why it’s needed:</strong>
+                        <ul>
+                          <li>Prevent abuse (DDoS attacks, brute-force logins, API misuse).</li>
+                          <li>Ensure fair usage across all clients.</li>
+                          <li>Protect backend resources from overload.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong> Allow 100 requests per minute per user — excess requests get a <code>429 Too Many Requests</code> response.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Rate limiting headers -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rate-limiting-headers" aria-expanded="false" aria-controls="flush-rate-limiting-headers">
+                    2. Rate limiting headers
+                  </button>
+                </h2>
+                <div id="flush-rate-limiting-headers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRateLimiting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>APIs often return headers so clients know their usage limits.</li>
+                      <li><strong>Common headers:</strong>
+                        <ul>
+                          <li><code>X-RateLimit-Limit</code> → Max requests allowed in the time window.</li>
+                          <li><code>X-RateLimit-Remaining</code> → Requests left in the current window.</li>
+                          <li><code>X-RateLimit-Reset</code> → Timestamp when the limit resets.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example response headers:</strong>
+                        <pre><code>X-RateLimit-Limit: 100
+            X-RateLimit-Remaining: 20
+            X-RateLimit-Reset: 1691577600</code></pre>
+                      </li>
+                      <li>This helps clients adapt request frequency to avoid hitting the limit.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Implementation -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-implementation" aria-expanded="false" aria-controls="flush-implementation">
+                    3. Implementation
+                  </button>
+                </h2>
+                <div id="flush-implementation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRateLimiting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Spring Boot:</strong> <code>Bucket4j</code> / Redis
+                        <ul>
+                          <li><strong>Bucket4j:</strong> Java library implementing the token bucket algorithm.</li>
+                          <li>Works in-memory or with distributed stores like Redis.</li>
+                          <li><strong>Example usage:</strong> Define capacity (e.g., 100 tokens) and refill rate (e.g., every minute). Each request consumes a token; if no tokens left → reject request.</li>
+                          <li><strong>Redis + Bucket4j:</strong> Allows rate limiting across multiple servers in a cluster. Good for microservices or load-balanced setups.</li>
+                        </ul>
+                      </li>
+                      <li><strong>NestJS:</strong> <code>@Throttle()</code> (NestJS Throttler)
+                        <ul>
+                          <li>Built-in NestJS Throttler package.</li>
+                          <li>Decorator-based approach:</li>
+                          <pre><code>@Throttle(10, 60) // 10 requests per 60 seconds
+@Get()
+getData() {
+  return 'Some data';
+}</code></pre>
+                          <li>Global throttling can be configured via <code>ThrottlerModule</code> in <code>app.module.ts</code>.</li>
+                          <li>Works in-memory or can be extended with Redis for distributed rate limiting.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleOpenAPI">
+              <h3>10. OpenAPI / Swagger</h3>
+            
+              <!-- 1. OpenAPI / Swagger -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-openapi-swagger" aria-expanded="false" aria-controls="flush-openapi-swagger">
+                    1. OpenAPI / Swagger
+                  </button>
+                </h2>
+                <div id="flush-openapi-swagger" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>OpenAPI:</strong>
+                        <ul>
+                          <li>A standard specification for describing REST APIs in JSON or YAML.</li>
+                          <li>Defines endpoints, request/response formats, authentication, etc.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Swagger:</strong>
+                        <ul>
+                          <li>A set of tools (UI, editor, codegen) for working with OpenAPI specs.</li>
+                          <li><strong>Swagger UI:</strong> Interactive API documentation where you can try endpoints directly in the browser.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Why it matters:</strong>
+                        <ul>
+                          <li>Improves developer onboarding.</li>
+                          <li>Makes APIs self-explanatory.</li>
+                          <li>Reduces miscommunication between backend and frontend teams.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Spring Boot: springdoc-openapi -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-springdoc-openapi" aria-expanded="false" aria-controls="flush-springdoc-openapi">
+                    2. Spring Boot: springdoc-openapi
+                  </button>
+                </h2>
+                <div id="flush-springdoc-openapi" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>springdoc-openapi</strong> automatically generates OpenAPI docs from Spring Boot annotations.</li>
+                      <li><strong>Setup:</strong> Add the dependency in <code>pom.xml</code> or <code>build.gradle</code>.</li>
+                      <li><strong>Example usage:</strong>
+                        <pre><code>@Operation(summary = "Get a book by ID")
+@GetMapping("/books/{id}")
+public Book getBook(@PathVariable Long id) { ... }</code></pre>
+                        → Appears in Swagger UI with description and parameters.
+                      </li>
+                      <li><strong>Default URL:</strong>
+                        <pre><code>http://localhost:8080/swagger-ui.html</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. NestJS: @nestjs/swagger -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nestjs-swagger" aria-expanded="false" aria-controls="flush-nestjs-swagger">
+                    3. NestJS: @nestjs/swagger
+                  </button>
+                </h2>
+                <div id="flush-nestjs-swagger" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Official NestJS package to generate OpenAPI specs from decorators.</li>
+                      <li><strong>Setup:</strong> Install <code>@nestjs/swagger</code> and <code>swagger-ui-express</code>.</li>
+                      <li><strong>Example usage:</strong>
+                        <pre><code>@ApiTags('books')
+@ApiOperation({ summary: 'Get a book by ID' })
+@Get(':id')
+getBook(@Param('id') id: string) { ... }</code></pre>
+                      </li>
+                      <li>Generates docs at <code>/api</code> or configured path.</li>
+                      <li>Works with DTO classes to document request bodies automatically.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Examples in docs -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-examples-docs" aria-expanded="false" aria-controls="flush-examples-docs">
+                    4. Examples in docs
+                  </button>
+                </h2>
+                <div id="flush-examples-docs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Good documentation includes real request/response examples for clarity.</li>
+                      <li><strong>Why:</strong> Helps developers understand input/output formats without guessing.</li>
+                      <li><strong>Example (Swagger):</strong>
+                        <pre><code>{
+  "id": 1,
+  "title": "REST API Design",
+  "author": "Jane Doe"
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Auto-generation from code annotations -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auto-generation" aria-expanded="false" aria-controls="flush-auto-generation">
+                    5. Auto-generation from code annotations
+                  </button>
+                </h2>
+                <div id="flush-auto-generation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Benefit:</strong> Docs stay up-to-date automatically when code changes.</li>
+                      <li><strong>How it works:</strong>
+                        <ul>
+                          <li>Annotate controllers, DTOs, and methods with metadata.</li>
+                          <li>The tool scans the codebase and produces OpenAPI spec.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Advantage:</strong> Avoids manually maintaining separate documentation files.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleTesting">
+              <h3>11. Testing APIs</h3>
+            
+              <!-- Manual testing with Postman -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-postman" aria-expanded="false" aria-controls="flush-postman">
+                    1. Manual testing with Postman
+                  </button>
+                </h2>
+                <div id="flush-postman" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <strong>What it is:</strong>
+                    <p>Postman is a GUI tool for sending HTTP requests and inspecting responses.</p>
+                    
+                    <strong>Why use it:</strong>
+                    <ul>
+                      <li>Quick testing without writing code.</li>
+                      <li>Supports all HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
+                      <li>Can set headers, body, query params easily.</li>
+                    </ul>
+            
+                    <strong>Extra features:</strong>
+                    <ul>
+                      <li>Save collections of requests for reuse.</li>
+                      <li>Add environment variables (e.g., <code>{{base_url}}</code>).</li>
+                      <li>Chain requests and do basic scripting for assertions.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- Automated integration tests -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-automated-tests" aria-expanded="false" aria-controls="flush-automated-tests">
+                    2. Automated integration tests
+                  </button>
+                </h2>
+                <div id="flush-automated-tests" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <p>Automated tests validate that endpoints behave correctly without manually hitting them each time.</p>
+            
+                    <!-- Spring Boot: MockMvc -->
+                    <h5>Spring Boot: MockMvc</h5>
+                    <strong>What it is:</strong>
+                    <p>A Spring test framework for testing controllers without starting the full server.</p>
+                    <strong>Example:</strong>
+                    <pre><code>@Autowired
+            private MockMvc mockMvc;
+            
+@Test
+void shouldReturnBook() throws Exception {
+    mockMvc.perform(get("/books/1"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.title").value("REST API Design"));
+}</code></pre>
+                    <strong>Pros:</strong>
+                    <ul>
+                      <li>Fast execution, no network overhead.</li>
+                    </ul>
+            
+                    <!-- Spring Boot: RestAssured -->
+                    <h5>Spring Boot: RestAssured</h5>
+                    <strong>What it is:</strong>
+                    <p>A Java DSL for testing REST APIs end-to-end.</p>
+                    <strong>Example:</strong>
+                    <pre><code>given()
+.when()
+.get("/books/1")
+.then()
+.statusCode(200)
+.body("title", equalTo("REST API Design"));</code></pre>
+                    <strong>Pros:</strong>
+                    <ul>
+                      <li>Works well for full-stack integration tests, can test external APIs too.</li>
+                    </ul>
+            
+                    <!-- NestJS: supertest -->
+                    <h5>NestJS: supertest</h5>
+                    <strong>What it is:</strong>
+                    <p>A Node.js library for testing HTTP APIs.</p>
+                    <strong>Example:</strong>
+                    <pre><code>it('/GET books', () => {
+  return request(app.getHttpServer())
+    .get('/books')
+    .expect(200)
+    .expect(res =&gt; {
+      expect(res.body[0].title).toBe('REST API Design');
+    });
+});</code></pre>
+                    <strong>Pros:</strong>
+                    <ul>
+                      <li>Works well with Jest (NestJS default test runner), supports chaining assertions.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleSecurity">
+              <h3>12. API Security Best Practices</h3>
+            
+              <!-- 1. HTTPS everywhere -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-https-everywhere" aria-expanded="false" aria-controls="flush-https-everywhere">
+                    1. HTTPS everywhere
+                  </button>
+                </h2>
+                <div id="flush-https-everywhere" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Use HTTPS (TLS/SSL encryption) for all API communication.</li>
+                      <li><strong>Why:</strong>
+                        <ul>
+                          <li>Encrypts data in transit to prevent eavesdropping or tampering.</li>
+                          <li>Protects sensitive information like passwords, tokens, and personal data.</li>
+                          <li>Best practice: Redirect all HTTP traffic to HTTPS and use modern TLS configurations.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Input validation -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-input-validation" aria-expanded="false" aria-controls="flush-input-validation">
+                    2. Input validation
+                  </button>
+                </h2>
+                <div id="flush-input-validation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Validate all incoming data from clients before processing.</li>
+                      <li><strong>Why:</strong>
+                        <ul>
+                          <li>Prevents malformed or malicious inputs from breaking the system.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Examples:</strong>
+                        <ul>
+                          <li>Check data types (string, number).</li>
+                          <li>Validate lengths and formats (email regex, max length).</li>
+                          <li>Reject unexpected parameters.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Preventing SQL Injection (use prepared statements) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sql-injection" aria-expanded="false" aria-controls="flush-sql-injection">
+                    3. Preventing SQL Injection (use prepared statements)
+                  </button>
+                </h2>
+                <div id="flush-sql-injection" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> SQL injection happens when attackers inject SQL commands into input fields.</li>
+                      <li><strong>Solution:</strong> Always use prepared statements or ORM query builders (never string concatenation).</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>String sql = "SELECT * FROM users WHERE id = ?";
+            preparedStatement.setInt(1, userId);</code></pre>
+                      </li>
+                      <li><strong>Benefit:</strong> Automatically escapes dangerous characters.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Preventing XSS/CSRF -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-xss-csrf" aria-expanded="false" aria-controls="flush-xss-csrf">
+                    4. Preventing XSS/CSRF
+                  </button>
+                </h2>
+                <div id="flush-xss-csrf" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>XSS (Cross-Site Scripting):</strong>
+                        <ul>
+                          <li>Happens when malicious JavaScript is injected into a web page.</li>
+                          <li>Prevention:
+                            <ul>
+                              <li>Escape HTML output.</li>
+                              <li>Use frameworks with built-in sanitization (e.g., React’s auto-escaping).</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><strong>CSRF (Cross-Site Request Forgery):</strong>
+                        <ul>
+                          <li>Tricks a logged-in user into performing actions without their consent.</li>
+                          <li>Prevention:
+                            <ul>
+                              <li>Use CSRF tokens in forms and API requests.</li>
+                              <li>Validate the Origin/Referer headers.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Avoid exposing sensitive data in responses -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sensitive-data" aria-expanded="false" aria-controls="flush-sensitive-data">
+                    5. Avoid exposing sensitive data in responses
+                  </button>
+                </h2>
+                <div id="flush-sensitive-data" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Rule:</strong> Never send confidential details (passwords, secret keys, internal IDs) in API responses.</li>
+                      <li><strong>Examples:</strong></li>
+                      <li>Bad:
+                        <pre><code>{
+  "username": "john",
+  "password": "123456"
+}</code></pre>
+                      </li>
+                      <li>Good:
+                        <pre><code>{
+  "username": "john"
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. Limiting payload size -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-payload-size" aria-expanded="false" aria-controls="flush-payload-size">
+                    6. Limiting payload size
+                  </button>
+                </h2>
+                <div id="flush-payload-size" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Restrict the maximum size of request bodies and responses.</li>
+                      <li><strong>Why:</strong>
+                        <ul>
+                          <li>Prevents denial-of-service (DoS) attacks using huge payloads.</li>
+                          <li>Reduces memory and bandwidth usage.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong>
+                        <ul>
+                          <li>Spring Boot: <code>spring.servlet.multipart.max-request-size=2MB</code></li>
+                          <li>NestJS: Configure body-parser limit in <code>main.ts</code>.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleReactAPI">
+              <h3>13. React API Consumption & Frontend Security</h3>
+            
+              <!-- 1. Fetching APIs in React -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-fetch-api" aria-expanded="false" aria-controls="flush-fetch-api">
+                    1. Fetching APIs in React
+                  </button>
+                </h2>
+                <div id="flush-fetch-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Fetch API:</strong> Built-in JS API for HTTP requests.
+                        <pre><code>fetch('/api/books')
+.then(res =&gt; res.json())
+.then(data =&gt; console.log(data))
+.catch(err =&gt; console.error(err));</code></pre>
+                        <strong>Pros:</strong> No extra dependency, widely supported.<br/>
+                        <strong>Cons:</strong> Verbose for complex requests (interceptors, timeouts).
+                      </li>
+                      <li><strong>Axios:</strong> Popular third-party HTTP client.
+                        <pre><code>import axios from 'axios';
+            
+axios.get('/api/books')
+  .then(res =&gt; console.log(res.data))
+  .catch(err =&gt; console.error(err));</code></pre>
+                        <strong>Pros:</strong>
+                        <ul>
+                          <li>Simpler syntax.</li>
+                          <li>Interceptors for auth tokens.</li>
+                          <li>Automatic JSON parsing.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Error & loading state handling -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-error-loading" aria-expanded="false" aria-controls="flush-error-loading">
+                    2. Error & loading state handling
+                  </button>
+                </h2>
+                <div id="flush-error-loading" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
+                  <div class="accordion-body">
+                    <p>Best practice in React: Use state variables to track loading and error states.</p>
+                    <pre><code>const [loading, setLoading] = useState(false);
+const [error, setError] = useState(null);
+const [data, setData] = useState([]);
+            
+useEffect(() =&gt; {
+  setLoading(true);
+  fetch('/api/books')
+    .then(res =&gt; res.json())
+    .then(setData)
+    .catch(setError)
+    .finally(() =&gt; setLoading(false));
+}, []);</code></pre>
+                    <p>Improves UX by showing spinners, retry options, or error messages.</p>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. CORS setup for frontend-backend communication -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cors-setup" aria-expanded="false" aria-controls="flush-cors-setup">
+                    3. CORS setup for frontend-backend communication
+                  </button>
+                </h2>
+                <div id="flush-cors-setup" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What is CORS:</strong> Security feature that controls cross-origin requests.</li>
+                      <li><strong>Development example:</strong> React app on <code>localhost:3000</code> calling API on <code>localhost:8080</code> requires backend CORS enabled.</li>
+                      <li><strong>Spring Boot example:</strong>
+                        <pre><code>@CrossOrigin(origins = "http://localhost:3000")
+@RestController
+public class BookController { ... }</code></pre>
+                      </li>
+                      <li><strong>NestJS example:</strong>
+                        <pre><code>app.enableCors({ origin: 'http://localhost:3000' });</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Handling authentication in frontend requests -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auth-frontend" aria-expanded="false" aria-controls="flush-auth-frontend">
+                    4. Handling authentication in frontend requests
+                  </button>
+                </h2>
+                <div id="flush-auth-frontend" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Token-based authentication:</strong> Store JWT/OAuth tokens securely (preferably in HTTP-only cookies to prevent XSS).</li>
+                      <li><strong>Send token with requests:</strong></li>
+                      <li><em>Fetch API example:</em>
+                        <pre><code>fetch('/api/books', {
+  headers: { Authorization: `Bearer ${token}` }
+});</code></pre>
+                      </li>
+                      <li><em>Axios example:</em>
+                        <pre><code>axios.get('/api/books', {
+  headers: { Authorization: `Bearer ${token}` }
+});</code></pre>
+                      </li>
+                      <li><strong>Best practice:</strong> Avoid storing tokens in <code>localStorage</code> if possible (due to XSS risk). Use secure cookies with <code>SameSite</code> and <code>Secure</code> flags.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleAdvancedAPI">
+              <h3>14. Advanced API Patterns</h3>
+            
+              <!-- 1. Bulk operations (POST /users/bulk) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bulk-ops" aria-expanded="false" aria-controls="flush-bulk-ops">
+                    1. Bulk operations (POST /users/bulk)
+                  </button>
+                </h2>
+                <div id="flush-bulk-ops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Allows creating or updating multiple resources in one request.</li>
+                      <li><strong>Why:</strong> Reduces network overhead and improves performance.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>POST /users/bulk
+[
+  { "name": "Alice", "email": "alice@mail.com" },
+  { "name": "Bob", "email": "bob@mail.com" }
+]</code></pre>
+                      </li>
+                      <li><strong>Considerations:</strong>
+                        <ul>
+                          <li>Validate all items before processing.</li>
+                          <li>Return per-item success/error details.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Partial updates with PATCH -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-partial-updates" aria-expanded="false" aria-controls="flush-partial-updates">
+                    2. Partial updates with PATCH
+                  </button>
+                </h2>
+                <div id="flush-partial-updates" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Update only certain fields of a resource instead of replacing the whole object.</li>
+                      <li><strong>HTTP method:</strong> PATCH (different from PUT, which replaces entire resource).</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>PATCH /users/123
+{ "email": "newemail@mail.com" }</code></pre>
+                      </li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Smaller payloads.</li>
+                          <li>Avoids overwriting unchanged fields.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. File upload/download endpoints -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-file-uploads" aria-expanded="false" aria-controls="flush-file-uploads">
+                    3. File upload/download endpoints
+                  </button>
+                </h2>
+                <div id="flush-file-uploads" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Upload:</strong> Common method: POST /files with multipart/form-data.</li>
+                      <li><strong>Spring Boot:</strong> Use <code>@RequestParam MultipartFile file</code></li>
+                      <li><strong>NestJS:</strong> Use <code>@UseInterceptors(FileInterceptor('file'))</code></li>
+                      <li><strong>Download:</strong> Return file as binary stream with <code>Content-Disposition: attachment</code>.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>GET /files/report.pdf</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Webhooks -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-webhooks" aria-expanded="false" aria-controls="flush-webhooks">
+                    4. Webhooks
+                  </button>
+                </h2>
+                <div id="flush-webhooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Server-to-server callbacks triggered by events.</li>
+                      <li><strong>Flow:</strong>
+                        <ul>
+                          <li>Client registers a URL.</li>
+                          <li>Your API calls that URL with event data when event occurs.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example:</strong> Stripe sends POST to <code>/payment-success</code> when payment completes.</li>
+                      <li><strong>Best practices:</strong>
+                        <ul>
+                          <li>Include event signatures for verification.</li>
+                          <li>Retry failed deliveries.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Async APIs & long-running jobs (202 Accepted + polling) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-async-apis" aria-expanded="false" aria-controls="flush-async-apis">
+                    5. Async APIs & long-running jobs (202 Accepted + polling)
+                  </button>
+                </h2>
+                <div id="flush-async-apis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>When to use:</strong> For operations that take a long time (video processing, large reports).</li>
+                      <li><strong>Pattern:</strong> Client sends request → server returns 202 Accepted with status URL → client polls status endpoint until done.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>POST /reports → 202 Accepted
+Location: /jobs/456
+            
+GET /jobs/456 → { "status": "in-progress" }</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. API Gateway concepts -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-api-gateway" aria-expanded="false" aria-controls="flush-api-gateway">
+                    6. API Gateway concepts
+                  </button>
+                </h2>
+                <div id="flush-api-gateway" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>What it is:</strong> Single entry point for multiple backend services.</li>
+                      <li><strong>Responsibilities:</strong>
+                        <ul>
+                          <li>Routing requests to microservices.</li>
+                          <li>Rate limiting, authentication, caching.</li>
+                          <li>Request/response transformation.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Examples:</strong> AWS API Gateway, Kong, Nginx, Zuul.</li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Simplifies frontend communication.</li>
+                          <li>Adds cross-cutting features without modifying backend services.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleRestBasics">
+              <h3>15. REST API in Spring Boot & NestJS</h3>
+            
+              <!-- Spring Boot Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-springboot-rest" aria-expanded="false" aria-controls="flush-springboot-rest">
+                    1. Spring Boot
+                  </button>
+                </h2>
+                <div id="flush-springboot-rest" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRestBasics">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>@RestController:</strong> Marks class as REST controller (returns JSON by default).</li>
+                      <li><strong>@GetMapping, @PostMapping, @PutMapping, @DeleteMapping:</strong> Map HTTP methods to Java methods.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>@RestController
+@RequestMapping("/books")
+public class BookController {
+    @GetMapping("/{id}")
+    public Book getBook(@PathVariable Long id) { ... }
+}</code></pre>
+                      </li>
+            
+                      <li><strong>DTOs & validation (@Valid):</strong> Define request/response structure with validation annotations.
+                        <pre><code>public class BookDTO {
+    @NotBlank
+    private String title;
+    @Min(1)
+    private double price;
+}
+            
+@PostMapping
+public ResponseEntity<?> createBook(@Valid @RequestBody BookDTO book) { ... }</code></pre>
+                      </li>
+            
+                      <li><strong>ResponseEntity:</strong> Wraps HTTP responses with status, headers, body.
+                        <pre><code>return ResponseEntity
+.status(HttpStatus.CREATED)
+.body(book);</code></pre>
+                      </li>
+            
+                      <li><strong>Exception handling with @ControllerAdvice:</strong> Centralized error handling.
+                        <pre><code>@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<?> handleNotFound(ResourceNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- NestJS Section -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nestjs-rest" aria-expanded="false" aria-controls="flush-nestjs-rest">
+                    2. NestJS
+                  </button>
+                </h2>
+                <div id="flush-nestjs-rest" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRestBasics">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>@Controller, @Get, @Post, @Put, @Delete:</strong> Mark class & map HTTP methods.
+                        <pre><code>@Controller('books')
+export class BookController {
+  @Get(':id')
+  getBook(@Param('id') id: string) { ... }
+}</code></pre>
+                      </li>
+            
+                      <li><strong>DTO validation with class-validator:</strong> Use decorators to validate DTOs.
+                        <pre><code>export class CreateBookDto {
+   @IsNotEmpty()
+  title: string;
+  @IsPositive()
+  price: number;
+}
+            
+@Post()
+createBook(@Body() dto: CreateBookDto) { ... }</code></pre>
+                        <p>Enable <code>ValidationPipe</code> in <code>main.ts</code> for auto-validation.</p>
+                      </li>
+            
+                      <li><strong>Exception filters:</strong> Catch & customize exceptions globally or per-controller.
+                        <pre><code>@Catch(HttpException)
+export class HttpExceptionFilter implements ExceptionFilter {
+  catch(exception: HttpException, host: ArgumentsHost) {
+    const ctx = host.switchToHttp();
+    const response = ctx.getResponse<Response>();
+    const status = exception.getStatus();
+    response.status(status).json({
+      statusCode: status,
+      message: exception.message,
+    });
+  }
+}</code></pre>
+                      </li>
+            
+                      <li><strong>Swagger docs with decorators:</strong> Auto-generate OpenAPI docs.
+                        <pre><code>@ApiTags('books')
+@ApiOperation({ summary: 'Get a book by ID' })
+@Get(':id')
+getBook(@Param('id') id: string) { ... }</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,2415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Home</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleNestJS">
+                <h3>1. Introduction to NestJS</h3>
+              
+                <!-- 1. What is NestJS and why use it? -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-what-is-nestjs" aria-expanded="false" aria-controls="flush-what-is-nestjs">
+                      1. What is NestJS and why use it?
+                    </button>
+                  </h2>
+                  <div id="flush-what-is-nestjs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Framework for building scalable, maintainable Node.js server apps</li>
+                        <li>Built with TypeScript, uses modern JavaScript features</li>
+                        <li>Inspired by Angular (modular design, decorators, DI)</li>
+                        <li>Helps organize code for large applications</li>
+                        <li>Suitable for enterprise-level backend projects</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Advantages of NestJS over Express/Fastify -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-advantages-nestjs" aria-expanded="false" aria-controls="flush-advantages-nestjs">
+                      2. Advantages of NestJS over Express/Fastify
+                    </button>
+                  </h2>
+                  <div id="flush-advantages-nestjs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Built-in architecture: Modules, controllers, providers ready out of the box</li>
+                        <li>TypeScript-first: Strong typing and better tooling</li>
+                        <li>Dependency Injection: Simplifies managing dependencies</li>
+                        <li>Extensible: Can run on Express or Fastify server engines</li>
+                        <li>More features: Validation, guards, interceptors, middleware included</li>
+                        <li>Better testing support: Modular design aids unit/integration testing</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. NestJS architecture and concepts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-concepts" aria-expanded="false" aria-controls="flush-architecture-concepts">
+                      3. NestJS architecture and concepts
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-concepts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Module:</strong> Groups related components, e.g., AppModule</li>
+                        <li><strong>Controller:</strong> Handles HTTP requests and routes</li>
+                        <li><strong>Provider (Service):</strong> Contains business logic, injected where needed</li>
+                        <li><strong>Dependency Injection:</strong> Inject dependencies automatically for loose coupling</li>
+                        <li><strong>Middleware:</strong> Functions before route handling (e.g., logging, auth)</li>
+                        <li><strong>Guard:</strong> Protects routes (authorization)</li>
+                        <li><strong>Pipe:</strong> Validates/transforms input data</li>
+                        <li><strong>Interceptor:</strong> Extends method behavior (logging, caching)</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Installing and setting up NestJS CLI -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-install-cli" aria-expanded="false" aria-controls="flush-install-cli">
+                      4. Installing and setting up NestJS CLI
+                    </button>
+                  </h2>
+                  <div id="flush-install-cli" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
+                    <div class="accordion-body">
+                      <p>Install CLI globally:</p>
+              <pre><code class="language-bash">npm install -g @nestjs/cli</code></pre>
+                      <p>Create new project:</p>
+              <pre><code class="language-bash">nest new project-name</code></pre>
+                      <p>Generate components easily:</p>
+              <pre><code class="language-bash">nest generate module users
+              nest generate controller users
+              nest generate service users</code></pre>
+                      <p>CLI auto-creates project with TypeScript, config, and basic structure.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Project structure overview -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-project-structure" aria-expanded="false" aria-controls="flush-project-structure">
+                      5. Project structure overview
+                    </button>
+                  </h2>
+                  <div id="flush-project-structure" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
+                    <div class="accordion-body">
+              <pre><code class="language-none">src/
+               ├── main.ts              # Entry point, bootstraps app
+               ├── app.module.ts        # Root module
+               ├── app.controller.ts    # Root controller (handles routes)
+               ├── app.service.ts       # Root service (business logic)
+               └── users/               # Example feature folder
+                    ├── users.module.ts
+                    ├── users.controller.ts
+                    └── users.service.ts
+              </code></pre>
+                      <p>Organized by features/modules.</p>
+                      <p>Each module encapsulates controllers and providers.</p>
+                      <p><code>main.ts</code> starts the app with <code>NestFactory.create(AppModule)</code>.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushCoreConcepts">
+                <h3>2. Core Concepts</h3>
+              
+                <!-- 1. Modules -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-modules" aria-expanded="false" aria-controls="flush-modules">
+                      1. Modules
+                    </button>
+                  </h2>
+                  <div id="flush-modules" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <p>Fundamental building blocks of a NestJS app</p>
+                      <ul>
+                        <li>Organize related controllers and providers</li>
+                        <li>Every app has at least one root module (AppModule)</li>
+                        <li>Decorated with <code>@Module()</code></li>
+                        <li>Can import/export other modules to share providers</li>
+                      </ul>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Module({
+                imports: [],
+                controllers: [UsersController],
+                providers: [UsersService],
+              })
+              export class UsersModule {}</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Controllers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-controllers" aria-expanded="false" aria-controls="flush-controllers">
+                      2. Controllers
+                    </button>
+                  </h2>
+                  <div id="flush-controllers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Handle incoming HTTP requests and return responses</li>
+                        <li>Define routes using decorators like <code>@Get()</code>, <code>@Post()</code></li>
+                        <li>Inject services/providers to process logic</li>
+                        <li>Decorated with <code>@Controller('route')</code></li>
+                      </ul>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Controller('users')
+              export class UsersController {
+                constructor(private readonly usersService: UsersService) {}
+                
+                @Get()
+                findAll() {
+                  return this.usersService.findAll();
+                }
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Providers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-providers" aria-expanded="false" aria-controls="flush-providers">
+                      3. Providers
+                    </button>
+                  </h2>
+                  <div id="flush-providers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Classes that can be injected via Dependency Injection</li>
+                        <li>Used to encapsulate business logic, database calls, etc.</li>
+                        <li>Decorated with <code>@Injectable()</code></li>
+                        <li>Services are a common type of provider</li>
+                        <li>Registered in module <code>providers</code> array</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Services -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-services" aria-expanded="false" aria-controls="flush-services">
+                      4. Services
+                    </button>
+                  </h2>
+                  <div id="flush-services" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <p>A specific kind of provider focused on business logic</p>
+                      <ul>
+                        <li>Handles data processing, interacts with database or APIs</li>
+                        <li>Injected into controllers or other providers</li>
+                      </ul>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Injectable()
+              export class UsersService {
+                findAll() {
+                  return ['user1', 'user2'];
+                }
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Dependency Injection (DI) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-di" aria-expanded="false" aria-controls="flush-di">
+                      5. Dependency Injection (DI)
+                    </button>
+                  </h2>
+                  <div id="flush-di" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Design pattern where dependencies are provided rather than created internally</li>
+                        <li>Promotes loose coupling and easier testing</li>
+                        <li>NestJS injects dependencies automatically when declared in constructor</li>
+                        <li>Uses metadata and decorators to resolve dependencies</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Custom Providers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-custom-providers" aria-expanded="false" aria-controls="flush-custom-providers">
+                      6. Custom Providers
+                    </button>
+                  </h2>
+                  <div id="flush-custom-providers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <p>Define providers with custom injection tokens or factory functions</p>
+                      <ul>
+                        <li>Useful for injecting values, classes, or async providers</li>
+                        <li>Types: Class provider, value provider, factory provider, existing provider</li>
+                      </ul>
+                      <p>Example (factory provider):</p>
+                      <pre><code class="language-typescript">{
+                provide: 'CONFIG',
+                useFactory: () => ({ port: 3000 }),
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. NestJS lifecycle hooks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-lifecycle-hooks" aria-expanded="false" aria-controls="flush-lifecycle-hooks">
+                      7. NestJS lifecycle hooks
+                    </button>
+                  </h2>
+                  <div id="flush-lifecycle-hooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
+                    <div class="accordion-body">
+                      <p>Special methods called at specific points of provider lifecycle</p>
+                      <p>Common hooks:</p>
+                      <ul>
+                        <li><code>onModuleInit()</code> — runs after module initialization</li>
+                        <li><code>onApplicationBootstrap()</code> — runs after app bootstrap</li>
+                        <li><code>onModuleDestroy()</code> — runs before module is destroyed</li>
+                        <li><code>onApplicationShutdown()</code> — runs on app shutdown</li>
+                      </ul>
+                      <p>Implement by adding interface and method in provider/service:</p>
+                      <pre><code class="language-typescript">export class UsersService implements OnModuleInit {
+                onModuleInit() {
+                  console.log('Module initialized');
+                }
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushRouting">
+                <h3>3. Routing</h3>
+              
+                <!-- 1. Creating routes in controllers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-routes-creation" aria-expanded="false" aria-controls="flush-routes-creation">
+                      1. Creating routes in controllers
+                    </button>
+                  </h2>
+                  <div id="flush-routes-creation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <p>Routes are defined inside controllers using method decorators.</p>
+                      <p>Common decorators: <code>@Get()</code>, <code>@Post()</code>, <code>@Put()</code>, <code>@Delete()</code>, <code>@Patch()</code></p>
+                      <p>Decorate methods with HTTP method and optional path</p>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Controller('users')
+              export class UsersController {
+                @Get()
+                getAllUsers() {
+                  return [];
+                }
+              
+                @Post()
+                createUser() {
+                  return 'User created';
+                }
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Route parameters and query parameters -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-route-params" aria-expanded="false" aria-controls="flush-route-params">
+                      2. Route parameters and query parameters
+                    </button>
+                  </h2>
+                  <div id="flush-route-params" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <p><strong>Route parameters:</strong> Dynamic parts of URL (e.g., /users/:id)</p>
+                      <p>Access using <code>@Param()</code> decorator</p>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Get(':id')
+              getUser(@Param('id') id: string) {
+                return `User ${id}`;
+              }</code></pre>
+              
+                      <p><strong>Query parameters:</strong> Key-value pairs after ? in URL (e.g., /users?role=admin)</p>
+                      <p>Access using <code>@Query()</code> decorator</p>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Get()
+              getUsers(@Query('role') role: string) {
+                return `Role: ${role}`;
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Request body handling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-request-body" aria-expanded="false" aria-controls="flush-request-body">
+                      3. Request body handling
+                    </button>
+                  </h2>
+                  <div id="flush-request-body" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <p>Access the HTTP request body (usually JSON) with <code>@Body()</code> decorator</p>
+                      <p>Used mostly with POST, PUT, PATCH requests</p>
+                      <p>Can use DTOs (Data Transfer Objects) to validate/define request shapes</p>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Post()
+              createUser(@Body() createUserDto: CreateUserDto) {
+                return createUserDto;
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. HTTP methods (GET, POST, PUT, DELETE, PATCH) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-http-methods" aria-expanded="false" aria-controls="flush-http-methods">
+                      4. HTTP methods (GET, POST, PUT, DELETE, PATCH)
+                    </button>
+                  </h2>
+                  <div id="flush-http-methods" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>GET:</strong> Retrieve data</li>
+                        <li><strong>POST:</strong> Create new data</li>
+                        <li><strong>PUT:</strong> Update existing data fully (replace)</li>
+                        <li><strong>PATCH:</strong> Update existing data partially</li>
+                        <li><strong>DELETE:</strong> Remove data</li>
+                      </ul>
+                      <p>Nest provides decorators for each method: <code>@Get()</code>, <code>@Post()</code>, <code>@Put()</code>, <code>@Patch()</code>, <code>@Delete()</code></p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Dynamic routing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dynamic-routing" aria-expanded="false" aria-controls="flush-dynamic-routing">
+                      5. Dynamic routing
+                    </button>
+                  </h2>
+                  <div id="flush-dynamic-routing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <p>Routes can have dynamic segments with <code>:param</code> syntax</p>
+                      <p>Multiple parameters possible (e.g., /users/:userId/posts/:postId)</p>
+                      <p>NestJS extracts them with <code>@Param()</code></p>
+                      <p>Useful for resource-specific endpoints</p>
+                      <p>Example:</p>
+                      <pre><code class="language-typescript">@Get(':userId/posts/:postId')
+              getPost(@Param('userId') userId: string, @Param('postId') postId: string) {
+                return `User ${userId}, Post ${postId}`;
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Route guards -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-route-guards" aria-expanded="false" aria-controls="flush-route-guards">
+                      6. Route guards
+                    </button>
+                  </h2>
+                  <div id="flush-route-guards" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRouting">
+                    <div class="accordion-body">
+                      <p>Control access to routes for authorization/authentication</p>
+                      <p>Implement <code>CanActivate</code> interface</p>
+                      <p>Return true to allow access or false to block</p>
+                      <p>Use <code>@UseGuards()</code> decorator to apply guards to controllers or routes</p>
+                      <p>Example guard usage:</p>
+                      <pre><code class="language-typescript">@UseGuards(AuthGuard)
+              @Get('profile')
+              getProfile() {
+                return 'User Profile';
+              }</code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushMiddleware">
+                <h3>4. Middleware</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-middleware-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-middleware-1" aria-expanded="false" aria-controls="flush-collapse-middleware-1">
+                      1. Creating middleware
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-middleware-1" class="accordion-collapse collapse" aria-labelledby="flush-middleware-1" data-bs-parent="#accordionFlushMiddleware">
+                    <div class="accordion-body">
+                      <p>Middleware are functions executed before route handlers. Used for logging, authentication, request modification, etc.</p>
+                      <p>Implement the NestMiddleware interface with a <code>use(req, res, next)</code> method.</p>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              import { Injectable, NestMiddleware } from '@nestjs/common';
+              
+              @Injectable()
+              export class LoggerMiddleware implements NestMiddleware {
+                use(req: Request, res: Response, next: Function) {
+                  console.log(`Request... ${req.method} ${req.url}`);
+                  next();
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-middleware-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-middleware-2" aria-expanded="false" aria-controls="flush-collapse-middleware-2">
+                      2. Applying middleware globally or per route
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-middleware-2" class="accordion-collapse collapse" aria-labelledby="flush-middleware-2" data-bs-parent="#accordionFlushMiddleware">
+                    <div class="accordion-body">
+                      <p><strong>Globally:</strong> Applied to all routes using <code>app.use()</code> in <code>main.ts</code>.</p>
+                      <pre><code class="language-typescript">
+              app.use(LoggerMiddleware);
+                      </code></pre>
+                      <p><strong>Per route or module:</strong> Use <code>configure()</code> method in a module implementing <code>NestModule</code>.</p>
+                      <pre><code class="language-typescript">
+              export class AppModule implements NestModule {
+                configure(consumer: MiddlewareConsumer) {
+                  consumer
+                    .apply(LoggerMiddleware)
+                    .forRoutes('users'); // applies only to /users routes
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-middleware-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-middleware-3" aria-expanded="false" aria-controls="flush-collapse-middleware-3">
+                      3. Built-in middleware vs custom middleware
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-middleware-3" class="accordion-collapse collapse" aria-labelledby="flush-middleware-3" data-bs-parent="#accordionFlushMiddleware">
+                    <div class="accordion-body">
+                      <p><strong>Built-in middleware:</strong> Provided by NestJS (e.g., Logger, Helmet, Cors).</p>
+                      <p><strong>Custom middleware:</strong> User-defined, tailored for specific app needs (e.g., custom logging, auth checks).</p>
+                      <p>Built-in middleware are easy to use and configure; custom middleware gives full control.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-middleware-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-middleware-4" aria-expanded="false" aria-controls="flush-collapse-middleware-4">
+                      4. Third-party middleware integration
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-middleware-4" class="accordion-collapse collapse" aria-labelledby="flush-middleware-4" data-bs-parent="#accordionFlushMiddleware">
+                    <div class="accordion-body">
+                      <p>NestJS can use Express or Fastify middleware. Use <code>.apply()</code> method in <code>configure()</code> to integrate.</p>
+                      <p><strong>Example integrating helmet middleware:</strong></p>
+                      <pre><code class="language-typescript">
+              import * as helmet from 'helmet';
+              
+              export class AppModule implements NestModule {
+                configure(consumer: MiddlewareConsumer) {
+                  consumer
+                    .apply(helmet())
+                    .forRoutes('*');
+                }
+              }
+                      </code></pre>
+                      <p>Enables use of popular middleware libraries easily.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExceptionHandling">
+                <h3>5. Exception Handling</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-exception-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-exception-1" aria-expanded="false" aria-controls="flush-collapse-exception-1">
+                      1. Built-in exceptions (HttpException, NotFoundException, etc.)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-exception-1" class="accordion-collapse collapse" aria-labelledby="flush-exception-1" data-bs-parent="#accordionFlushExceptionHandling">
+                    <div class="accordion-body">
+                      <p>NestJS provides common HTTP exceptions extending <code>HttpException</code>.</p>
+                      <ul>
+                        <li>NotFoundException (404)</li>
+                        <li>BadRequestException (400)</li>
+                        <li>UnauthorizedException (401)</li>
+                        <li>ForbiddenException (403)</li>
+                      </ul>
+                      <p>Throw these in controllers/services to send proper HTTP error responses.</p>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              throw new NotFoundException('User not found');
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-exception-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-exception-2" aria-expanded="false" aria-controls="flush-collapse-exception-2">
+                      2. Global exception filters
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-exception-2" class="accordion-collapse collapse" aria-labelledby="flush-exception-2" data-bs-parent="#accordionFlushExceptionHandling">
+                    <div class="accordion-body">
+                      <p>Catch and handle exceptions thrown anywhere in the app globally.</p>
+                      <p>Implement <code>ExceptionFilter</code> interface and use <code>@Catch()</code> decorator.</p>
+                      <p>Register globally using:</p>
+                      <pre><code class="language-typescript">
+              app.useGlobalFilters(new AllExceptionsFilter());
+                      </code></pre>
+                      <p>Useful for consistent error formatting and logging.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-exception-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-exception-3" aria-expanded="false" aria-controls="flush-collapse-exception-3">
+                      3. Custom exception filters
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-exception-3" class="accordion-collapse collapse" aria-labelledby="flush-exception-3" data-bs-parent="#accordionFlushExceptionHandling">
+                    <div class="accordion-body">
+                      <p>Create filters to handle specific exceptions or customize responses.</p>
+                      <p>Can catch multiple or single exception types via <code>@Catch(ExceptionType)</code>.</p>
+                      <p>Access exception, request, response objects to tailor handling.</p>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Catch(HttpException)
+              export class HttpExceptionFilter implements ExceptionFilter {
+                catch(exception: HttpException, host: ArgumentsHost) {
+                  const ctx = host.switchToHttp();
+                  const response = ctx.getResponse&lt;Response&gt;();
+                  const status = exception.getStatus();
+              
+                  response.status(status).json({
+                    statusCode: status,
+                    message: exception.message,
+                  });
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-exception-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-exception-4" aria-expanded="false" aria-controls="flush-collapse-exception-4">
+                      4. Handling errors in async operations
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-exception-4" class="accordion-collapse collapse" aria-labelledby="flush-exception-4" data-bs-parent="#accordionFlushExceptionHandling">
+                    <div class="accordion-body">
+                      <p>Use try-catch blocks inside async methods to catch exceptions.</p>
+                      <p>Throw exceptions inside catch block for Nest to handle.</p>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              async findUser(id: string) {
+                try {
+                  const user = await this.userRepository.findById(id);
+                  if (!user) throw new NotFoundException('User not found');
+                  return user;
+                } catch (error) {
+                  throw new InternalServerErrorException();
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushPipes">
+                <h3>6. Pipes</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-pipe-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-pipe-1" aria-expanded="false" aria-controls="flush-collapse-pipe-1">
+                      1. Built-in pipes (ValidationPipe, ParseIntPipe, etc.)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-pipe-1" class="accordion-collapse collapse" aria-labelledby="flush-pipe-1" data-bs-parent="#accordionFlushPipes">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Pipes operate on incoming request data before handlers process it.</li>
+                        <li>Common built-in pipes:
+                          <ul>
+                            <li><strong>ValidationPipe:</strong> validates input data using class-validator decorators.</li>
+                            <li><strong>ParseIntPipe:</strong> converts string params to integers.</li>
+                            <li><strong>ParseBoolPipe, ParseUUIDPipe, etc.:</strong> for type parsing.</li>
+                          </ul>
+                        </li>
+                        <li>Used via method parameter decorators or globally.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Get(':id')
+              getUser(@Param('id', ParseIntPipe) id: number) {
+                return `User ID: ${id}`;
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-pipe-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-pipe-2" aria-expanded="false" aria-controls="flush-collapse-pipe-2">
+                      2. Creating custom pipes
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-pipe-2" class="accordion-collapse collapse" aria-labelledby="flush-pipe-2" data-bs-parent="#accordionFlushPipes">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Implement <code>PipeTransform</code> interface with <code>transform(value, metadata)</code> method.</li>
+                        <li>Can transform, validate, or reject data.</li>
+                        <li>Decorate class with <code>@Injectable()</code>.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Injectable()
+              export class MyCustomPipe implements PipeTransform {
+                transform(value: any) {
+                  // custom validation or transformation
+                  return value;
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-pipe-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-pipe-3" aria-expanded="false" aria-controls="flush-collapse-pipe-3">
+                      3. Using pipes for transformation and validation
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-pipe-3" class="accordion-collapse collapse" aria-labelledby="flush-pipe-3" data-bs-parent="#accordionFlushPipes">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Pipes can modify input data (e.g., convert string to int) before it reaches the route handler.</li>
+                        <li>Validate input and throw exceptions if invalid.</li>
+                        <li>Can be applied:
+                          <ul>
+                            <li>Per-route or method parameter:</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @Post()
+              createUser(@Body(new ValidationPipe()) createUserDto: CreateUserDto) {}
+                      </code></pre>
+                      <ul>
+                        <li>Globally using <code>app.useGlobalPipes()</code></li>
+                        <li>Enhances security and data consistency</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushGuards">
+                <h3>7. Guards & Authorization</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-guard-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-guard-1" aria-expanded="false" aria-controls="flush-collapse-guard-1">
+                      1. Creating guards
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-guard-1" class="accordion-collapse collapse" aria-labelledby="flush-guard-1" data-bs-parent="#accordionFlushGuards">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Guards control access to routes by implementing the <code>CanActivate</code> interface.</li>
+                        <li><code>canActivate(context: ExecutionContext)</code> method returns <code>true</code> (allow) or <code>false</code> (deny).</li>
+                        <li>Apply guards using the <code>@UseGuards()</code> decorator on routes or controllers.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Injectable()
+              export class AuthGuard implements CanActivate {
+                canActivate(context: ExecutionContext): boolean {
+                  const request = context.switchToHttp().getRequest();
+                  return Boolean(request.user); // allow if user exists
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-guard-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-guard-2" aria-expanded="false" aria-controls="flush-collapse-guard-2">
+                      2. Role-based access control (RBAC)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-guard-2" class="accordion-collapse collapse" aria-labelledby="flush-guard-2" data-bs-parent="#accordionFlushGuards">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Control access based on user roles or permissions (e.g., admin, user).</li>
+                        <li>Roles assigned to users determine their permissions.</li>
+                        <li>Use guards to check roles before allowing access.</li>
+                        <li>Often combined with decorators like <code>@Roles('admin')</code> for cleaner code.</li>
+                      </ul>
+                      <p><strong>Example guard checking roles:</strong></p>
+                      <pre><code class="language-typescript">
+              canActivate(context: ExecutionContext): boolean {
+                const request = context.switchToHttp().getRequest();
+                const user = request.user;
+                return user?.roles.includes('admin');
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-guard-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-guard-3" aria-expanded="false" aria-controls="flush-collapse-guard-3">
+                      3. Authentication vs authorization in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-guard-3" class="accordion-collapse collapse" aria-labelledby="flush-guard-3" data-bs-parent="#accordionFlushGuards">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Authentication:</strong> Verifies user identity (e.g., login, JWT verification).</li>
+                        <li><strong>Authorization:</strong> Determines if authenticated user has permission to access resources (e.g., RBAC).</li>
+                        <li>Authentication is usually handled by strategies (Passport.js integration).</li>
+                        <li>Authorization is enforced via guards.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-guard-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-guard-4" aria-expanded="false" aria-controls="flush-collapse-guard-4">
+                      4. Combining guards and interceptors
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-guard-4" class="accordion-collapse collapse" aria-labelledby="flush-guard-4" data-bs-parent="#accordionFlushGuards">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Guards check if a request is allowed (authorization).</li>
+                        <li>Interceptors modify or extend how the request or response is handled (e.g., logging, caching).</li>
+                        <li>Can be used together to enforce security and modify behavior.</li>
+                        <li>Applied with decorators:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @UseGuards(AuthGuard)
+              @UseInterceptors(LoggingInterceptor)
+              @Get()
+              getData() {}
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushInterceptors">
+                <h3>8. Interceptors</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-interceptor-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-interceptor-1" aria-expanded="false" aria-controls="flush-collapse-interceptor-1">
+                      1. Logging interceptors
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-interceptor-1" class="accordion-collapse collapse" aria-labelledby="flush-interceptor-1" data-bs-parent="#accordionFlushInterceptors">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Intercept incoming requests and outgoing responses for logging purposes.</li>
+                        <li>Implement <code>NestInterceptor</code> interface and override <code>intercept()</code> method.</li>
+                        <li>Can log method, URL, execution time, etc.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              export class LoggingInterceptor implements NestInterceptor {
+                intercept(context: ExecutionContext, next: CallHandler): Observable<any> {
+                  console.log('Before...');
+                  const now = Date.now();
+                  return next.handle().pipe(
+                    tap(() => console.log(`After... ${Date.now() - now}ms`)),
+                  );
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-interceptor-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-interceptor-2" aria-expanded="false" aria-controls="flush-collapse-interceptor-2">
+                      2. Response transformation
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-interceptor-2" class="accordion-collapse collapse" aria-labelledby="flush-interceptor-2" data-bs-parent="#accordionFlushInterceptors">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Modify or format the response before sending it to the client.</li>
+                        <li>Used to change data structure, remove sensitive fields, or wrap responses.</li>
+                        <li>Implement in <code>intercept()</code> and map the result.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              return next.handle().pipe(map(data => ({ data, status: 'success' })));
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-interceptor-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-interceptor-3" aria-expanded="false" aria-controls="flush-collapse-interceptor-3">
+                      3. Exception mapping
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-interceptor-3" class="accordion-collapse collapse" aria-labelledby="flush-interceptor-3" data-bs-parent="#accordionFlushInterceptors">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Catch and transform exceptions or errors thrown in route handlers.</li>
+                        <li>Wrap errors into consistent formats or log them.</li>
+                        <li>Interceptors can complement exception filters.</li>
+                        <li>Example use: transform database errors into HTTP exceptions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-interceptor-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-interceptor-4" aria-expanded="false" aria-controls="flush-collapse-interceptor-4">
+                      4. Timeout interceptors
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-interceptor-4" class="accordion-collapse collapse" aria-labelledby="flush-interceptor-4" data-bs-parent="#accordionFlushInterceptors">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Set a timeout limit for request handling.</li>
+                        <li>Automatically throw error if handler exceeds allowed time.</li>
+                      </ul>
+                      <p><strong>Example using RxJS timeout operator:</strong></p>
+                      <pre><code class="language-typescript">
+              return next.handle().pipe(timeout(5000));
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-interceptor-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-interceptor-5" aria-expanded="false" aria-controls="flush-collapse-interceptor-5">
+                      5. Caching with interceptors
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-interceptor-5" class="accordion-collapse collapse" aria-labelledby="flush-interceptor-5" data-bs-parent="#accordionFlushInterceptors">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Cache responses to improve performance.</li>
+                        <li>Check cache before handling request, return cached response if available.</li>
+                        <li>Save response data to cache after processing.</li>
+                        <li>Often combined with Redis or in-memory cache stores.</li>
+                        <li>Example: cache interceptor stores frequently requested data.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushValidation">
+                <h3>9. Validation</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-validation-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-validation-1" aria-expanded="false" aria-controls="flush-collapse-validation-1">
+                      1. Class-validator and class-transformer integration
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-validation-1" class="accordion-collapse collapse" aria-labelledby="flush-validation-1" data-bs-parent="#accordionFlushValidation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><code>class-validator</code>: library for declarative validation with decorators (e.g., <code>@IsString()</code>, <code>@IsNotEmpty()</code>).</li>
+                        <li><code>class-transformer</code>: transforms plain objects into class instances and supports data transformation.</li>
+                        <li>Both integrate seamlessly with NestJS DTOs for validation and transformation.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              import { IsString, IsInt } from 'class-validator';
+              
+              export class CreateUserDto {
+                @IsString()
+                name: string;
+              
+                @IsInt()
+                age: number;
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-validation-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-validation-2" aria-expanded="false" aria-controls="flush-collapse-validation-2">
+                      2. DTOs (Data Transfer Objects)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-validation-2" class="accordion-collapse collapse" aria-labelledby="flush-validation-2" data-bs-parent="#accordionFlushValidation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Classes defining the shape and validation rules of data sent over the network (request payloads).</li>
+                        <li>Used as method parameters decorated with <code>@Body()</code>.</li>
+                        <li>Improve code clarity, validation, and type safety.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Post()
+              createUser(@Body() createUserDto: CreateUserDto) {}
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-validation-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-validation-3" aria-expanded="false" aria-controls="flush-collapse-validation-3">
+                      3. Input validation best practices
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-validation-3" class="accordion-collapse collapse" aria-labelledby="flush-validation-3" data-bs-parent="#accordionFlushValidation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Always validate incoming data to avoid malformed or malicious input.</li>
+                        <li>Use DTOs with decorators for clear, reusable validation rules.</li>
+                        <li>Validate both route params and request bodies.</li>
+                        <li>Provide meaningful error messages.</li>
+                        <li>Keep validation logic separate from business logic.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-validation-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-validation-4" aria-expanded="false" aria-controls="flush-collapse-validation-4">
+                      4. Automatic validation with ValidationPipe
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-validation-4" class="accordion-collapse collapse" aria-labelledby="flush-validation-4" data-bs-parent="#accordionFlushValidation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>NestJS built-in pipe that automatically validates DTOs on incoming requests.</li>
+                        <li>Throws exceptions if validation fails (HTTP 400).</li>
+                        <li>Can be applied per-route, per-controller, or globally (<code>app.useGlobalPipes()</code>).</li>
+                      </ul>
+                      <p><strong>Example global usage:</strong></p>
+                      <pre><code class="language-typescript">
+              app.useGlobalPipes(new ValidationPipe());
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushConfig">
+                <h3>10. Configuration Management</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-config-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-config-1" aria-expanded="false" aria-controls="flush-collapse-config-1">
+                      1. Using @nestjs/config module
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-config-1" class="accordion-collapse collapse" aria-labelledby="flush-config-1" data-bs-parent="#accordionFlushConfig">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Official NestJS module to manage app configuration.</li>
+                        <li>Loads configuration from <code>.env</code> files or other sources.</li>
+                        <li>Provides a <code>ConfigService</code> to access config values anywhere via Dependency Injection.</li>
+                        <li>Easy to organize and centralize config management.</li>
+                      </ul>
+                      <p><strong>Setup example:</strong></p>
+                      <pre><code class="language-typescript">
+              import { ConfigModule } from '@nestjs/config';
+              
+              @Module({
+                imports: [ConfigModule.forRoot()],
+              })
+              export class AppModule {}
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-config-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-config-2" aria-expanded="false" aria-controls="flush-collapse-config-2">
+                      2. Environment variables and .env files
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-config-2" class="accordion-collapse collapse" aria-labelledby="flush-config-2" data-bs-parent="#accordionFlushConfig">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Store sensitive or environment-specific settings outside code (e.g., API keys, DB URLs).</li>
+                        <li><code>.env</code> file contains key-value pairs:</li>
+                      </ul>
+                      <pre><code class="language-ini">
+              DATABASE_URL=postgres://user:pass@localhost:5432/dbname
+              PORT=3000
+                      </code></pre>
+                      <ul>
+                        <li><code>@nestjs/config</code> reads <code>.env</code> automatically with <code>forRoot()</code>.</li>
+                        <li>Use <code>ConfigService</code> to safely access variables:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              const port = this.configService.get<number>('PORT');
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-config-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-config-3" aria-expanded="false" aria-controls="flush-collapse-config-3">
+                      3. Configuration schema validation
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-config-3" class="accordion-collapse collapse" aria-labelledby="flush-config-3" data-bs-parent="#accordionFlushConfig">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Validate environment variables to avoid misconfiguration at runtime.</li>
+                        <li>Use libraries like Joi to define validation schemas.</li>
+                        <li>Pass schema to <code>ConfigModule.forRoot()</code> to auto-validate <code>.env</code> contents.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              import * as Joi from 'joi';
+              
+              ConfigModule.forRoot({
+                validationSchema: Joi.object({
+                  PORT: Joi.number().default(3000),
+                  DATABASE_URL: Joi.string().required(),
+                }),
+              });
+                      </code></pre>
+                      <p>Prevents app startup with invalid or missing config values.</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushDatabase">
+                <h3>11. Database Integration</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-1" aria-expanded="false" aria-controls="flush-collapse-db-1">
+                      1. TypeORM integration
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-1" class="accordion-collapse collapse" aria-labelledby="flush-db-1" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>TypeORM: popular ORM for SQL databases (Postgres, MySQL, etc.)</li>
+                        <li>Official NestJS package: <code>@nestjs/typeorm</code></li>
+                        <li>Define entities as classes with decorators (<code>@Entity()</code>, <code>@Column()</code>)</li>
+                        <li>Use <code>TypeOrmModule.forRoot()</code> to configure DB connection</li>
+                        <li>Inject repositories/services to perform CRUD operations</li>
+                      </ul>
+                      <p><strong>Example entity:</strong></p>
+                      <pre><code class="language-typescript">
+              import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
+              
+              @Entity()
+              export class User {
+                @PrimaryGeneratedColumn()
+                id: number;
+              
+                @Column()
+                name: string;
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-2" aria-expanded="false" aria-controls="flush-collapse-db-2">
+                      2. Prisma integration
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-2" class="accordion-collapse collapse" aria-labelledby="flush-db-2" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Prisma: modern ORM for type-safe database access, supports SQL DBs</li>
+                        <li>Use Prisma Client inside Nest services for queries</li>
+                        <li>Schema defined in <code>schema.prisma</code> file</li>
+                        <li>Prisma doesn’t have official NestJS module but works well with Dependency Injection</li>
+                        <li>Generate Prisma Client via CLI, inject in services</li>
+                      </ul>
+                      <p><strong>Example usage:</strong></p>
+                      <pre><code class="language-typescript">
+              const user = await this.prisma.user.findMany();
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-3" aria-expanded="false" aria-controls="flush-collapse-db-3">
+                      3. Mongoose integration for MongoDB
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-3" class="accordion-collapse collapse" aria-labelledby="flush-db-3" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><code>@nestjs/mongoose</code> package integrates Mongoose ODM for MongoDB</li>
+                        <li>Define schemas using decorators (<code>@Schema()</code>, <code>@Prop()</code>)</li>
+                        <li>Register models with <code>MongooseModule.forFeature()</code></li>
+                        <li>Use injected models for CRUD</li>
+                      </ul>
+                      <p><strong>Example schema:</strong></p>
+                      <pre><code class="language-typescript">
+              import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
+              
+              @Schema()
+              export class Cat {
+                @Prop()
+                name: string;
+              }
+              
+              export const CatSchema = SchemaFactory.createForClass(Cat);
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-4" aria-expanded="false" aria-controls="flush-collapse-db-4">
+                      4. Repository pattern in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-4" class="accordion-collapse collapse" aria-labelledby="flush-db-4" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Abstracts data access logic behind repository classes</li>
+                        <li>Used in TypeORM with <code>Repository&lt;T&gt;</code></li>
+                        <li>Helps keep service code clean and focused on business logic</li>
+                        <li>Inject repositories via constructor</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              constructor(
+                @InjectRepository(User) private userRepository: Repository<User>,
+              ) {}
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-5" aria-expanded="false" aria-controls="flush-collapse-db-5">
+                      5. Transactions in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-5" class="accordion-collapse collapse" aria-labelledby="flush-db-5" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Transactions ensure multiple DB operations succeed or fail together</li>
+                        <li>Supported in TypeORM and Prisma</li>
+                        <li>In TypeORM, use <code>@Transaction()</code> decorator or <code>queryRunner</code></li>
+                      </ul>
+                      <p><strong>Example (TypeORM):</strong></p>
+                      <pre><code class="language-typescript">
+              await this.connection.transaction(async manager => {
+                await manager.save(user);
+                await manager.save(profile);
+              });
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-db-6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-db-6" aria-expanded="false" aria-controls="flush-collapse-db-6">
+                      6. Database migrations
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-db-6" class="accordion-collapse collapse" aria-labelledby="flush-db-6" data-bs-parent="#accordionFlushDatabase">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Manage schema changes incrementally and safely</li>
+                        <li>TypeORM and Prisma provide CLI tools for generating and running migrations</li>
+                        <li>Migrations help version control DB schema alongside code</li>
+                      </ul>
+                      <p><strong>Example (TypeORM CLI):</strong></p>
+                      <pre><code class="language-bash">
+              typeorm migration:generate -n AddUserTable
+              typeorm migration:run
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushAuthentication">
+                <h3>12. Authentication</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-auth-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-auth-1" aria-expanded="false" aria-controls="flush-collapse-auth-1">
+                      1. JWT authentication
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-auth-1" class="accordion-collapse collapse" aria-labelledby="flush-auth-1" data-bs-parent="#accordionFlushAuthentication">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Uses JSON Web Tokens (JWT) to securely transmit user identity</li>
+                        <li>Server issues JWT after login, client stores and sends it with requests (usually in Authorization header)</li>
+                        <li>Stateless: no session stored on server</li>
+                        <li>Verify token on each request via guard or middleware</li>
+                      </ul>
+                      <p><strong>Example usage:</strong></p>
+                      <pre><code class="language-typescript">
+              @UseGuards(JwtAuthGuard)
+              @Get('profile')
+              getProfile() {
+                return this.userService.getProfile();
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-auth-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-auth-2" aria-expanded="false" aria-controls="flush-collapse-auth-2">
+                      2. Passport.js strategies (local, jwt, oauth)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-auth-2" class="accordion-collapse collapse" aria-labelledby="flush-auth-2" data-bs-parent="#accordionFlushAuthentication">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Passport.js is a popular authentication middleware integrated with NestJS</li>
+                        <li>Strategies:
+                          <ul>
+                            <li>Local: username/password verification</li>
+                            <li>JWT: validate and decode JWT tokens</li>
+                            <li>OAuth: third-party providers (Google, Facebook, GitHub)</li>
+                          </ul>
+                        </li>
+                        <li>Use <code>@nestjs/passport</code> package to implement strategies</li>
+                      </ul>
+                      <p><strong>Example local strategy:</strong></p>
+                      <pre><code class="language-typescript">
+              @Injectable()
+              export class LocalStrategy extends PassportStrategy(Strategy) {
+                async validate(username: string, password: string) {
+                  // validate user credentials
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-auth-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-auth-3" aria-expanded="false" aria-controls="flush-collapse-auth-3">
+                      3. Refresh tokens
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-auth-3" class="accordion-collapse collapse" aria-labelledby="flush-auth-3" data-bs-parent="#accordionFlushAuthentication">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Long-lived tokens used to obtain new short-lived JWTs without re-login</li>
+                        <li>Stored securely (httpOnly cookies or secure storage)</li>
+                        <li>Helps maintain user sessions without compromising security</li>
+                        <li>Refresh token endpoint verifies and issues new JWT</li>
+                        <li>Important for logout and token invalidation logic</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-auth-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-auth-4" aria-expanded="false" aria-controls="flush-collapse-auth-4">
+                      4. Session-based authentication
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-auth-4" class="accordion-collapse collapse" aria-labelledby="flush-auth-4" data-bs-parent="#accordionFlushAuthentication">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Traditional authentication storing session state on server (memory, Redis)</li>
+                        <li>Uses cookies to track sessions</li>
+                        <li>Less scalable than JWT but easier for some use cases</li>
+                        <li>Supported in NestJS via express-session and Passport</li>
+                      </ul>
+                      <p><strong>Example:</strong> configure session middleware in <code>main.ts</code></p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-auth-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-auth-5" aria-expanded="false" aria-controls="flush-collapse-auth-5">
+                      5. Social logins (Google, Facebook, etc.)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-auth-5" class="accordion-collapse collapse" aria-labelledby="flush-auth-5" data-bs-parent="#accordionFlushAuthentication">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>OAuth-based login with third-party providers</li>
+                        <li>Use Passport OAuth strategies like <code>passport-google-oauth20</code></li>
+                        <li>Users authenticate via provider; app receives user info and access tokens</li>
+                        <li>Enables easy login without password management</li>
+                      </ul>
+                      <p><strong>Example:</strong> implement Google strategy and handle OAuth callback routes</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushFileUploads">
+                <h3>13. File Uploads</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-fileupload-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-fileupload-1" aria-expanded="false" aria-controls="flush-collapse-fileupload-1">
+                      1. Handling file uploads with Multer
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-fileupload-1" class="accordion-collapse collapse" aria-labelledby="flush-fileupload-1" data-bs-parent="#accordionFlushFileUploads">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>NestJS uses Multer middleware (built-in integration via <code>@nestjs/platform-express</code>) for handling multipart/form-data</li>
+                        <li>Use <code>@UseInterceptors(FileInterceptor('fieldname'))</code> to intercept file uploads</li>
+                        <li>Access uploaded file with <code>@UploadedFile()</code> decorator</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @Post('upload')
+              @UseInterceptors(FileInterceptor('file'))
+              uploadFile(@UploadedFile() file: Express.Multer.File) {
+                console.log(file);
+                return { message: 'File uploaded successfully' };
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-fileupload-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-fileupload-2" aria-expanded="false" aria-controls="flush-collapse-fileupload-2">
+                      2. Storing files locally
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-fileupload-2" class="accordion-collapse collapse" aria-labelledby="flush-fileupload-2" data-bs-parent="#accordionFlushFileUploads">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Save uploaded files to server disk using Multer's disk storage engine</li>
+                        <li>Configure destination folder and filename in Multer options</li>
+                      </ul>
+                      <p><strong>Example disk storage config:</strong></p>
+                      <pre><code class="language-typescript">
+              @UseInterceptors(FileInterceptor('file', {
+                storage: diskStorage({
+                  destination: './uploads',
+                  filename: (req, file, cb) => {
+                    const uniqueName = Date.now() + '-' + file.originalname;
+                    cb(null, uniqueName);
+                  },
+                }),
+              }))
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-fileupload-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-fileupload-3" aria-expanded="false" aria-controls="flush-collapse-fileupload-3">
+                      3. Uploading to cloud storage (AWS S3, GCP, etc.)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-fileupload-3" class="accordion-collapse collapse" aria-labelledby="flush-fileupload-3" data-bs-parent="#accordionFlushFileUploads">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>After receiving file, upload it programmatically to cloud storage services</li>
+                        <li>Use official SDKs (AWS SDK, Google Cloud Storage client) inside service methods</li>
+                        <li>Store URLs or metadata in database for reference</li>
+                      </ul>
+                      <p><strong>Example (AWS S3):</strong></p>
+                      <p>Receive file in controller, pass buffer or stream to S3 upload method in service, return S3 file URL after successful upload</p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushEventDriven">
+                <h3>14. Event-Driven Architecture</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-event-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-event-1" aria-expanded="false" aria-controls="flush-collapse-event-1">
+                      1. EventEmitter in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-event-1" class="accordion-collapse collapse" aria-labelledby="flush-event-1" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Built-in event bus for intra-application event handling</li>
+                        <li>Uses EventEmitter2 package integrated via <code>@nestjs/event-emitter</code></li>
+                        <li>Emit events and subscribe with listeners</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              // Emit event
+              this.eventEmitter.emit('user.created', payload);
+              
+              // Listen for event
+              @OnEvent('user.created')
+              handleUserCreatedEvent(payload: any) {
+                // handle event
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-event-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-event-2" aria-expanded="false" aria-controls="flush-collapse-event-2">
+                      2. Message queues (RabbitMQ, Kafka, NATS)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-event-2" class="accordion-collapse collapse" aria-labelledby="flush-event-2" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Used for decoupled, scalable communication between microservices or distributed components</li>
+                        <li>NestJS microservice package integrates RabbitMQ, Kafka, NATS</li>
+                        <li>Supports publish-subscribe, message routing, durability</li>
+                        <li>Use transport layers like <code>ClientsModule.register()</code> with config</li>
+                      </ul>
+                      <p><strong>Example with RabbitMQ:</strong></p>
+                      <pre><code class="language-typescript">
+              ClientsModule.register([
+                { 
+                  name: 'RABBITMQ_SERVICE', 
+                  transport: Transport.RMQ, 
+                  options: { 
+                    urls: ['amqp://localhost'], 
+                    queue: 'main_queue' 
+                  }
+                }
+              ]);
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-event-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-event-3" aria-expanded="false" aria-controls="flush-collapse-event-3">
+                      3. WebSockets
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-event-3" class="accordion-collapse collapse" aria-labelledby="flush-event-3" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Real-time bidirectional communication protocol</li>
+                        <li>Supported via <code>@WebSocketGateway()</code> decorator</li>
+                        <li>Handle events with <code>@SubscribeMessage()</code></li>
+                        <li>Used for chat apps, live notifications, etc.</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              @WebSocketGateway()
+              export class EventsGateway {
+                @SubscribeMessage('message')
+                handleMessage(client: any, payload: any) {
+                  return 'Hello world!';
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-event-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-event-4" aria-expanded="false" aria-controls="flush-collapse-event-4">
+                      4. Microservices with event-based communication
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-event-4" class="accordion-collapse collapse" aria-labelledby="flush-event-4" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Microservices communicate via events/messages instead of direct HTTP calls</li>
+                        <li>Use NestJS microservices package with transporters (TCP, Redis, NATS, RabbitMQ)</li>
+                        <li>Supports request-response and event-driven patterns</li>
+                        <li>Promotes loose coupling and scalability</li>
+                      </ul>
+                      <p><strong>Example:</strong></p>
+                      <pre><code class="language-typescript">
+              const app = await NestFactory.createMicroservice(AppModule, { transport: Transport.TCP });
+              await app.listen();
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushRestApi">
+                <h3>15. REST API Development</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-rest-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-rest-1" aria-expanded="false" aria-controls="flush-collapse-rest-1">
+                      1. Versioning APIs
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-rest-1" class="accordion-collapse collapse" aria-labelledby="flush-rest-1" data-bs-parent="#accordionFlushRestApi">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Manage multiple API versions without breaking existing clients</li>
+                        <li>NestJS supports versioning via URL, header, or media type</li>
+                        <li>Enable versioning in main app module:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              app.enableVersioning({
+                type: VersioningType.URI, // e.g., /v1/users
+              });
+                      </code></pre>
+                      <p>Use <code>@Version('1')</code> decorator on controllers or routes</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-rest-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-rest-2" aria-expanded="false" aria-controls="flush-collapse-rest-2">
+                      2. Pagination and filtering
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-rest-2" class="accordion-collapse collapse" aria-labelledby="flush-rest-2" data-bs-parent="#accordionFlushRestApi">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Handle large datasets by returning data in chunks (pagination)</li>
+                        <li>Use query parameters for pagination (page, limit) and filtering (status, category)</li>
+                        <li>Implement logic in service layer to fetch subset of data</li>
+                        <li>Example query params:</li>
+                      </ul>
+                      <pre><code>
+              GET /users?page=2&amp;limit=10&amp;role=admin
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-rest-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-rest-3" aria-expanded="false" aria-controls="flush-collapse-rest-3">
+                      3. HATEOAS (Hypermedia as the Engine of Application State)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-rest-3" class="accordion-collapse collapse" aria-labelledby="flush-rest-3" data-bs-parent="#accordionFlushRestApi">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>REST principle where responses include links to related resources or next actions</li>
+                        <li>Helps clients navigate API dynamically</li>
+                        <li>Example: returning a user with links to edit or delete</li>
+                      </ul>
+                      <pre><code class="language-json">
+              {
+                "id": 1,
+                "name": "John",
+                "_links": {
+                  "self": "/users/1",
+                  "edit": "/users/1/edit",
+                  "delete": "/users/1"
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-rest-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-rest-4" aria-expanded="false" aria-controls="flush-collapse-rest-4">
+                      4. API documentation with Swagger
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-rest-4" class="accordion-collapse collapse" aria-labelledby="flush-rest-4" data-bs-parent="#accordionFlushRestApi">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>NestJS integrates Swagger via <code>@nestjs/swagger</code></li>
+                        <li>Automatically generate interactive API docs</li>
+                        <li>Decorate controllers, DTOs, and methods for rich docs</li>
+                        <li>Setup example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              const config = new DocumentBuilder()
+                .setTitle('API')
+                .setVersion('1.0')
+                .build();
+              const document = SwaggerModule.createDocument(app, config);
+              SwaggerModule.setup('api', app, document);
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-rest-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-rest-5" aria-expanded="false" aria-controls="flush-collapse-rest-5">
+                      5. Response shaping
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-rest-5" class="accordion-collapse collapse" aria-labelledby="flush-rest-5" data-bs-parent="#accordionFlushRestApi">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Customize API responses by transforming data</li>
+                        <li>Remove sensitive fields, add metadata, or format output</li>
+                        <li>Use interceptors or DTO transformation</li>
+                        <li>Example with interceptor to wrap response:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              return next.handle().pipe(map(data => ({ status: 'success', data })));
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushGraphQL">
+                <h3>16. GraphQL</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-graphql-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-graphql-1" aria-expanded="false" aria-controls="flush-collapse-graphql-1">
+                      1. GraphQL basics in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-graphql-1" class="accordion-collapse collapse" aria-labelledby="flush-graphql-1" data-bs-parent="#accordionFlushGraphQL">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>GraphQL is a query language for APIs and runtime for executing queries</li>
+                        <li>NestJS supports GraphQL via <code>@nestjs/graphql</code> package</li>
+                        <li>Enables flexible data fetching and avoids over/under-fetching</li>
+                        <li>Integrate by importing <code>GraphQLModule</code> in app module</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              GraphQLModule.forRoot({
+                autoSchemaFile: true, // code-first schema generation
+              });
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-graphql-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-graphql-2" aria-expanded="false" aria-controls="flush-collapse-graphql-2">
+                      2. Schema-first vs code-first approaches
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-graphql-2" class="accordion-collapse collapse" aria-labelledby="flush-graphql-2" data-bs-parent="#accordionFlushGraphQL">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Schema-first:</strong></li>
+                        <ul>
+                          <li>Write GraphQL schema (.graphql files) manually</li>
+                          <li>Generate resolvers based on schema</li>
+                          <li>More control over schema but extra maintenance</li>
+                        </ul>
+                        <li><strong>Code-first:</strong></li>
+                        <ul>
+                          <li>Define schema using TypeScript decorators (<code>@ObjectType()</code>, <code>@Field()</code>)</li>
+                          <li>Schema is generated automatically from code</li>
+                          <li>Faster development with type safety and easier refactoring</li>
+                        </ul>
+                        <li>NestJS supports both, but code-first is more common in Nest</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-graphql-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-graphql-3" aria-expanded="false" aria-controls="flush-collapse-graphql-3">
+                      3. Queries, mutations, and subscriptions
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-graphql-3" class="accordion-collapse collapse" aria-labelledby="flush-graphql-3" data-bs-parent="#accordionFlushGraphQL">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Queries: Read operations, fetch data</li>
+                        <li>Mutations: Write operations, create/update/delete data</li>
+                        <li>Subscriptions: Real-time data updates over WebSockets</li>
+                        <li>Define resolvers for each type</li>
+                        <li>Example query resolver:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @Query(() => [User])
+              getUsers() {
+                return this.userService.findAll();
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-graphql-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-graphql-4" aria-expanded="false" aria-controls="flush-collapse-graphql-4">
+                      4. DataLoader for optimization
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-graphql-4" class="accordion-collapse collapse" aria-labelledby="flush-graphql-4" data-bs-parent="#accordionFlushGraphQL">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Batch and cache requests to avoid redundant database calls</li>
+                        <li>Useful in GraphQL to solve the “N+1” problem</li>
+                        <li>DataLoader groups multiple requests into a single batch request</li>
+                        <li>Integrate by creating a DataLoader instance per request and injecting it into resolvers</li>
+                        <li>Improves performance and reduces DB load</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushTesting">
+                <h3>17. Testing</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-testing-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-testing-1" aria-expanded="false" aria-controls="flush-collapse-testing-1">
+                      1. Unit testing with Jest
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-testing-1" class="accordion-collapse collapse" aria-labelledby="flush-testing-1" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Jest is the default testing framework used by NestJS</li>
+                        <li>Tests individual units like services or controllers in isolation</li>
+                        <li>Use <code>@nestjs/testing</code> module to create testing modules</li>
+                        <li>Example basic test:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              describe('UsersService', () => {
+                let service: UsersService;
+              
+                beforeEach(async () => {
+                  const module = await Test.createTestingModule({
+                    providers: [UsersService],
+                  }).compile();
+              
+                  service = module.get<UsersService>(UsersService);
+                });
+              
+                it('should be defined', () => {
+                  expect(service).toBeDefined();
+                });
+              });
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-testing-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-testing-2" aria-expanded="false" aria-controls="flush-collapse-testing-2">
+                      2. End-to-end (E2E) testing
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-testing-2" class="accordion-collapse collapse" aria-labelledby="flush-testing-2" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tests the entire application flow including HTTP requests</li>
+                        <li>Uses <code>supertest</code> package to simulate requests</li>
+                        <li>Run with a real instance of the app</li>
+                        <li>Usually placed in <code>test</code> or <code>e2e</code> folders</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              const app = await NestFactory.create(AppModule);
+              await request(app.getHttpServer())
+                .get('/users')
+                .expect(200);
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-testing-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-testing-3" aria-expanded="false" aria-controls="flush-collapse-testing-3">
+                      3. Mocking dependencies
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-testing-3" class="accordion-collapse collapse" aria-labelledby="flush-testing-3" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Replace real dependencies with mocks to isolate units</li>
+                        <li>Use Jest’s mocking features (<code>jest.fn()</code>, <code>jest.mock()</code>)</li>
+                        <li>Inject mock providers in test modules</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              const mockUsersService = { findAll: jest.fn().mockReturnValue(['user1']) };
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-testing-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-testing-4" aria-expanded="false" aria-controls="flush-collapse-testing-4">
+                      4. Testing controllers, services, and guards
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-testing-4" class="accordion-collapse collapse" aria-labelledby="flush-testing-4" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Controllers: test request handling, route responses</li>
+                        <li>Services: test business logic and data processing</li>
+                        <li>Guards: test authorization logic by mocking <code>ExecutionContext</code></li>
+                        <li>Use Nest’s testing utilities to instantiate modules with mocks for dependencies</li>
+                        <li>Example guard test:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              it('should allow access if user exists', () => {
+                const context = createMockExecutionContextWithUser();
+                expect(guard.canActivate(context)).toBe(true);
+              });
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushSecurity">
+                <h3>18. Security</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-security-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-security-1" aria-expanded="false" aria-controls="flush-collapse-security-1">
+                      1. CSRF protection
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-security-1" class="accordion-collapse collapse" aria-labelledby="flush-security-1" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Cross-Site Request Forgery attacks trick users into submitting unauthorized requests</li>
+                        <li>Use CSRF tokens to validate legitimate requests</li>
+                        <li>NestJS apps with sessions can use <code>csurf</code> middleware for CSRF protection</li>
+                        <li>For stateless APIs (JWT), CSRF risk is lower but consider same-site cookies and CORS policies</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-security-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-security-2" aria-expanded="false" aria-controls="flush-collapse-security-2">
+                      2. Rate limiting
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-security-2" class="accordion-collapse collapse" aria-labelledby="flush-security-2" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Protect APIs from abuse and DoS attacks by limiting request rate</li>
+                        <li>Use NestJS <code>@nestjs/throttler</code> package for easy rate limiting</li>
+                        <li>Example setup:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              ThrottlerModule.forRoot({ ttl: 60, limit: 10 }); // 10 requests per minute
+                      </code></pre>
+                      <ul>
+                        <li>Apply globally or per-route with guards</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-security-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-security-3" aria-expanded="false" aria-controls="flush-collapse-security-3">
+                      3. Data sanitization
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-security-3" class="accordion-collapse collapse" aria-labelledby="flush-security-3" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Clean incoming data to remove malicious input (e.g., scripts, HTML tags)</li>
+                        <li>Prevent XSS and injection attacks</li>
+                        <li>Use libraries like <code>class-sanitizer</code> alongside <code>class-validator</code></li>
+                        <li>Sanitize user inputs before processing or saving</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-security-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-security-4" aria-expanded="false" aria-controls="flush-collapse-security-4">
+                      4. Secure headers
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-security-4" class="accordion-collapse collapse" aria-labelledby="flush-security-4" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use middleware like <code>helmet</code> to set HTTP headers for security (e.g., CSP, XSS protection)</li>
+                        <li>Easy integration in NestJS:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              app.use(helmet());
+                      </code></pre>
+                      <ul>
+                        <li>Helps prevent attacks like clickjacking, MIME sniffing, and more</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-security-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-security-5" aria-expanded="false" aria-controls="flush-collapse-security-5">
+                      5. Preventing NoSQL/SQL injection
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-security-5" class="accordion-collapse collapse" aria-labelledby="flush-security-5" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Avoid building queries with raw user input strings</li>
+                        <li>Use parameterized queries or ORM query builders</li>
+                        <li>Validate and sanitize inputs thoroughly</li>
+                        <li>Example:</li>
+                      </ul>
+                      <ul>
+                        <li>TypeORM automatically parameterizes queries</li>
+                        <li>In MongoDB, avoid direct string concatenation for filters</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushPerformance">
+                <h3>19. Performance Optimization</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-performance-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-performance-1" aria-expanded="false" aria-controls="flush-collapse-performance-1">
+                      1. Caching (in-memory, Redis)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-performance-1" class="accordion-collapse collapse" aria-labelledby="flush-performance-1" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Store frequently accessed data to reduce database or API calls</li>
+                        <li>In-memory cache (e.g., NestJS CacheModule with default memory store) for simple, fast caching</li>
+                        <li>Redis cache for distributed, scalable caching across servers</li>
+                        <li>Use <code>@Cacheable()</code>, manual cache management, or interceptors for caching responses</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @Cacheable()
+              getCachedData() { /* ... */ }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-performance-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-performance-2" aria-expanded="false" aria-controls="flush-collapse-performance-2">
+                      2. Compression
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-performance-2" class="accordion-collapse collapse" aria-labelledby="flush-performance-2" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Reduce response payload size to speed up network transfer</li>
+                        <li>Use compression middleware (e.g., gzip)</li>
+                        <li>Easy integration in NestJS:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              import * as compression from 'compression';
+              app.use(compression());
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-performance-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-performance-3" aria-expanded="false" aria-controls="flush-collapse-performance-3">
+                      3. Async providers
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-performance-3" class="accordion-collapse collapse" aria-labelledby="flush-performance-3" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use async factory providers to initialize resources like database connections asynchronously</li>
+                        <li>Allows better startup control and resource management</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              {
+                provide: 'ASYNC_SERVICE',
+                useFactory: async () => await createAsyncResource(),
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-performance-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-performance-4" aria-expanded="false" aria-controls="flush-collapse-performance-4">
+                      4. Lazy loading modules
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-performance-4" class="accordion-collapse collapse" aria-labelledby="flush-performance-4" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Load modules only when needed instead of at app startup</li>
+                        <li>Improves startup time and memory usage</li>
+                        <li>Supported via dynamic module imports and imports array in modules</li>
+                        <li>Useful for rarely used features or heavy modules</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushDeployment">
+                <h3>20. Deployment</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-deployment-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-deployment-1" aria-expanded="false" aria-controls="flush-collapse-deployment-1">
+                      1. NestJS production build
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-deployment-1" class="accordion-collapse collapse" aria-labelledby="flush-deployment-1" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use <code>npm run build</code> to compile TypeScript to JavaScript in the <code>dist/</code> folder</li>
+                        <li>Use environment variables for production settings (<code>NODE_ENV=production</code>)</li>
+                        <li>Minimize and optimize build using tools like webpack if needed</li>
+                        <li>Serve compiled code with Node.js in production</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-deployment-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-deployment-2" aria-expanded="false" aria-controls="flush-collapse-deployment-2">
+                      2. Running with PM2
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-deployment-2" class="accordion-collapse collapse" aria-labelledby="flush-deployment-2" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>PM2 is a process manager for Node.js apps for production use</li>
+                        <li>Supports process monitoring, auto-restart, clustering</li>
+                        <li>Start NestJS app with PM2:</li>
+                      </ul>
+                      <pre><code class="language-bash">
+              pm2 start dist/main.js --name my-nest-app
+              pm2 startup
+              pm2 save
+                      </code></pre>
+                      <ul>
+                        <li>Use PM2 for zero-downtime reloads and logs management</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-deployment-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-deployment-3" aria-expanded="false" aria-controls="flush-collapse-deployment-3">
+                      3. Dockerizing a NestJS app
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-deployment-3" class="accordion-collapse collapse" aria-labelledby="flush-deployment-3" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Create a Dockerfile to containerize your app</li>
+                        <li>Typical steps:</li>
+                        <ul>
+                          <li>Use Node base image</li>
+                          <li>Copy source files and install dependencies</li>
+                          <li>Build app (<code>npm run build</code>)</li>
+                          <li>Expose port and start app with <code>node dist/main.js</code></li>
+                        </ul>
+                        <li>Example snippet:</li>
+                      </ul>
+                      <pre><code class="language-dockerfile">
+              FROM node:18-alpine
+              WORKDIR /app
+              COPY package*.json ./
+              RUN npm install
+              COPY . .
+              RUN npm run build
+              EXPOSE 3000
+              CMD ["node", "dist/main.js"]
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-deployment-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-deployment-4" aria-expanded="false" aria-controls="flush-collapse-deployment-4">
+                      4. CI/CD pipelines for NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-deployment-4" class="accordion-collapse collapse" aria-labelledby="flush-deployment-4" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automate build, test, and deploy using tools like GitHub Actions, GitLab CI, Jenkins, CircleCI</li>
+                        <li>Typical steps:</li>
+                        <ul>
+                          <li>Install dependencies</li>
+                          <li>Run tests</li>
+                          <li>Build app</li>
+                          <li>Push Docker image or deploy to server</li>
+                        </ul>
+                        <li>Helps ensure code quality and fast delivery</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-deployment-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-deployment-5" aria-expanded="false" aria-controls="flush-collapse-deployment-5">
+                      5. Deploying to AWS, Azure, GCP, or Vercel
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-deployment-5" class="accordion-collapse collapse" aria-labelledby="flush-deployment-5" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>AWS:</strong> Use EC2, Elastic Beanstalk, or Lambda (serverless)</li>
+                        <li><strong>Azure:</strong> Use Azure App Service or Azure Functions</li>
+                        <li><strong>GCP:</strong> Use App Engine or Cloud Run</li>
+                        <li><strong>Vercel:</strong> Supports Node.js serverless deployment, good for quick API hosting</li>
+                        <li>Configure environment variables and secrets on the platform</li>
+                        <li>Use cloud-specific CLI/tools for deployment automation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushAdvancedTopics">
+                <h3>21. Advanced Topics</h3>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-1" aria-expanded="false" aria-controls="flush-collapse-advanced-1">
+                      1. Custom decorators
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-1" class="accordion-collapse collapse" aria-labelledby="flush-advanced-1" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Create reusable decorators to simplify code and add metadata</li>
+                        <li>Use <code>createParamDecorator</code> or class/method decorators</li>
+                        <li>Example custom param decorator:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              export const User = createParamDecorator((data, ctx) => {
+                const request = ctx.switchToHttp().getRequest();
+                return request.user;
+              });
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-2" aria-expanded="false" aria-controls="flush-collapse-advanced-2">
+                      2. Dynamic modules
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-2" class="accordion-collapse collapse" aria-labelledby="flush-advanced-2" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Modules configured and imported with parameters at runtime</li>
+                        <li>Return <code>DynamicModule</code> from static <code>forRoot()</code> or <code>forFeature()</code> methods</li>
+                        <li>Useful for reusable, configurable libraries or features</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @Module({})
+              export class ConfigurableModule {
+                static forRoot(options: ConfigOptions): DynamicModule {
+                  return {
+                    module: ConfigurableModule,
+                    providers: [{ provide: 'CONFIG_OPTIONS', useValue: options }],
+                  };
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-3" aria-expanded="false" aria-controls="flush-collapse-advanced-3">
+                      3. Request-scoped providers
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-3" class="accordion-collapse collapse" aria-labelledby="flush-advanced-3" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Providers instantiated per incoming request (not singleton)</li>
+                        <li>Useful when provider holds request-specific state or data</li>
+                        <li>Use <code>@Injectable({ scope: Scope.REQUEST })</code></li>
+                        <li>Slightly impacts performance; use only when necessary</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-4" aria-expanded="false" aria-controls="flush-collapse-advanced-4">
+                      4. Hybrid apps (REST + GraphQL + WebSockets)
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-4" class="accordion-collapse collapse" aria-labelledby="flush-advanced-4" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Combine multiple communication protocols in one NestJS app</li>
+                        <li>Import relevant modules (GraphQLModule, WebSocket gateways, REST controllers)</li>
+                        <li>Share business logic/services across protocols</li>
+                        <li>Example: REST for CRUD, GraphQL for flexible queries, WebSockets for real-time updates</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-5" aria-expanded="false" aria-controls="flush-collapse-advanced-5">
+                      5. Multi-tenancy in NestJS
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-5" class="accordion-collapse collapse" aria-labelledby="flush-advanced-5" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Support multiple isolated tenants (clients) within one app instance</li>
+                        <li>Strategies:</li>
+                        <ul>
+                          <li>Separate databases per tenant</li>
+                          <li>Shared database with tenant ID filtering</li>
+                        </ul>
+                        <li>Implement tenant context injection via middleware or request-scoped providers</li>
+                        <li>Ensure data isolation and security</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="flush-advanced-6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse-advanced-6" aria-expanded="false" aria-controls="flush-collapse-advanced-6">
+                      6. Integrating with third-party APIs
+                    </button>
+                  </h2>
+                  <div id="flush-collapse-advanced-6" class="accordion-collapse collapse" aria-labelledby="flush-advanced-6" data-bs-parent="#accordionFlushAdvancedTopics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use HTTP modules like <code>HttpModule</code> to call external APIs</li>
+                        <li>Handle authentication, rate limiting, error handling for APIs</li>
+                        <li>Wrap API calls in services for clean separation</li>
+                        <li>Example:</li>
+                      </ul>
+                      <pre><code class="language-typescript">
+              @Injectable()
+              export class ExternalApiService {
+                constructor(private httpService: HttpService) {}
+              
+                getData() {
+                  return this.httpService.get('https://api.example.com/data');
+                }
+              }
+                      </code></pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+                  
+                     
+          
+            
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
