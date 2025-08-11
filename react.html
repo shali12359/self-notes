@@ -721,7 +721,937 @@
                   </div>
                 </div>
             </div>
-                
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleForms">
+              <h3>5. Forms &amp; Validation</h3>
+            
+              <!-- 1. Controlled form inputs -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-controlled-inputs" aria-expanded="false" aria-controls="flush-controlled-inputs">
+                    1. Controlled form inputs
+                  </button>
+                </h2>
+                <div id="flush-controlled-inputs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> React form inputs where the value is stored in component state.</li>
+                      <li><strong>Behavior:</strong> Every keystroke triggers <code>onChange</code> to update state, making React the single source of truth.</li>
+                      <li><strong>Advantages:</strong> Allows real-time validation and dynamic behavior.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>import { useState } from "react";
+            
+            function MyForm() {
+              const [name, setName] = useState("");
+            
+              return (
+                &lt;form&gt;
+                  &lt;input 
+                    value={name} 
+                    onChange={e =&gt; setName(e.target.value)} 
+                    placeholder="Enter name" 
+                  /&gt;
+                  &lt;p&gt;{name}&lt;/p&gt;
+                &lt;/form&gt;
+              );
+            }</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Handling multiple inputs -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-multiple-inputs" aria-expanded="false" aria-controls="flush-multiple-inputs">
+                    2. Handling multiple inputs
+                  </button>
+                </h2>
+                <div id="flush-multiple-inputs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Definition:</strong> Use one state object to store multiple form field values.</li>
+                      <li><strong>Technique:</strong> Use the <code>name</code> attribute of inputs to update the correct field dynamically.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>function MyForm() {
+              const [formData, setFormData] = useState({ username: "", email: "" });
+            
+              const handleChange = e =&gt; {
+                const { name, value } = e.target;
+                setFormData(prev =&gt; ({ ...prev, [name]: value }));
+              };
+            
+              return (
+                &lt;form&gt;
+                  &lt;input name="username" value={formData.username} onChange={handleChange} /&gt;
+                  &lt;input name="email" value={formData.email} onChange={handleChange} /&gt;
+                &lt;/form&gt;
+              );
+            }</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Form validation -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-form-validation" aria-expanded="false" aria-controls="flush-form-validation">
+                    3. Form validation
+                  </button>
+                </h2>
+                <div id="flush-form-validation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
+                  <div class="accordion-body">
+                    <h5>a. Custom validation</h5>
+                    <p>Manual checks for field values before submission. Useful for small forms with specific rules.</p>
+                    <pre><code>function MyForm() {
+              const [email, setEmail] = useState("");
+              const [error, setError] = useState("");
+            
+              const handleSubmit = e =&gt; {
+                e.preventDefault();
+                if (!email.includes("@")) setError("Invalid email address");
+              };
+            
+              return (
+                &lt;form onSubmit={handleSubmit}&gt;
+                  &lt;input value={email} onChange={e =&gt; setEmail(e.target.value)} /&gt;
+                  {error &amp;&amp; &lt;p&gt;{error}&lt;/p&gt;}
+                  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+              );
+            }</code></pre>
+            
+                    <h5>b. Formik + Yup</h5>
+                    <p>Formik manages form state and handles submissions; Yup provides schema-based validation.</p>
+                    <pre><code>import { Formik, Form, Field, ErrorMessage } from "formik";
+            import * as Yup from "yup";
+            
+            const schema = Yup.object({
+              email: Yup.string().email("Invalid email").required("Required"),
+            });
+            
+            &lt;Formik
+              initialValues={{ email: "" }}
+              validationSchema={schema}
+              onSubmit={values =&gt; console.log(values)}
+            &gt;
+              &lt;Form&gt;
+                &lt;Field name="email" /&gt;
+                &lt;ErrorMessage name="email" /&gt;
+                &lt;button type="submit"&gt;Submit&lt;/button&gt;
+              &lt;/Form&gt;
+            &lt;/Formik&gt;</code></pre>
+            
+                    <h5>c. React Hook Form</h5>
+                    <p>Lightweight library using uncontrolled inputs for better performance, with built-in validation.</p>
+                    <pre><code>import { useForm } from "react-hook-form";
+            
+            function MyForm() {
+              const { register, handleSubmit, formState: { errors } } = useForm();
+            
+              const onSubmit = data =&gt; console.log(data);
+            
+              return (
+                &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+                  &lt;input {...register("email", { required: "Email is required" })} /&gt;
+                  {errors.email &amp;&amp; &lt;p&gt;{errors.email.message}&lt;/p&gt;}
+                  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+              );
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleDataFetching">
+              <h3>6. Data Fetching</h3>
+            
+              <!-- 1. Fetch API & Axios -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-fetch-axios" aria-expanded="false" aria-controls="flush-fetch-axios">
+                    1. Fetch API &amp; Axios
+                  </button>
+                </h2>
+                <div id="flush-fetch-axios" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Description:</strong> Native Fetch API and Axios (popular HTTP client) are used to make HTTP requests.</li>
+                      <li><strong>Differences:</strong> Fetch returns promises and requires manual JSON parsing; Axios automatically parses JSON and handles errors better.</li>
+                      <li><strong>Example with Fetch:</strong>
+                        <pre><code>fetch('https://api.example.com/data')
+              .then(res =&gt; res.json())
+              .then(data =&gt; console.log(data));</code></pre>
+                      </li>
+                      <li><strong>Example with Axios:</strong>
+                        <pre><code>import axios from 'axios';
+            
+            axios.get('https://api.example.com/data')
+              .then(response =&gt; console.log(response.data));</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. useEffect for fetching data -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-useeffect-fetch" aria-expanded="false" aria-controls="flush-useeffect-fetch">
+                    2. useEffect for fetching data
+                  </button>
+                </h2>
+                <div id="flush-useeffect-fetch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    <p>Use React’s <code>useEffect</code> hook to fetch data on component mount or when dependencies change. Place fetch logic inside <code>useEffect</code> with proper dependency array to avoid infinite loops.</p>
+                    <pre><code>import { useState, useEffect } from 'react';
+            
+            function DataComponent() {
+              const [data, setData] = useState(null);
+            
+              useEffect(() =&gt; {
+                fetch('https://api.example.com/data')
+                  .then(res =&gt; res.json())
+                  .then(setData);
+              }, []); // Empty array runs once on mount
+            
+              return &lt;div&gt;{data ? JSON.stringify(data) : 'Loading...'}&lt;/div&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Loading & error states -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-loading-error" aria-expanded="false" aria-controls="flush-loading-error">
+                    3. Loading &amp; error states
+                  </button>
+                </h2>
+                <div id="flush-loading-error" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    <p>Track loading and error states in local state to improve user experience. Show loading indicator while data is fetching, and error message if request fails.</p>
+                    <pre><code>const [loading, setLoading] = useState(false);
+            const [error, setError] = useState(null);
+            
+            useEffect(() =&gt; {
+              setLoading(true);
+              fetch('https://api.example.com/data')
+                .then(res =&gt; res.json())
+                .then(data =&gt; {
+                  setData(data);
+                  setLoading(false);
+                })
+                .catch(err =&gt; {
+                  setError(err.message);
+                  setLoading(false);
+                });
+            }, []);</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Canceling requests -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cancel-requests" aria-expanded="false" aria-controls="flush-cancel-requests">
+                    4. Canceling requests
+                  </button>
+                </h2>
+                <div id="flush-cancel-requests" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    <p>Abort fetch requests to avoid memory leaks or unwanted responses, especially in unmount scenarios. Use <code>AbortController</code> to cancel requests.</p>
+                    <pre><code>useEffect(() =&gt; {
+              const controller = new AbortController();
+            
+              fetch('https://api.example.com/data', { signal: controller.signal })
+                .then(res =&gt; res.json())
+                .then(setData)
+                .catch(err =&gt; {
+                  if (err.name !== 'AbortError') console.error(err);
+                });
+            
+              return () =&gt; controller.abort(); // Cancel on unmount
+            }, []);</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. React Query / TanStack Query: useQuery, useMutation -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-react-query" aria-expanded="false" aria-controls="flush-react-query">
+                    5. React Query / TanStack Query: useQuery, useMutation
+                  </button>
+                </h2>
+                <div id="flush-react-query" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    <p>React Query manages server state: fetching, caching, updating. <code>useQuery</code> for fetching data; automatically handles loading, errors, and caching. <code>useMutation</code> for creating/updating/deleting data with built-in status handling.</p>
+                    <pre><code>import { useQuery } from '@tanstack/react-query';
+            
+            function Todos() {
+              const { data, error, isLoading } = useQuery(['todos'], () =&gt;
+                fetch('/api/todos').then(res =&gt; res.json())
+              );
+            
+              if (isLoading) return 'Loading...';
+              if (error) return 'Error!';
+            
+              return &lt;ul&gt;{data.map(todo =&gt; &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;)}&lt;/ul&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. Caching -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-caching" aria-expanded="false" aria-controls="flush-caching">
+                    6. Caching
+                  </button>
+                </h2>
+                <div id="flush-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    React Query caches fetched data by default to improve performance and reduce requests. Cached data is reused until stale or invalidated.
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 7. Automatic refetching -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auto-refetch" aria-expanded="false" aria-controls="flush-auto-refetch">
+                    7. Automatic refetching
+                  </button>
+                </h2>
+                <div id="flush-auto-refetch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
+                  <div class="accordion-body">
+                    React Query supports automatic refetch on window focus, reconnect, or intervals. Keeps UI data fresh without manual refreshes.
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExamplePerformance">
+              <h3>7. Performance Optimization</h3>
+            
+              <!-- 1. React.memo -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-react-memo" aria-expanded="false" aria-controls="flush-react-memo">
+                    1. React.memo
+                  </button>
+                </h2>
+                <div id="flush-react-memo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Description:</strong> Higher-order component that memoizes functional components.</li>
+                      <li><strong>Purpose:</strong> Prevents re-rendering if props haven’t changed (shallow comparison).</li>
+                      <li><strong>Use case:</strong> Optimizing pure components that receive the same props frequently.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>const MyComponent = React.memo(function MyComponent({ value }) {
+              return &lt;div&gt;{value}&lt;/div&gt;;
+            });</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. useMemo / useCallback -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-usememo-usecallback" aria-expanded="false" aria-controls="flush-usememo-usecallback">
+                    2. useMemo / useCallback
+                  </button>
+                </h2>
+                <div id="flush-usememo-usecallback" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    <p><strong>useMemo:</strong> Memoizes expensive computed values to avoid recalculating on every render.</p>
+                    <p><strong>useCallback:</strong> Memoizes functions to avoid creating new function instances each render; useful to prevent unnecessary child re-renders.</p>
+                    <p><strong>Examples:</strong></p>
+                    <pre><code>const computedValue = useMemo(() =&gt; heavyCalculation(data), [data]);
+            
+            const handleClick = useCallback(() =&gt; doSomething(), [dependency]);</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Avoiding unnecessary renders -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-avoid-renders" aria-expanded="false" aria-controls="flush-avoid-renders">
+                    3. Avoiding unnecessary renders
+                  </button>
+                </h2>
+                <div id="flush-avoid-renders" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Use <code>React.memo</code>, <code>useMemo</code>, and <code>useCallback</code> to control when components re-render.</li>
+                      <li>Pass stable props and avoid anonymous functions in JSX unless memoized.</li>
+                      <li>Use keys properly in lists to help React identify changed items.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Lazy loading components (React.lazy, Suspense) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-lazy-loading" aria-expanded="false" aria-controls="flush-lazy-loading">
+                    4. Lazy loading components (React.lazy, Suspense)
+                  </button>
+                </h2>
+                <div id="flush-lazy-loading" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    <p>Load components only when needed to reduce initial bundle size. Use <code>React.lazy()</code> with <code>Suspense</code> fallback for code-splitting.</p>
+                    <pre><code>const LazyComponent = React.lazy(() =&gt; import('./LazyComponent'));
+            
+            function App() {
+              return (
+                &lt;Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;
+                  &lt;LazyComponent /&gt;
+                &lt;/Suspense&gt;
+              );
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Code splitting -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-code-splitting" aria-expanded="false" aria-controls="flush-code-splitting">
+                    5. Code splitting
+                  </button>
+                </h2>
+                <div id="flush-code-splitting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    Break app bundles into smaller chunks loaded on demand. Usually done with dynamic <code>import()</code> or <code>React.lazy</code>. Improves initial load times, especially for large apps.
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. Virtualization (React Window, React Virtualized) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-virtualization" aria-expanded="false" aria-controls="flush-virtualization">
+                    6. Virtualization (React Window, React Virtualized)
+                  </button>
+                </h2>
+                <div id="flush-virtualization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
+                  <div class="accordion-body">
+                    <p>Render only visible items in large lists or tables to reduce DOM nodes and improve performance. Libraries like React Window and React Virtualized provide virtualization utilities.</p>
+                    <pre><code>import { FixedSizeList as List } from 'react-window';
+            
+            &lt;List
+              height={150}
+              itemCount={1000}
+              itemSize={35}
+              width={300}
+            &gt;
+              {({ index, style }) =&gt; (
+                &lt;div style={style}&gt;Row {index}&lt;/div&gt;
+              )}
+            &lt;/List&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleAdvancedReact">
+              <h3>8. Advanced React Concepts</h3>
+            
+              <!-- 1. Reconciliation & Virtual DOM -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-reconciliation">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-reconciliation" aria-expanded="false" aria-controls="flush-reconciliation">
+                    1. Reconciliation &amp; Virtual DOM
+                  </button>
+                </h2>
+                <div id="flush-reconciliation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>React keeps a lightweight copy of the DOM called the Virtual DOM.</li>
+                      <li>On state or props changes, React compares the new Virtual DOM with the previous one (diffing algorithm).</li>
+                      <li>Only updates the real DOM where differences exist, optimizing performance.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Fiber architecture basics -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-fiber">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-fiber" aria-expanded="false" aria-controls="flush-fiber">
+                    2. Fiber architecture basics
+                  </button>
+                </h2>
+                <div id="flush-fiber" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Fiber is React’s reimplementation of the reconciliation algorithm.</li>
+                      <li>Enables interruptible rendering and prioritizes updates for smoother UI.</li>
+                      <li>Breaks rendering work into chunks to avoid blocking the main thread.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Strict Mode -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-strictmode">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-strictmode" aria-expanded="false" aria-controls="flush-strictmode">
+                    3. Strict Mode
+                  </button>
+                </h2>
+                <div id="flush-strictmode" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p><code>&lt;React.StrictMode&gt;</code> is a tool for highlighting potential problems in an app during development.</p>
+                    <ul>
+                      <li>Checks for unsafe lifecycle methods, legacy API usage, and side effects.</li>
+                      <li>Does not affect production build.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Error boundaries -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-errorboundaries">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-errorboundaries" aria-expanded="false" aria-controls="flush-errorboundaries">
+                    4. Error boundaries
+                  </button>
+                </h2>
+                <div id="flush-errorboundaries" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p>React components that catch JavaScript errors in their child component tree, prevent entire app from crashing and display fallback UI.</p>
+                    <p>Implemented using lifecycle method <code>componentDidCatch</code> or static <code>getDerivedStateFromError</code>.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>class ErrorBoundary extends React.Component {
+              state = { hasError: false };
+            
+              static getDerivedStateFromError() {
+                return { hasError: true };
+              }
+            
+              componentDidCatch(error, info) {
+                console.error(error, info);
+              }
+            
+              render() {
+                if (this.state.hasError) return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+                return this.props.children;
+              }
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Portals -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-portals">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-portals" aria-expanded="false" aria-controls="flush-portals">
+                    5. Portals
+                  </button>
+                </h2>
+                <div id="flush-portals" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p>Render children into a DOM node outside the parent component hierarchy. Useful for modals, tooltips, or overlays that require different stacking context.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>ReactDOM.createPortal(&lt;Modal /&gt;, document.getElementById('modal-root'));</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. Forwarding refs (forwardRef) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-forwardingrefs">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-forwardingrefs" aria-expanded="false" aria-controls="flush-forwardingrefs">
+                    6. Forwarding refs (forwardRef)
+                  </button>
+                </h2>
+                <div id="flush-forwardingrefs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p>Allows passing refs through components to access DOM nodes or child components.</p>
+                    <p>Useful when you want parent components to control child DOM elements.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>const FancyInput = React.forwardRef((props, ref) =&gt; (
+              &lt;input ref={ref} {...props} /&gt;
+            ));</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 7. Render props -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-renderprops">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-renderprops" aria-expanded="false" aria-controls="flush-renderprops">
+                    7. Render props
+                  </button>
+                </h2>
+                <div id="flush-renderprops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p>Technique where a component’s child is a function that returns React elements. Enables sharing code between components using a function as a child.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>&lt;DataFetcher render={data =&gt; &lt;div&gt;{data}&lt;/div&gt;} /&gt;</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 8. Higher-order components (HOCs) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-hocs">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-hocs" aria-expanded="false" aria-controls="flush-hocs">
+                    8. Higher-order components (HOCs)
+                  </button>
+                </h2>
+                <div id="flush-hocs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
+                  <div class="accordion-body">
+                    <p>Functions that take a component and return an enhanced component. Used for reusing component logic (e.g., authentication, logging).</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>function withLogger(WrappedComponent) {
+              return function(props) {
+                console.log('Rendering', WrappedComponent.name);
+                return &lt;WrappedComponent {...props} /&gt;;
+              };
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleStylingReact">
+              <h3>9. Styling in React</h3>
+            
+              <!-- 1. CSS Modules -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-cssmodules">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cssmodules" aria-expanded="false" aria-controls="flush-cssmodules">
+                    1. CSS Modules
+                  </button>
+                </h2>
+                <div id="flush-cssmodules" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
+                  <div class="accordion-body">
+                    <p>CSS files scoped locally by default, avoiding class name conflicts.</p>
+                    <p>Import styles as objects and use them in JSX.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import styles from './Button.module.css';
+            
+            function Button() {
+              return &lt;button className={styles.primary}&gt;Click me&lt;/button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Styled-components / Emotion -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-styledcomponents">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-styledcomponents" aria-expanded="false" aria-controls="flush-styledcomponents">
+                    2. Styled-components / Emotion
+                  </button>
+                </h2>
+                <div id="flush-styledcomponents" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
+                  <div class="accordion-body">
+                    <p>CSS-in-JS libraries allowing styling via JavaScript.</p>
+                    <p>Define styled components with tagged template literals.</p>
+                    <p>Supports dynamic styling with props.</p>
+                    <p><strong>Example (styled-components):</strong></p>
+                    <pre><code>import styled from 'styled-components';
+            
+            const Button = styled.button`
+              background: blue;
+              color: white;
+              padding: 10px;
+            `;
+            
+            function App() {
+              return &lt;Button&gt;Click me&lt;/Button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Tailwind CSS -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-tailwindcss">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tailwindcss" aria-expanded="false" aria-controls="flush-tailwindcss">
+                    3. Tailwind CSS
+                  </button>
+                </h2>
+                <div id="flush-tailwindcss" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
+                  <div class="accordion-body">
+                    <p>Utility-first CSS framework providing predefined classes.</p>
+                    <p>Enables fast styling directly in JSX with <code>className</code> attributes.</p>
+                    <p>Encourages consistency and responsive design.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>function Button() {
+              return &lt;button className="bg-blue-500 text-white p-2 rounded"&gt;Click me&lt;/button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Inline styles -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-inlinestyles">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-inlinestyles" aria-expanded="false" aria-controls="flush-inlinestyles">
+                    4. Inline styles
+                  </button>
+                </h2>
+                <div id="flush-inlinestyles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
+                  <div class="accordion-body">
+                    <p>Styles defined directly on JSX elements as objects.</p>
+                    <p>Useful for dynamic or one-off styles but lacks pseudo-classes and media queries.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>function Button() {
+              return &lt;button style={{ backgroundColor: 'blue', color: 'white', padding: '10px' }}&gt;Click me&lt;/button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Ant Design / Material UI components -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-antdesignmui">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-antdesignmui" aria-expanded="false" aria-controls="flush-antdesignmui">
+                    5. Ant Design / Material UI components
+                  </button>
+                </h2>
+                <div id="flush-antdesignmui" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
+                  <div class="accordion-body">
+                    <p>Popular React UI component libraries with pre-built, customizable components.</p>
+                    <p>Provide consistent design, theming, and accessibility features.</p>
+                    <p><strong>Example (Material UI):</strong></p>
+                    <pre><code>import Button from '@mui/material/Button';
+            
+            function App() {
+              return &lt;Button variant="contained" color="primary"&gt;Click me&lt;/Button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleTestingReact">
+              <h3>10. Testing in React</h3>
+            
+              <!-- 1. Unit testing with Jest -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-jest">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jest" aria-expanded="false" aria-controls="flush-jest">
+                    1. Unit testing with Jest
+                  </button>
+                </h2>
+                <div id="flush-jest" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
+                  <div class="accordion-body">
+                    <p>Jest is the default testing framework for React apps.</p>
+                    <p>Tests individual functions or components in isolation.</p>
+                    <p>Supports mocks, timers, and snapshot testing.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>test('adds 1 + 2 to equal 3', () => {
+              expect(1 + 2).toBe(3);
+            });</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Component testing with React Testing Library -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-testinglibrary">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-testinglibrary" aria-expanded="false" aria-controls="flush-testinglibrary">
+                    2. Component testing with React Testing Library
+                  </button>
+                </h2>
+                <div id="flush-testinglibrary" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
+                  <div class="accordion-body">
+                    <p>Focuses on testing components as users interact with them.</p>
+                    <p>Encourages testing behavior over implementation details.</p>
+                    <p>Provides utilities to query and interact with rendered components.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import { render, screen, fireEvent } from '@testing-library/react';
+            import Button from './Button';
+            
+            test('renders button and responds to click', () => {
+              const handleClick = jest.fn();
+              render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
+              fireEvent.click(screen.getByText(/click me/i));
+              expect(handleClick).toHaveBeenCalledTimes(1);
+            });</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Snapshot testing -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-snapshot">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-snapshot" aria-expanded="false" aria-controls="flush-snapshot">
+                    3. Snapshot testing
+                  </button>
+                </h2>
+                <div id="flush-snapshot" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
+                  <div class="accordion-body">
+                    <p>Captures a “snapshot” of a component’s rendered output.</p>
+                    <p>Alerts when UI changes unexpectedly.</p>
+                    <p>Useful for regression testing UI components.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>import renderer from 'react-test-renderer';
+            import Button from './Button';
+            
+            test('renders correctly', () => {
+              const tree = renderer.create(&lt;Button&gt;Click me&lt;/Button&gt;).toJSON();
+              expect(tree).toMatchSnapshot();
+            });</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Mocking APIs -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-mockingapis">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-mockingapis" aria-expanded="false" aria-controls="flush-mockingapis">
+                    4. Mocking APIs
+                  </button>
+                </h2>
+                <div id="flush-mockingapis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
+                  <div class="accordion-body">
+                    <p>Simulate backend responses to isolate frontend tests.</p>
+                    <p>Jest provides <code>jest.mock()</code> for mocking modules or API calls.</p>
+                    <p>Tools like MSW (Mock Service Worker) mock network requests in tests.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>jest.mock('./api');
+            import { fetchData } from './api';
+            
+            fetchData.mockResolvedValue({ data: 'mocked data' });</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. E2E testing (Cypress, Playwright) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-e2e">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-e2e" aria-expanded="false" aria-controls="flush-e2e">
+                    5. E2E testing (Cypress, Playwright)
+                  </button>
+                </h2>
+                <div id="flush-e2e" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
+                  <div class="accordion-body">
+                    <p>Tests the full user flow in a real browser environment.</p>
+                    <p>Validates integration of frontend with backend.</p>
+                    <p>Cypress and Playwright offer powerful APIs for interaction and assertions.</p>
+                    <p><strong>Example (Cypress):</strong></p>
+                    <pre><code>describe('Login flow', () => {
+              it('logs in successfully', () => {
+                cy.visit('/login');
+                cy.get('input[name="username"]').type('user');
+                cy.get('input[name="password"]').type('password');
+                cy.get('button[type="submit"]').click();
+                cy.url().should('include', '/dashboard');
+              });
+            });</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleReactTS">
+              <h3>11. React with TypeScript</h3>
+            
+              <!-- 1. Typing props & state -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-typing-props-state">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-typing-props-state" aria-expanded="false" aria-controls="flush-typing-props-state">
+                    1. Typing props & state
+                  </button>
+                </h2>
+                <div id="flush-typing-props-state" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
+                  <div class="accordion-body">
+                    <p>Define interfaces or types for component props and state to get type safety.</p>
+                    <p>Helps catch errors early and improves code readability.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>interface ButtonProps {
+              label: string;
+              onClick: () =&gt; void;
+            }
+            
+            function Button({ label, onClick }: ButtonProps) {
+              return &lt;button onClick={onClick}&gt;{label}&lt;/button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. React.FC vs function components -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-react-fc-vs-fn">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-react-fc-vs-fn" aria-expanded="false" aria-controls="flush-react-fc-vs-fn">
+                    2. React.FC vs function components
+                  </button>
+                </h2>
+                <div id="flush-react-fc-vs-fn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
+                  <div class="accordion-body">
+                    <p>React.FC (FunctionComponent) is a TypeScript type for functional components.</p>
+                    <p>It automatically types <code>children</code> prop but has some limitations (e.g., default props).</p>
+                    <p>Many prefer plain functions with explicit typing for more control.</p>
+                    <p><strong>Example with React.FC:</strong></p>
+                    <pre><code>const Button: React.FC&lt;ButtonProps&gt; = ({ label, children }) =&gt; (
+              &lt;button&gt;{label} {children}&lt;/button&gt;
+            );</code></pre>
+                    <p><strong>Example without React.FC:</strong></p>
+                    <pre><code>function Button({ label }: ButtonProps) {
+              return &lt;button&gt;{label}&lt;/button&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Generics with components -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-generics-components">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-generics-components" aria-expanded="false" aria-controls="flush-generics-components">
+                    3. Generics with components
+                  </button>
+                </h2>
+                <div id="flush-generics-components" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
+                  <div class="accordion-body">
+                    <p>Use generics to create reusable components that work with different data types.</p>
+                    <p>Enables strong typing while keeping flexibility.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>interface ListProps&lt;T&gt; {
+              items: T[];
+              renderItem: (item: T) =&gt; React.ReactNode;
+            }
+            
+            function List&lt;T&gt;({ items, renderItem }: ListProps&lt;T&gt;) {
+              return &lt;ul&gt;{items.map(renderItem)}&lt;/ul&gt;;
+            }</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Typing hooks -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="heading-typing-hooks">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-typing-hooks" aria-expanded="false" aria-controls="flush-typing-hooks">
+                    4. Typing hooks
+                  </button>
+                </h2>
+                <div id="flush-typing-hooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
+                  <div class="accordion-body">
+                    <p>Type React hooks to enforce correct usage and improve autocompletion.</p>
+                    <p>For useState, specify the state type explicitly if not inferred.</p>
+                    <p><strong>Example:</strong></p>
+                    <pre><code>const [count, setCount] = useState&lt;number&gt;(0);
+            
+            const inputRef = useRef&lt;HTMLInputElement&gt;(null);</code></pre>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+            
             
                      
           
