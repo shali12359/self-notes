@@ -5,52 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
-    <title>Document</title>
+    <title>JavaScript</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
+          <a class="navbar-brand" href="./index.html">Nerd-Nest</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Link</a>
               </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            </ul> -->
           </div>
         </div>
       </nav>
       <div class="container my-5">
           <div class="container">
-            <!-- Make sure Bootstrap 5 CSS & JS are loaded for this to work -->
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleJS">
                 <h3>1. JavaScript Fundamentals</h3>
-            
-                <!-- 1. Variables & Data Types -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-vars-datatypes" aria-expanded="false" aria-controls="flush-vars-datatypes">
@@ -67,16 +46,13 @@
                             <li>Reference: <code>object</code>, <code>array</code>, <code>function</code>, etc.</li>
                         </ul>
                         </li>
-                        <li><strong>Example:</strong></li>
+                        <li><strong>Example:</strong></li><pre><code class="language-js">let name = "Alex"; // string
+let age = 25;      // number
+let isActive = true; // boolean</code></pre>
                     </ul>
-                    <pre><code class="language-js">let name = "Alex"; // string
-            let age = 25;      // number
-            let isActive = true; // boolean</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 2. var, let, const -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-var-let-const" aria-expanded="false" aria-controls="flush-var-let-const">
@@ -89,15 +65,15 @@
                         <li><strong>var:</strong> function-scoped, hoisted, can be re-declared.</li>
                         <li><strong>let:</strong> block-scoped, not hoisted in usable form, reassignable but not re-declarable in same scope.</li>
                         <li><strong>const:</strong> block-scoped, cannot be reassigned (but reference-type contents can mutate).</li>
-                    </ul>
-                    <pre><code class="language-js">var x = 1;
-            let y = 2;
-            const z = 3;</code></pre>
+                        <li>
+                          Example:<pre><code class="language-js">var x = 1;
+let y = 2;
+const z = 3;</code></pre>
+                        </li>
+                      </ul>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 3. Primitive vs. Reference Types -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-primitive-reference" aria-expanded="false" aria-controls="flush-primitive-reference">
@@ -109,20 +85,19 @@
                     <ul>
                         <li><strong>Primitive:</strong> stored directly, immutable (e.g., numbers, strings).</li>
                         <li><strong>Reference:</strong> stored in heap; variables hold references to objects/arrays/functions.</li>
-                        <li><strong>Example:</strong></li>
+                        <li>
+                          <strong>Example:</strong><pre><code class="language-js">let a = 10;
+let b = a; // b is copy
+b = 20; // a remains 10
+                            
+let obj1 = { name: "John" };
+let obj2 = obj1; // both reference same object
+obj2.name = "Jane"; // obj1.name is now "Jane"</code></pre>
+                        </li>
                     </ul>
-                    <pre><code class="language-js">let a = 10;
-            let b = a; // b is copy
-            b = 20; // a remains 10
-            
-            let obj1 = { name: "John" };
-            let obj2 = obj1; // both reference same object
-            obj2.name = "Jane"; // obj1.name is now "Jane"</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 4. Type Conversion & Coercion -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-conversion-coercion" aria-expanded="false" aria-controls="flush-conversion-coercion">
@@ -134,17 +109,17 @@
                     <ul>
                         <li><strong>Conversion (explicit):</strong> using <code>Number()</code>, <code>String()</code>, etc.</li>
                         <li><strong>Coercion (implicit):</strong> JS converts types automatically during operations.</li>
-                    </ul>
-                    <pre><code class="language-js">Number("42"); // 42
-            String(123);    // "123"
-            
-            "5" + 1; // "51"  (string concatenation)
-            "5" - 1; // 4     (string coerced to number)</code></pre>
+                        <li>
+                          Example: <pre><code class="language-js">Number("42"); // 42
+String(123);    // "123"
+                            
+"5" + 1; // "51"  (string concatenation)
+"5" - 1; // 4     (string coerced to number)</code></pre>
+                        </li>
+                      </ul>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 5. Operators -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-operators" aria-expanded="false" aria-controls="flush-operators">
@@ -162,8 +137,6 @@
                     </div>
                 </div>
                 </div>
-            
-                <!-- 6. Nullish Coalescing (??) -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nullish" aria-expanded="false" aria-controls="flush-nullish">
@@ -174,15 +147,13 @@
                     <div class="accordion-body">
                     <ul>
                         <li><strong>Behaviour:</strong> returns the right-hand operand only when left is <code>null</code> or <code>undefined</code>.</li>
-                        <li><strong>Example:</strong></li>
+                        <li><strong>Example:</strong><pre><code class="language-js">let username = null;
+console.log(username ?? "Guest"); // "Guest"</code></pre>
+                        </li>
                     </ul>
-                    <pre><code class="language-js">let username = null;
-            console.log(username ?? "Guest"); // "Guest"</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 7. Optional Chaining (?.) -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-optional-chaining" aria-expanded="false" aria-controls="flush-optional-chaining">
@@ -193,16 +164,15 @@
                     <div class="accordion-body">
                     <ul>
                         <li><strong>Purpose:</strong> safely access deep properties without throwing if a part is <code>null</code> or <code>undefined</code>.</li>
-                        <li><strong>Example:</strong></li>
+                        <li>
+                          <strong>Example:</strong><pre><code class="language-js">let user = { profile: { name: "Sam" } };
+console.log(user.profile?.name);   // "Sam"
+console.log(user.contact?.phone);  // undefined (no error)</code></pre>
+                        </li>
                     </ul>
-                    <pre><code class="language-js">let user = { profile: { name: "Sam" } };
-            console.log(user.profile?.name);   // "Sam"
-            console.log(user.contact?.phone);  // undefined (no error)</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 8. Control Flow -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-control-flow" aria-expanded="false" aria-controls="flush-control-flow">
@@ -215,25 +185,25 @@
                         <li><strong>If / Else:</strong> conditional branching.</li>
                         <li><strong>Switch:</strong> multi-branch control.</li>
                         <li><strong>Loops:</strong> <code>for</code>, <code>while</code>, <code>do...while</code>, also <code>for...of</code> (values) and <code>for...in</code> (keys).</li>
+                        <li>
+                          Example:<pre><code class="language-js">if (x > 10) { /* ... */ } else { /* ... */ }
+            
+switch(day) {
+    case "Mon": /* ... */; break;
+    default: /* ... */
+}
+                            
+for (let i = 0; i &lt; 5; i++) { /* ... */ }
+while (condition) { /* ... */ }
+do { /* ... */ } while (condition);
+                            
+for (let val of array) { /* values */ }
+for (let key in object) { /* keys */ }</code></pre>
+                        </li>
                     </ul>
-                    <pre><code class="language-js">if (x > 10) { /* ... */ } else { /* ... */ }
-            
-            switch(day) {
-                case "Mon": /* ... */; break;
-                default: /* ... */
-            }
-            
-            for (let i = 0; i &lt; 5; i++) { /* ... */ }
-            while (condition) { /* ... */ }
-            do { /* ... */ } while (condition);
-            
-            for (let val of array) { /* values */ }
-            for (let key in object) { /* keys */ }</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 9. Functions -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-functions" aria-expanded="false" aria-controls="flush-functions">
@@ -247,30 +217,30 @@
                         <li><strong>Expression:</strong> not hoisted (<code>const f = function(){}</code>).</li>
                         <li><strong>Arrow:</strong> lexical <code>this</code>, concise syntax (<code>const f = () =&gt; {}</code>).</li>
                         <li><strong>Default params, rest & spread:</strong> useful patterns.</li>
+                        <li>
+                          Example:<pre><code class="language-js">// Declaration (hoisted)
+function greet() { return "hi"; }
+                            
+// Expression (not hoisted)
+const greet2 = function() { return "hi"; };
+                            
+// Arrow
+const greet3 = () =&gt; "hi";
+                            
+// Defaults
+function sum(a = 0, b = 0) { return a + b; }
+                            
+// Rest
+function total(...nums) { return nums.reduce((a, b) =&gt; a + b, 0); }
+                            
+// Spread
+let arr1 = [1, 2];
+let arr2 = [...arr1, 3, 4];</code></pre>
+                        </li>
                     </ul>
-                    <pre><code class="language-js">// Declaration (hoisted)
-            function greet() { return "hi"; }
-            
-            // Expression (not hoisted)
-            const greet2 = function() { return "hi"; };
-            
-            // Arrow
-            const greet3 = () =&gt; "hi";
-            
-            // Defaults
-            function sum(a = 0, b = 0) { return a + b; }
-            
-            // Rest
-            function total(...nums) { return nums.reduce((a, b) =&gt; a + b, 0); }
-            
-            // Spread
-            let arr1 = [1, 2];
-            let arr2 = [...arr1, 3, 4];</code></pre>
                     </div>
                 </div>
                 </div>
-            
-                <!-- 10. Scope & Closures -->
                 <div class="accordion-item">
                 <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scope-closures" aria-expanded="false" aria-controls="flush-scope-closures">
@@ -283,26 +253,26 @@
                         <li><strong>Scope:</strong> global vs local; block vs function.</li>
                         <li><strong>Lexical scope:</strong> inner functions access outer variables where they were defined.</li>
                         <li><strong>Closures:</strong> functions that remember their lexical environment (useful for data privacy, factory functions).</li>
-                    </ul>
-                    <pre><code class="language-js">function outer() {
-                let count = 0;
-                return function inner() {
-                count++;
-                return count;
-                };
-            }
-            const counter = outer();
-            console.log(counter()); // 1
-            console.log(counter()); // 2</code></pre>
+                        <li>
+                          Example: <pre><code class="language-js">function outer() {
+    let count = 0;
+    return function inner() {
+    count++;
+    return count;
+    };
+}
+
+const counter = outer();
+console.log(counter()); // 1
+console.log(counter()); // 2</code></pre>
+                        </li>
+                      </ul>
                     </div>
                 </div>
                 </div>
-            
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleAdvancedJS">
                 <h3>2. Advanced Concepts</h3>
-              
-                <!-- 1. Hoisting -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-hoisting" aria-expanded="false" aria-controls="flush-hoisting">
@@ -316,20 +286,20 @@
                         <li><strong>Function declarations:</strong> fully hoisted (can be called before definition).</li>
                         <li><strong>var variables:</strong> hoisted but initialized as <code>undefined</code>.</li>
                         <li><strong>let / const:</strong> hoisted but in Temporal Dead Zone (cannot be accessed before declaration).</li>
+                        <li>
+                          Example:<pre><code class="language-js">greet(); // "Hi"
+function greet() { console.log("Hi"); }
+                                          
+console.log(x); // undefined
+var x = 5;
+                                          
+console.log(y); // ReferenceError
+let y = 10;</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">greet(); // "Hi"
-              function greet() { console.log("Hi"); }
-              
-              console.log(x); // undefined
-              var x = 5;
-              
-              console.log(y); // ReferenceError
-              let y = 10;</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Execution Context & Call Stack -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-execution-context" aria-expanded="false" aria-controls="flush-execution-context">
@@ -343,16 +313,16 @@
                         <li><strong>Creation phase:</strong> hoisting happens, <code>this</code> binding set.</li>
                         <li><strong>Execution phase:</strong> code runs line-by-line.</li>
                         <li><strong>Call Stack:</strong> tracks function calls (LIFO - last in, first out).</li>
+                        <li>
+                          Example: <pre><code class="language-js">function first() { second(); }
+function second() { console.log("Hello"); }
+first();
+// Stack: first → second → pop → pop</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">function first() { second(); }
-              function second() { console.log("Hello"); }
-              first();
-              // Stack: first → second → pop → pop</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Event Loop & Concurrency -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-loop" aria-expanded="false" aria-controls="flush-event-loop">
@@ -369,8 +339,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Microtasks vs. Macrotasks -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-micro-macro" aria-expanded="false" aria-controls="flush-micro-macro">
@@ -382,15 +350,15 @@
                       <ul>
                         <li><strong>Macrotasks:</strong> <code>setTimeout</code>, <code>setInterval</code>, I/O callbacks — run after current stack is clear.</li>
                         <li><strong>Microtasks:</strong> <code>Promise.then</code>, <code>queueMicrotask</code>, <code>MutationObserver</code> — run before next macrotask.</li>
+                        <li>
+                          Example:<pre><code class="language-js">setTimeout(() =&gt; console.log("Macrotask"), 0);
+Promise.resolve().then(() =&gt; console.log("Microtask"));
+// Output: Microtask → Macrotask</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">setTimeout(() =&gt; console.log("Macrotask"), 0);
-              Promise.resolve().then(() =&gt; console.log("Microtask"));
-              // Output: Microtask → Macrotask</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 5. setTimeout, setInterval, Promise -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-timers-promises" aria-expanded="false" aria-controls="flush-timers-promises">
@@ -403,17 +371,17 @@
                         <li><code>setTimeout(fn, ms)</code>: run once after delay.</li>
                         <li><code>setInterval(fn, ms)</code>: run repeatedly.</li>
                         <li><strong>Promise:</strong> represents future value (<em>pending</em> → <em>fulfilled/rejected</em>).</li>
+                        <li>
+                          Example:<pre><code class="language-js">setTimeout(() =&gt; console.log("Later"), 1000);
+let id = setInterval(() =&gt; console.log("Repeat"), 500);
+clearInterval(id);
+                            
+Promise.resolve("Done").then(console.log);</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">setTimeout(() =&gt; console.log("Later"), 1000);
-              let id = setInterval(() =&gt; console.log("Repeat"), 500);
-              clearInterval(id);
-              
-              Promise.resolve("Done").then(console.log);</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 6. Prototypal Inheritance -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-prototypal" aria-expanded="false" aria-controls="flush-prototypal">
@@ -422,12 +390,14 @@
                   </h2>
                   <div id="flush-prototypal" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedJS">
                     <div class="accordion-body">
-                      <p>Objects inherit from other objects via the prototype chain. Every object has an internal <code>[[Prototype]]</code> link to another object or null.</p>
+                      <ul>
+                        <li>
+                          <p>Objects inherit from other objects via the prototype chain. Every object has an internal <code>[[Prototype]]</code> link to another object or null.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 7. Prototype Chain -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-prototype-chain" aria-expanded="false" aria-controls="flush-prototype-chain">
@@ -439,16 +409,16 @@
                       <ul>
                         <li>Chain of objects linked through <code>__proto__</code>.</li>
                         <li>Property lookup climbs the chain until found or null.</li>
+                        <li>
+                          Example: <pre><code class="language-js">function Person(name) { this.name = name; }
+Person.prototype.greet = function() { console.log("Hi " + this.name); };
+const p = new Person("Alex");
+p.greet(); // via prototype</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">function Person(name) { this.name = name; }
-              Person.prototype.greet = function() { console.log("Hi " + this.name); };
-              const p = new Person("Alex");
-              p.greet(); // via prototype</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 8. Object.create() -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-object-create" aria-expanded="false" aria-controls="flush-object-create">
@@ -457,15 +427,17 @@
                   </h2>
                   <div id="flush-object-create" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedJS">
                     <div class="accordion-body">
-                      <p>Creates a new object with the specified prototype.</p>
+                      <ul>
+                        <li>
+                          Creates a new object with the specified prototype.
                       <pre><code class="language-js">const proto = { greet() { console.log("Hello"); } };
-              const obj = Object.create(proto);
-              obj.greet();</code></pre>
+const obj = Object.create(proto);
+obj.greet();</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 9. this Keyword -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-this" aria-expanded="false" aria-controls="flush-this">
@@ -484,8 +456,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 10. call, apply, bind -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-call-apply-bind" aria-expanded="false" aria-controls="flush-call-apply-bind">
@@ -498,18 +468,18 @@
                         <li><code>call</code>: invoke with given <code>this</code> and args (comma-separated).</li>
                         <li><code>apply</code>: same but args as array.</li>
                         <li><code>bind</code>: returns new function with fixed <code>this</code>.</li>
+                        <li>
+                          Example: <pre><code class="language-js">function greet(g) { console.log(g + " " + this.name); }
+const person = { name: "Sam" };
+greet.call(person, "Hi");
+greet.apply(person, ["Hello"]);
+const bound = greet.bind(person, "Hey");
+bound();</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">function greet(g) { console.log(g + " " + this.name); }
-              const person = { name: "Sam" };
-              greet.call(person, "Hi");
-              greet.apply(person, ["Hello"]);
-              const bound = greet.bind(person, "Hey");
-              bound();</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 11. Currying & Partial Application -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-currying" aria-expanded="false" aria-controls="flush-currying">
@@ -521,20 +491,20 @@
                       <ul>
                         <li><strong>Currying:</strong> transform multi-arg function into sequence of single-arg functions.</li>
                         <li><strong>Partial application:</strong> fix some args and return new function.</li>
+                        <li>
+                          Example:<pre><code class="language-js">// Currying
+const add = a =&gt; b =&gt; a + b;
+add(2)(3); // 5
+                            
+// Partial application
+function multiply(a, b) { return a * b; }
+const double = multiply.bind(null, 2);
+double(5); // 10</code></pre>
+                        </li>
                       </ul>
-                      <pre><code class="language-js">// Currying
-              const add = a =&gt; b =&gt; a + b;
-              add(2)(3); // 5
-              
-              // Partial application
-              function multiply(a, b) { return a * b; }
-              const double = multiply.bind(null, 2);
-              double(5); // 10</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 12. Memoization -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-memoization" aria-expanded="false" aria-controls="flush-memoization">
@@ -543,27 +513,29 @@
                   </h2>
                   <div id="flush-memoization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedJS">
                     <div class="accordion-body">
-                      <p>Caching function results to avoid recalculation.</p>
+                      <ul>
+                        <li>
+                          <p>Caching function results to avoid recalculation.</p>
                       <pre><code class="language-js">function memoize(fn) {
-                const cache = {};
-                return function(...args) {
-                  let key = JSON.stringify(args);
-                  if (cache[key]) return cache[key];
-                  cache[key] = fn(...args);
-                  return cache[key];
-                }
-              }
-              const slow = n =&gt; { for(let i=0;i&lt;1e8;i++); return n; };
-              const fast = memoize(slow);</code></pre>
+  const cache = {};
+  return function(...args) {
+    let key = JSON.stringify(args);
+    if (cache[key]) return cache[key];
+    cache[key] = fn(...args);
+    return cache[key];
+  }
+}
+
+const slow = n =&gt; { for(let i=0;i&lt;1e8;i++); return n; };
+const fast = memoize(slow);</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleObjectsArrays">
                 <h3>3. Object & Array Handling</h3>
-              
-                <!-- 1. Object Creation Patterns -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-object-creation" aria-expanded="false" aria-controls="flush-object-creation">
@@ -584,8 +556,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Destructuring -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-destructuring" aria-expanded="false" aria-controls="flush-destructuring">
@@ -606,8 +576,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Object Methods -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-object-methods" aria-expanded="false" aria-controls="flush-object-methods">
@@ -628,8 +596,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Array Methods -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-array-methods" aria-expanded="false" aria-controls="flush-array-methods">
@@ -650,8 +616,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 5. flat & flatMap -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-flat-flatmap" aria-expanded="false" aria-controls="flush-flat-flatmap">
@@ -668,8 +632,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 6. Sorting & Searching -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sorting-searching" aria-expanded="false" aria-controls="flush-sorting-searching">
@@ -690,8 +652,6 @@
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleDOM">
                 <h3>4. DOM Manipulation & Browser APIs</h3>
-              
-                <!-- 1. Selecting Elements -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-selecting-elements" aria-expanded="false" aria-controls="flush-selecting-elements">
@@ -708,8 +668,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Modifying DOM -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-modifying-dom" aria-expanded="false" aria-controls="flush-modifying-dom">
@@ -728,8 +686,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Event Handling -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-handling" aria-expanded="false" aria-controls="flush-event-handling">
@@ -744,8 +700,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Event Bubbling & Capturing -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-bubbling" aria-expanded="false" aria-controls="flush-event-bubbling">
@@ -754,15 +708,21 @@
                   </h2>
                   <div id="flush-event-bubbling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDOM">
                     <div class="accordion-body">
-                      <p><strong>Bubbling:</strong> Target → ancestors (default).</p>
-                      <p><strong>Capturing:</strong> Root → target.</p>
-                      <pre><code>element.addEventListener("click", handler, true); // capturing
-              element.addEventListener("click", handler, false); // bubbling</code></pre>
+                      <ul>
+                        <li>
+                          <p><strong>Bubbling:</strong> Target → ancestors (default).</p>
+                        </li>
+                        <li>
+                          <p><strong>Capturing:</strong> Root → target.</p>
+                        </li>
+                        <li>
+                          Example:<pre><code>element.addEventListener("click", handler, true); // capturing
+element.addEventListener("click", handler, false); // bubbling</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 5. Event Delegation -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-delegation" aria-expanded="false" aria-controls="flush-event-delegation">
@@ -771,15 +731,17 @@
                   </h2>
                   <div id="flush-event-delegation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDOM">
                     <div class="accordion-body">
-                      <p>Attach listener to parent for better performance & dynamic elements.</p>
+                      <ul>
+                        <li>
+                          <p>Attach listener to parent for better performance & dynamic elements.</p>
                       <pre><code>document.getElementById("list").addEventListener("click", e => {
-                if (e.target.tagName === "LI") console.log(e.target.textContent);
-              });</code></pre>
+  if (e.target.tagName === "LI") console.log(e.target.textContent);
+});</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 6. Forms & Inputs -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-forms-inputs" aria-expanded="false" aria-controls="flush-forms-inputs">
@@ -799,8 +761,6 @@
                     </div>
                   </div>
                 </div>
-              
-                <!-- 7. Browser APIs -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-browser-apis" aria-expanded="false" aria-controls="flush-browser-apis">
@@ -824,8 +784,6 @@
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleAsync">
                 <h3>5. Asynchronous JavaScript</h3>
-              
-                <!-- 1. Callbacks -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-callbacks" aria-expanded="false" aria-controls="flush-callbacks">
@@ -834,17 +792,22 @@
                   </h2>
                   <div id="flush-callbacks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAsync">
                     <div class="accordion-body">
-                      <p>A callback is a function passed as an argument to another function, executed later (often after async work).</p>
+                      <ul>
+                        <li>
+                          <p>A callback is a function passed as an argument to another function, executed later (often after async work).</p>
                       <pre><code>function fetchData(cb) {
-                setTimeout(() => cb("Data loaded"), 1000);
-              }
-              fetchData(result => console.log(result));</code></pre>
-                      <p><strong>Drawback:</strong> Callback hell → deeply nested callbacks that are hard to read/manage.</p>
+  setTimeout(() => cb("Data loaded"), 1000);
+}
+
+fetchData(result => console.log(result));</code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Drawback:</strong> Callback hell → deeply nested callbacks that are hard to read/manage.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Promises -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-promises" aria-expanded="false" aria-controls="flush-promises">
@@ -853,16 +816,22 @@
                   </h2>
                   <div id="flush-promises" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAsync">
                     <div class="accordion-body">
-                      <p>A Promise represents a value that will be available in the future.</p>
-                      <p><strong>States:</strong> pending → fulfilled or rejected.</p>
-                      <pre><code>const p = new Promise((resolve, reject) => {
-                setTimeout(() => resolve("Done"), 1000);
-              });</code></pre>
+                      <ul>
+                        <li>
+                          <p>A Promise represents a value that will be available in the future.</p>
+                        </li>
+                        <li>
+                          <p><strong>States:</strong> pending → fulfilled or rejected.</p>
+                        </li>
+                        <li>
+                          Example: <pre><code>const p = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done"), 1000);
+});</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. .then(), .catch(), .finally() -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-then-catch-finally" aria-expanded="false" aria-controls="flush-then-catch-finally">
@@ -875,15 +844,15 @@
                         <li><code>.then()</code> → Runs on fulfillment.</li>
                         <li><code>.catch()</code> → Runs on rejection.</li>
                         <li><code>.finally()</code> → Runs regardless of outcome.</li>
+                        <li>
+                          Example:<pre><code>p.then(data => console.log(data))
+    .catch(err => console.error(err))
+    .finally(() => console.log("Finished"));</code></pre>
+                        </li>
                       </ul>
-                      <pre><code>p.then(data => console.log(data))
-               .catch(err => console.error(err))
-               .finally(() => console.log("Finished"));</code></pre>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Async/Await -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-async-await" aria-expanded="false" aria-controls="flush-async-await">
@@ -892,22 +861,29 @@
                   </h2>
                   <div id="flush-async-await" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAsync">
                     <div class="accordion-body">
-                      <p>Syntactic sugar over Promises for cleaner code.</p>
-                      <p><code>await</code> pauses inside async function until the Promise resolves/rejects.</p>
-                      <pre><code>async function load() {
-                try {
-                  const data = await p;
-                  console.log(data);
-                } catch (err) {
-                  console.error(err);
-                }
-              }
-              load();</code></pre>
+                      <ul>
+                        <li>
+                          <p>Syntactic sugar over Promises for cleaner code.</p>
+                        </li>
+                        <li>
+                          <p><code>await</code> pauses inside async function until the Promise resolves/rejects.</p>
+                        </li>
+                        <li>
+                          Example:<pre><code>async function load() {
+  try {
+    const data = await p;
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+load();</code></pre>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 5. Error Handling in Async Code -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-error-handling-async" aria-expanded="false" aria-controls="flush-error-handling-async">
@@ -916,17 +892,24 @@
                   </h2>
                   <div id="flush-error-handling-async" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAsync">
                     <div class="accordion-body">
-                      <p><strong>With try/catch:</strong></p>
-                      <pre><code>async function getData() {
-                try {
-                  const res = await fetch("bad_url");
-                  const json = await res.json();
-                } catch (error) {
-                  console.error("Error:", error);
-                }
-              }</code></pre>
-                      <p><strong>With .catch():</strong></p>
-                      <pre><code>fetch("bad_url").catch(err => console.error(err));</code></pre>
+                      <ul>
+                        <li>
+                          <p><strong>With try/catch:</strong></p>
+                          <pre><code>async function getData() {
+  try {
+    const res = await fetch("bad_url");
+    const json = await res.json();
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}</code></pre>
+                        </li>
+                        <li>
+                          <p><strong>With .catch():</strong></p>
+                          <pre><code>fetch("bad_url").catch(err => console.error(err));</code></pre>
+                        </li>
+                      </ul>
+                      
                     </div>
                   </div>
                 </div>
