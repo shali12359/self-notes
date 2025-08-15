@@ -503,14 +503,16 @@
                     </h2>
                     <div id="flush-token-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
                         <div class="accordion-body">
-                            Authentication method where the server issues a token after verifying user credentials.
                             <ul>
+                              <li>
+                                Authentication method where the server issues a token after verifying user credentials.
+                              </li>
                                 <li>Token is sent in subsequent requests, usually in the Authorization header.</li>
                                 <li>Stateless – server does not store session data.</li>
                             </ul>
-                            <ul>
+                            <ol>
                                 <li>
-                                    1. JWT (JSON Web Token)
+                                    JWT (JSON Web Token)
                                     <ul>
                                         <li>A compact, URL-safe token format containing claims about the user.</li>
                                         <li>Structure: Header, Payload, Signature.</li>
@@ -519,7 +521,7 @@
                                     </ul>
                                 </li>
                                 <li>
-                                    2. Refresh tokens
+                                    Refresh tokens
                                     <ul>
                                         <li>Used to obtain a new access token without re-authenticating the user.</li>
                                         <li>Stored securely (not in local storage).</li>
@@ -527,7 +529,7 @@
                                         <li>Usually has longer expiration than access tokens.</li>
                                     </ul>
                                 </li>
-                            </ul>
+                            </ol>
                         </div>
                     </div>
                 </div>
@@ -542,8 +544,10 @@
                     </h2>
                     <div id="flush-oauth2" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
                         <div class="accordion-body">
-                            Open standard for delegated authorization.
-                            <ul>
+                          <ul>
+                            <li>
+                              Open standard for delegated authorization.
+                                </li>
                                 <li>Allows applications to access resources on behalf of a user.</li>
                                 <li>Common flows: Authorization Code, Client Credentials, Implicit, Password.</li>
                                 <li>Used by platforms like Google, Facebook for third-party login.</li>
@@ -562,8 +566,10 @@
                     </h2>
                     <div id="flush-api-keys" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
                         <div class="accordion-body">
-                            Simple token used to identify and authenticate an application or user.
-                            <ul>
+                          <ul>
+                              <li>
+                                Simple token used to identify and authenticate an application or user.
+                              </li>
                                 <li>Often sent in request headers or query parameters.</li>
                                 <li>Should be kept secret and rotated periodically.</li>
                                 <li>Not as secure as JWT or OAuth2 if exposed.</li>
@@ -582,8 +588,10 @@
                     </h2>
                     <div id="flush-rbac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
                         <div class="accordion-body">
-                            Access control method based on user roles.
-                            <ul>
+                          <ul>
+                            <li>
+                              Access control method based on user roles.
+                                </li>
                                 <li>Roles define permissions to perform certain actions.</li>
                                 <li>Common in enterprise applications.</li>
                                 <li>Example: Admin can delete users, while User cannot.</li>
@@ -602,8 +610,10 @@
                     </h2>
                     <div id="flush-cors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAuth">
                         <div class="accordion-body">
-                            Mechanism to allow restricted resources on a web page to be accessed from another domain.
-                            <ul>
+                          <ul>
+                            <li>
+                              Mechanism to allow restricted resources on a web page to be accessed from another domain.
+                              </li>
                                 <li><code>Access-Control-Allow-Origin</code> specifies allowed origins.</li>
                                 <li>Prevents unauthorized cross-domain requests.</li>
                                 <li>Important for securing APIs consumed by browsers.</li>
@@ -1137,21 +1147,27 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 </h2>
                 <div id="flush-postman" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
                   <div class="accordion-body">
-                    <strong>What it is:</strong>
-                    <p>Postman is a GUI tool for sending HTTP requests and inspecting responses.</p>
-                    
-                    <strong>Why use it:</strong>
                     <ul>
-                      <li>Quick testing without writing code.</li>
-                      <li>Supports all HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
-                      <li>Can set headers, body, query params easily.</li>
-                    </ul>
-            
-                    <strong>Extra features:</strong>
-                    <ul>
-                      <li>Save collections of requests for reuse.</li>
-                      <li>Add environment variables (e.g., <code>{{base_url}}</code>).</li>
-                      <li>Chain requests and do basic scripting for assertions.</li>
+                      <li>
+                        <strong>What it is:</strong>
+                        <p>Postman is a GUI tool for sending HTTP requests and inspecting responses.</p>
+                      </li>
+                      <li>
+                        <strong>Why use it:</strong>
+                        <ul>
+                          <li>Quick testing without writing code.</li>
+                          <li>Supports all HTTP methods (GET, POST, PUT, DELETE, etc.).</li>
+                          <li>Can set headers, body, query params easily.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <strong>Extra features:</strong>
+                        <ul>
+                          <li>Save collections of requests for reuse.</li>
+                          <li>Add environment variables (e.g., <code>{{base_url}}</code>).</li>
+                          <li>Chain requests and do basic scripting for assertions.</li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1166,59 +1182,93 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 </h2>
                 <div id="flush-automated-tests" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
                   <div class="accordion-body">
-                    <p>Automated tests validate that endpoints behave correctly without manually hitting them each time.</p>
-            
-                    <!-- Spring Boot: MockMvc -->
-                    <h5>Spring Boot: MockMvc</h5>
-                    <strong>What it is:</strong>
-                    <p>A Spring test framework for testing controllers without starting the full server.</p>
-                    <strong>Example:</strong>
-                    <pre><code>@Autowired
-            private MockMvc mockMvc;
-            
-@Test
-void shouldReturnBook() throws Exception {
-    mockMvc.perform(get("/books/1"))
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.title").value("REST API Design"));
-}</code></pre>
-                    <strong>Pros:</strong>
                     <ul>
-                      <li>Fast execution, no network overhead.</li>
-                    </ul>
-            
-                    <!-- Spring Boot: RestAssured -->
-                    <h5>Spring Boot: RestAssured</h5>
-                    <strong>What it is:</strong>
-                    <p>A Java DSL for testing REST APIs end-to-end.</p>
-                    <strong>Example:</strong>
-                    <pre><code>given()
-.when()
-.get("/books/1")
-.then()
-.statusCode(200)
-.body("title", equalTo("REST API Design"));</code></pre>
-                    <strong>Pros:</strong>
-                    <ul>
-                      <li>Works well for full-stack integration tests, can test external APIs too.</li>
-                    </ul>
-            
-                    <!-- NestJS: supertest -->
-                    <h5>NestJS: supertest</h5>
-                    <strong>What it is:</strong>
-                    <p>A Node.js library for testing HTTP APIs.</p>
-                    <strong>Example:</strong>
-                    <pre><code>it('/GET books', () => {
-  return request(app.getHttpServer())
-    .get('/books')
-    .expect(200)
-    .expect(res =&gt; {
-      expect(res.body[0].title).toBe('REST API Design');
-    });
-});</code></pre>
-                    <strong>Pros:</strong>
-                    <ul>
-                      <li>Works well with Jest (NestJS default test runner), supports chaining assertions.</li>
+                      <li>
+                        <p>Automated tests validate that endpoints behave correctly without manually hitting them each time.</p>
+                
+                      </li>
+                      <li>
+                        <!-- Spring Boot: MockMvc -->
+                        <h5>Spring Boot: MockMvc</h5>
+                        <ul>
+                          <li>
+                            <strong>What it is:</strong>
+                            <p>A Spring test framework for testing controllers without starting the full server.</p>
+                          </li>
+                          <li>
+                            <strong>Example:</strong>
+                            <pre><code>@Autowired
+    private MockMvc mockMvc;
+                    
+    @Test
+    void shouldReturnBook() throws Exception {
+        mockMvc.perform(get("/books/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.title").value("REST API Design"));
+    }</code></pre>
+                          </li>
+                          <li>
+                            <strong>Pros:</strong>
+                            <ul>
+                              <li>Fast execution, no network overhead.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li><br>
+                      
+                      <li>
+                        <!-- Spring Boot: RestAssured -->
+                        <h5>Spring Boot: RestAssured</h5>
+                        <ul>
+                          <li>
+                            <strong>What it is:</strong>
+                            <p>A Java DSL for testing REST APIs end-to-end.</p>
+                          </li>
+                          <li>
+                            <strong>Example:</strong>
+                            <pre><code>given()
+    .when()
+    .get("/books/1")
+    .then()
+    .statusCode(200)
+    .body("title", equalTo("REST API Design"));</code></pre>
+                          </li>
+                          <li>
+                            <strong>Pros:</strong>
+                            <ul>
+                              <li>Works well for full-stack integration tests, can test external APIs too.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li><br>
+                      
+                      <li>
+                        <!-- NestJS: supertest -->
+                        <h5>NestJS: supertest</h5>
+                        <ul>
+                          <li>
+                            <strong>What it is:</strong>
+                            <p>A Node.js library for testing HTTP APIs.</p>
+                          </li>
+                          <li>
+                            <strong>Example:</strong>
+                            <pre><code>it('/GET books', () => {
+      return request(app.getHttpServer())
+        .get('/books')
+        .expect(200)
+        .expect(res =&gt; {
+          expect(res.body[0].title).toBe('REST API Design');
+        });
+    });</code></pre>
+                          </li>
+                          <li>
+                            <strong>Pros:</strong>
+                            <ul>
+                              <li>Works well with Jest (NestJS default test runner), supports chaining assertions.</li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1408,26 +1458,39 @@ void shouldReturnBook() throws Exception {
                   <div class="accordion-body">
                     <ul>
                       <li><strong>Fetch API:</strong> Built-in JS API for HTTP requests.
-                        <pre><code>fetch('/api/books')
-.then(res =&gt; res.json())
-.then(data =&gt; console.log(data))
-.catch(err =&gt; console.error(err));</code></pre>
-                        <strong>Pros:</strong> No extra dependency, widely supported.<br/>
-                        <strong>Cons:</strong> Verbose for complex requests (interceptors, timeouts).
-                      </li>
-                      <li><strong>Axios:</strong> Popular third-party HTTP client.
-                        <pre><code>import axios from 'axios';
-            
-axios.get('/api/books')
-  .then(res =&gt; console.log(res.data))
-  .catch(err =&gt; console.error(err));</code></pre>
-                        <strong>Pros:</strong>
                         <ul>
-                          <li>Simpler syntax.</li>
-                          <li>Interceptors for auth tokens.</li>
-                          <li>Automatic JSON parsing.</li>
+                          <li>
+                            <pre><code>fetch('/api/books')
+  .then(res =&gt; res.json())
+  .then(data =&gt; console.log(data))
+  .catch(err =&gt; console.error(err));</code></pre>
+                          </li>
+                          <li>
+                                                        <strong>Pros:</strong> No extra dependency, widely supported.<br/>
+                                                      </li>
+                                                      <li>
+                                                        <strong>Cons:</strong> Verbose for complex requests (interceptors, timeouts).
+                                                      </li><br>
                         </ul>
                       </li>
+                      <li><strong>Axios:</strong> Popular third-party HTTP client.
+                        <ul>
+                          <pre><code>import axios from 'axios';
+              
+  axios.get('/api/books')
+    .then(res =&gt; console.log(res.data))
+    .catch(err =&gt; console.error(err));</code></pre>
+    <li>
+      <strong>Pros:</strong>
+      <ul>
+        <li>Simpler syntax.</li>
+        <li>Interceptors for auth tokens.</li>
+        <li>Automatic JSON parsing.</li>
+      </ul>
+    </li>
+                        </ul>
+                      </li>
+                     
                     </ul>
                   </div>
                 </div>
@@ -1442,11 +1505,13 @@ axios.get('/api/books')
                 </h2>
                 <div id="flush-error-loading" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
                   <div class="accordion-body">
-                    <p>Best practice in React: Use state variables to track loading and error states.</p>
-                    <pre><code>const [loading, setLoading] = useState(false);
+                    <ul>
+                      <li>
+                        <p>Best practice in React: Use state variables to track loading and error states.</p>
+                        <pre><code>const [loading, setLoading] = useState(false);
 const [error, setError] = useState(null);
 const [data, setData] = useState([]);
-            
+                
 useEffect(() =&gt; {
   setLoading(true);
   fetch('/api/books')
@@ -1455,7 +1520,11 @@ useEffect(() =&gt; {
     .catch(setError)
     .finally(() =&gt; setLoading(false));
 }, []);</code></pre>
-                    <p>Improves UX by showing spinners, retry options, or error messages.</p>
+                      </li>
+                      <li>
+                        <p>Improves UX by showing spinners, retry options, or error messages.</p>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
