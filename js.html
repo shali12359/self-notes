@@ -943,23 +943,29 @@ load();</code></pre>
                   </h2>
                   <div id="flush-template" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Introduced in ES6, enclosed by backticks (<code>` `</code>) instead of quotes.<br>
-                      Supports string interpolation (<code>${expression}</code>) and multi-line strings.
-                      <pre><code class="language-javascript">
-              let name = "Alex";
-              let message = `Hello, ${name}! Today is ${new Date().toDateString()}.`;
-              console.log(message);
-              
-              // Supports multi-line without \n
-              let multiline = `Line 1
-              Line 2`;
-                      </code></pre>
-                      <strong>Why useful:</strong> Cleaner syntax, easier to embed variables and expressions.
+                      <ul>
+                        <li>
+                          Introduced in ES6, enclosed by backticks (<code>` `</code>) instead of quotes.<br>
+                        </li>
+                        <li>
+                          Supports string interpolation (<code>${expression}</code>) and multi-line strings.
+                          <pre><code class="language-javascript">
+let name = "Alex";
+let message = `Hello, ${name}! Today is ${new Date().toDateString()}.`;
+console.log(message);
+                            
+// Supports multi-line without \n
+let multiline = `Line 1
+Line 2`;
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Cleaner syntax, easier to embed variables and expressions.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Modules -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-modules" aria-expanded="false" aria-controls="flush-modules">
@@ -968,27 +974,31 @@ load();</code></pre>
                   </h2>
                   <div id="flush-modules" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Modules help organize code into separate files.
-                      <pre><code class="language-javascript">
-              // math.js
-              export const add = (a,b) => a + b;
-              export const sub = (a,b) => a - b;
-              
-              // main.js
-              import { add, sub } from './math.js';
-              
-              // utils.js
-              export default function log(msg) { console.log(msg); }
-              
-              // main.js
-              import log from './utils.js';
-                      </code></pre>
-                      <strong>Why useful:</strong> Improves maintainability, avoids global scope pollution.
+                      <ul>
+                        <li>
+                          Modules help organize code into separate files.
+                          <pre><code class="language-javascript">
+// math.js
+export const add = (a,b) => a + b;
+export const sub = (a,b) => a - b;
+                            
+// main.js
+import { add, sub } from './math.js';
+                            
+// utils.js
+export default function log(msg) { console.log(msg); }
+                            
+// main.js
+import log from './utils.js';
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Improves maintainability, avoids global scope pollution.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Generators -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-generators" aria-expanded="false" aria-controls="flush-generators">
@@ -997,22 +1007,27 @@ load();</code></pre>
                   </h2>
                   <div id="flush-generators" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Special functions that can pause and resume execution using <code>yield</code>.
-                      <pre><code class="language-javascript">
-              function* countUp() {
-                yield 1;
-                yield 2;
-                yield 3;
-              }
-              const counter = countUp();
-              console.log(counter.next()); // { value: 1, done: false }
-                      </code></pre>
-                      <strong>Why useful:</strong> Efficient for sequences, lazy evaluation, async flows.
+                      <ul>
+                        <li>
+                          Special functions that can pause and resume execution using <code>yield</code>.
+                          <pre><code class="language-javascript">
+function* countUp() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+
+const counter = countUp();
+console.log(counter.next()); // { value: 1, done: false }
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Efficient for sequences, lazy evaluation, async flows.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Symbols -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-symbols" aria-expanded="false" aria-controls="flush-symbols">
@@ -1021,18 +1036,22 @@ load();</code></pre>
                   </h2>
                   <div id="flush-symbols" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Unique and immutable primitive values, often used as object keys to avoid naming conflicts.
-                      <pre><code class="language-javascript">
-              const id = Symbol("id");
-              const user = { [id]: 123, name: "Sam" };
-              console.log(user[id]); // 123
-                      </code></pre>
-                      <strong>Why useful:</strong> Ensures truly unique property keys, useful for private object properties.
+                      <ul>
+                        <li>
+                          Unique and immutable primitive values, often used as object keys to avoid naming conflicts.
+                          <pre><code class="language-javascript">
+const id = Symbol("id");
+const user = { [id]: 123, name: "Sam" };
+console.log(user[id]); // 123
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Ensures truly unique property keys, useful for private object properties.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 5. Sets & Maps -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sets-maps" aria-expanded="false" aria-controls="flush-sets-maps">
@@ -1041,23 +1060,29 @@ load();</code></pre>
                   </h2>
                   <div id="flush-sets-maps" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      <strong>Set:</strong> Collection of unique values.<br>
-                      <strong>Map:</strong> Key-value pairs where keys can be any type.
-                      <pre><code class="language-javascript">
-              const s = new Set([1, 2, 2, 3]);
-              console.log(s); // Set {1, 2, 3}
-              
-              const m = new Map();
-              m.set("name", "Alex");
-              m.set(1, "Number Key");
-              console.log(m.get(1));
-                      </code></pre>
-                      <strong>Why useful:</strong> More flexible than arrays/objects for certain lookups and uniqueness checks.
+                      <ul>
+                        <li>
+                          <strong>Set:</strong> Collection of unique values.<br>
+                        </li>
+                        <li>
+                          <strong>Map:</strong> Key-value pairs where keys can be any type.
+                          <pre><code class="language-javascript">
+const s = new Set([1, 2, 2, 3]);
+console.log(s); // Set {1, 2, 3}
+                            
+const m = new Map();
+m.set("name", "Alex");
+m.set(1, "Number Key");
+console.log(m.get(1));
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> More flexible than arrays/objects for certain lookups and uniqueness checks.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 6. Optional Chaining -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-optional" aria-expanded="false" aria-controls="flush-optional">
@@ -1066,18 +1091,22 @@ load();</code></pre>
                   </h2>
                   <div id="flush-optional" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Safely access nested properties without throwing an error if a value is null or undefined.
-                      <pre><code class="language-javascript">
-              let user = { profile: { name: "Sam" } };
-              console.log(user.profile?.name); // "Sam"
-              console.log(user.address?.street); // undefined (no error)
-                      </code></pre>
-                      <strong>Why useful:</strong> Prevents runtime errors from deeply nested access.
+                      <ul>
+                        <li>
+                          Safely access nested properties without throwing an error if a value is null or undefined.
+                          <pre><code class="language-javascript">
+let user = { profile: { name: "Sam" } };
+console.log(user.profile?.name); // "Sam"
+console.log(user.address?.street); // undefined (no error)
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Prevents runtime errors from deeply nested access.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 7. Nullish Coalescing -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nullish" aria-expanded="false" aria-controls="flush-nullish">
@@ -1086,23 +1115,27 @@ load();</code></pre>
                   </h2>
                   <div id="flush-nullish" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleES6">
                     <div class="accordion-body">
-                      Returns right-hand value only if left-hand is <code>null</code> or <code>undefined</code> (unlike <code>||</code>, which treats <code>0</code>, <code>""</code>, and <code>false</code> as falsy).
-                      <pre><code class="language-javascript">
-              let username = null;
-              console.log(username ?? "Guest"); // "Guest"
-              
-              let count = 0;
-              console.log(count ?? 10); // 0 (keeps 0, unlike ||)
-                      </code></pre>
-                      <strong>Why useful:</strong> Provides safer default values without overriding valid falsy values.
+                      <ul>
+                        <li>
+                          Returns right-hand value only if left-hand is <code>null</code> or <code>undefined</code> (unlike <code>||</code>, which treats <code>0</code>, <code>""</code>, and <code>false</code> as falsy).
+                          <pre><code class="language-javascript">
+let username = null;
+console.log(username ?? "Guest"); // "Guest"
+                            
+let count = 0;
+console.log(count ?? 10); // 0 (keeps 0, unlike ||)
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Provides safer default values without overriding valid falsy values.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleOOP">
                 <h3>7. Object-Oriented Programming (OOP)</h3>
-                <!-- 1. Classes -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-classes" aria-expanded="false" aria-controls="flush-classes">
@@ -1111,25 +1144,29 @@ load();</code></pre>
                   </h2>
                   <div id="flush-classes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
                     <div class="accordion-body">
-                      ES6 introduced <code>class</code> syntax as a cleaner way to create objects and handle inheritance (syntactic sugar over prototypes).
-                      <pre><code class="language-javascript">
-              class Person {
-                constructor(name) {
-                  this.name = name;
-                }
-                greet() {
-                  console.log(`Hello, my name is ${this.name}`);
-                }
-              }
-              const p = new Person("Alex");
-              p.greet(); // Hello, my name is Alex
-                      </code></pre>
-                      <strong>Why useful:</strong> Organizes related properties and methods in one blueprint for creating objects.
+                      <ul>
+                        <li>
+                          ES6 introduced <code>class</code> syntax as a cleaner way to create objects and handle inheritance (syntactic sugar over prototypes).
+                          <pre><code class="language-javascript">
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  greet() {
+    console.log(`Hello, my name is ${this.name}`);
+  }
+}
+const p = new Person("Alex");
+p.greet(); // Hello, my name is Alex
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Organizes related properties and methods in one blueprint for creating objects.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Constructor, Methods, Static Methods -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-constructor" aria-expanded="false" aria-controls="flush-constructor">
@@ -1138,31 +1175,40 @@ load();</code></pre>
                   </h2>
                   <div id="flush-constructor" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
                     <div class="accordion-body">
-                      <strong>Constructor:</strong> Called automatically when creating a new instance.<br>
-                      <strong>Instance methods:</strong> Defined inside the class, accessible to created objects.<br>
-                      <strong>Static methods:</strong> Belong to the class itself, used for utilities.
-                      <pre><code class="language-javascript">
-              class MathUtil {
-                constructor(num) {
-                  this.num = num;
-                }
-                double() {
-                  return this.num * 2;
-                }
-                static add(a, b) {
-                  return a + b;
-                }
-              }
-              const m = new MathUtil(5);
-              console.log(m.double()); // 10
-              console.log(MathUtil.add(3, 4)); // 7
-                      </code></pre>
-                      <strong>Why useful:</strong> Separates object-specific behavior from general helper methods.
+                      <ul>
+                        <li>
+                          <strong>Constructor:</strong> Called automatically when creating a new instance.<br>
+                        </li>
+                        <li>
+                          <strong>Instance methods:</strong> Defined inside the class, accessible to created objects.<br>
+                        </li>
+                        <li>
+                          <strong>Static methods:</strong> Belong to the class itself, used for utilities.
+                          <pre><code class="language-javascript">
+class MathUtil {
+  constructor(num) {
+    this.num = num;
+  }
+  double() {
+    return this.num * 2;
+  }
+  static add(a, b) {
+    return a + b;
+  }
+}
+
+const m = new MathUtil(5);
+console.log(m.double()); // 10
+console.log(MathUtil.add(3, 4)); // 7
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Separates object-specific behavior from general helper methods.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Inheritance -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-inheritance" aria-expanded="false" aria-controls="flush-inheritance">
@@ -1171,36 +1217,42 @@ load();</code></pre>
                   </h2>
                   <div id="flush-inheritance" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
                     <div class="accordion-body">
-                      <code>extends</code> creates a subclass from another class.<br>
-                      <code>super</code> calls the parent class’s constructor or methods.
-                      <pre><code class="language-javascript">
-              class Animal {
-                constructor(name) {
-                  this.name = name;
-                }
-                speak() {
-                  console.log(`${this.name} makes a sound`);
-                }
-              }
-              class Dog extends Animal {
-                constructor(name, breed) {
-                  super(name);
-                  this.breed = breed;
-                }
-                speak() {
-                  super.speak();
-                  console.log(`${this.name} barks`);
-                }
-              }
-              const d = new Dog("Buddy", "Labrador");
-              d.speak();
-                      </code></pre>
-                      <strong>Why useful:</strong> Promotes code reuse and a clear “is-a” relationship between classes.
+                      <ul>
+                        <li>
+                          <code>extends</code> creates a subclass from another class.<br>
+                        </li>
+                        <li>
+                          <code>super</code> calls the parent class’s constructor or methods.
+                          <pre><code class="language-javascript">
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a sound`);
+  }
+}
+class Dog extends Animal {
+  constructor(name, breed) {
+    super(name);
+    this.breed = breed;
+  }
+  speak() {
+    super.speak();
+    console.log(`${this.name} barks`);
+  }
+}
+const d = new Dog("Buddy", "Labrador");
+d.speak();
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Promotes code reuse and a clear “is-a” relationship between classes.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Encapsulation -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-encapsulation" aria-expanded="false" aria-controls="flush-encapsulation">
@@ -1209,36 +1261,42 @@ load();</code></pre>
                   </h2>
                   <div id="flush-encapsulation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
                     <div class="accordion-body">
-                      Public fields are accessible anywhere.<br>
-                      Private fields (ES2022) are prefixed with <code>#</code> and only accessible inside the class.
-                      <pre><code class="language-javascript">
-              class BankAccount {
-                #balance; // private
-                constructor(initialBalance) {
-                  this.#balance = initialBalance;
-                }
-                deposit(amount) {
-                  this.#balance += amount;
-                }
-                getBalance() {
-                  return this.#balance;
-                }
-              }
-              const account = new BankAccount(100);
-              account.deposit(50);
-              console.log(account.getBalance()); // 150
-              console.log(account.#balance); // SyntaxError
-                      </code></pre>
-                      <strong>Why useful:</strong> Hides internal state from outside code, allowing controlled access and preventing misuse.
+                      <ul>
+                        <li>
+                          Public fields are accessible anywhere.<br>
+                        </li>
+                        <li>
+                          Private fields (ES2022) are prefixed with <code>#</code> and only accessible inside the class.
+                          <pre><code class="language-javascript">
+class BankAccount {
+  #balance; // private
+  constructor(initialBalance) {
+    this.#balance = initialBalance;
+  }
+  deposit(amount) {
+    this.#balance += amount;
+  }
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+const account = new BankAccount(100);
+account.deposit(50);
+console.log(account.getBalance()); // 150
+console.log(account.#balance); // SyntaxError
+                                    </code></pre>
+                        </li>
+                        <li>
+                          <strong>Why useful:</strong> Hides internal state from outside code, allowing controlled access and preventing misuse.
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleErrorHandling">
                 <h3>8. Error Handling</h3>
-            
-                <!-- try...catch...finally -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-try-catch-finally" aria-expanded="false" aria-controls="flush-try-catch-finally">
@@ -1247,27 +1305,31 @@ load();</code></pre>
                     </h2>
                     <div id="flush-try-catch-finally" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                         <div class="accordion-body">
-                            <p>The <code>try...catch...finally</code> statement lets you handle runtime errors without stopping your program.</p>
                             <ul>
-                                <li><strong>try:</strong> Place code that might throw an error.</li>
-                                <li><strong>catch:</strong> Handles the error if one occurs.</li>
-                                <li><strong>finally:</strong> Runs no matter what — useful for cleanup operations (closing connections, releasing resources).</li>
+                              <li>
+                                <p>The <code>try...catch...finally</code> statement lets you handle runtime errors without stopping your program.</p>
+                                <ul>
+                                    <li><strong>try:</strong> Place code that might throw an error.</li>
+                                    <li><strong>catch:</strong> Handles the error if one occurs.</li>
+                                    <li><strong>finally:</strong> Runs no matter what — useful for cleanup operations (closing connections, releasing resources).</li>
+                                </ul><br>
+                <pre><code class="language-js">try {
+  let result = riskyOperation();
+  console.log("Operation successful:", result);
+} catch (error) {
+  console.error("Something went wrong:", error.message);
+} finally {
+  console.log("Cleanup actions executed");
+}
+                </code></pre>
+                              </li>
+                              <li>
+                                <p><strong>Why useful:</strong> Prevents crashes and allows graceful recovery or fallback when something unexpected happens.</p>
+                              </li>
                             </ul>
-            <pre><code class="language-js">try {
-              let result = riskyOperation();
-              console.log("Operation successful:", result);
-            } catch (error) {
-              console.error("Something went wrong:", error.message);
-            } finally {
-              console.log("Cleanup actions executed");
-            }
-            </code></pre>
-                            <p><strong>Why useful:</strong> Prevents crashes and allows graceful recovery or fallback when something unexpected happens.</p>
                         </div>
                     </div>
                 </div>
-            
-                <!-- Custom Error Classes -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-custom-error" aria-expanded="false" aria-controls="flush-custom-error">
@@ -1276,36 +1338,40 @@ load();</code></pre>
                     </h2>
                     <div id="flush-custom-error" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                         <div class="accordion-body">
-                            <p>You can extend the built-in <code>Error</code> class to create your own error types. This makes error handling more specific and organized in large applications.</p>
-            <pre><code class="language-js">class ValidationError extends Error {
-              constructor(message) {
-                super(message);
-                this.name = "ValidationError";
-              }
-            }
-            
-            function validateUser(user) {
-              if (!user.name) {
-                throw new ValidationError("Name is required");
-              }
-            }
-            
-            try {
-              validateUser({});
-            } catch (err) {
-              if (err instanceof ValidationError) {
-                console.error("Validation failed:", err.message);
-              } else {
-                console.error("Unknown error:", err);
-              }
-            }
-            </code></pre>
-                            <p><strong>Why useful:</strong> Helps categorize and handle errors differently depending on their type.</p>
+                          <ul>
+                            <li>
+                              <p>You can extend the built-in <code>Error</code> class to create your own error types. This makes error handling more specific and organized in large applications.</p>
+              <pre><code class="language-js">class ValidationError extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "ValidationError";
+  }
+}
+              
+function validateUser(user) {
+  if (!user.name) {
+    throw new ValidationError("Name is required");
+  }
+}
+              
+try {
+  validateUser({});
+} catch (err) {
+  if (err instanceof ValidationError) {
+    console.error("Validation failed:", err.message);
+  } else {
+    console.error("Unknown error:", err);
+  }
+}
+              </code></pre>
+                            </li>
+                            <li>
+                              <p><strong>Why useful:</strong> Helps categorize and handle errors differently depending on their type.</p>
+                            </li>
+                          </ul>
                         </div>
                     </div>
                 </div>
-            
-                <!-- Throwing Errors in Async Functions -->
                 <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-async-errors" aria-expanded="false" aria-controls="flush-async-errors">
@@ -1314,32 +1380,36 @@ load();</code></pre>
                     </h2>
                     <div id="flush-async-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                         <div class="accordion-body">
-                            <p>In async functions, errors are thrown just like in synchronous code — but must be caught using <code>try...catch</code> inside the async function or with <code>.catch()</code> on the returned Promise.</p>
-            <pre><code class="language-js">async function fetchData() {
-              if (Math.random() > 0.5) {
-                throw new Error("Random failure");
-              }
-              return "Data fetched successfully";
-            }
-            
-            (async () => {
-              try {
-                const data = await fetchData();
-                console.log(data);
-              } catch (error) {
-                console.error("Error in async function:", error.message);
-              }
-            })();
-            </code></pre>
-                            <p><strong>Why useful:</strong> Ensures asynchronous errors are handled properly, avoiding unhandled promise rejections and unexpected crashes.</p>
+                          <ul>
+                            <li>
+                              <p>In async functions, errors are thrown just like in synchronous code — but must be caught using <code>try...catch</code> inside the async function or with <code>.catch()</code> on the returned Promise.</p>
+              <pre><code class="language-js">async function fetchData() {
+  if (Math.random() > 0.5) {
+    throw new Error("Random failure");
+  }
+  return "Data fetched successfully";
+}
+              
+(async () => {
+  try {
+    const data = await fetchData();
+    console.log(data);
+  } catch (error) {
+    console.error("Error in async function:", error.message);
+  }
+})();
+              </code></pre>
+                            </li>
+                            <li>
+                              <p><strong>Why useful:</strong> Ensures asynchronous errors are handled properly, avoiding unhandled promise rejections and unexpected crashes.</p>
+                            </li>
+                          </ul>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExamplePerformance">
                 <h3>9. Performance Optimization</h3>
-              
-                <!-- 1. Debouncing & Throttling -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-debounce-throttle" aria-expanded="false" aria-controls="flush-debounce-throttle">
@@ -1348,42 +1418,50 @@ load();</code></pre>
                   </h2>
                   <div id="flush-debounce-throttle" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                     <div class="accordion-body">
-                      <p>Both are techniques to limit how often a function runs, improving performance when handling frequent events like scrolling or resizing.</p>
-                      <p><strong>Debouncing</strong> delays execution until a certain time has passed since the last call. Useful to avoid multiple quick triggers.</p>
-              <pre><code class="language-js">function debounce(fn, delay) {
-                let timer;
-                return function(...args) {
-                  clearTimeout(timer);
-                  timer = setTimeout(() => fn.apply(this, args), delay);
-                };
-              }
-              
-              window.addEventListener('resize', debounce(() => {
-                console.log('Resize event handled');
-              }, 300));
-              </code></pre>
-                      <p><strong>Throttling</strong> ensures the function runs at most once every set interval, ignoring calls during that period.</p>
-              <pre><code class="language-js">function throttle(fn, limit) {
-                let lastCall = 0;
-                return function(...args) {
-                  const now = Date.now();
-                  if (now - lastCall >= limit) {
-                    lastCall = now;
-                    fn.apply(this, args);
-                  }
-                };
-              }
-              
-              window.addEventListener('scroll', throttle(() => {
-                console.log('Scroll event handled');
-              }, 300));
-              </code></pre>
-                      <p><strong>Why useful:</strong> Reduces unnecessary function executions, saving CPU and improving responsiveness.</p>
+                      <ul>
+                        <li>
+                          <p>Both are techniques to limit how often a function runs, improving performance when handling frequent events like scrolling or resizing.</p>
+                        </li>
+                        <li>
+                          <p><strong>Debouncing</strong> delays execution until a certain time has passed since the last call. Useful to avoid multiple quick triggers.</p>
+                  <pre><code class="language-js">function debounce(fn, delay) {
+  let timer;
+  return function(...args) {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay);
+  };
+}
+                  
+ window.addEventListener('resize', debounce(() => {
+  console.log('Resize event handled');
+}, 300));
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Throttling</strong> ensures the function runs at most once every set interval, ignoring calls during that period.</p>
+                  <pre><code class="language-js">function throttle(fn, limit) {
+  let lastCall = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - lastCall >= limit) {
+      lastCall = now;
+      fn.apply(this, args);
+    }
+  };
+}
+                  
+window.addEventListener('scroll', throttle(() => {
+  console.log('Scroll event handled');
+}, 300));
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Reduces unnecessary function executions, saving CPU and improving responsiveness.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Lazy Loading -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-lazy-loading" aria-expanded="false" aria-controls="flush-lazy-loading">
@@ -1392,16 +1470,22 @@ load();</code></pre>
                   </h2>
                   <div id="flush-lazy-loading" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                     <div class="accordion-body">
-                      <p>Loads resources (images, scripts, modules) only when needed, usually when they enter the viewport or just before usage.</p>
-              <pre><code class="language-html">&lt;img src="placeholder.jpg" data-src="real-image.jpg" class="lazy"&gt;
-              </code></pre>
-                      <p>JavaScript listens for scroll or uses Intersection Observer to swap in the real src when visible.</p>
-                      <p><strong>Why useful:</strong> Improves initial page load time and reduces bandwidth usage.</p>
+                      <ul>
+                        <li>
+                          <p>Loads resources (images, scripts, modules) only when needed, usually when they enter the viewport or just before usage.</p>
+                  <pre><code class="language-html">&lt;img src="placeholder.jpg" data-src="real-image.jpg" class="lazy"&gt;
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p>JavaScript listens for scroll or uses Intersection Observer to swap in the real src when visible.</p>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Improves initial page load time and reduces bandwidth usage.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Minification & Tree-Shaking -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-minify-tree" aria-expanded="false" aria-controls="flush-minify-tree">
@@ -1410,14 +1494,20 @@ load();</code></pre>
                   </h2>
                   <div id="flush-minify-tree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                     <div class="accordion-body">
-                      <p><strong>Minification:</strong> Compresses code by removing whitespace, comments, and shortening variable names without changing functionality.</p>
-                      <p><strong>Tree-shaking:</strong> Removes unused code during bundling (e.g., with Webpack or Rollup). Only code actually imported and used is included.</p>
-                      <p><strong>Why useful:</strong> Reduces file size, leading to faster downloads and better performance.</p>
+                      <ul>
+                        <li>
+                          <p><strong>Minification:</strong> Compresses code by removing whitespace, comments, and shortening variable names without changing functionality.</p>
+                        </li>
+                        <li>
+                          <p><strong>Tree-shaking:</strong> Removes unused code during bundling (e.g., with Webpack or Rollup). Only code actually imported and used is included.</p>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Reduces file size, leading to faster downloads and better performance.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Memory Leaks & Garbage Collection Basics -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-memory-gc" aria-expanded="false" aria-controls="flush-memory-gc">
@@ -1426,23 +1516,31 @@ load();</code></pre>
                   </h2>
                   <div id="flush-memory-gc" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                     <div class="accordion-body">
-                      <p>Memory leaks occur when your program retains references to objects no longer needed, preventing garbage collection.</p>
-                      <p>Garbage collection is automatic in JavaScript; the engine frees memory by removing unreachable objects.</p>
-                      <p><strong>Common leak causes:</strong></p>
                       <ul>
-                        <li>Global variables</li>
-                        <li>Forgotten timers or event listeners</li>
-                        <li>Closures holding large data unnecessarily</li>
+                        <li>
+                          <p>Memory leaks occur when your program retains references to objects no longer needed, preventing garbage collection.</p>
+                        </li>
+                        <li>
+                          <p>Garbage collection is automatic in JavaScript; the engine frees memory by removing unreachable objects.</p>
+                        </li>
+                        <li>
+                          <p><strong>Common leak causes:</strong></p>
+                          <ul>
+                            <li>Global variables</li>
+                            <li>Forgotten timers or event listeners</li>
+                            <li>Closures holding large data unnecessarily</li>
+                          </ul>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Prevents increasing memory usage which can slow down or crash applications.</p>
+                        </li>
                       </ul>
-                      <p><strong>Why useful:</strong> Prevents increasing memory usage which can slow down or crash applications.</p>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleTesting">
                 <h3>10. Testing &amp; Debugging</h3>
-              
-                <!-- 1. Debugging with console.log and Browser DevTools -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-debug-console" aria-expanded="false" aria-controls="flush-debug-console">
@@ -1451,24 +1549,30 @@ load();</code></pre>
                   </h2>
                   <div id="flush-debug-console" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
                     <div class="accordion-body">
-                      <p><code>console.log</code> is the simplest way to output variable values, program flow, or errors to the console. It helps quickly identify where the problem is.</p>
-                      <p>Browser DevTools provide powerful debugging tools including:</p>
                       <ul>
-                        <li>Inspecting HTML/CSS</li>
-                        <li>Setting breakpoints to pause execution</li>
-                        <li>Step-by-step code execution (step over, step into)</li>
-                        <li>Watching variables and call stacks</li>
-                        <li>Network requests monitoring</li>
+                        <li>
+                          <p><code>console.log</code> is the simplest way to output variable values, program flow, or errors to the console. It helps quickly identify where the problem is.</p>
+                        </li>
+                        <li>
+                          <p>Browser DevTools provide powerful debugging tools including:</p>
+                          <ul>
+                            <li>Inspecting HTML/CSS</li>
+                            <li>Setting breakpoints to pause execution</li>
+                            <li>Step-by-step code execution (step over, step into)</li>
+                            <li>Watching variables and call stacks</li>
+                            <li>Network requests monitoring</li>
+                          </ul>
+                  <pre><code class="language-js">console.log("Value of x:", x);
+debugger;  // Pauses execution if DevTools are open
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Allows real-time inspection and control, making it easier to find bugs and understand code behavior.</p>
+                        </li>
                       </ul>
-              <pre><code class="language-js">console.log("Value of x:", x);
-              debugger;  // Pauses execution if DevTools are open
-              </code></pre>
-                      <p><strong>Why useful:</strong> Allows real-time inspection and control, making it easier to find bugs and understand code behavior.</p>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Unit Testing Basics (Jest, Mocha) -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unit-testing" aria-expanded="false" aria-controls="flush-unit-testing">
@@ -1477,22 +1581,28 @@ load();</code></pre>
                   </h2>
                   <div id="flush-unit-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
                     <div class="accordion-body">
-                      <p>Unit testing verifies small parts of your code (functions, modules) work correctly in isolation.</p>
-                      <p>Popular JavaScript testing frameworks:</p>
                       <ul>
-                        <li><strong>Jest:</strong> Zero-config, supports mocks and snapshots, widely used with React.</li>
-                        <li><strong>Mocha:</strong> Flexible test runner often combined with assertion libraries like Chai.</li>
+                        <li>
+                          <p>Unit testing verifies small parts of your code (functions, modules) work correctly in isolation.</p>
+                        </li>
+                        <li>
+                          <p>Popular JavaScript testing frameworks:</p>
+                          <ul>
+                            <li><strong>Jest:</strong> Zero-config, supports mocks and snapshots, widely used with React.</li>
+                            <li><strong>Mocha:</strong> Flexible test runner often combined with assertion libraries like Chai.</li>
+                          </ul>
+                  <pre><code class="language-js">test('adds 1 + 2 to equal 3', () => {
+  expect(1 + 2).toBe(3);
+});
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Ensures code correctness, catches bugs early, and makes refactoring safer.</p>
+                        </li>
                       </ul>
-              <pre><code class="language-js">test('adds 1 + 2 to equal 3', () => {
-                expect(1 + 2).toBe(3);
-              });
-              </code></pre>
-                      <p><strong>Why useful:</strong> Ensures code correctness, catches bugs early, and makes refactoring safer.</p>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Understanding Stack Traces -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-stack-traces" aria-expanded="false" aria-controls="flush-stack-traces">
@@ -1501,23 +1611,31 @@ load();</code></pre>
                   </h2>
                   <div id="flush-stack-traces" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
                     <div class="accordion-body">
-                      <p>A stack trace is a report of the active function calls at the point an error occurred.</p>
-                      <p>It shows the call sequence (from the current function back to where execution started), file names, and line numbers.</p>
-                      <p>Helps pinpoint the exact location and chain of calls that led to an error.</p>
-              <pre><code class="language-php">TypeError: Cannot read property 'foo' of undefined
-                  at bar (app.js:10:15)
-                  at baz (app.js:20:5)
-                  at main (app.js:30:3)
-              </code></pre>
-                      <p><strong>Why useful:</strong> Speeds up debugging by showing the path the program took before crashing.</p>
+                      <ul>
+                        <li>
+                          <p>A stack trace is a report of the active function calls at the point an error occurred.</p>
+                        </li>
+                        <li>
+                          <p>It shows the call sequence (from the current function back to where execution started), file names, and line numbers.</p>
+                        </li>
+                        <li>
+                          <p>Helps pinpoint the exact location and chain of calls that led to an error.</p>
+                  <pre><code class="language-php">TypeError: Cannot read property 'foo' of undefined
+at bar (app.js:10:15)
+at baz (app.js:20:5)
+at main (app.js:30:3)
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Speeds up debugging by showing the path the program took before crashing.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleSecurity">
                 <h3>11. Security</h3>
-              
-                <!-- 1. XSS Prevention -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-xss-prevention" aria-expanded="false" aria-controls="flush-xss-prevention">
@@ -1526,18 +1644,26 @@ load();</code></pre>
                   </h2>
                   <div id="flush-xss-prevention" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                     <div class="accordion-body">
-                      <p>Cross-Site Scripting (XSS) attacks happen when malicious scripts are injected into trusted websites, potentially stealing data or hijacking user sessions.</p>
-                      <p>To prevent XSS, always sanitize and escape user input before inserting it into the DOM.</p>
-                      <p>Avoid inserting raw HTML from untrusted sources.</p>
-              <pre><code class="language-js">const safeText = document.createTextNode(userInput);
-              element.appendChild(safeText);
-              </code></pre>
-                      <p><strong>Why useful:</strong> Protects users from malicious code execution in their browsers.</p>
+                      <ul>
+                        <li>
+                          <p>Cross-Site Scripting (XSS) attacks happen when malicious scripts are injected into trusted websites, potentially stealing data or hijacking user sessions.</p>
+                        </li>
+                        <li>
+                          <p>To prevent XSS, always sanitize and escape user input before inserting it into the DOM.</p>
+                        </li>
+                        <li>
+                          <p>Avoid inserting raw HTML from untrusted sources.</p>
+                  <pre><code class="language-js">const safeText = document.createTextNode(userInput);
+element.appendChild(safeText);
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Protects users from malicious code execution in their browsers.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 2. Avoiding eval -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-avoid-eval" aria-expanded="false" aria-controls="flush-avoid-eval">
@@ -1546,14 +1672,20 @@ load();</code></pre>
                   </h2>
                   <div id="flush-avoid-eval" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                     <div class="accordion-body">
-                      <p><code>eval()</code> executes a string as JavaScript code, which can lead to serious security vulnerabilities if the string contains untrusted data.</p>
-                      <p>Avoid <code>eval()</code> completely or replace it with safer alternatives like <code>JSON.parse()</code> or functions.</p>
-                      <p><strong>Why useful:</strong> Prevents execution of arbitrary, potentially harmful code.</p>
+                      <ul>
+                        <li>
+                          <p><code>eval()</code> executes a string as JavaScript code, which can lead to serious security vulnerabilities if the string contains untrusted data.</p>
+                        </li>
+                        <li>
+                          <p>Avoid <code>eval()</code> completely or replace it with safer alternatives like <code>JSON.parse()</code> or functions.</p>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Prevents execution of arbitrary, potentially harmful code.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 3. Proper Use of innerHTML -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-innerhtml" aria-expanded="false" aria-controls="flush-innerhtml">
@@ -1562,17 +1694,25 @@ load();</code></pre>
                   </h2>
                   <div id="flush-innerhtml" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                     <div class="accordion-body">
-                      <p>Using <code>innerHTML</code> to insert HTML content can open doors to XSS if the content isn’t sanitized.</p>
-                      <p>Prefer <code>textContent</code> for inserting text safely, or sanitize HTML strings before use.</p>
-                      <p>Use libraries like DOMPurify if you must insert HTML from external sources.</p>
-              <pre><code class="language-js">element.textContent = userInput; // safer than innerHTML
-              </code></pre>
-                      <p><strong>Why useful:</strong> Prevents injecting unsafe HTML or scripts into the page.</p>
+                      <ul>
+                        <li>
+                          <p>Using <code>innerHTML</code> to insert HTML content can open doors to XSS if the content isn’t sanitized.</p>
+                        </li>
+                        <li>
+                          <p>Prefer <code>textContent</code> for inserting text safely, or sanitize HTML strings before use.</p>
+                        </li>
+                        <li>
+                          <p>Use libraries like DOMPurify if you must insert HTML from external sources.</p>
+                  <pre><code class="language-js">element.textContent = userInput; // safer than innerHTML
+                  </code></pre>
+                        </li>
+                        <li>
+                          <p><strong>Why useful:</strong> Prevents injecting unsafe HTML or scripts into the page.</p>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
-              
-                <!-- 4. Secure API Calls -->
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-secure-api" aria-expanded="false" aria-controls="flush-secure-api">
@@ -1586,15 +1726,14 @@ load();</code></pre>
                         <li>Validate and sanitize all input on the server side, not just client side.</li>
                         <li>Use authentication tokens (like JWT) securely and avoid exposing secrets in client code.</li>
                         <li>Implement rate limiting and CORS properly to prevent abuse.</li>
+                        <li>
+                          <p><strong>Why useful:</strong> Protects sensitive data and prevents unauthorized access.</p>
+                        </li>
                       </ul>
-                      <p><strong>Why useful:</strong> Protects sensitive data and prevents unauthorized access.</p>
                     </div>
                   </div>
                 </div>
             </div>
-                     
-          
-            
           </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

@@ -1341,7 +1341,9 @@ SELECT city FROM suppliers;</code></pre>
                 </h2>
                 <div id="flush-creating-dropping" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
                   <div class="accordion-body">
-                    <p><strong>Creating an index:</strong></p>
+                    <ul>
+                      <li>
+                        <p><strong>Creating an index:</strong></p>
                     <ul>
                       <li><strong>Non-clustered index</strong></li>
                       <pre><code>CREATE INDEX idx_customer_name
@@ -1350,11 +1352,17 @@ ON Customers (LastName);</code></pre>
                       <pre><code>CREATE CLUSTERED INDEX idx_customer_id
 ON Customers (CustomerID);</code></pre>
                     </ul>
-                    <p><strong>Dropping an index:</strong></p>
-                    <ul>
-                      <li><pre><code>DROP INDEX idx_customer_name ON Customers;</code></pre></li>
+                      </li>
+                      <li>
+                        <p><strong>Dropping an index:</strong></p>
+                        <ul>
+                          <li><pre><code>DROP INDEX idx_customer_name ON Customers;</code></pre></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><em>Note:</em> Some DBMS automatically create indexes for primary keys and unique constraints.</p>
+                      </li>
                     </ul>
-                    <p><em>Note:</em> Some DBMS automatically create indexes for primary keys and unique constraints.</p>
                   </div>
                 </div>
               </div>
@@ -1368,18 +1376,24 @@ ON Customers (CustomerID);</code></pre>
                 </h2>
                 <div id="flush-when-to-use" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleIndexes">
                   <div class="accordion-body">
-                    <p><strong>Use indexes when:</strong></p>
+                    <ul>
+                      <li>
+                        <p><strong>Use indexes when:</strong></p>
                     <ul>
                       <li>Columns are frequently used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code>, or <code>GROUP BY</code>.</li>
                       <li>Querying large tables for fast lookups.</li>
                       <li>Column has high cardinality (many unique values).</li>
                     </ul>
-                    <p><strong>Avoid or limit indexes when:</strong></p>
-                    <ul>
-                      <li>Table is small.</li>
-                      <li>Column has low cardinality (few distinct values).</li>
-                      <li>Data changes often.</li>
-                      <li>You already have many indexes.</li>
+                      </li>
+                      <li>
+                        <p><strong>Avoid or limit indexes when:</strong></p>
+                        <ul>
+                          <li>Table is small.</li>
+                          <li>Column has low cardinality (few distinct values).</li>
+                          <li>Data changes often.</li>
+                          <li>You already have many indexes.</li>
+                        </ul>
+                      </li>
                     </ul>
                   </div>
                 </div>
@@ -1397,8 +1411,10 @@ ON Customers (CustomerID);</code></pre>
                     <ul>
                       <li><strong>Positive:</strong> Speeds up retrieval, reduces disk I/O.</li>
                       <li><strong>Negative:</strong> Slows down writes (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>), consumes extra storage, unused indexes still cost resources.</li>
+                      <li>
+                        <p><strong>Key Insight:</strong> Indexes are a trade-off — optimize reads at the cost of slower writes and extra storage.</p>
+                      </li>
                     </ul>
-                    <p><strong>Key Insight:</strong> Indexes are a trade-off — optimize reads at the cost of slower writes and extra storage.</p>
                   </div>
                 </div>
               </div>
