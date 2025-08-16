@@ -1,0 +1,2288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Spring boot</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushSpring">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. Spring Boot Fundamentals</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false">
+                      1. Introduction to Spring Framework & Spring Boot
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Spring Framework:</strong> A popular Java framework for enterprise apps.
+                          <ul>
+                            <li>Features: Dependency Injection (IoC), Transaction Management, AOP, integrations.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Spring Boot:</strong> Lightweight extension of Spring Framework.
+                          <ul>
+                            <li>Reduces boilerplate and simplifies configuration.</li>
+                            <li>Quick setup for production-ready apps.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false">
+                      2. Differences: Spring vs. Spring Boot
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Spring:</strong>
+                          <ul>
+                            <li>Manual configuration (XML/Java).</li>
+                            <li>Flexible but more setup required.</li>
+                            <li>No built-in server (Tomcat/Jetty required).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Spring Boot:</strong>
+                          <ul>
+                            <li>Auto-configuration support.</li>
+                            <li>Embedded servers (Tomcat, Jetty, Undertow).</li>
+                            <li>Opinionated defaults for faster dev.</li>
+                            <li>spring-boot-starter dependencies simplify setup.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false">
+                      3. Features and Advantages of Spring Boot
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Auto-Configuration: Configures beans based on classpath/settings.</li>
+                        <li>Embedded Server: Standalone JAR (Tomcat/Jetty).</li>
+                        <li>Starter Dependencies: Bundled dependencies (e.g., spring-boot-starter-web).</li>
+                        <li>Production Ready: Health checks, metrics, monitoring (Actuator).</li>
+                        <li>Rapid Development: Minimal setup, quick prototype/deploy.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false">
+                      4. Project Setup (Maven & Gradle)
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Maven:</strong>
+                          <ul>
+                            <li>XML-based build tool (pom.xml).</li>
+                            <li>Strong dependency management.</li>
+                            <li>Uses central repository.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Gradle:</strong>
+                          <ul>
+                            <li>Groovy/Kotlin DSL-based (build.gradle).</li>
+                            <li>Faster with incremental builds.</li>
+                            <li>Preferred for larger projects.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Spring Initializr:</strong> Ready-to-use templates for Maven & Gradle.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false">
+                      5. Spring Boot Project Structure
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <pre>
+src/
+  ├── main/
+  │    ├── java/
+  │    │     └── com.example.demo
+  │    │           └── DemoApplication.java (@SpringBootApplication)
+  │    └── resources/
+  │           ├── application.properties (or application.yml)
+  │           ├── static/ (HTML, CSS, JS)
+  │           └── templates/ (Thymeleaf, Freemarker)
+  └── test/ (unit/integration tests)
+pom.xml or build.gradle
+                      </pre>
+                      <ul>
+                        <li>
+                          <p><em>Convention-over-configuration:</em> Auto-detection/configuration by Spring Boot.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false">
+                      6. Spring Boot Starters & Dependencies
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Starters:</strong> Predefined dependency bundles.
+                          <ul>
+                            <li>spring-boot-starter-web → REST APIs/web apps.</li>
+                            <li>spring-boot-starter-data-jpa → JPA + Hibernate.</li>
+                            <li>spring-boot-starter-security → Authentication & authorization.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Advantages:</strong>
+                          <ul>
+                            <li>No manual addition of multiple dependencies.</li>
+                            <li>Ensures compatible versions (avoid conflicts).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false">
+                      7. Understanding application.properties & application.yml
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <p><strong>application.properties</strong></p>
+                          <pre>
+server.port=8081
+spring.datasource.url=jdbc:mysql://localhost:3306/testdb
+spring.datasource.username=root
+                          </pre>
+                        </li>
+                        <li>
+                          <p><strong>application.yml</strong></p>
+                          <pre>
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+                          </pre>
+                        </li>
+                      </ul>
+              
+              
+                      <ul>
+                        <li>Externalized configuration: DB creds, ports, logging levels.</li>
+                        <li>Profiles: <code>application-dev.yml</code>, <code>application-prod.yml</code>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 8 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseEight" aria-expanded="false">
+                      8. Spring Boot CLI (Command Line Interface)
+                    </button>
+                  </h2>
+                  <div id="flush-collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tool for prototyping with Groovy scripts.</li>
+                        <li>Run apps without boilerplate Java code.</li>
+                        <li>Not commonly used for production.</li><br>
+                        <pre>
+  @RestController
+  class HelloController {
+      @RequestMapping("/")
+      String home() { "Hello World" }
+  }
+                        </pre>
+                        <li>
+                          <p>Run with: <code>spring run app.groovy</code></p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushSpringCore">
+              <div class="row">
+                <div class="col-10">
+                  <h3>2. Spring Core Concepts</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-core" id="vbtn-radio-core1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio-core1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-core" id="vbtn-radio-core2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio-core2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-core" id="vbtn-radio-core3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio-core3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreOne" aria-expanded="false">
+                    1. Spring IoC (Inversion of Control) Container
+                  </button>
+                </h2>
+                <div id="flush-coreOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>IoC: The container creates, configures, and manages objects instead of the programmer.</li>
+                      <li>Reads metadata (annotations, XML, or Java config) and injects dependencies into beans.</li>
+                      <li>Types of IoC containers:
+                        <ul>
+                          <li><strong>BeanFactory:</strong> Basic container, lazy loading.</li>
+                          <li><strong>ApplicationContext:</strong> Advanced container, supports i18n, events, eager loading.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreTwo" aria-expanded="false">
+                    2. @Component, @Service, @Repository Annotations
+                  </button>
+                </h2>
+                <div id="flush-coreTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Component</code>: Generic stereotype for any Spring-managed bean.</li>
+                      <li><code>@Service</code>: Specialized <code>@Component</code> for service layer beans (business logic).</li>
+                      <li><code>@Repository</code>: Specialized <code>@Component</code> for DAO layer beans.
+                        <ul>
+                          <li>Adds persistence-related exception translation.</li>
+                        </ul>
+                      </li>
+                      <li>All three make a class eligible for <strong>component scanning</strong> so Spring can detect/manage it as a bean.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreThree" aria-expanded="false">
+                    3. @Autowired & Constructor Injection
+                  </button>
+                </h2>
+                <div id="flush-coreThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Autowired</code>: Instructs Spring to inject a bean dependency (constructor, setter, or field).</li>
+                      <li><strong>Constructor Injection (recommended):</strong>
+                        <pre>
+@Service
+public class UserService {
+    private final UserRepository repo;
+                
+    @Autowired
+    public UserService(UserRepository repo) {
+        this.repo = repo;
+    }
+}
+                        </pre>
+                      </li>
+                      <li>Benefits:
+                        <ul>
+                          <li>Makes dependencies explicit.</li>
+                          <li>Easier unit testing.</li>
+                          <li>Ensures immutability (final dependencies).</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreFour" aria-expanded="false">
+                    4. @Bean Annotation and Configuration Classes
+                  </button>
+                </h2>
+                <div id="flush-coreFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Bean</code>: Used inside a <code>@Configuration</code> class to explicitly define a bean.</li>
+                      <li>Example:
+                        <pre>
+@Configuration
+public class AppConfig {
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+}
+                        </pre>
+                      </li>
+                      <li>Use case: When you need more control over bean creation than component scanning provides.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreFive" aria-expanded="false">
+                    5. Bean Scopes (singleton, prototype, request, session)
+                  </button>
+                </h2>
+                <div id="flush-coreFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>singleton (default):</strong> One shared instance per container.</li>
+                      <li><strong>prototype:</strong> New instance every time it’s requested.</li>
+                      <li><strong>request:</strong> One instance per HTTP request (web apps).</li>
+                      <li><strong>session:</strong> One instance per HTTP session.</li>
+                      <li><strong>application:</strong> One instance per <code>ServletContext</code> lifecycle.</li>
+                      <li>➡️ Scope defines bean lifecycle & visibility.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-coreSix" aria-expanded="false">
+                    6. Lazy Initialization of Beans
+                  </button>
+                </h2>
+                <div id="flush-coreSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringCore">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>By default, Spring creates singleton beans at startup (eager init).</li>
+                      <li><strong>Lazy initialization (<code>@Lazy</code>):</strong> Bean created only when needed.</li>
+                      <li>Example:
+                        <pre>
+@Component
+@Lazy
+public class HeavyBean { ... }
+                        </pre>
+                      </li>
+                      <li>Useful for resource-heavy or optional beans.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushSpringRest">
+              <div class="row">
+                <div class="col-10">
+                  <h3>3. Spring REST Controllers</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-rest" id="vbtn-radio-rest1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio-rest1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-rest" id="vbtn-radio-rest2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio-rest2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-rest" id="vbtn-radio-rest3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio-rest3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restOne" aria-expanded="false">
+                    1. Creating REST Controllers (@RestController)
+                  </button>
+                </h2>
+                <div id="flush-restOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>A REST controller handles HTTP requests and returns responses in JSON/XML.</li>
+                      <li><code>@RestController</code> = <code>@Controller</code> + <code>@ResponseBody</code></li>
+                      <li>Example:
+                        <pre>
+@RestController
+@RequestMapping("/users")
+public class UserController {
+     @GetMapping
+    public List&lt;User&gt; getAllUsers() { ... }
+}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restTwo" aria-expanded="false">
+                    2. @RequestMapping, @GetMapping, @PostMapping, @PutMapping, @DeleteMapping
+                  </button>
+                </h2>
+                <div id="flush-restTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@RequestMapping</code>: General mapping for all HTTP methods.</li>
+                      <li>Shorthand annotations (preferred in REST APIs):
+                        <ul>
+                          <li><code>@GetMapping</code> → GET (fetch data).</li>
+                          <li><code>@PostMapping</code> → POST (create resource).</li>
+                          <li><code>@PutMapping</code> → PUT (update resource).</li>
+                          <li><code>@DeleteMapping</code> → DELETE (remove resource).</li>
+                        </ul>
+                      </li>
+                      <li>Example:
+                        <pre>
+@GetMapping("/{id}")
+public User getUserById(@PathVariable Long id) { ... }
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restThree" aria-expanded="false">
+                    3. Request Parameters & Path Variables
+                  </button>
+                </h2>
+                <div id="flush-restThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Request Parameters (<code>@RequestParam</code>):</strong> Extracts query params from URL.
+                        <br>Example: <code>/users?active=true</code>
+                        <pre>
+@GetMapping
+public List&lt;User&gt; getUsers(@RequestParam boolean active) { ... }
+                        </pre>
+                      </li>
+                      <li><strong>Path Variables (<code>@PathVariable</code>):</strong> Extracts values from URL path.
+                        <br>Example: <code>/users/5</code>
+                        <pre>
+@GetMapping("/{id}")
+public User getUser(@PathVariable Long id) { ... }
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restFour" aria-expanded="false">
+                    4. Request Body & Response Entity
+                  </button>
+                </h2>
+                <div id="flush-restFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@RequestBody</code>: Maps JSON request body to Java object.
+                        <pre>
+@PostMapping
+public User createUser(@RequestBody User user) { ... }
+                        </pre>
+                      </li>
+                      <li><code>ResponseEntity</code>: Customize HTTP response (status, headers, body).
+                        <pre>
+return ResponseEntity.status(HttpStatus.CREATED).body(user);
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restFive" aria-expanded="false">
+                    5. Exception Handling with @ControllerAdvice & @ExceptionHandler
+                  </button>
+                </h2>
+                <div id="flush-restFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@ControllerAdvice</code>: Global exception handler across controllers.</li>
+                      <li><code>@ExceptionHandler</code>: Handles specific exceptions.</li>
+                      <li>Example:
+                        <pre>
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(UserNotFoundException.class)
+    public ResponseEntity&lt;String&gt; handleUserNotFound(UserNotFoundException ex) {
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
+    }
+}
+                        </pre>
+                      </li>
+                      <li>Ensures consistent error responses instead of exposing raw exceptions.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-restSix" aria-expanded="false">
+                    6. Custom Response Models (DTOs)
+                  </button>
+                </h2>
+                <div id="flush-restSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringRest">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>DTO (Data Transfer Object):</strong> A custom class used to transfer data between client and server.</li>
+                      <li>Benefits:
+                        <ul>
+                          <li>Hides internal entity structure.</li>
+                          <li>Helps with validation & transformation.</li>
+                          <li>Keeps response clean and client-friendly.</li>
+                        </ul>
+                      </li>
+                      <li>Example:
+                        <pre>
+public class UserDTO {
+    private String name;
+    private String email;
+}
+                        </pre>
+                      </li>
+                      <li>Controller returns DTO instead of entity:
+                        <pre>
+return new UserDTO(user.getName(), user.getEmail());
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushSpringDataJPA">
+              <div class="row">
+                <div class="col-10">
+                  <h3>4. Spring Data JPA</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-jpa" id="vbtn-radio-jpa1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio-jpa1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-jpa" id="vbtn-radio-jpa2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio-jpa2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-jpa" id="vbtn-radio-jpa3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio-jpa3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaOne" aria-expanded="false">
+                    1. Spring Data JPA Basics
+                  </button>
+                </h2>
+                <div id="flush-jpaOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Simplifies data access using JPA (Java Persistence API).</li>
+                      <li>Removes boilerplate DAO code by providing repositories.</li>
+                      <li>Integrates with Hibernate (default JPA provider).</li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Auto-implemented CRUD operations.</li>
+                          <li>Powerful query creation from method names.</li>
+                          <li>Supports pagination, sorting, transactions.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaTwo" aria-expanded="false">
+                    2. Entity Mapping with @Entity and @Table
+                  </button>
+                </h2>
+                <div id="flush-jpaTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Entity</code>: Marks class as a JPA entity (maps to table).</li>
+                      <li><code>@Table</code>: Specifies table details (optional if class name matches).</li>
+                      <li>Example:
+                        <pre>
+@Entity
+@Table(name = "users")
+public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+            
+    @Column(nullable = false)
+     private String name;
+}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaThree" aria-expanded="false">
+                    3. JPA Repositories (CrudRepository, JpaRepository)
+                  </button>
+                </h2>
+                <div id="flush-jpaThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>CrudRepository&lt;T, ID&gt;</code>: Basic CRUD methods.</li>
+                      <li><code>JpaRepository&lt;T, ID&gt;</code>: Extends <code>CrudRepository</code>, adds pagination & batch operations.</li>
+                      <li>Example:
+                        <pre>
+public interface UserRepository extends JpaRepository&lt;User, Long&gt; {}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaFour" aria-expanded="false">
+                    4. Query Methods & Derived Queries
+                  </button>
+                </h2>
+                <div id="flush-jpaFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Create queries by defining method names.</li>
+                      <li>Examples:
+                        <pre>
+List&lt;User&gt; findByName(String name);
+List&lt;User&gt; findByEmailContaining(String keyword);
+List&lt;User&gt; findByAgeGreaterThan(int age);
+                        </pre>
+                      </li>
+                      <li>Spring parses method names & generates SQL automatically.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaFive" aria-expanded="false">
+                    5. JPQL & Native Queries
+                  </button>
+                </h2>
+                <div id="flush-jpaFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>JPQL (Java Persistence Query Language):</strong> Object-oriented queries using entity names.
+                        <pre>
+@Query("SELECT u FROM User u WHERE u.name = :name")
+List&lt;User&gt; findByName(@Param("name") String name);
+                        </pre>
+                      </li>
+                      <li><strong>Native Queries:</strong> Raw SQL queries directly.
+                        <pre>
+@Query(value = "SELECT * FROM users WHERE email = ?1", nativeQuery = true)
+User findByEmailNative(String email);
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaSix" aria-expanded="false">
+                    6. Pagination & Sorting
+                  </button>
+                </h2>
+                <div id="flush-jpaSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Spring Data JPA provides <code>Pageable</code> and <code>Sort</code>.</li>
+                      <li>Example:
+                        <pre>
+Page&lt;User&gt; findAll(Pageable pageable);
+                        </pre>
+                      </li>
+                      <li>Usage:
+                        <pre>
+Pageable pageable = PageRequest.of(0, 10, Sort.by("name").ascending());
+Page&lt;User&gt; users = userRepository.findAll(pageable);
+                        </pre>
+                      </li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Avoids loading large datasets at once.</li>
+                          <li>Useful for APIs returning limited results.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 7 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-jpaSeven" aria-expanded="false">
+                    7. Transactions (@Transactional)
+                  </button>
+                </h2>
+                <div id="flush-jpaSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSpringDataJPA">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Transactional</code>: Ensures DB operations run as one unit (commit/rollback).</li>
+                      <li>Example:
+                        <pre>
+@Service
+public class UserService {
+    @Transactional
+    public void registerUser(User user) {
+        userRepository.save(user);
+        emailService.sendWelcomeEmail(user); 
+        // rolled back if save fails
+    }
+}
+                        </pre>
+                      </li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>Maintains data consistency.</li>
+                          <li>Prevents partial updates on errors.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushDatabase">
+              <div class="row">
+                <div class="col-10">
+                  <h3>5. Database Setup & Migrations</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-db" id="vbtn-radio-db1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio-db1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-db" id="vbtn-radio-db2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio-db2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-db" id="vbtn-radio-db3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio-db3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dbOne" aria-expanded="false">
+                    1. MySQL, PostgreSQL, H2 Database Setup
+                  </button>
+                </h2>
+                <div id="flush-dbOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabase">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>MySQL & PostgreSQL:</strong>
+                        <ul>
+                          <li>Popular relational DBs supported by Spring Data JPA.</li>
+                          <li>Add driver dependency (<code>mysql-connector-java</code> or <code>postgresql</code>).</li>
+                          <li>Configure <code>application.properties</code>:
+                            <pre>
+spring.datasource.url=jdbc:mysql://localhost:3306/mydb
+spring.datasource.username=root
+spring.datasource.password=secret
+spring.jpa.hibernate.ddl-auto=update
+                            </pre>
+                          </li>
+                          <li>Spring Boot auto-configures DataSource, EntityManager, and TransactionManager.</li>
+                        </ul>
+                      </li>
+                      <li><strong>H2 Database:</strong>
+                        <ul>
+                          <li>In-memory DB for testing & prototyping.</li>
+                          <li>Dependency: <code>com.h2database:h2</code>.</li>
+                          <li>Auto-starts with Spring Boot → Access at <code>/h2-console</code>.</li>
+                          <li>Great for unit tests.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dbTwo" aria-expanded="false">
+                    2. MongoDB Integration with Spring Data MongoDB
+                  </button>
+                </h2>
+                <div id="flush-dbTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabase">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Add <code>spring-boot-starter-data-mongodb</code> dependency.</li>
+                      <li>Configure:
+                        <pre>
+spring.data.mongodb.uri=mongodb://localhost:27017/mydb
+                        </pre>
+                      </li>
+                      <li>Create entity with <code>@Document</code> instead of <code>@Entity</code>:
+                        <pre>
+@Document(collection = "users")
+public class User {
+    @Id
+    private String id;
+    private String name;
+}
+                        </pre>
+                      </li>
+                      <li>Repository:
+                        <pre>
+public interface UserRepository extends MongoRepository&lt;User, String&gt; {}
+                        </pre>
+                      </li>
+                      <li><strong>Benefits:</strong>
+                        <ul>
+                          <li>No schema migrations needed.</li>
+                          <li>Great for flexible, JSON-like data structures.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dbThree" aria-expanded="false">
+                    3. Database Migrations with Flyway & Liquibase
+                  </button>
+                </h2>
+                <div id="flush-dbThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabase">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Why Migrations?</strong> → Manage schema changes consistently, version-controlled.</li>
+                      <li><strong>Flyway:</strong>
+                        <ul>
+                          <li>Uses SQL scripts → place in <code>src/main/resources/db/migration</code>.</li>
+                          <li>Example <code>V1__init.sql</code>:
+                            <pre>
+CREATE TABLE users (
+    id INT PRIMARY KEY,
+    name VARCHAR(100)
+);
+                            </pre>
+                          </li>
+                          <li>Applied automatically on startup.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Liquibase:</strong>
+                        <ul>
+                          <li>Uses XML, YAML, JSON, or SQL changesets.</li>
+                          <li>Example (<code>db.changelog-master.xml</code>):
+                            <pre>
+&lt;changeSet id="1" author="admin"&gt;
+    &lt;createTable tableName="users"&gt;
+        &lt;column name="id" type="BIGINT" primaryKey="true"/&gt;
+        &lt;column name="name" type="VARCHAR(100)"/&gt;
+    &lt;/createTable&gt;
+&lt;/changeSet&gt;
+                            </pre>
+                          </li>
+                          <li>Supports rollbacks, branching, multiple environments.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Comparison:</strong>
+                        <ul>
+                          <li>Flyway → Simple, SQL-based, quick setup (best for smaller projects).</li>
+                          <li>Liquibase → Flexible, enterprise-grade, supports multiple formats.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushValidation">
+              <div class="row">
+                <div class="col-10">
+                  <h3>6. Validation & Data Binding</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-val" id="vbtn-radio-val1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio-val1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-val" id="vbtn-radio-val2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio-val2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-val" id="vbtn-radio-val3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio-val3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-valOne" aria-expanded="false">
+                    1. Bean Validation API (@NotNull, @Size, @Email, etc.)
+                  </button>
+                </h2>
+                <div id="flush-valOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushValidation">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Spring Boot integrates with <strong>Jakarta Bean Validation (JSR-380)</strong> → Hibernate Validator by default.</li>
+                      <li>Common annotations:
+                        <ul>
+                          <li><code>@NotNull</code> → field must not be null</li>
+                          <li><code>@NotBlank</code> → string must not be null/empty</li>
+                          <li><code>@Size(min=, max=)</code> → limits string/collection size</li>
+                          <li><code>@Email</code> → valid email format</li>
+                          <li><code>@Min, @Max</code> → numeric ranges</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example DTO:</strong>
+                        <pre>
+public class UserDTO {
+    @NotBlank
+    private String name;
+            
+    @Email
+    private String email;
+            
+    @Min(18)
+    private int age;
+}
+                        </pre>
+                      </li>
+                      <li><strong>Controller usage:</strong>
+                        <pre>
+public ResponseEntity&lt;?&gt; createUser(@Valid @RequestBody UserDTO dto) { ... }
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-valTwo" aria-expanded="false">
+                    2. Custom Validators
+                  </button>
+                </h2>
+                <div id="flush-valTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushValidation">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>For domain-specific rules (e.g., phone numbers, usernames).</li>
+                      <li><strong>Step 1 → Create annotation:</strong>
+                        <pre>
+@Constraint(validatedBy = PhoneNumberValidator.class)
+public @interface ValidPhoneNumber {
+    String message() default "Invalid phone number";
+    Class&lt;?&gt;[] groups() default {};
+    Class&lt;? extends Payload&gt;[] payload() default {};
+}
+                        </pre>
+                      </li>
+                      <li><strong>Step 2 → Implement validator:</strong>
+                        <pre>
+public class PhoneNumberValidator 
+        implements ConstraintValidator&lt;ValidPhoneNumber, String&gt; {
+    public boolean isValid(String value, ConstraintValidatorContext context) {
+        return value != null && value.matches("\\d{10}");
+    }
+}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-valThree" aria-expanded="false">
+                    3. Data Binding & Type Conversion
+                  </button>
+                </h2>
+                <div id="flush-valThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushValidation">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Data Binding:</strong> Spring auto-maps request JSON/params → DTOs.</li>
+                      <li><strong>Type Conversion:</strong>
+                        <ul>
+                          <li>Built-in: String → int, String → Date, etc.</li>
+                          <li>Custom: Implement <code>Converter&lt;S, T&gt;</code> or use <code>@InitBinder</code>.</li>
+                        </ul>
+                      </li>
+                      <li><strong>Example custom converter:</strong>
+                        <pre>
+public class StringToLocalDateConverter 
+        implements Converter&lt;String, LocalDate&gt; {
+    public LocalDate convert(String source) {
+        return LocalDate.parse(source);
+    }
+}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4 -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-valFour" aria-expanded="false">
+                    4. Error Handling & Response Formatting
+                  </button>
+                </h2>
+                <div id="flush-valFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushValidation">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>When validation fails → Spring throws <code>MethodArgumentNotValidException</code>.</li>
+                      <li>Best practice → format structured JSON errors with <code>@ControllerAdvice</code>.</li>
+                      <li><strong>Example:</strong>
+                        <pre>
+@ControllerAdvice
+public class GlobalExceptionHandler {
+    @ExceptionHandler(MethodArgumentNotValidException.class)
+    public ResponseEntity&lt;Map&lt;String, String&gt;&gt; handleValidationErrors(
+              MethodArgumentNotValidException ex) {
+        Map&lt;String, String&gt; errors = new HashMap&lt;&gt;();
+        ex.getBindingResult().getFieldErrors()
+          .forEach(error -> errors.put(error.getField(), error.getDefaultMessage()));
+        return ResponseEntity.badRequest().body(errors);
+    }
+}
+                        </pre>
+                      </li>
+                      <li><strong>Client receives clean JSON:</strong>
+                        <pre>
+{
+  "name": "must not be blank",
+  "email": "must be a well-formed email address"
+}
+                        </pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleConfig">
+              <div class="row">
+                <div class="col-10">
+                  <h3>7. Configuration & Profiles</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-7" id="vbtn-radio1-7-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-7-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-7" id="vbtn-radio2-7-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-7-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-7" id="vbtn-radio3-7-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-7-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Application Configuration Files -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-config-files" aria-expanded="false" aria-controls="flush-config-files">
+                    1. Application Configuration Files (application.properties, application.yml)
+                  </button>
+                </h2>
+                <div id="flush-config-files" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConfig">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>
+                          Spring Boot allows configuring application settings through <code>application.properties</code> or
+                          <code>application.yml</code> in <code>src/main/resources</code>.
+                        </p>
+                      </li>
+                      <li>
+                        <p><strong>Common configurations include:</strong></p>
+                        <ul>
+                          <li>Server: <code>server.port=8081</code></li>
+                          <li>Database: <code>spring.datasource.url=...</code></li>
+                          <li>Logging: <code>logging.level.org.springframework=DEBUG</code></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>application.properties → Key-value pairs.</strong></p>
+                        <pre><code>server.port=8081
+spring.datasource.username=root</code></pre>
+                
+                        <p><strong>application.yml → Hierarchical, easier for complex configs.</strong></p>
+                        <pre><code>server:
+  port: 8081
+spring:
+  datasource:
+    username: root</code></pre>
+                      </li>
+                      <li>
+                        <p>Both are functionally equivalent; <code>.yml</code> is often preferred for readability.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Environment-Specific Profiles -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-profiles" aria-expanded="false" aria-controls="flush-profiles">
+                    2. Environment-Specific Profiles (@Profile)
+                  </button>
+                </h2>
+                <div id="flush-profiles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConfig">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>
+                          Profiles allow you to define different configurations for different environments
+                          (<code>dev</code>, <code>test</code>, <code>prod</code>).
+                        </p>
+                      </li>
+                      <li>
+                        <p><strong>Profile-specific files:</strong></p>
+                        <ul>
+                          <li><code>application-dev.yml</code></li>
+                          <li><code>application-test.yml</code></li>
+                          <li><code>application-prod.yml</code></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Activate profile:</strong></p>
+                        <pre><code># In properties
+    spring.profiles.active=dev
+                
+    # Or via command line
+    java -jar app.jar --spring.profiles.active=prod</code></pre>
+                
+                        <p><strong>@Profile annotation example:</strong></p>
+                        <pre><code>@Service
+    @Profile("dev")
+    public class DevEmailService implements EmailService {
+        ...
+    }
+                </code></pre>
+                      </li>
+                      <li>
+                        <p>Only active in the <code>dev</code> profile.</p>
+                      </li>
+                      <li>
+                        <p><strong>Benefit:</strong> Separates configurations (DB credentials, logging, cache) for different environments.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Externalized Configuration & Environment Variables -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-external-config" aria-expanded="false" aria-controls="flush-external-config">
+                    3. Externalized Configuration & Environment Variables
+                  </button>
+                </h2>
+                <div id="flush-external-config" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleConfig">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>
+                          Spring Boot allows configs to be externalized so the same code can run in multiple environments without changes.
+                        </p>
+                      </li>
+                      <li>
+                        <strong>Sources of configuration (in order of precedence):</strong>
+                        <ol>
+                          <li>Command-line arguments.</li>
+                          <li>Environment variables (e.g., <code>SPRING_DATASOURCE_URL</code>).</li>
+                          <li><code>application.properties</code> / <code>application.yml</code>.</li>
+                          <li>Default values in code.</li>
+                        </ol>
+                      </li><br>
+                      <li>
+                        <strong>Example using environment variables:</strong>
+                        <pre><code>spring.datasource.username=${DB_USER:root}
+spring.datasource.password=${DB_PASS:password}</code></pre>
+                      </li>
+                      <li>
+                        <p>Reads from environment variables (<code>DB_USER</code>, <code>DB_PASS</code>), defaults to root/password if not set.</p>
+                      </li>
+                      <li>
+                        <strong>Benefits:</strong>
+                        <ul>
+                          <li>Secure (no hardcoding secrets).</li>
+                          <li>Easy to override in CI/CD pipelines, Docker, Kubernetes.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleSecurity">
+              <div class="row">
+                <div class="col-10">
+                  <h3>8. Spring Security</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-8" id="vbtn-radio1-8-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-8-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-8" id="vbtn-radio2-8-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-8-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-8" id="vbtn-radio3-8-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-8-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Introduction to Spring Security -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-intro-security" aria-expanded="false" aria-controls="flush-intro-security">
+                    1. Introduction to Spring Security
+                  </button>
+                </h2>
+                <div id="flush-intro-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>Spring Security is the security framework for Spring apps.</p>
+                      </li>
+                      <li>
+                        <p>Provides:</p>
+                        <ul>
+                          <li><strong>Authentication</strong> → Verifying identity (who you are).</li>
+                          <li><strong>Authorization</strong> → Checking permissions (what you can do).</li>
+                          <li>Protection against attacks like CSRF, XSS, Session fixation.</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p>Integration with Spring Boot: <code>spring-boot-starter-security</code>.</p>
+                      </li>
+                      <li>
+                        <p>By default, all endpoints are secured with basic authentication and a generated password.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Authentication & Authorization -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-auth" aria-expanded="false" aria-controls="flush-auth">
+                    2. Authentication & Authorization
+                  </button>
+                </h2>
+                <div id="flush-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>Authentication</strong>: Verifies user credentials (username/password, token, etc.). Implemented via <code>AuthenticationManager</code> and <code>UserDetailsService</code>.</li>
+                      <li><strong>Authorization</strong>: Grants/denies access based on roles/permissions. Example: Only admins can delete a user.</li>
+                      <li>
+                        <strong>Flow:</strong>
+                        <ol>
+                          <li>User logs in → credentials verified.</li>
+                          <li>On success → SecurityContext stores authenticated user.</li>
+                          <li>Authorization checks run on each request.</li>
+                        </ol>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Role-Based Access Control (RBAC) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-rbac" aria-expanded="false" aria-controls="flush-rbac">
+                    3. Role-Based Access Control (RBAC)
+                  </button>
+                </h2>
+                <div id="flush-rbac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>RBAC assigns permissions based on roles (e.g., ADMIN, USER).</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>http
+.authorizeHttpRequests(auth -&gt; auth
+    .requestMatchers("/admin/**").hasRole("ADMIN")
+    .requestMatchers("/user/**").hasAnyRole("USER", "ADMIN")
+    .anyRequest().authenticated()
+);</code></pre>
+                      </li>
+                      <li>
+                        <strong>Benefits:</strong>
+                        <ul>
+                          <li>Easier to manage permissions.</li>
+                          <li>Widely used in enterprise applications.</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. JWT Authentication -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-jwt" aria-expanded="false" aria-controls="flush-jwt">
+                    4. JWT (JSON Web Token) Authentication
+                  </button>
+                </h2>
+                <div id="flush-jwt" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>JWT is a stateless token-based authentication method.</p>
+                      </li>
+                      <li>
+                        <strong>Flow:</strong>
+                        <ol>
+                          <li>User logs in with credentials.</li>
+                          <li>Server issues a JWT signed with a secret key.</li>
+                          <li>Client sends JWT in <code>Authorization: Bearer &lt;token&gt;</code> header.</li>
+                          <li>Server validates token (no DB lookup needed).</li>
+                        </ol>
+                      </li><br>
+                      <li>
+                        <p><strong>Benefits:</strong> Scalable for microservices, stateless.</p>
+                      </li>
+                      <li>
+                        <p><strong>Example claims in JWT payload:</strong></p>
+                        <pre><code>{
+  "sub": "user123",
+  "role": "ADMIN",
+  "exp": 1699999999
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. OAuth2 & OpenID Connect Integration -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-oauth" aria-expanded="false" aria-controls="flush-oauth">
+                    5. OAuth2 & OpenID Connect Integration
+                  </button>
+                </h2>
+                <div id="flush-oauth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><strong>OAuth2</strong>: Authorization framework for delegated access (e.g., login with Google/GitHub).</li>
+                      <li><strong>OpenID Connect (OIDC)</strong>: Adds authentication (who the user is) on top of OAuth2 → supports SSO.</li>
+                      <li>
+                        <p>Spring Boot provides <code>spring-boot-starter-oauth2-client</code> and <code>spring-security-oauth2-resource-server</code> for easy integration.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. Method-Level Security -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-method-security" aria-expanded="false" aria-controls="flush-method-security">
+                    6. Method-Level Security (@PreAuthorize, @Secured)
+                  </button>
+                </h2>
+                <div id="flush-method-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        Enables fine-grained authorization at the method level.
+                        <ul>
+                          <li><strong>@Secured</strong>: Allows access only if the user has a specific role.
+                            <pre><code>@Secured("ROLE_ADMIN")
+    public void deleteUser(Long id) { ... }</code></pre>
+                          </li>
+                          <li><strong>@PreAuthorize</strong>: More powerful, supports SpEL.
+                            <pre><code>@PreAuthorize("hasRole('ADMIN') or #id == authentication.principal.id")
+    public User getUser(Long id) { ... }</code></pre>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <p><strong>Benefits:</strong> Security rules are close to business logic and more flexible than URL-based restrictions.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleTesting">
+              <div class="row">
+                <div class="col-10">
+                  <h3>9. Spring Boot Testing</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-9" id="vbtn-radio1-9-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-9-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-9" id="vbtn-radio2-9-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-9-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-9" id="vbtn-radio3-9-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-9-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Unit Testing with JUnit & Mockito -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-unit-testing" aria-expanded="false" aria-controls="flush-unit-testing">
+                    1. Unit Testing with JUnit & Mockito
+                  </button>
+                </h2>
+                <div id="flush-unit-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        Unit testing: Testing individual classes/methods in isolation.
+                        <ul>
+                          <li><strong>JUnit:</strong> Standard Java testing framework.
+                            <ul>
+                              <li><code>@Test</code> → Marks a test method.</li>
+                              <li><code>@BeforeEach / @AfterEach</code> → Setup and cleanup before/after each test.</li>
+                            </ul>
+                          </li>
+                          <li><strong>Example:</strong>
+                            <pre><code>@Test
+void testAddUser() {
+    UserService service = new UserService();
+    User user = service.addUser("John");
+    assertEquals("John", user.getName());
+}</code></pre>
+                          </li>
+                          <li><strong>Mockito:</strong> Mock dependencies to isolate the unit being tested.
+                            <pre><code>@Mock
+UserRepository repo;
+                
+@InjectMocks
+UserService service;
+                
+@Test
+void testAddUser() {
+    when(repo.save(any(User.class))).thenReturn(new User("John"));
+    User user = service.addUser("John");
+    assertEquals("John", user.getName());
+}</code></pre>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Integration Testing with Spring Boot Test -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-integration-testing" aria-expanded="false" aria-controls="flush-integration-testing">
+                    2. Integration Testing with Spring Boot Test
+                  </button>
+                </h2>
+                <div id="flush-integration-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>Integration testing: Testing multiple components together (controllers, services, repositories).</p>
+                      </li>
+                      <li><code>@SpringBootTest</code>: Boots up the full Spring context for testing.</li>
+                      <li><strong>Example:</strong>
+                        <pre><code>@SpringBootTest
+class UserServiceIntegrationTest {
+    @Autowired
+    UserService service;
+                
+    @Test
+    void testAddUserIntegration() {
+        User user = service.addUser("Alice");
+        assertNotNull(user.getId());
+    }
+}</code></pre>
+                      </li>
+                      <li>Can be combined with <code>@Transactional</code> to rollback DB changes after tests.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Testing REST APIs with MockMvc -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-mockmvc" aria-expanded="false" aria-controls="flush-mockmvc">
+                    3. Testing REST APIs with MockMvc
+                  </button>
+                </h2>
+                <div id="flush-mockmvc" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>MockMvc: Simulates HTTP requests without starting a real server. Useful for controller layer testing.</p>
+                        <pre><code>@AutoConfigureMockMvc
+@SpringBootTest
+class UserControllerTest {
+    @Autowired
+    private MockMvc mockMvc;
+                
+    @Test
+    void testGetUser() throws Exception {
+        mockMvc.perform(get("/users/1"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.name").value("John"));
+    }
+}</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Testcontainers for Database Testing -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-testcontainers" aria-expanded="false" aria-controls="flush-testcontainers">
+                    4. Testcontainers for Database Testing
+                  </button>
+                </h2>
+                <div id="flush-testcontainers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTesting">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>Testcontainers: Provides temporary Docker containers for databases during tests. Ensures a real DB environment without affecting local setup.</p>
+                      </li>
+                      <li>
+                        <p><strong>Example for PostgreSQL:</strong></p>
+                        <pre><code>@Testcontainers
+@SpringBootTest
+class UserRepositoryTest {
+                
+    @Container
+    static PostgreSQLContainer<?> postgres = new PostgreSQLContainer<>("postgres:15")
+        .withDatabaseName("testdb")
+        .withUsername("user")
+        .withPassword("pass");
+                
+    @Autowired
+    UserRepository repo;
+                
+    @Test
+    void testSaveUser() {
+        User user = new User("Alice");
+        repo.save(user);
+        assertEquals(1, repo.findAll().size());
+    }
+}</code></pre>
+                      </li>
+                      <li>
+                        <p><strong>Benefits:</strong> Tests run in isolated, real DB environments; works well with CI/CD pipelines.</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleActuator">
+              <div class="row">
+                <div class="col-10">
+                  <h3>10. Spring Boot Actuator & Advanced Features</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-10" id="vbtn-radio1-10-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-10-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-10" id="vbtn-radio2-10-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-10-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-10" id="vbtn-radio3-10-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-10-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Spring Boot Actuator for Monitoring -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-actuator" aria-expanded="false" aria-controls="flush-actuator">
+                    1. Spring Boot Actuator for Monitoring
+                  </button>
+                </h2>
+                <div id="flush-actuator" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>
+                        <p>Spring Boot Actuator provides production-ready monitoring for applications.</p>
+                      </li>
+                      <li>Adds endpoints to check app health, metrics, environment, and more.</li>
+                      <li>Example dependency: <code>spring-boot-starter-actuator</code></li>
+                      <li>Common endpoints:
+                        <ul>
+                          <li><code>/actuator/health</code> → Application health</li>
+                          <li><code>/actuator/metrics</code> → Metrics like memory, CPU, requests</li>
+                          <li><code>/actuator/env</code> → Environment properties</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Health Checks & Metrics -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-health-metrics" aria-expanded="false" aria-controls="flush-health-metrics">
+                    2. Health Checks & Metrics
+                  </button>
+                </h2>
+                <div id="flush-health-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Health checks verify that services (DB, cache, messaging) are running.</li>
+                      <li>Customize health indicators:
+                        <pre><code>@Component
+public class CustomHealthIndicator implements HealthIndicator {
+    @Override
+    public Health health() {
+        return Health.up().withDetail("status", "All good").build();
+    }
+}</code></pre>
+                      </li>
+                      <li>Metrics: Track performance, request counts, DB connections, etc. (Micrometer integration).</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Async Processing (@Async) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-async" aria-expanded="false" aria-controls="flush-async">
+                    3. Async Processing (@Async)
+                  </button>
+                </h2>
+                <div id="flush-async" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Async</code> allows methods to run asynchronously in a separate thread.</li>
+                      <li>Useful for long-running tasks like sending emails.</li>
+                      <li>Example:
+                        <pre><code>@Async
+public void sendEmail(User user) { ... }</code></pre>
+                      </li>
+                      <li>Enable async support:
+                        <pre><code>@EnableAsync
+@SpringBootApplication</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Scheduling Tasks (@Scheduled) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-scheduled" aria-expanded="false" aria-controls="flush-scheduled">
+                    4. Scheduling Tasks (@Scheduled)
+                  </button>
+                </h2>
+                <div id="flush-scheduled" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li><code>@Scheduled</code> allows running methods at fixed intervals or cron expressions.</li>
+                      <li>Examples:
+                        <pre><code>@Scheduled(fixedRate = 5000)
+public void checkDatabase() { ... }
+            
+@Scheduled(cron = "0 0 * * * ?")
+public void runDailyTask() { ... }</code></pre>
+                      </li>
+                      <li>Enable scheduling:
+                        <pre><code>@EnableScheduling
+@SpringBootApplication</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Caching with Spring Cache -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-cache" aria-expanded="false" aria-controls="flush-cache">
+                    5. Caching with Spring Cache
+                  </button>
+                </h2>
+                <div id="flush-cache" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Declarative caching using <code>@Cacheable</code> and <code>@CacheEvict</code>.</li>
+                      <li>Example:
+                        <pre><code>@Cacheable("users")
+public User getUser(Long id) { ... }
+            
+@CacheEvict(value = "users", key = "#id")
+public void updateUser(Long id, User user) { ... }</code></pre>
+                      </li>
+                      <li>Supports multiple providers: EhCache, Redis, Caffeine.</li>
+                      <li>Benefits: Reduces DB load, improves performance.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 6. File Upload & Download -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-file" aria-expanded="false" aria-controls="flush-file">
+                    6. File Upload & Download
+                  </button>
+                </h2>
+                <div id="flush-file" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Multipart file upload using <code>MultipartFile</code>.</li>
+                      <li>Example upload:
+                        <pre><code>@PostMapping("/upload")
+public String uploadFile(@RequestParam MultipartFile file) { ... }</code></pre>
+                      </li>
+                      <li>Example download:
+                        <pre><code>@GetMapping("/download/{filename}")
+public ResponseEntity&lt;Resource&gt; downloadFile(@PathVariable String filename) { ... }</code></pre>
+                      </li>
+                      <li>Useful for storing files in filesystem, DB, or cloud storage.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 7. Internationalization (i18n) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-i18n" aria-expanded="false" aria-controls="flush-i18n">
+                    7. Internationalization (i18n)
+                  </button>
+                </h2>
+                <div id="flush-i18n" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Supports multiple languages using messages.properties and messages_{locale}.properties.</li>
+                      <li>Configure LocaleResolver:
+                        <pre><code>@Bean
+public LocaleResolver localeResolver() {
+    SessionLocaleResolver slr = new SessionLocaleResolver();
+    slr.setDefaultLocale(Locale.ENGLISH);
+    return slr;
+}</code></pre>
+                      </li>
+                      <li>Access messages via <code>@Autowired MessageSource messageSource</code>.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 8. WebSockets in Spring Boot -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-websocket" aria-expanded="false" aria-controls="flush-websocket">
+                    8. WebSockets in Spring Boot
+                  </button>
+                </h2>
+                <div id="flush-websocket" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleActuator">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Enables real-time communication between client and server.</li>
+                      <li>Use <code>spring-boot-starter-websocket</code>.</li>
+                      <li>Example:
+                        <pre><code>@Controller
+public class ChatController {
+    @MessageMapping("/chat")
+    @SendTo("/topic/messages")
+    public Message sendMessage(Message msg) { return msg; }
+}</code></pre>
+                      </li>
+                      <li>Supports STOMP protocol, enabling chat apps, live notifications, or dashboards.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleMicroservices">
+              <div class="row">
+                <div class="col-10">
+                  <h3>11. Microservices Architecture & Spring Cloud</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-11" id="vbtn-radio1-11-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-11-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-11" id="vbtn-radio2-11-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-11-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-11" id="vbtn-radio3-11-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-11-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Introduction to Microservices Architecture -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-microservices-intro" aria-expanded="false" aria-controls="flush-microservices-intro">
+                    1. Introduction to Microservices Architecture
+                  </button>
+                </h2>
+                <div id="flush-microservices-intro" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleMicroservices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Microservices: Application broken into small, independent services communicating over APIs.</li>
+                      <li>Characteristics:
+                        <ul>
+                          <li>Each service is independently deployable</li>
+                          <li>Own database or data storage</li>
+                          <li>Focused on a single business capability</li>
+                        </ul>
+                      </li>
+                      <li>Benefits: Scalability, flexibility, easier maintenance, faster deployments.</li>
+                      <li>Contrast with Monolithic:
+                        <ul>
+                          <li>Monolithic → Single deployable, tightly coupled</li>
+                          <li>Microservices → Loosely coupled, independently deployable</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Spring Cloud Basics (Eureka, Config Server, API Gateway) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-spring-cloud" aria-expanded="false" aria-controls="flush-spring-cloud">
+                    2. Spring Cloud Basics (Eureka, Config Server, API Gateway)
+                  </button>
+                </h2>
+                <div id="flush-spring-cloud" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleMicroservices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Spring Cloud provides tools for building microservices with Spring Boot.</li>
+                      <li>Eureka (Service Discovery): 
+                        <ul>
+                          <li>Registers microservices for dynamic discovery</li>
+                          <li>Eliminates hard-coded service URLs</li>
+                        </ul>
+                      </li>
+                      <li>Config Server: Centralizes configuration for all services (Git, filesystem, etc.)</li>
+                      <li>API Gateway (Spring Cloud Gateway / Zuul):
+                        <ul>
+                          <li>Single entry point for all clients</li>
+                          <li>Handles routing, rate limiting, authentication, logging</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Inter-Service Communication (Feign Client, RestTemplate, WebClient) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-communication" aria-expanded="false" aria-controls="flush-communication">
+                    3. Inter-Service Communication (Feign Client, RestTemplate, WebClient)
+                  </button>
+                </h2>
+                <div id="flush-communication" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleMicroservices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Services communicate via HTTP APIs or messaging queues.</li>
+                      <li>Clients:
+                        <ul>
+                          <li>RestTemplate: Synchronous HTTP client</li>
+                          <li>WebClient: Reactive, non-blocking HTTP client (Spring WebFlux)</li>
+                          <li>Feign Client: Declarative REST client integrated with Eureka</li>
+                        </ul>
+                      </li>
+                      <li>Example Feign client:
+                        <pre><code>@FeignClient(name = "user-service")
+public interface UserClient {
+    @GetMapping("/users/{id}")
+    User getUser(@PathVariable Long id);
+}</code></pre>
+                      </li>
+                      <li>Choice depends on sync vs async needs and reactive programming.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Resilience4j for Fault Tolerance -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-resilience4j" aria-expanded="false" aria-controls="flush-resilience4j">
+                    4. Resilience4j for Fault Tolerance
+                  </button>
+                </h2>
+                <div id="flush-resilience4j" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleMicroservices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Provides circuit breakers, retries, rate limiting, bulkhead patterns.</li>
+                      <li>Prevents cascading failures in microservices.</li>
+                      <li>Example:
+                        <pre><code>@CircuitBreaker(name = "userService", fallbackMethod = "fallbackUser")
+public User getUser(Long id) { ... }
+            
+public User fallbackUser(Long id, Throwable ex) {
+    return new User("default");
+}</code></pre>
+                      </li>
+                      <li>Improves system reliability when dependent services fail.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Distributed Tracing (Zipkin, Sleuth) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-tracing" aria-expanded="false" aria-controls="flush-tracing">
+                    5. Distributed Tracing (Zipkin, Sleuth)
+                  </button>
+                </h2>
+                <div id="flush-tracing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleMicroservices">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Tracks flow of a request across multiple services.</li>
+                      <li>Tools:
+                        <ul>
+                          <li>Spring Cloud Sleuth: Adds trace IDs to logs</li>
+                          <li>Zipkin: Collects traces and visualizes request flow</li>
+                        </ul>
+                      </li>
+                      <li>Helps debug latency issues and identify bottlenecks.</li>
+                      <li>Example log with Sleuth:
+                        <pre><code>[traceId=abc123 spanId=xyz456] GET /orders/1</code></pre>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><br>
+            <div class="accordion accordion-flush my-3" id="accordionFlushExampleDeployment">
+              <div class="row">
+                <div class="col-10">
+                  <h3>12. Spring Boot Deployment & Production Readiness</h3>
+                </div>
+                <div class="col-2">
+                  <div class="btn-group-horizontal" role="group" aria-label="Progress">
+                    <span>Progress:</span>
+                    <input type="radio" class="btn-check" name="vbtn-radio-12" id="vbtn-radio1-12-1" autocomplete="off" checked>
+                    <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-12-1"><i class="fas fa-frown"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-12" id="vbtn-radio2-12-2" autocomplete="off">
+                    <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-12-2"><i class="fas fa-smile"></i></label>
+                    <input type="radio" class="btn-check" name="vbtn-radio-12" id="vbtn-radio3-12-3" autocomplete="off">
+                    <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-12-3"><i class="fas fa-grin-hearts"></i></label>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 1. Packaging Spring Boot Apps (Jar, War) -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-packaging" aria-expanded="false" aria-controls="flush-packaging">
+                    1. Packaging Spring Boot Apps (Jar, War)
+                  </button>
+                </h2>
+                <div id="flush-packaging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDeployment">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Executable Jar (default) → Contains embedded server (Tomcat/Jetty)
+                        <pre><code>mvn clean package
+java -jar target/app.jar</code></pre>
+                      </li>
+                      <li>War → Deployable to external servlet containers</li>
+                      <li>Benefits of executable jar:
+                        <ul>
+                          <li>No need for separate app server</li>
+                          <li>Simplifies deployment and CI/CD pipelines</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 2. Running Spring Boot with Docker -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-docker" aria-expanded="false" aria-controls="flush-docker">
+                    2. Running Spring Boot with Docker
+                  </button>
+                </h2>
+                <div id="flush-docker" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDeployment">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Containerizing apps ensures environment consistency across dev, test, prod.</li>
+                      <li>Dockerfile example:
+                        <pre><code>FROM openjdk:17-jdk-slim
+COPY target/app.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]</code></pre>
+                      </li>
+                      <li>Build & run:
+                        <pre><code>docker build -t myapp:1.0 .
+docker run -p 8080:8080 myapp:1.0</code></pre>
+                      </li>
+                      <li>Benefits: Easy scaling, consistent runtime, easier orchestration (Kubernetes)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 3. Deploying to AWS, Azure, GCP -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-cloud" aria-expanded="false" aria-controls="flush-cloud">
+                    3. Deploying to AWS, Azure, GCP
+                  </button>
+                </h2>
+                <div id="flush-cloud" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDeployment">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Cloud Platforms:
+                        <ul>
+                          <li>AWS: Elastic Beanstalk, ECS, Lambda (serverless)</li>
+                          <li>Azure: App Service, Kubernetes Service</li>
+                          <li>GCP: App Engine, Cloud Run, Kubernetes Engine</li>
+                        </ul>
+                      </li>
+                      <li>Typical deployment steps:
+                        <ul>
+                          <li>Build jar/war or Docker image</li>
+                          <li>Upload to cloud environment</li>
+                          <li>Configure environment variables, database connections, scaling</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 4. Logging with Logback & SLF4J -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-logging" aria-expanded="false" aria-controls="flush-logging">
+                    4. Logging with Logback & SLF4J
+                  </button>
+                </h2>
+                <div id="flush-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDeployment">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>SLF4J: Logging facade; allows switching between implementations (Logback, Log4j2)</li>
+                      <li>Logback: Default logging implementation in Spring Boot</li>
+                      <li>Configuration example:
+                        <pre><code>logging.level.org.springframework=INFO
+logging.file.name=app.log</code></pre>
+                      </li>
+                      <li>Benefits:
+                        <ul>
+                          <li>Structured logging</li>
+                          <li>Separate logs for production, development</li>
+                          <li>Helps with monitoring, debugging, auditing</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <!-- 5. Performance Tuning & Optimization -->
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-performance" aria-expanded="false" aria-controls="flush-performance">
+                    5. Performance Tuning & Optimization
+                  </button>
+                </h2>
+                <div id="flush-performance" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDeployment">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Key areas:
+                        <ul>
+                          <li>Connection Pooling: Use HikariCP</li>
+                          <li>Caching: Spring Cache or Redis</li>
+                          <li>Async Processing: Offload tasks with @Async</li>
+                          <li>Proper indexing & query optimization for DB</li>
+                          <li>Monitoring & Metrics: Actuator & Micrometer</li>
+                          <li>Thread pool tuning for web requests</li>
+                        </ul>
+                      </li>
+                      <li>Benefits: Ensures scalable, fast, and reliable production apps</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
