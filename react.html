@@ -90,24 +90,31 @@
                   </h2>
                   <div id="flush-collapse-react-3" class="accordion-collapse collapse" aria-labelledby="flush-react-3" data-bs-parent="#accordionFlushReactFundamentals">
                     <div class="accordion-body">
-                      <h6>Syntax & rules</h6>
                       <ul>
-                        <li>XML-like syntax for describing UI</li>
-                        <li>Must return a single parent element</li>
-                        <li>Tags must be closed (<code>&lt;img /&gt;</code>)</li>
-                        <li><code>class</code> → <code>className</code>, <code>for</code> → <code>htmlFor</code></li>
-                      </ul>
-              
-                      <h6>Embedding expressions</h6>
-                      <pre><code class="language-jsx">
-              <h1>{user.name}</h1>
-                      </code></pre>
-              
-                      <h6>Differences from HTML</h6>
-                      <ul>
-                        <li>Attribute names are camelCase (<code>tabIndex</code>)</li>
-                        <li>JS expressions instead of string concatenation</li>
-                        <li>No direct HTML event attributes — use camelCase (<code>onClick</code>)</li>
+                        <li>
+                          <h6>Syntax & rules</h6>
+                          <ul>
+                            <li>XML-like syntax for describing UI</li>
+                            <li>Must return a single parent element</li>
+                            <li>Tags must be closed (<code>&lt;img /&gt;</code>)</li>
+                            <li><code>class</code> → <code>className</code>, <code>for</code> → <code>htmlFor</code></li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h6>Embedding expressions</h6>
+                          <ul>
+                            <li><pre><code class="language-jsx">{user.name}</code></pre>
+                            </li>
+                          </ul>
+                        </li>
+                        <li>
+                          <h6>Differences from HTML</h6>
+                          <ul>
+                            <li>Attribute names are camelCase (<code>tabIndex</code>)</li>
+                            <li>JS expressions instead of string concatenation</li>
+                            <li>No direct HTML event attributes — use camelCase (<code>onClick</code>)</li>
+                          </ul>
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -122,34 +129,37 @@
                   </h2>
                   <div id="flush-collapse-react-4" class="accordion-collapse collapse" aria-labelledby="flush-react-4" data-bs-parent="#accordionFlushReactFundamentals">
                     <div class="accordion-body">
-                      <h6>Functional vs Class components</h6>
                       <ul>
-                        <li><strong>Functional:</strong> Simpler, use hooks (<code>useState</code>, <code>useEffect</code>)</li>
-                        <li><strong>Class:</strong> Use lifecycle methods (<code>componentDidMount</code>, etc.)</li>
+                        <li>
+                          <h6>Functional vs Class components</h6>
+                          <ul>
+                            <li><strong>Functional:</strong> Simpler, use hooks (<code>useState</code>, <code>useEffect</code>)</li>
+                            <li><strong>Class:</strong> Use lifecycle methods (<code>componentDidMount</code>, etc.)</li><br>
+                          </ul>
+                        </li>
+                        <li>
+                          <h6>Component composition</h6>
+                          <pre><code class="language-jsx"><pre>&lt;Header /&gt;
+&lt;MainContent /&gt;
+&lt;Footer /&gt;</pre></code></pre>
+                        </li>
+                        <li>
+                          <h6>Props (passing data to components)</h6>
+                          <ul>
+                            <li>Immutable data passed from parent to child</li>
+                            <pre><code class="language-jsx">&lt;Greeting name="John" /&gt;</code></pre>
+                          </ul>
+                        </li>
+                        <li>
+                          <h6>Default props & propTypes</h6>
+                          <pre><code class="language-jsx">Greeting.defaultProps = { name: 'Guest' };
+Greeting.propTypes = { name: PropTypes.string };
+                          </code></pre>
+                        </li>
                       </ul>
               
-                      <h6>Component composition</h6>
-                      <pre><code class="language-jsx">
-                        <pre>
-                            &lt;Header /&gt;
-                            &lt;MainContent /&gt;
-                            &lt;Footer /&gt;
-                            </pre>                            
-                      </code></pre>
               
-                      <h6>Props (passing data to components)</h6>
-                      <ul>
-                        <li>Immutable data passed from parent to child</li>
-                      </ul>
-                      <pre><code class="language-jsx">
-              <Greeting name="John" />
-                      </code></pre>
               
-                      <h6>Default props & propTypes</h6>
-                      <pre><code class="language-jsx">
-              Greeting.defaultProps = { name: 'Guest' };
-              Greeting.propTypes = { name: PropTypes.string };
-                      </code></pre>
                     </div>
                   </div>
                 </div>
@@ -163,19 +173,27 @@
                   </h2>
                   <div id="flush-collapse-react-5" class="accordion-collapse collapse" aria-labelledby="flush-react-5" data-bs-parent="#accordionFlushReactFundamentals">
                     <div class="accordion-body">
-                      <h6>useState hook</h6>
-                      <pre><code class="language-jsx">
-              const [count, setCount] = useState(0);
-                      </code></pre>
-              
-                      <h6>Updating state correctly (immutability)</h6>
                       <ul>
-                        <li>Never mutate state directly (<code>state.push()</code>)</li>
-                        <li>Use new object/array instead (<code>[...state, newItem]</code>)</li>
+                        <li>
+                          <h6>useState hook</h6>
+                          <pre><code class="language-jsx">const [count, setCount] = useState(0);</code></pre>
+                        </li>
+                        <li>
+                          <h6>Updating state correctly (immutability)</h6>
+                          <ul>
+                            <li>Never mutate state directly (<code>state.push()</code>)</li>
+                            <li>Use new object/array instead (<code>[...state, newItem]</code>)</li>
+                          </ul><br>
+                        </li>
+                        <li>
+                          <h6>State batching</h6>
+                          <ul>
+                            <li>
+                              <p>React batches multiple state updates for performance. In React 18+, batching happens in all contexts, not just events.</p>
+                            </li>
+                          </ul>
+                        </li>
                       </ul>
-              
-                      <h6>State batching</h6>
-                      <p>React batches multiple state updates for performance. In React 18+, batching happens in all contexts, not just events.</p>
                     </div>
                   </div>
                 </div>
@@ -189,24 +207,30 @@
                   </h2>
                   <div id="flush-collapse-react-6" class="accordion-collapse collapse" aria-labelledby="flush-react-6" data-bs-parent="#accordionFlushReactFundamentals">
                     <div class="accordion-body">
-                      <h6>Conditional rendering</h6>
-                      <pre><code class="language-jsx">
-              {isLoggedIn ? <Dashboard /> : <Login />}
-                      </code></pre>
-              
-                      <h6>Lists & keys</h6>
-                      <pre><code class="language-jsx">
-              {items.map(item => <li key={item.id}>{item.name}</li>)}
-                      </code></pre>
-              
-                      <h6>Controlled vs uncontrolled components</h6>
-                      <p><strong>Controlled:</strong> Form data managed by state</p>
-                      <pre><code class="language-jsx">
-                        <pre>
-                            &lt;input value={name} onChange={e => setName(e.target.value)} /&gt;
-                        </pre>
-                      </code></pre>
-                      <p><strong>Uncontrolled:</strong> Access data via ref instead of state</p>
+                      <ul>
+                        <li>
+                          <h6>Conditional rendering</h6>
+                          <pre><code class="language-jsx">{isLoggedIn ? <Dashboard /> : <Login />}
+                          </code></pre>
+                        </li>
+                        <li>
+                          <h6>Lists & keys</h6>
+                          <pre><code class="language-jsx">{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</code></pre>
+                          </code></pre>
+                        </li>
+                        <li>
+                          <h6>Controlled vs uncontrolled components</h6>
+                          <ul>
+                            <li>
+                              <strong>Controlled:</strong> Form data managed by state
+                              <pre><code class="language-jsx"><pre>&lt;input value={name} onChange={e => setName(e.target.value)} /&gt;</pre></code></pre>
+                            </li>
+                            <li>
+                              <strong>Uncontrolled:</strong> Access data via ref instead of state
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -228,7 +252,7 @@
                         <li><strong>Definition:</strong> Declares state variables in functional components.</li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const [count, setCount] = useState(0);
-              setCount(prev =&gt; prev + 1);</code></pre>
+setCount(prev =&gt; prev + 1);</code></pre>
                         </li>
                         <li><strong>Notes:</strong> Updates are asynchronous and should be immutable.</li>
                       </ul>
@@ -249,9 +273,9 @@
                         <li><strong>Definition:</strong> Handles side effects (data fetching, subscriptions, DOM manipulation). Runs after render.</li>
                         <li><strong>Syntax:</strong>
                           <pre><code>useEffect(() =&gt; {
-                fetchData();
-                return () =&gt; cleanup(); // optional
-              }, [dependency]);</code></pre>
+  fetchData();
+  return () =&gt; cleanup(); // optional
+}, [dependency]);</code></pre>
                         </li>
                         <li><strong>Dependency array:</strong>
                           <ul>
@@ -278,8 +302,8 @@
                         <li><strong>Definition:</strong> Stores a mutable value that doesn’t trigger re-renders. Access DOM nodes directly.</li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const inputRef = useRef();
-              &lt;input ref={inputRef} /&gt;
-              inputRef.current.focus();</code></pre>
+&lt;input ref={inputRef} /&gt;
+inputRef.current.focus();</code></pre>
                         </li>
                         <li><strong>Notes:</strong> Persists values across renders without causing updates.</li>
                       </ul>
@@ -320,8 +344,8 @@
                         <li><strong>Definition:</strong> Manages complex state logic.</li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const [state, dispatch] = useReducer(reducer, initialState);
-              function reducer(state, action) { /* ... */ }
-              dispatch({ type: 'INCREMENT' });</code></pre>
+function reducer(state, action) { /* ... */ }
+dispatch({ type: 'INCREMENT' });</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -422,12 +446,12 @@
                         <li><strong>Example:</strong>
                           <pre><code>import { BrowserRouter, Routes, Route } from "react-router-dom";
               
-              &lt;BrowserRouter&gt;
-                &lt;Routes&gt;
-                  &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
-                  &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
-                &lt;/Routes&gt;
-              &lt;/BrowserRouter&gt;</code></pre>
+&lt;BrowserRouter&gt;
+  &lt;Routes&gt;
+    &lt;Route path="/" element={&lt;Home /&gt;} /&gt;
+    &lt;Route path="/about" element={&lt;About /&gt;} /&gt;
+  &lt;/Routes&gt;
+ &lt;/BrowserRouter&gt;</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -448,7 +472,7 @@
                         <li><strong>NavLink:</strong> Like Link but adds styling for active link.</li>
                         <li><strong>Example:</strong>
                           <pre><code>&lt;Link to="/about"&gt;About&lt;/Link&gt;
-              &lt;NavLink to="/about" className={({ isActive }) =&gt; isActive ? 'active' : ''}&gt;About&lt;/NavLink&gt;</code></pre>
+&lt;NavLink to="/about" className={({ isActive }) =&gt; isActive ? 'active' : ''}&gt;About&lt;/NavLink&gt;</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -467,12 +491,12 @@
                       <ul>
                         <li><strong>Definition:</strong> Define dynamic segments in path with <code>:paramName</code>. Access with <code>useParams()</code>.</li>
                         <li><strong>Example:</strong>
-                          <pre><code>&lt;Route path="/users/:id" element={&lt;User /&gt;} /&gt;
-              
-              function User() {
-                const { id } = useParams();
-                return &lt;h1&gt;User ID: {id}&lt;/h1&gt;;
-              }</code></pre>
+                          <pre><code>&lt;Route path="/users/:id" element={&lt;User /&gt;} /&gt; 
+
+function User() {
+  const { id } = useParams();
+  return &lt;h1&gt;User ID: {id}&lt;/h1&gt;;
+}</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -492,12 +516,12 @@
                         <li><strong>Definition:</strong> Manage query strings.</li>
                         <li><strong>Example:</strong>
                           <pre><code>import { useSearchParams } from "react-router-dom";
-              
-              function Products() {
-                const [searchParams, setSearchParams] = useSearchParams();
-                const category = searchParams.get('category');
-                return &lt;div&gt;Category: {category}&lt;/div&gt;;
-              }</code></pre>
+  
+function Products() {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const category = searchParams.get('category');
+  return &lt;div&gt;Category: {category}&lt;/div&gt;;
+}</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -517,15 +541,15 @@
                         <li><strong>Definition:</strong> Routes inside routes; <code>Outlet</code> renders child route content.</li>
                         <li><strong>Example:</strong>
                           <pre><code>&lt;Route path="/dashboard" element={&lt;Dashboard /&gt;}&gt;
-                &lt;Route path="stats" element={&lt;Stats /&gt;} /&gt;
-              &lt;/Route&gt;
+  &lt;Route path="stats" element={&lt;Stats /&gt;} /&gt;
+&lt;/Route&gt;
               
-              function Dashboard() {
-                return &lt;&gt;
-                  &lt;h1&gt;Dashboard&lt;/h1&gt;
-                  &lt;Outlet /&gt;
-                &lt;/&gt;;
-              }</code></pre>
+function Dashboard() {
+  return &lt;&gt;
+    &lt;h1&gt;Dashboard&lt;/h1&gt;
+    &lt;Outlet /&gt;
+  &lt;/&gt;;
+}</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -545,7 +569,7 @@
                         <li><strong>Definition:</strong> Navigate in code instead of using <code>&lt;Link&gt;</code>.</li>
                         <li><strong>Example:</strong>
                           <pre><code>const navigate = useNavigate();
-              navigate("/login");</code></pre>
+navigate("/login");</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -565,13 +589,13 @@
                         <li><strong>Definition:</strong> Custom wrapper that checks auth before rendering.</li>
                         <li><strong>Example:</strong>
                           <pre><code>function ProtectedRoute({ children }) {
-                const isAuth = useAuth();
-                return isAuth ? children : &lt;Navigate to="/login" /&gt;;
-              }
+  const isAuth = useAuth();
+  return isAuth ? children : &lt;Navigate to="/login" /&gt;;
+}
               
-              &lt;Route path="/dashboard" element={
-                &lt;ProtectedRoute&gt;&lt;Dashboard /&gt;&lt;/ProtectedRoute&gt;
-              } /&gt;</code></pre>
+&lt;Route path="/dashboard" element={
+  &lt;ProtectedRoute&gt;&lt;Dashboard /&gt;&lt;/ProtectedRoute&gt;
+} /&gt;</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -597,20 +621,20 @@
                         <li><strong>Example:</strong>
                           <pre><code>const ThemeContext = React.createContext();
               
-              function App() {
-                const [theme, setTheme] = useState("light");
+function App() {
+  const [theme, setTheme] = useState("light");
               
-                return (
-                  &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
-                    &lt;ChildComponent /&gt;
-                  &lt;/ThemeContext.Provider&gt;
-                );
-              }
+  return (
+    &lt;ThemeContext.Provider value={{ theme, setTheme }}&gt;
+      &lt;ChildComponent /&gt;
+    &lt;/ThemeContext.Provider&gt;
+  );
+}
               
-              function ChildComponent() {
-                const { theme } = React.useContext(ThemeContext);
-                return &lt;div&gt;Theme: {theme}&lt;/div&gt;;
-              }</code></pre>
+function ChildComponent() {
+  const { theme } = React.useContext(ThemeContext);
+  return &lt;div&gt;Theme: {theme}&lt;/div&gt;;
+}</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -637,21 +661,21 @@
                         </li>
                         <li><strong>Example:</strong>
                           <pre><code>// Action
-              const increment = { type: "INCREMENT" };
+const increment = { type: "INCREMENT" };
               
-              // Reducer
-              function counterReducer(state = 0, action) {
-                switch (action.type) {
-                  case "INCREMENT":
-                    return state + 1;
-                  default:
-                    return state;
-                }
-              }
+// Reducer
+function counterReducer(state = 0, action) {
+  switch (action.type) {
+    case "INCREMENT":
+      return state + 1;
+    default:
+      return state;
+  }
+}
               
-              // Store
-              import { createStore } from "redux";
-              const store = createStore(counterReducer);</code></pre>
+// Store
+import { createStore } from "redux";
+const store = createStore(counterReducer);</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -673,17 +697,17 @@
                         <li><strong>Example:</strong>
                           <pre><code>import { useSelector, useDispatch } from "react-redux";
               
-              function Counter() {
-                const count = useSelector(state =&gt; state);
-                const dispatch = useDispatch();
+function Counter() {
+  const count = useSelector(state =&gt; state);
+  const dispatch = useDispatch();
               
-                return (
-                  &lt;&gt;
-                    &lt;p&gt;{count}&lt;/p&gt;
-                    &lt;button onClick={() =&gt; dispatch({ type: "INCREMENT" })}&gt;+&lt;/button&gt;
-                  &lt;/&gt;
-                );
-              }</code></pre>
+  return (
+     &lt;&gt;
+      &lt;p&gt;{count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; dispatch({ type: "INCREMENT" })}&gt;+&lt;/button&gt;
+    &lt;/&gt;
+  );
+}</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -705,16 +729,16 @@
                         <li><strong>Example:</strong>
                           <pre><code>import { configureStore, createSlice } from "@reduxjs/toolkit";
               
-              const counterSlice = createSlice({
-                name: "counter",
-                initialState: 0,
-                reducers: {
-                  increment: state =&gt; state + 1,
-                },
-              });
+const counterSlice = createSlice({
+  name: "counter",
+  initialState: 0,
+  reducers: {
+    increment: state =&gt; state + 1,
+  },
+});
               
-              export const { increment } = counterSlice.actions;
-              const store = configureStore({ reducer: counterSlice.reducer });</code></pre>
+export const { increment } = counterSlice.actions;
+const store = configureStore({ reducer: counterSlice.reducer });</code></pre>
                         </li>
                       </ul>
                     </div>
@@ -740,20 +764,20 @@
                       <li><strong>Example:</strong>
                         <pre><code>import { useState } from "react";
             
-            function MyForm() {
-              const [name, setName] = useState("");
+function MyForm() {
+  const [name, setName] = useState("");
             
-              return (
-                &lt;form&gt;
-                  &lt;input 
-                    value={name} 
-                    onChange={e =&gt; setName(e.target.value)} 
-                    placeholder="Enter name" 
-                  /&gt;
-                  &lt;p&gt;{name}&lt;/p&gt;
-                &lt;/form&gt;
-              );
-            }</code></pre>
+  return (
+    &lt;form&gt;
+       &lt;input 
+        value={name} 
+        onChange={e =&gt; setName(e.target.value)} 
+        placeholder="Enter name" 
+      /&gt;
+      &lt;p&gt;{name}&lt;/p&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
                       </li>
                     </ul>
                   </div>
@@ -774,20 +798,20 @@
                       <li><strong>Technique:</strong> Use the <code>name</code> attribute of inputs to update the correct field dynamically.</li>
                       <li><strong>Example:</strong>
                         <pre><code>function MyForm() {
-              const [formData, setFormData] = useState({ username: "", email: "" });
+  const [formData, setFormData] = useState({ username: "", email: "" });
             
-              const handleChange = e =&gt; {
-                const { name, value } = e.target;
-                setFormData(prev =&gt; ({ ...prev, [name]: value }));
-              };
+  const handleChange = e =&gt; {
+    const { name, value } = e.target;
+    setFormData(prev =&gt; ({ ...prev, [name]: value }));
+  };
             
-              return (
-                &lt;form&gt;
-                  &lt;input name="username" value={formData.username} onChange={handleChange} /&gt;
-                  &lt;input name="email" value={formData.email} onChange={handleChange} /&gt;
-                &lt;/form&gt;
-              );
-            }</code></pre>
+  return (
+    &lt;form&gt;
+      &lt;input name="username" value={formData.username} onChange={handleChange} /&gt;
+      &lt;input name="email" value={formData.email} onChange={handleChange} /&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
                       </li>
                     </ul>
                   </div>
@@ -803,64 +827,81 @@
                 </h2>
                 <div id="flush-form-validation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
                   <div class="accordion-body">
-                    <h5>a. Custom validation</h5>
-                    <p>Manual checks for field values before submission. Useful for small forms with specific rules.</p>
-                    <pre><code>function MyForm() {
-              const [email, setEmail] = useState("");
-              const [error, setError] = useState("");
-            
-              const handleSubmit = e =&gt; {
-                e.preventDefault();
-                if (!email.includes("@")) setError("Invalid email address");
-              };
-            
-              return (
-                &lt;form onSubmit={handleSubmit}&gt;
-                  &lt;input value={email} onChange={e =&gt; setEmail(e.target.value)} /&gt;
-                  {error &amp;&amp; &lt;p&gt;{error}&lt;/p&gt;}
-                  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-                &lt;/form&gt;
-              );
-            }</code></pre>
-            
-                    <h5>b. Formik + Yup</h5>
-                    <p>Formik manages form state and handles submissions; Yup provides schema-based validation.</p>
-                    <pre><code>import { Formik, Form, Field, ErrorMessage } from "formik";
-            import * as Yup from "yup";
-            
-            const schema = Yup.object({
-              email: Yup.string().email("Invalid email").required("Required"),
-            });
-            
-            &lt;Formik
-              initialValues={{ email: "" }}
-              validationSchema={schema}
-              onSubmit={values =&gt; console.log(values)}
-            &gt;
-              &lt;Form&gt;
-                &lt;Field name="email" /&gt;
-                &lt;ErrorMessage name="email" /&gt;
-                &lt;button type="submit"&gt;Submit&lt;/button&gt;
-              &lt;/Form&gt;
-            &lt;/Formik&gt;</code></pre>
-            
-                    <h5>c. React Hook Form</h5>
-                    <p>Lightweight library using uncontrolled inputs for better performance, with built-in validation.</p>
-                    <pre><code>import { useForm } from "react-hook-form";
-            
-            function MyForm() {
-              const { register, handleSubmit, formState: { errors } } = useForm();
-            
-              const onSubmit = data =&gt; console.log(data);
-            
-              return (
-                &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
-                  &lt;input {...register("email", { required: "Email is required" })} /&gt;
-                  {errors.email &amp;&amp; &lt;p&gt;{errors.email.message}&lt;/p&gt;}
-                  &lt;button type="submit"&gt;Submit&lt;/button&gt;
-                &lt;/form&gt;
-              );
-            }</code></pre>
+                    <ol>
+                      <li>
+                        <h5>Custom validation</h5>
+                        <ul>
+                          <li>
+                            <p>Manual checks for field values before submission. Useful for small forms with specific rules.</p>
+                            <pre><code>function MyForm() {
+  const [email, setEmail] = useState("");
+          const [error, setError] = useState("");
+                    
+  const handleSubmit = e =&gt; {
+    e.preventDefault();
+    if (!email.includes("@")) setError("Invalid email address");
+  };
+                    
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input value={email} onChange={e =&gt; setEmail(e.target.value)} /&gt;
+      {error &amp;&amp; &lt;p&gt;{error}&lt;/p&gt;}
+      &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h5>Formik + Yup</h5>
+                        <ul>
+                          <li>
+                            <p>Formik manages form state and handles submissions; Yup provides schema-based validation.</p>
+                            <pre><code>import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+                    
+const schema = Yup.object({
+  email: Yup.string().email("Invalid email").required("Required"),
+});
+                    
+&lt;Formik
+  initialValues={{ email: "" }}
+  validationSchema={schema}
+  onSubmit={values =&gt; console.log(values)}&gt;
+    &lt;Form&gt;
+    &lt;Field name="email" /&gt;
+    &lt;ErrorMessage name="email" /&gt;
+    &lt;button type="submit"&gt;Submit&lt;/button&gt;
+  &lt;/Form&gt;
+&lt;/Formik&gt;</code></pre>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <h5>React Hook Form</h5>
+                        <ul>
+                          <li>
+                            <p>Lightweight library using uncontrolled inputs for better performance, with built-in validation.</p>
+                            <pre><code>import { useForm } from "react-hook-form";
+                    
+function MyForm() {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+                    
+  const onSubmit = data =&gt; console.log(data);
+                    
+  return (
+      &lt;form onSubmit={handleSubmit(onSubmit)}&gt;
+        &lt;input {...register("email", { required: "Email is required" })} /&gt;
+      {errors.email &amp;&amp; &lt;p&gt;{errors.email.message}&lt;/p&gt;}
+        &lt;button type="submit"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}</code></pre>
+                          </li>
+                        </ul>
+                      </li>
+                    </ol>
                   </div>
                 </div>
               </div>
@@ -882,14 +923,14 @@
                       <li><strong>Differences:</strong> Fetch returns promises and requires manual JSON parsing; Axios automatically parses JSON and handles errors better.</li>
                       <li><strong>Example with Fetch:</strong>
                         <pre><code>fetch('https://api.example.com/data')
-              .then(res =&gt; res.json())
-              .then(data =&gt; console.log(data));</code></pre>
+  .then(res =&gt; res.json())
+    .then(data =&gt; console.log(data));</code></pre>
                       </li>
                       <li><strong>Example with Axios:</strong>
                         <pre><code>import axios from 'axios';
             
-            axios.get('https://api.example.com/data')
-              .then(response =&gt; console.log(response.data));</code></pre>
+axios.get('https://api.example.com/data')
+  .then(response =&gt; console.log(response.data));</code></pre>
                       </li>
                     </ul>
                   </div>
@@ -905,20 +946,24 @@
                 </h2>
                 <div id="flush-useeffect-fetch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    <p>Use React’s <code>useEffect</code> hook to fetch data on component mount or when dependencies change. Place fetch logic inside <code>useEffect</code> with proper dependency array to avoid infinite loops.</p>
-                    <pre><code>import { useState, useEffect } from 'react';
-            
-            function DataComponent() {
-              const [data, setData] = useState(null);
-            
-              useEffect(() =&gt; {
-                fetch('https://api.example.com/data')
-                  .then(res =&gt; res.json())
-                  .then(setData);
-              }, []); // Empty array runs once on mount
-            
-              return &lt;div&gt;{data ? JSON.stringify(data) : 'Loading...'}&lt;/div&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        <p>Use React’s <code>useEffect</code> hook to fetch data on component mount or when dependencies change. Place fetch logic inside <code>useEffect</code> with proper dependency array to avoid infinite loops.</p>
+                        <pre><code>import { useState, useEffect } from 'react';
+                
+function DataComponent() {
+  const [data, setData] = useState(null);
+                
+  useEffect(() =&gt; {
+    fetch('https://api.example.com/data')
+      .then(res =&gt; res.json())
+      .then(setData);
+  }, []); // Empty array runs once on mount
+                
+  return &lt;div&gt;{data ? JSON.stringify(data) : 'Loading...'}&lt;/div&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -932,23 +977,27 @@
                 </h2>
                 <div id="flush-loading-error" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    <p>Track loading and error states in local state to improve user experience. Show loading indicator while data is fetching, and error message if request fails.</p>
-                    <pre><code>const [loading, setLoading] = useState(false);
-            const [error, setError] = useState(null);
-            
-            useEffect(() =&gt; {
-              setLoading(true);
-              fetch('https://api.example.com/data')
-                .then(res =&gt; res.json())
-                .then(data =&gt; {
-                  setData(data);
-                  setLoading(false);
-                })
-                .catch(err =&gt; {
-                  setError(err.message);
-                  setLoading(false);
-                });
-            }, []);</code></pre>
+                    <ul>
+                      <li>
+                        <p>Track loading and error states in local state to improve user experience. Show loading indicator while data is fetching, and error message if request fails.</p>
+                        <pre><code>const [loading, setLoading] = useState(false);
+const [error, setError] = useState(null);
+                
+useEffect(() =&gt; {
+  setLoading(true);
+  fetch('https://api.example.com/data')
+    .then(res =&gt; res.json())
+    .then(data =&gt; {
+      setData(data);
+      setLoading(false);
+    })
+    .catch(err =&gt; {
+      setError(err.message);
+      setLoading(false);
+    });
+}, []);</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -962,19 +1011,23 @@
                 </h2>
                 <div id="flush-cancel-requests" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    <p>Abort fetch requests to avoid memory leaks or unwanted responses, especially in unmount scenarios. Use <code>AbortController</code> to cancel requests.</p>
-                    <pre><code>useEffect(() =&gt; {
-              const controller = new AbortController();
-            
-              fetch('https://api.example.com/data', { signal: controller.signal })
-                .then(res =&gt; res.json())
-                .then(setData)
-                .catch(err =&gt; {
-                  if (err.name !== 'AbortError') console.error(err);
-                });
-            
-              return () =&gt; controller.abort(); // Cancel on unmount
-            }, []);</code></pre>
+                    <ul>
+                      <li>
+                        <p>Abort fetch requests to avoid memory leaks or unwanted responses, especially in unmount scenarios. Use <code>AbortController</code> to cancel requests.</p>
+                        <pre><code>useEffect(() =&gt; {
+  const controller = new AbortController();
+                
+  fetch('https://api.example.com/data', { signal: controller.signal })
+    .then(res =&gt; res.json())
+    .then(setData)
+    .catch(err =&gt; {
+      if (err.name !== 'AbortError') console.error(err);
+    });
+                
+  return () =&gt; controller.abort(); // Cancel on unmount
+}, []);</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -988,19 +1041,23 @@
                 </h2>
                 <div id="flush-react-query" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    <p>React Query manages server state: fetching, caching, updating. <code>useQuery</code> for fetching data; automatically handles loading, errors, and caching. <code>useMutation</code> for creating/updating/deleting data with built-in status handling.</p>
-                    <pre><code>import { useQuery } from '@tanstack/react-query';
-            
-            function Todos() {
-              const { data, error, isLoading } = useQuery(['todos'], () =&gt;
-                fetch('/api/todos').then(res =&gt; res.json())
-              );
-            
-              if (isLoading) return 'Loading...';
-              if (error) return 'Error!';
-            
-              return &lt;ul&gt;{data.map(todo =&gt; &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;)}&lt;/ul&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        <p>React Query manages server state: fetching, caching, updating. <code>useQuery</code> for fetching data; automatically handles loading, errors, and caching. <code>useMutation</code> for creating/updating/deleting data with built-in status handling.</p>
+                        <pre><code>import { useQuery } from '@tanstack/react-query';
+                
+function Todos() {
+  const { data, error, isLoading } = useQuery(['todos'], () =&gt;
+    fetch('/api/todos').then(res =&gt; res.json())
+  );
+                
+  if (isLoading) return 'Loading...';
+  if (error) return 'Error!';
+                
+  return &lt;ul&gt;{data.map(todo =&gt; &lt;li key={todo.id}&gt;{todo.text}&lt;/li&gt;)}&lt;/ul&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1014,7 +1071,11 @@
                 </h2>
                 <div id="flush-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    React Query caches fetched data by default to improve performance and reduce requests. Cached data is reused until stale or invalidated.
+                    <ul>
+                      <li>
+                        React Query caches fetched data by default to improve performance and reduce requests. Cached data is reused until stale or invalidated.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1028,7 +1089,11 @@
                 </h2>
                 <div id="flush-auto-refetch" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
-                    React Query supports automatic refetch on window focus, reconnect, or intervals. Keeps UI data fresh without manual refreshes.
+                    <ul>
+                      <li>
+                        React Query supports automatic refetch on window focus, reconnect, or intervals. Keeps UI data fresh without manual refreshes.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1052,8 +1117,8 @@
                       <li><strong>Use case:</strong> Optimizing pure components that receive the same props frequently.</li>
                       <li><strong>Example:</strong>
                         <pre><code>const MyComponent = React.memo(function MyComponent({ value }) {
-              return &lt;div&gt;{value}&lt;/div&gt;;
-            });</code></pre>
+  return &lt;div&gt;{value}&lt;/div&gt;;
+});</code></pre>
                       </li>
                     </ul>
                   </div>
@@ -1069,12 +1134,19 @@
                 </h2>
                 <div id="flush-usememo-usecallback" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                   <div class="accordion-body">
-                    <p><strong>useMemo:</strong> Memoizes expensive computed values to avoid recalculating on every render.</p>
-                    <p><strong>useCallback:</strong> Memoizes functions to avoid creating new function instances each render; useful to prevent unnecessary child re-renders.</p>
-                    <p><strong>Examples:</strong></p>
-                    <pre><code>const computedValue = useMemo(() =&gt; heavyCalculation(data), [data]);
-            
-            const handleClick = useCallback(() =&gt; doSomething(), [dependency]);</code></pre>
+                    <ul>
+                      <li>
+                        <p><strong>useMemo:</strong> Memoizes expensive computed values to avoid recalculating on every render.</p>
+                      </li>
+                      <li>
+                        <p><strong>useCallback:</strong> Memoizes functions to avoid creating new function instances each render; useful to prevent unnecessary child re-renders.</p>
+                      </li>
+                      <li>
+                        <strong>Examples:</strong>
+                        <pre><code>const computedValue = useMemo(() =&gt; heavyCalculation(data), [data]);
+const handleClick = useCallback(() =&gt; doSomething(), [dependency]);</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1106,16 +1178,20 @@
                 </h2>
                 <div id="flush-lazy-loading" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                   <div class="accordion-body">
-                    <p>Load components only when needed to reduce initial bundle size. Use <code>React.lazy()</code> with <code>Suspense</code> fallback for code-splitting.</p>
-                    <pre><code>const LazyComponent = React.lazy(() =&gt; import('./LazyComponent'));
-            
-            function App() {
-              return (
-                &lt;Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;
-                  &lt;LazyComponent /&gt;
-                &lt;/Suspense&gt;
-              );
-            }</code></pre>
+                    <ul>
+                      <li>
+                        <p>Load components only when needed to reduce initial bundle size. Use <code>React.lazy()</code> with <code>Suspense</code> fallback for code-splitting.</p>
+                        <pre><code>const LazyComponent = React.lazy(() =&gt; import('./LazyComponent'));
+                
+function App() {
+  return (
+    &lt;Suspense fallback=&lt;div&gt;Loading...&lt;/div&gt;&gt;
+      &lt;LazyComponent /&gt;
+    &lt;/Suspense&gt;
+  );
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1129,7 +1205,11 @@
                 </h2>
                 <div id="flush-code-splitting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                   <div class="accordion-body">
-                    Break app bundles into smaller chunks loaded on demand. Usually done with dynamic <code>import()</code> or <code>React.lazy</code>. Improves initial load times, especially for large apps.
+                    <ul>
+                      <li>
+                        Break app bundles into smaller chunks loaded on demand. Usually done with dynamic <code>import()</code> or <code>React.lazy</code>. Improves initial load times, especially for large apps.
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1143,23 +1223,25 @@
                 </h2>
                 <div id="flush-virtualization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                   <div class="accordion-body">
-                    <p>Render only visible items in large lists or tables to reduce DOM nodes and improve performance. Libraries like React Window and React Virtualized provide virtualization utilities.</p>
-                    <pre><code>import { FixedSizeList as List } from 'react-window';
-            
-            &lt;List
-              height={150}
-              itemCount={1000}
-              itemSize={35}
-              width={300}
-            &gt;
-              {({ index, style }) =&gt; (
-                &lt;div style={style}&gt;Row {index}&lt;/div&gt;
-              )}
-            &lt;/List&gt;</code></pre>
+                    <ul>
+                      <li>
+                        <p>Render only visible items in large lists or tables to reduce DOM nodes and improve performance. Libraries like React Window and React Virtualized provide virtualization utilities.</p>
+                        <pre><code>import { FixedSizeList as List } from 'react-window';
+                
+&lt;List
+  height={150}
+  itemCount={1000}
+  itemSize={35}
+  width={300}&gt;
+  {({ index, style }) =&gt; (
+    &lt;div style={style}&gt;Row {index}&lt;/div&gt;
+  )}
+&lt;/List&gt;</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleAdvancedReact">
               <h3>8. Advanced React Concepts</h3>
@@ -1209,8 +1291,10 @@
                 </h2>
                 <div id="flush-strictmode" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p><code>&lt;React.StrictMode&gt;</code> is a tool for highlighting potential problems in an app during development.</p>
                     <ul>
+                      <li>
+                        <code>&lt;React.StrictMode&gt;</code> is a tool for highlighting potential problems in an app during development.
+                      </li>
                       <li>Checks for unsafe lifecycle methods, legacy API usage, and side effects.</li>
                       <li>Does not affect production build.</li>
                     </ul>
@@ -1227,25 +1311,33 @@
                 </h2>
                 <div id="flush-errorboundaries" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p>React components that catch JavaScript errors in their child component tree, prevent entire app from crashing and display fallback UI.</p>
-                    <p>Implemented using lifecycle method <code>componentDidCatch</code> or static <code>getDerivedStateFromError</code>.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>class ErrorBoundary extends React.Component {
-              state = { hasError: false };
-            
-              static getDerivedStateFromError() {
-                return { hasError: true };
-              }
-            
-              componentDidCatch(error, info) {
-                console.error(error, info);
-              }
-            
-              render() {
-                if (this.state.hasError) return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
-                return this.props.children;
-              }
-            }</code></pre>
+                    <ul>
+                      <li>
+                        React components that catch JavaScript errors in their child component tree, prevent entire app from crashing and display fallback UI.
+                      </li>
+                      <li>
+                        <p>Implemented using lifecycle method <code>componentDidCatch</code> or static <code>getDerivedStateFromError</code>.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>class ErrorBoundary extends React.Component {
+  state = { hasError: false };
+                
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+                
+  componentDidCatch(error, info) {
+    console.error(error, info);
+  }
+                
+  render() {
+    if (this.state.hasError) return &lt;h1&gt;Something went wrong.&lt;/h1&gt;;
+    return this.props.children;
+  }
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1259,9 +1351,15 @@
                 </h2>
                 <div id="flush-portals" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p>Render children into a DOM node outside the parent component hierarchy. Useful for modals, tooltips, or overlays that require different stacking context.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>ReactDOM.createPortal(&lt;Modal /&gt;, document.getElementById('modal-root'));</code></pre>
+                    <ul>
+                      <li>
+                        <p>Render children into a DOM node outside the parent component hierarchy. Useful for modals, tooltips, or overlays that require different stacking context.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>ReactDOM.createPortal(&lt;Modal /&gt;, document.getElementById('modal-root'));</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1275,12 +1373,20 @@
                 </h2>
                 <div id="flush-forwardingrefs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p>Allows passing refs through components to access DOM nodes or child components.</p>
-                    <p>Useful when you want parent components to control child DOM elements.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>const FancyInput = React.forwardRef((props, ref) =&gt; (
-              &lt;input ref={ref} {...props} /&gt;
-            ));</code></pre>
+                    <ul>
+                      <li>
+                        Allows passing refs through components to access DOM nodes or child components.
+                      </li>
+                      <li>
+                        <p>Useful when you want parent components to control child DOM elements.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>const FancyInput = React.forwardRef((props, ref) =&gt; (
+  &lt;input ref={ref} {...props} /&gt;
+));</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1294,9 +1400,15 @@
                 </h2>
                 <div id="flush-renderprops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p>Technique where a component’s child is a function that returns React elements. Enables sharing code between components using a function as a child.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>&lt;DataFetcher render={data =&gt; &lt;div&gt;{data}&lt;/div&gt;} /&gt;</code></pre>
+                    <ul>
+                      <li>
+                        <p>Technique where a component’s child is a function that returns React elements. Enables sharing code between components using a function as a child.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>&lt;DataFetcher render={data =&gt; &lt;div&gt;{data}&lt;/div&gt;} /&gt;</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1310,14 +1422,20 @@
                 </h2>
                 <div id="flush-hocs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedReact">
                   <div class="accordion-body">
-                    <p>Functions that take a component and return an enhanced component. Used for reusing component logic (e.g., authentication, logging).</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>function withLogger(WrappedComponent) {
-              return function(props) {
-                console.log('Rendering', WrappedComponent.name);
-                return &lt;WrappedComponent {...props} /&gt;;
-              };
-            }</code></pre>
+                    <ul>
+                      <li>
+                        <p>Functions that take a component and return an enhanced component. Used for reusing component logic (e.g., authentication, logging).</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>function withLogger(WrappedComponent) {
+  return function(props) {
+    console.log('Rendering', WrappedComponent.name);
+    return &lt;WrappedComponent {...props} /&gt;;
+  };
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1335,14 +1453,22 @@
                 </h2>
                 <div id="flush-cssmodules" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
                   <div class="accordion-body">
-                    <p>CSS files scoped locally by default, avoiding class name conflicts.</p>
-                    <p>Import styles as objects and use them in JSX.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>import styles from './Button.module.css';
-            
-            function Button() {
-              return &lt;button className={styles.primary}&gt;Click me&lt;/button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        CSS files scoped locally by default, avoiding class name conflicts.
+                      </li>
+                      <li>
+                        <p>Import styles as objects and use them in JSX.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>import styles from './Button.module.css';
+                
+function Button() {
+  return &lt;button className={styles.primary}&gt;Click me&lt;/button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1356,21 +1482,31 @@
                 </h2>
                 <div id="flush-styledcomponents" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
                   <div class="accordion-body">
-                    <p>CSS-in-JS libraries allowing styling via JavaScript.</p>
-                    <p>Define styled components with tagged template literals.</p>
-                    <p>Supports dynamic styling with props.</p>
-                    <p><strong>Example (styled-components):</strong></p>
-                    <pre><code>import styled from 'styled-components';
-            
-            const Button = styled.button`
-              background: blue;
-              color: white;
-              padding: 10px;
-            `;
-            
-            function App() {
-              return &lt;Button&gt;Click me&lt;/Button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        CSS-in-JS libraries allowing styling via JavaScript.
+                      </li>
+                      <li>
+                        Define styled components with tagged template literals.
+                      </li>
+                      <li>
+                        <p>Supports dynamic styling with props.</p>
+                      </li>
+                      <li>
+                        <strong>Example (styled-components):</strong>
+                        <pre><code>import styled from 'styled-components';
+                
+const Button = styled.button`
+  background: blue;
+  color: white;
+  padding: 10px;
+`;
+                
+function App() {
+  return &lt;Button&gt;Click me&lt;/Button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1384,13 +1520,23 @@
                 </h2>
                 <div id="flush-tailwindcss" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
                   <div class="accordion-body">
-                    <p>Utility-first CSS framework providing predefined classes.</p>
-                    <p>Enables fast styling directly in JSX with <code>className</code> attributes.</p>
-                    <p>Encourages consistency and responsive design.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>function Button() {
-              return &lt;button className="bg-blue-500 text-white p-2 rounded"&gt;Click me&lt;/button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        Utility-first CSS framework providing predefined classes.
+                      </li>
+                      <li>
+                        Enables fast styling directly in JSX with <code>className</code> attributes.
+                      </li>
+                      <li>
+                        <p>Encourages consistency and responsive design.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>function Button() {
+  return &lt;button className="bg-blue-500 text-white p-2 rounded"&gt;Click me&lt;/button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1404,12 +1550,20 @@
                 </h2>
                 <div id="flush-inlinestyles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
                   <div class="accordion-body">
-                    <p>Styles defined directly on JSX elements as objects.</p>
-                    <p>Useful for dynamic or one-off styles but lacks pseudo-classes and media queries.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>function Button() {
-              return &lt;button style={{ backgroundColor: 'blue', color: 'white', padding: '10px' }}&gt;Click me&lt;/button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        Styles defined directly on JSX elements as objects.
+                      </li>
+                      <li>
+                        <p>Useful for dynamic or one-off styles but lacks pseudo-classes and media queries.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>function Button() {
+  return &lt;button style={{ backgroundColor: 'blue', color: 'white', padding: '10px' }}&gt;Click me&lt;/button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1423,14 +1577,22 @@
                 </h2>
                 <div id="flush-antdesignmui" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleStylingReact">
                   <div class="accordion-body">
-                    <p>Popular React UI component libraries with pre-built, customizable components.</p>
-                    <p>Provide consistent design, theming, and accessibility features.</p>
-                    <p><strong>Example (Material UI):</strong></p>
-                    <pre><code>import Button from '@mui/material/Button';
-            
-            function App() {
-              return &lt;Button variant="contained" color="primary"&gt;Click me&lt;/Button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        Popular React UI component libraries with pre-built, customizable components.
+                      </li>
+                      <li>
+                        <p>Provide consistent design, theming, and accessibility features.</p>
+                      </li>
+                      <li>
+                        <strong>Example (Material UI):</strong>
+                        <pre><code>import Button from '@mui/material/Button';
+                
+function App() {
+  return &lt;Button variant="contained" color="primary"&gt;Click me&lt;/Button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1447,13 +1609,23 @@
                 </h2>
                 <div id="flush-jest" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
                   <div class="accordion-body">
-                    <p>Jest is the default testing framework for React apps.</p>
-                    <p>Tests individual functions or components in isolation.</p>
-                    <p>Supports mocks, timers, and snapshot testing.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>test('adds 1 + 2 to equal 3', () => {
-              expect(1 + 2).toBe(3);
-            });</code></pre>
+                    <ul>
+                      <li>
+                        Jest is the default testing framework for React apps.
+                      </li>
+                      <li>
+                        Tests individual functions or components in isolation.
+                      </li>
+                      <li>
+                        <p>Supports mocks, timers, and snapshot testing.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>test('adds 1 + 2 to equal 3', () => {
+  expect(1 + 2).toBe(3);
+});</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1467,19 +1639,29 @@
                 </h2>
                 <div id="flush-testinglibrary" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
                   <div class="accordion-body">
-                    <p>Focuses on testing components as users interact with them.</p>
-                    <p>Encourages testing behavior over implementation details.</p>
-                    <p>Provides utilities to query and interact with rendered components.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>import { render, screen, fireEvent } from '@testing-library/react';
-            import Button from './Button';
-            
-            test('renders button and responds to click', () => {
-              const handleClick = jest.fn();
-              render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
-              fireEvent.click(screen.getByText(/click me/i));
-              expect(handleClick).toHaveBeenCalledTimes(1);
-            });</code></pre>
+                    <ul>
+                      <li>
+                        Focuses on testing components as users interact with them.
+                      </li>
+                      <li>
+                        Encourages testing behavior over implementation details.
+                      </li>
+                      <li>
+                        <p>Provides utilities to query and interact with rendered components.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>import { render, screen, fireEvent } from '@testing-library/react';
+import Button from './Button';
+                
+test('renders button and responds to click', () => {
+  const handleClick = jest.fn();
+  render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
+  fireEvent.click(screen.getByText(/click me/i));
+  expect(handleClick).toHaveBeenCalledTimes(1);
+});</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1493,17 +1675,27 @@
                 </h2>
                 <div id="flush-snapshot" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
                   <div class="accordion-body">
-                    <p>Captures a “snapshot” of a component’s rendered output.</p>
-                    <p>Alerts when UI changes unexpectedly.</p>
-                    <p>Useful for regression testing UI components.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>import renderer from 'react-test-renderer';
-            import Button from './Button';
-            
-            test('renders correctly', () => {
-              const tree = renderer.create(&lt;Button&gt;Click me&lt;/Button&gt;).toJSON();
-              expect(tree).toMatchSnapshot();
-            });</code></pre>
+                    <ul>
+                      <li>
+                        Captures a “snapshot” of a component’s rendered output.
+                      </li>
+                      <li>
+                        Alerts when UI changes unexpectedly.
+                      </li>
+                      <li>
+                        <p>Useful for regression testing UI components.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>import renderer from 'react-test-renderer';
+import Button from './Button';
+                
+test('renders correctly', () => {
+  const tree = renderer.create(&lt;Button&gt;Click me&lt;/Button&gt;).toJSON();
+   expect(tree).toMatchSnapshot();
+});</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1517,14 +1709,24 @@
                 </h2>
                 <div id="flush-mockingapis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
                   <div class="accordion-body">
-                    <p>Simulate backend responses to isolate frontend tests.</p>
-                    <p>Jest provides <code>jest.mock()</code> for mocking modules or API calls.</p>
-                    <p>Tools like MSW (Mock Service Worker) mock network requests in tests.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>jest.mock('./api');
-            import { fetchData } from './api';
-            
-            fetchData.mockResolvedValue({ data: 'mocked data' });</code></pre>
+                    <ul>
+                      <li>
+                        Simulate backend responses to isolate frontend tests.
+                      </li>
+                      <li>
+                        Jest provides <code>jest.mock()</code> for mocking modules or API calls.
+                      </li>
+                      <li>
+                        <p>Tools like MSW (Mock Service Worker) mock network requests in tests.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>jest.mock('./api');
+import { fetchData } from './api';
+                
+fetchData.mockResolvedValue({ data: 'mocked data' });</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1538,23 +1740,32 @@
                 </h2>
                 <div id="flush-e2e" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleTestingReact">
                   <div class="accordion-body">
-                    <p>Tests the full user flow in a real browser environment.</p>
-                    <p>Validates integration of frontend with backend.</p>
-                    <p>Cypress and Playwright offer powerful APIs for interaction and assertions.</p>
-                    <p><strong>Example (Cypress):</strong></p>
-                    <pre><code>describe('Login flow', () => {
-              it('logs in successfully', () => {
-                cy.visit('/login');
-                cy.get('input[name="username"]').type('user');
-                cy.get('input[name="password"]').type('password');
-                cy.get('button[type="submit"]').click();
-                cy.url().should('include', '/dashboard');
-              });
-            });</code></pre>
+                    <ul>
+                      <li>
+                        Tests the full user flow in a real browser environment.
+                      </li>
+                      <li>
+                        Validates integration of frontend with backend.
+                      </li>
+                      <li>
+                        <p>Cypress and Playwright offer powerful APIs for interaction and assertions.</p>
+                      </li>
+                      <li>
+                        <strong>Example (Cypress):</strong>
+                        <pre><code>describe('Login flow', () => {
+  it('logs in successfully', () => {
+    cy.visit('/login');
+    cy.get('input[name="username"]').type('user');
+    cy.get('input[name="password"]').type('password');
+    cy.get('button[type="submit"]').click();
+    cy.url().should('include', '/dashboard');
+  });
+});</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExampleReactTS">
               <h3>11. React with TypeScript</h3>
@@ -1568,17 +1779,25 @@
                 </h2>
                 <div id="flush-typing-props-state" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
                   <div class="accordion-body">
-                    <p>Define interfaces or types for component props and state to get type safety.</p>
-                    <p>Helps catch errors early and improves code readability.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>interface ButtonProps {
-              label: string;
-              onClick: () =&gt; void;
-            }
-            
-            function Button({ label, onClick }: ButtonProps) {
-              return &lt;button onClick={onClick}&gt;{label}&lt;/button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        Define interfaces or types for component props and state to get type safety.
+                      </li>
+                      <li>
+                        <p>Helps catch errors early and improves code readability.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>interface ButtonProps {
+  label: string;
+  onClick: () =&gt; void;
+}
+                
+function Button({ label, onClick }: ButtonProps) {
+  return &lt;button onClick={onClick}&gt;{label}&lt;/button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1592,17 +1811,27 @@
                 </h2>
                 <div id="flush-react-fc-vs-fn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
                   <div class="accordion-body">
-                    <p>React.FC (FunctionComponent) is a TypeScript type for functional components.</p>
-                    <p>It automatically types <code>children</code> prop but has some limitations (e.g., default props).</p>
-                    <p>Many prefer plain functions with explicit typing for more control.</p>
-                    <p><strong>Example with React.FC:</strong></p>
-                    <pre><code>const Button: React.FC&lt;ButtonProps&gt; = ({ label, children }) =&gt; (
-              &lt;button&gt;{label} {children}&lt;/button&gt;
-            );</code></pre>
-                    <p><strong>Example without React.FC:</strong></p>
-                    <pre><code>function Button({ label }: ButtonProps) {
-              return &lt;button&gt;{label}&lt;/button&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        React.FC (FunctionComponent) is a TypeScript type for functional components.
+                      </li>
+                      <li>
+                        It automatically types <code>children</code> prop but has some limitations (e.g., default props).
+                      </li>
+                      <li>
+                        <p>Many prefer plain functions with explicit typing for more control.</p>
+                      </li>
+                      <li>
+                        <strong>Example with React.FC:</strong>
+                        <pre><code>const Button: React.FC&lt;ButtonProps&gt; = ({ label, children }) =&gt; (
+  &lt;button&gt;{label} {children}&lt;/button&gt;
+);</code></pre>
+        <p><strong>Example without React.FC:</strong></p>
+        <pre><code>function Button({ label }: ButtonProps) {
+  return &lt;button&gt;{label}&lt;/button&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1616,17 +1845,25 @@
                 </h2>
                 <div id="flush-generics-components" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
                   <div class="accordion-body">
-                    <p>Use generics to create reusable components that work with different data types.</p>
-                    <p>Enables strong typing while keeping flexibility.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>interface ListProps&lt;T&gt; {
-              items: T[];
-              renderItem: (item: T) =&gt; React.ReactNode;
-            }
-            
-            function List&lt;T&gt;({ items, renderItem }: ListProps&lt;T&gt;) {
-              return &lt;ul&gt;{items.map(renderItem)}&lt;/ul&gt;;
-            }</code></pre>
+                    <ul>
+                      <li>
+                        Use generics to create reusable components that work with different data types.
+                      </li>
+                      <li>
+                        <p>Enables strong typing while keeping flexibility.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>interface ListProps&lt;T&gt; {
+  items: T[];
+  renderItem: (item: T) =&gt; React.ReactNode;
+}
+                
+function List&lt;T&gt;({ items, renderItem }: ListProps&lt;T&gt;) {
+  return &lt;ul&gt;{items.map(renderItem)}&lt;/ul&gt;;
+}</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -1640,22 +1877,24 @@
                 </h2>
                 <div id="flush-typing-hooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactTS">
                   <div class="accordion-body">
-                    <p>Type React hooks to enforce correct usage and improve autocompletion.</p>
-                    <p>For useState, specify the state type explicitly if not inferred.</p>
-                    <p><strong>Example:</strong></p>
-                    <pre><code>const [count, setCount] = useState&lt;number&gt;(0);
-            
-            const inputRef = useRef&lt;HTMLInputElement&gt;(null);</code></pre>
+                    <ul>
+                      <li>
+                        Type React hooks to enforce correct usage and improve autocompletion.
+                      </li>
+                      <li>
+                        <p>For useState, specify the state type explicitly if not inferred.</p>
+                      </li>
+                      <li>
+                        <strong>Example:</strong>
+                        <pre><code>const [count, setCount] = useState&lt;number&gt;(0);
+                
+const inputRef = useRef&lt;HTMLInputElement&gt;(null);</code></pre>
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
-            
             </div>
-            
-            
-                     
-          
-            
           </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
