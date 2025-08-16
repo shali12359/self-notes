@@ -1,0 +1,1441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Microservice</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Fundamentals of Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Definition & Characteristics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      1. Definition & Characteristics of Microservices
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Microservices is an architectural style where an application is built as a collection of small, independent services. Each service runs in its own process and communicates via lightweight protocols (HTTP/REST, gRPC, or messaging).</li>
+                        <li><strong>Characteristics:</strong>
+                          <ul>
+                            <li>Independent deployability → each service can be built, tested, and deployed without affecting others.</li>
+                            <li>Decentralized data management → each service owns its own database/schema.</li>
+                            <li>Technology flexibility → different services can use different programming languages or frameworks.</li>
+                            <li>Resilience → failure in one service should not bring down the entire system.</li>
+                            <li>Scalability → services can scale independently based on demand.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Monolithic vs Microservices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      2. Monolithic vs Microservices Architecture
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Monolithic:</strong>
+                          <ul>
+                            <li>Single codebase, all modules tightly coupled.</li>
+                            <li>Easier to develop initially but harder to scale and maintain as the app grows.</li>
+                            <li>Deployment → the entire app must be redeployed even for small changes.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Microservices:</strong>
+                          <ul>
+                            <li>Application split into small, autonomous services.</li>
+                            <li>Each service can scale independently.</li>
+                            <li>Easier to maintain and evolve large applications.</li>
+                            <li>Requires more infrastructure (service discovery, communication, monitoring).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Benefits & Challenges -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      3. Benefits & Challenges of Microservices
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Faster development & deployment cycles.</li>
+                            <li>Independent scaling → saves resources.</li>
+                            <li>Fault isolation → one service failing won’t crash the whole system.</li>
+                            <li>Technology diversity → best tool for each service.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Challenges:</strong>
+                          <ul>
+                            <li>Complexity → managing multiple services is harder than one monolith.</li>
+                            <li>Data consistency → hard to maintain across distributed databases.</li>
+                            <li>Operational overhead → need DevOps, CI/CD, monitoring, logging.</li>
+                            <li>Network latency → services communicate over the network, which adds overhead.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Core Principles -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      4. Core Principles
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Single Responsibility:</strong> Each microservice should do one thing really well (e.g., "User Service" only manages users, not payments).</li>
+                        <li><strong>Loose Coupling:</strong> Services should minimize dependencies. One service’s change should not break others. Communication via well-defined APIs.</li>
+                        <li><strong>High Cohesion:</strong> All logic related to a specific business capability should be inside one service (e.g., all “order-related” logic lives in the Order Service).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Use Cases -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      5. Use Cases & When Not to Use Microservices
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Use Cases (when to use):</strong>
+                          <ul>
+                            <li>Large, complex applications with multiple business domains.</li>
+                            <li>Applications needing independent scaling (e.g., streaming service where “video streaming” needs more scaling than “user profiles”).</li>
+                            <li>Teams working on different features simultaneously (microservices allow parallel development).</li>
+                          </ul>
+                        </li>
+                        <li><strong>When NOT to use:</strong>
+                          <ul>
+                            <li>Small/simple applications where a monolith is faster and easier to maintain.</li>
+                            <li>Teams without enough DevOps maturity (microservices require advanced CI/CD, monitoring, and deployment practices).</li>
+                            <li>When low latency is critical and network calls could be a bottleneck.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Microservices Design Patterns</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. API Gateway Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      1. API Gateway Pattern
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> A single entry point for all client requests, which routes them to the correct microservice.</li>
+                        <li><strong>Why use it:</strong> Hides service complexity, provides security, handles load balancing, request aggregation, and authentication.</li>
+                        <li><strong>Example:</strong> Instead of calling 5 different services separately, the client calls the API Gateway, which aggregates and returns the response.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Service Registry & Discovery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      2. Service Registry & Discovery
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Mechanism that helps microservices automatically find each other at runtime.</li>
+                        <li><strong>Service Registry:</strong> A database of available services and their network locations (e.g., Eureka, Consul).</li>
+                        <li><strong>Service Discovery:</strong> Allows services to dynamically register and discover other services without hardcoding addresses.</li>
+                        <li><strong>Why use it:</strong> Makes services scalable and fault-tolerant in dynamic environments like Kubernetes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Database per Service Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      3. Database per Service Pattern
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Each microservice has its own database, instead of sharing a single one.</li>
+                        <li><strong>Why use it:</strong> Ensures loose coupling and data ownership per service.</li>
+                        <li><strong>Challenge:</strong> Maintaining data consistency across services (needs eventual consistency).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. CQRS -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      4. CQRS (Command Query Responsibility Segregation)
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Separates read (queries) and write (commands) operations into different models.</li>
+                        <li><strong>Why use it:</strong> Improves scalability, performance, and allows optimized read/write handling.</li>
+                        <li><strong>Example:</strong> Writing to one DB while reading from a read-optimized DB (e.g., caching or projections).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Saga Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      5. Saga Pattern (for Distributed Transactions)
+                    </button>
+                  </h2>
+                  <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Manages transactions across multiple services using a sequence of local transactions with compensation steps.</li>
+                        <li><strong>Types:</strong>
+                          <ul>
+                            <li><strong>Choreography:</strong> Services listen to events and react.</li>
+                            <li><strong>Orchestration:</strong> A central controller coordinates steps.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Why use it:</strong> Ensures data consistency without two-phase commit (which doesn’t scale in microservices).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Event Sourcing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      6. Event Sourcing
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Instead of storing just the current state in the database, store a log of all state-changing events.</li>
+                        <li><strong>Why use it:</strong> Provides an audit trail, allows replaying events to rebuild state, and works well with CQRS.</li>
+                        <li><strong>Challenge:</strong> Event log management and complexity of replaying.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. Strangler Fig Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      7. Strangler Fig Pattern (Gradual Migration)
+                    </button>
+                  </h2>
+                  <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> A strategy for migrating from a monolith to microservices gradually.</li>
+                        <li><strong>How it works:</strong> New features are built as microservices, while old parts remain in the monolith until replaced.</li>
+                        <li><strong>Why use it:</strong> Reduces risk by avoiding a "big bang" migration.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            <div class="accordion accordion-flush" id="accordionFlushServiceComm">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Service Communication</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="comm-vbtn-radio" id="comm-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="comm-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="comm-vbtn-radio" id="comm-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="comm-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="comm-vbtn-radio" id="comm-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="comm-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Synchronous Communication -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-service-sync" aria-expanded="false" aria-controls="flush-service-sync">
+                      1. Synchronous Communication
+                    </button>
+                  </h2>
+                  <div id="flush-service-sync" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceComm">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>REST:</strong>
+                          <ul>
+                            <li><strong>Definition:</strong> REST (Representational State Transfer) is an architectural style using HTTP for communication between services.</li>
+                            <li><strong>Characteristics:</strong>
+                              <ul>
+                                <li>Human-readable (JSON/XML).</li>
+                                <li>Stateless – each request contains all necessary information.</li>
+                                <li>Widely adopted, easy to debug.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Use Cases:</strong> Best when simplicity and human readability are more important than performance.</li>
+                          </ul>
+                        </li>
+                        <li><strong>gRPC:</strong>
+                          <ul>
+                            <li><strong>Definition:</strong> gRPC is a high-performance, open-source RPC framework that uses Protocol Buffers (Protobuf) for serialization.</li>
+                            <li><strong>Characteristics:</strong>
+                              <ul>
+                                <li>Faster and more efficient than REST (binary format).</li>
+                                <li>Supports streaming (client, server, bi-directional).</li>
+                                <li>Strongly typed contracts through Protobuf definitions.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Use Cases:</strong> Ideal for low-latency, high-throughput internal service communication.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Asynchronous Communication -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-service-async" aria-expanded="false" aria-controls="flush-service-async">
+                      2. Asynchronous Communication
+                    </button>
+                  </h2>
+                  <div id="flush-service-async" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceComm">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Message Brokers (RabbitMQ, Kafka, NATS):</strong>
+                          <ul>
+                            <li><strong>Definition:</strong> Middleware systems that allow services to communicate by sending messages via queues or topics.</li>
+                            <li><strong>Characteristics:</strong>
+                              <ul>
+                                <li>Decouples sender and receiver.</li>
+                                <li>Ensures durability, reliability, and scalability.</li>
+                                <li>Kafka → high throughput, event streaming.</li>
+                                <li>RabbitMQ → strong in complex routing and traditional queuing.</li>
+                                <li>NATS → lightweight, simple, low-latency pub/sub.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Use Cases:</strong> When services need to work independently without waiting for responses (e.g., order processing, notifications).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Event-Driven Architecture:</strong>
+                          <ul>
+                            <li><strong>Definition:</strong> A style where services produce and consume events to react to changes in state.</li>
+                            <li><strong>Characteristics:</strong>
+                              <ul>
+                                <li>Promotes real-time processing.</li>
+                                <li>Loose coupling between services.</li>
+                                <li>Facilitates scalability and resilience.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Use Cases:</strong> Best for systems where business processes depend on state changes (e.g., stock updates, payment confirmations).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Request/Response vs Publish/Subscribe -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-service-patterns" aria-expanded="false" aria-controls="flush-service-patterns">
+                      3. Request/Response vs Publish/Subscribe
+                    </button>
+                  </h2>
+                  <div id="flush-service-patterns" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceComm">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Request/Response:</strong>
+                          <ul>
+                            <li>Communication style where one service sends a request and waits for a response.</li>
+                            <li>Common in synchronous protocols (REST, gRPC).</li>
+                            <li>Tight coupling → sender expects a reply from a specific service.</li>
+                            <li><strong>Example:</strong> A user service querying an authentication service.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Publish/Subscribe:</strong>
+                          <ul>
+                            <li>One service publishes messages/events to a topic; multiple services can subscribe and react.</li>
+                            <li>Common in asynchronous/event-driven architectures.</li>
+                            <li>Loose coupling → publishers don’t need to know who consumes the event.</li>
+                            <li><strong>Example:</strong> An order service publishing an “OrderPlaced” event consumed by inventory, billing, and notification services.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushDataMgmt">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Data Management in Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="data-vbtn-radio" id="data-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="data-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="data-vbtn-radio" id="data-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="data-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="data-vbtn-radio" id="data-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="data-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Database per Service Concept -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-data-service-db" aria-expanded="false" aria-controls="flush-data-service-db">
+                      1. Database per Service Concept
+                    </button>
+                  </h2>
+                  <div id="flush-data-service-db" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataMgmt">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Each microservice owns its database and manages its schema independently.</li>
+                        <li>This ensures loose coupling — changes in one service’s data model don’t affect others.</li>
+                        <li><strong>Example:</strong> The Orders service has its own DB, while the Payments service has a separate one.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Shared Database Challenges -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-data-shared-db" aria-expanded="false" aria-controls="flush-data-shared-db">
+                      2. Shared Database Challenges
+                    </button>
+                  </h2>
+                  <div id="flush-data-shared-db" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataMgmt">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>If multiple services share the same database, it creates tight coupling.</li>
+                        <li>Schema changes by one service can break others.</li>
+                        <li>It becomes harder to enforce service boundaries and ownership of data.</li>
+                        <li>Leads to coordination overhead and reduced autonomy of teams.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Polyglot Persistence -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-data-polyglot" aria-expanded="false" aria-controls="flush-data-polyglot">
+                      3. Polyglot Persistence
+                    </button>
+                  </h2>
+                  <div id="flush-data-polyglot" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataMgmt">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Different services can use different types of databases depending on their needs.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li>Catalog service → NoSQL database for flexible schema.</li>
+                            <li>Orders service → Relational database for strong consistency.</li>
+                          </ul>
+                        </li>
+                        <li>Enables using the right tool for the job instead of forcing a single DB for all services.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Data Replication & Synchronization Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-data-replication" aria-expanded="false" aria-controls="flush-data-replication">
+                      4. Data Replication & Synchronization Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-data-replication" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataMgmt">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Since each service has its own database, sometimes data needs to be replicated across services.</li>
+                        <li><strong>Approaches:</strong>
+                          <ul>
+                            <li>Event-driven replication → services publish events (e.g., “OrderCreated”) and others subscribe to update their local DB.</li>
+                            <li>API calls for sync → one service calls another to fetch/update data.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Challenges:</strong> avoiding data staleness and ensuring consistency.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Distributed Transactions & Eventual Consistency -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-data-consistency" aria-expanded="false" aria-controls="flush-data-consistency">
+                      5. Distributed Transactions & Eventual Consistency
+                    </button>
+                  </h2>
+                  <div id="flush-data-consistency" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataMgmt">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Traditional ACID transactions across multiple services/databases are hard to implement.</li>
+                        <li>Instead, microservices rely on eventual consistency: data will become consistent over time.</li>
+                        <li><strong>Strategies:</strong>
+                          <ul>
+                            <li>Saga pattern → break transactions into smaller steps with compensating actions if one fails.</li>
+                            <li>Event sourcing → store events as the source of truth and rebuild state as needed.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Trade-off:</strong> lose strong consistency, but gain scalability and resilience.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushServiceDiscovery">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Service Discovery</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="discovery-vbtn-radio" id="discovery-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="discovery-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="discovery-vbtn-radio" id="discovery-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="discovery-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="discovery-vbtn-radio" id="discovery-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="discovery-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-discovery-client" aria-expanded="false" aria-controls="flush-discovery-client">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-discovery-client" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          In a microservices architecture, services often run on multiple instances that may scale up or down, and their network locations (IP addresses, ports) change dynamically. Service Discovery is the process of automatically detecting and keeping track of these service instances so that they can communicate with each other without hardcoding addresses.
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Client-side discovery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-discovery-client" aria-expanded="false" aria-controls="flush-discovery-client">
+                      1. Client-side discovery
+                    </button>
+                  </h2>
+                  <div id="flush-discovery-client" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>The client is responsible for finding available service instances.</li>
+                        <li>Client queries the service registry (a database of active services).</li>
+                        <li>After getting the list of instances, the client selects one (e.g., using round-robin) and sends the request directly.</li>
+                        <li><strong>Example:</strong> Netflix Eureka with Ribbon (client load balancer).</li>
+                        <li><strong>Steps:</strong> Service registers → Client queries registry → Client calls service.</li>
+                        <li><strong>Pros:</strong> Simple, no middleman needed.</li>
+                        <li><strong>Cons:</strong> Client must handle discovery logic and load balancing, making it more complex.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Server-side discovery -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-discovery-server" aria-expanded="false" aria-controls="flush-discovery-server">
+                      2. Server-side discovery
+                    </button>
+                  </h2>
+                  <div id="flush-discovery-server" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>The client sends a request to a load balancer or API Gateway instead of looking up services itself.</li>
+                        <li>The load balancer queries the service registry and picks a healthy instance.</li>
+                        <li>The client doesn’t need to know about the discovery process.</li>
+                        <li><strong>Example:</strong> AWS Elastic Load Balancer.</li>
+                        <li><strong>Steps:</strong> Service registers → Client sends request to load balancer → Load balancer queries registry → Request routed to service.</li>
+                        <li><strong>Pros:</strong> Client is simpler, centralizes load balancing.</li>
+                        <li><strong>Cons:</strong> Adds an extra network hop and dependency on the load balancer.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-discovery-tools" aria-expanded="false" aria-controls="flush-discovery-tools">
+                      3. Tools
+                    </button>
+                  </h2>
+                  <div id="flush-discovery-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Netflix Eureka:</strong>
+                          <ul>
+                            <li>Popular with Spring Cloud.</li>
+                            <li>Provides service registry and supports client-side discovery.</li>
+                            <li>Lightweight and integrates well with Ribbon and Zuul.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Consul:</strong>
+                          <ul>
+                            <li>Developed by HashiCorp.</li>
+                            <li>Provides service registry, health checks, and key-value storage.</li>
+                            <li>Supports both client-side and server-side discovery.</li>
+                            <li>Often used in containerized environments.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Zookeeper:</strong>
+                          <ul>
+                            <li>Originally from Apache Hadoop ecosystem.</li>
+                            <li>Distributed coordination service, often used for leader election, configuration, and service discovery.</li>
+                            <li>Strong consistency but heavier compared to Eureka and Consul.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushApiGateway">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>API Gateway</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="api-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="api-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="api-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-role" aria-expanded="false" aria-controls="flush-api-role">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-api-role" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          An API Gateway acts as a single entry point for all clients to access multiple microservices. It handles request routing, security, and other cross-cutting concerns, simplifying client interaction with a microservices architecture.
+                        </li>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- 1. Role & Benefits -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-role" aria-expanded="false" aria-controls="flush-api-role">
+                      1. Role & Benefits of API Gateway
+                    </button>
+                  </h2>
+                  <div id="flush-api-role" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Role:</strong> Centralizes client requests and routes them to appropriate microservices.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Simplifies client interactions (one endpoint instead of many).</li>
+                            <li>Handles cross-cutting concerns like authentication, logging, and monitoring.</li>
+                            <li>Aggregates responses from multiple services.</li>
+                            <li>Enables versioning and backward compatibility.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Authentication & Authorization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-auth" aria-expanded="false" aria-controls="flush-api-auth">
+                      2. Authentication & Authorization
+                    </button>
+                  </h2>
+                  <div id="flush-api-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>API Gateway can enforce security policies before requests reach microservices.</li>
+                        <li><strong>Supports:</strong>
+                          <ul>
+                            <li>Token-based authentication (JWT, OAuth2).</li>
+                            <li>Role-based access control (RBAC).</li>
+                            <li>Integration with identity providers.</li>
+                          </ul>
+                        </li>
+                        <li>Ensures that only authorized clients can access protected services.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Routing & Load Balancing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-routing" aria-expanded="false" aria-controls="flush-api-routing">
+                      3. Routing & Load Balancing
+                    </button>
+                  </h2>
+                  <div id="flush-api-routing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Routing:</strong> Directs requests to the appropriate microservice based on URL path, headers, or request parameters.</li>
+                        <li><strong>Load balancing:</strong> Distributes incoming requests across multiple instances of a service for better performance and fault tolerance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Rate Limiting & Caching -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-rate-cache" aria-expanded="false" aria-controls="flush-api-rate-cache">
+                      4. Rate Limiting & Caching
+                    </button>
+                  </h2>
+                  <div id="flush-api-rate-cache" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Rate limiting:</strong> Controls the number of requests a client can make in a given time, preventing abuse or overload.</li>
+                        <li><strong>Caching:</strong> Stores responses temporarily to reduce service load and improve performance.</li>
+                        <li>These features improve reliability, scalability, and response times.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Popular Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-api-tools" aria-expanded="false" aria-controls="flush-api-tools">
+                      5. Popular Tools
+                    </button>
+                  </h2>
+                  <div id="flush-api-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Kong:</strong> Cloud-native API gateway with plugins for authentication, logging, and rate limiting.</li>
+                        <li><strong>Nginx:</strong> Web server often used as reverse proxy, load balancer, and API gateway.</li>
+                        <li><strong>AWS API Gateway:</strong> Fully managed gateway for creating, publishing, and monitoring APIs on AWS.</li>
+                        <li><strong>Zuul:</strong> Netflix open-source gateway, integrates well with Spring Cloud for routing and filtering.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Security in Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="sec-vbtn-radio" id="sec-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="sec-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="sec-vbtn-radio" id="sec-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="sec-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="sec-vbtn-radio" id="sec-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="sec-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-sec-auth" aria-expanded="false" aria-controls="flush-sec-auth">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-sec-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          Microservices communicate over networks, often exposed to the internet, making security critical. Key areas include authentication, authorization, secure communication, and secret management.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Authentication & Authorization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-sec-auth" aria-expanded="false" aria-controls="flush-sec-auth">
+                      1. Authentication & Authorization
+                    </button>
+                  </h2>
+                  <div id="flush-sec-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Authentication:</strong> Verifies the identity of a user or service.</li>
+                        <li><strong>Authorization:</strong> Determines what resources or actions the authenticated user/service can access.</li>
+                        <li><strong>Protocols & Standards:</strong>
+                          <ul>
+                            <li><strong>OAuth 2.0:</strong>
+                              <ul>
+                                <li>Delegated authorization framework.</li>
+                                <li>Allows clients to access resources on behalf of users without sharing credentials.</li>
+                                <li>Common flows: Authorization Code, Client Credentials, Implicit, Resource Owner Password.</li>
+                              </ul>
+                            </li>
+                            <li><strong>OpenID Connect (OIDC):</strong>
+                              <ul>
+                                <li>Built on top of OAuth 2.0.</li>
+                                <li>Adds user identity verification and profile information.</li>
+                                <li>Provides ID tokens for authentication in addition to access tokens.</li>
+                              </ul>
+                            </li>
+                            <li><strong>JWT (JSON Web Token):</strong>
+                              <ul>
+                                <li>Compact, self-contained token used for authentication/authorization.</li>
+                                <li>Includes claims (user info, roles, expiry) and is signed to ensure integrity.</li>
+                                <li>Commonly used in stateless authentication between services.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. API Security Best Practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-sec-api" aria-expanded="false" aria-controls="flush-sec-api">
+                      2. API Security Best Practices
+                    </button>
+                  </h2>
+                  <div id="flush-sec-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Validate inputs to prevent injection attacks.</li>
+                        <li>Use HTTPS to encrypt communication.</li>
+                        <li>Rate limit requests to prevent abuse.</li>
+                        <li>Implement logging and monitoring for suspicious activity.</li>
+                        <li>Avoid exposing internal endpoints to public networks.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Mutual TLS (mTLS) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-sec-mtls" aria-expanded="false" aria-controls="flush-sec-mtls">
+                      3. Mutual TLS (mTLS)
+                    </button>
+                  </h2>
+                  <div id="flush-sec-mtls" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>mTLS ensures two-way authentication between client and server.</li>
+                        <li>Both parties present certificates to verify identities.</li>
+                        <li>Enhances security by encrypting traffic and confirming service authenticity.</li>
+                        <li>Commonly used for service-to-service communication in microservices.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Secret Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-sec-secrets" aria-expanded="false" aria-controls="flush-sec-secrets">
+                      4. Secret Management
+                    </button>
+                  </h2>
+                  <div id="flush-sec-secrets" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Microservices often need credentials (DB passwords, API keys, tokens).</li>
+                        <li>Secrets should not be hard-coded; use secure secret management tools.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>HashiCorp Vault → Centralized secret storage with dynamic secrets and access policies.</li>
+                            <li>AWS Secrets Manager → Managed service to store, rotate, and retrieve secrets securely.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushDeployment">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Deployment & Orchestration</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="deploy-vbtn-radio" id="deploy-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="deploy-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="deploy-vbtn-radio" id="deploy-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="deploy-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="deploy-vbtn-radio" id="deploy-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="deploy-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-deploy-container" aria-expanded="false" aria-controls="flush-deploy-container">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-deploy-container" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          Microservices require careful deployment and orchestration because of their distributed nature. Key practices include containerization, orchestration, and advanced deployment strategies.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Containerization (Docker) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-deploy-container" aria-expanded="false" aria-controls="flush-deploy-container">
+                      1. Containerization (Docker)
+                    </button>
+                  </h2>
+                  <div id="flush-deploy-container" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Packaging microservices and their dependencies into lightweight, portable containers.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Consistent environment across development, testing, and production.</li>
+                            <li>Simplifies deployment and scaling.</li>
+                            <li>Isolates services to avoid conflicts.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> `docker build` to create an image and `docker run` to start a container.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Container Orchestration -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-deploy-orchestration" aria-expanded="false" aria-controls="flush-deploy-orchestration">
+                      2. Container Orchestration
+                    </button>
+                  </h2>
+                  <div id="flush-deploy-orchestration" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Automates deployment, scaling, networking, and management of multiple containers.</li>
+                        <li><strong>Popular Tools:</strong>
+                          <ul>
+                            <li><strong>Kubernetes:</strong>
+                              <ul>
+                                <li>Open-source orchestration platform.</li>
+                                <li>Manages pods, deployments, services, scaling, and self-healing.</li>
+                                <li>Handles service discovery and load balancing automatically.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Docker Swarm:</strong>
+                              <ul>
+                                <li>Native Docker orchestration.</li>
+                                <li>Easier to set up than Kubernetes but less feature-rich.</li>
+                                <li>Manages container clusters and simple scaling.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Service Mesh (Istio, Linkerd) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-deploy-mesh" aria-expanded="false" aria-controls="flush-deploy-mesh">
+                      3. Service Mesh (Istio, Linkerd)
+                    </button>
+                  </h2>
+                  <div id="flush-deploy-mesh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Infrastructure layer for managing service-to-service communication.</li>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>Traffic routing, retries, and failover.</li>
+                            <li>Observability and metrics.</li>
+                            <li>Security (mTLS between services).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example Tools:</strong> Istio, Linkerd.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Rolling Updates & Blue-Green Deployments -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-deploy-strategies" aria-expanded="false" aria-controls="flush-deploy-strategies">
+                      4. Rolling Updates & Blue-Green Deployments
+                    </button>
+                  </h2>
+                  <div id="flush-deploy-strategies" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Rolling Updates:</strong> Gradually replace old service instances with new ones without downtime.</li>
+                        <li><strong>Blue-Green Deployment:</strong> Maintain two identical environments (Blue = current, Green = new). Switch traffic to the Green environment once it’s validated.</li>
+                        <li><strong>Benefits:</strong> Zero-downtime deployment, easy rollback, and minimal disruption.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushMonitoring">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Monitoring & Observability</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="monitor-vbtn-radio" id="monitor-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="monitor-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="monitor-vbtn-radio" id="monitor-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="monitor-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="monitor-vbtn-radio" id="monitor-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="monitor-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-monitor-logging" aria-expanded="false" aria-controls="flush-monitor-logging">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-monitor-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          Monitoring and observability are critical in microservices because distributed services can fail independently, making it challenging to detect and debug issues.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Centralized Logging -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-monitor-logging" aria-expanded="false" aria-controls="flush-monitor-logging">
+                      1. Centralized Logging
+                    </button>
+                  </h2>
+                  <div id="flush-monitor-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Aggregating logs from all microservices into a single system for easier analysis.</li>
+                        <li><strong>ELK Stack:</strong>
+                          <ul>
+                            <li>Elasticsearch → Stores and indexes log data for fast searches.</li>
+                            <li>Logstash → Collects, processes, and forwards logs.</li>
+                            <li>Kibana → Visualizes logs with dashboards and search queries.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Easy debugging of issues across multiple services.</li>
+                            <li>Detects patterns and anomalies.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Distributed Tracing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-monitor-tracing" aria-expanded="false" aria-controls="flush-monitor-tracing">
+                      2. Distributed Tracing
+                    </button>
+                  </h2>
+                  <div id="flush-monitor-tracing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Tracks requests as they propagate through multiple services, helping identify latency bottlenecks.</li>
+                        <li><strong>Tools:</strong>
+                          <ul>
+                            <li>Jaeger → Open-source distributed tracing with visualization and analysis.</li>
+                            <li>Zipkin → Collects and visualizes traces; integrates with Spring Cloud Sleuth.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Helps understand request flows across services.</li>
+                            <li>Pinpoints slow services or failed calls.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Metrics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-monitor-metrics" aria-expanded="false" aria-controls="flush-monitor-metrics">
+                      3. Metrics
+                    </button>
+                  </h2>
+                  <div id="flush-monitor-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Quantitative measurements of system behavior over time.</li>
+                        <li><strong>Tools:</strong>
+                          <ul>
+                            <li>Prometheus → Collects metrics from services, stores time-series data, and triggers alerts.</li>
+                            <li>Grafana → Visualizes metrics with dashboards, graphs, and alerts.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Monitors performance, resource usage, and system health.</li>
+                            <li>Helps in capacity planning and scaling decisions.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Health Checks & Uptime Monitoring -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-monitor-health" aria-expanded="false" aria-controls="flush-monitor-health">
+                      4. Health Checks & Uptime Monitoring
+                    </button>
+                  </h2>
+                  <div id="flush-monitor-health" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Checks whether services are alive and responsive.</li>
+                        <li><strong>Implementation:</strong>
+                          <ul>
+                            <li>Spring Boot’s /actuator/health endpoint.</li>
+                            <li>External uptime monitoring tools.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Automatic detection of failed services.</li>
+                            <li>Supports automated failover and alerts.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion accordion-flush" id="accordionFlushResilience">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>Resilience & Fault Tolerance</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="resilience-vbtn-radio" id="resilience-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="resilience-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="resilience-vbtn-radio" id="resilience-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="resilience-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="resilience-vbtn-radio" id="resilience-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="resilience-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-resilience-circuit" aria-expanded="false" aria-controls="flush-resilience-circuit">
+                      1. What
+                    </button>
+                  </h2>
+                  <div id="flush-resilience-circuit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          Microservices are distributed, so failures in one service can cascade and affect others. Resilience and fault tolerance ensure that the system continues to function gracefully under failure conditions.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Circuit Breaker Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-resilience-circuit" aria-expanded="false" aria-controls="flush-resilience-circuit">
+                      1. Circuit Breaker Pattern
+                    </button>
+                  </h2>
+                  <div id="flush-resilience-circuit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Prevents repeated calls to a failing service to avoid cascading failures.</li>
+                        <li><strong>How it works:</strong>
+                          <ul>
+                            <li>Monitors service calls; if failures exceed a threshold, the circuit “opens” and subsequent calls fail immediately.</li>
+                            <li>After a timeout, the circuit “half-opens” to test if the service has recovered.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Tools:</strong> Netflix Hystrix, Resilience4j.</li>
+                        <li><strong>Benefit:</strong> Improves system stability and prevents overload on failing services.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Retry Mechanism & Exponential Backoff -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-resilience-retry" aria-expanded="false" aria-controls="flush-resilience-retry">
+                      2. Retry Mechanism & Exponential Backoff
+                    </button>
+                  </h2>
+                  <div id="flush-resilience-retry" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Automatically retries failed service calls to handle transient errors.</li>
+                        <li><strong>Exponential Backoff:</strong> Wait time increases after each retry (e.g., 1s → 2s → 4s) to reduce system load.</li>
+                        <li><strong>Benefit:</strong> Helps recover from temporary network or service glitches without overwhelming services.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Bulkhead Pattern -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-resilience-bulkhead" aria-expanded="false" aria-controls="flush-resilience-bulkhead">
+                      3. Bulkhead Pattern
+                    </button>
+                  </h2>
+                  <div id="flush-resilience-bulkhead" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Isolates resources (threads, connections) for each service or component to prevent failures from affecting others.</li>
+                        <li><strong>Analogy:</strong> Like compartments in a ship; if one leaks, the rest remain intact.</li>
+                        <li><strong>Benefit:</strong> Prevents cascading failures and improves system stability.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Failover Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#flush-resilience-failover" aria-expanded="false" aria-controls="flush-resilience-failover">
+                      4. Failover Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-resilience-failover" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Automatically switch to a backup service or instance when the primary fails.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>Active-passive failover → standby instance is idle until primary fails.</li>
+                            <li>Active-active failover → multiple instances handle traffic simultaneously; traffic shifts on failure.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefit:</strong> Ensures high availability and continuity of service.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                                                                   
+            
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
