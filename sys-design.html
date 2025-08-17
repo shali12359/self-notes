@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>System Design</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushSystemDesign">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. Fundamentals of System Design</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="systemdesign-vbtn-radio" id="systemdesign-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="systemdesign-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="systemdesign-vbtn-radio" id="systemdesign-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="systemdesign-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="systemdesign-vbtn-radio" id="systemdesign-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="systemdesign-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Understanding Scalability -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-scalability" aria-expanded="false" aria-controls="flush-systemdesign-scalability">
+                      1. Understanding Scalability
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-scalability" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Scalability is the ability of a system to handle increasing load or users without performance degradation.</li>
+                        <li>Types of scalability:
+                          <ul>
+                            <li><strong>Vertical scaling (scale-up):</strong> Add more resources to a single machine (CPU, RAM, storage).</li>
+                            <li><strong>Horizontal scaling (scale-out):</strong> Add more machines/servers to share the load.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> Upgrading a database from 16GB to 64GB RAM is vertical scaling; adding 3 more database servers behind a load balancer is horizontal scaling.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Vertical vs Horizontal Scaling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-verticalhorizontal" aria-expanded="false" aria-controls="flush-systemdesign-verticalhorizontal">
+                      2. Vertical vs Horizontal Scaling
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-verticalhorizontal" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Vertical scaling:</strong> Pros: Simpler to implement, no distributed system complexity; Cons: Limited by hardware, expensive, single point of failure.</li>
+                        <li><strong>Horizontal scaling:</strong> Pros: More resilient, can handle very large loads; Cons: More complex to design, needs distributed coordination.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Reliability, Availability, and Fault Tolerance -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-reliability" aria-expanded="false" aria-controls="flush-systemdesign-reliability">
+                      3. Reliability, Availability, and Fault Tolerance
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-reliability" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Reliability:</strong> System performs correctly over time, with minimal failures.</li>
+                        <li><strong>Availability:</strong> System is accessible and operational when needed.</li>
+                        <li><strong>Fault tolerance:</strong> System continues to work even if some components fail.</li>
+                        <li><strong>Example:</strong> A cloud service with multiple redundant servers ensures high availability and fault tolerance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Latency vs Throughput -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-latency" aria-expanded="false" aria-controls="flush-systemdesign-latency">
+                      4. Latency vs Throughput
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-latency" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Latency:</strong> Time taken to complete a single request (response time).</li>
+                        <li><strong>Throughput:</strong> Number of requests processed in a given time (e.g., requests/sec).</li>
+                        <li><strong>Example:</strong> A system may have low latency (fast response) but low throughput if it handles only a few requests at a time.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. CAP Theorem (Consistency, Availability, Partition Tolerance) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-cap" aria-expanded="false" aria-controls="flush-systemdesign-cap">
+                      5. Trade-offs Between Consistency, Availability, and Partition Tolerance (CAP Theorem)
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-cap" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>In distributed systems, you can only guarantee two out of three at a time:
+                          <ul>
+                            <li><strong>Consistency:</strong> All nodes see the same data at the same time.</li>
+                            <li><strong>Availability:</strong> Every request gets a response, even if some nodes fail.</li>
+                            <li><strong>Partition tolerance:</strong> System continues to operate even if network partitions occur.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> In a network split, you must choose between consistency (return error for some requests) or availability (return potentially stale data).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Basics of Load Balancing and Caching -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-systemdesign-loadcache" aria-expanded="false" aria-controls="flush-systemdesign-loadcache">
+                      6. Basics of Load Balancing and Caching
+                    </button>
+                  </h2>
+                  <div id="flush-systemdesign-loadcache" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Load balancing:</strong> Distributes incoming traffic across multiple servers to avoid overload and improve response time.
+                          <ul>
+                            <li>Types: Round-robin, least connections, IP hash, etc.</li>
+                            <li><strong>Example:</strong> A web app uses a load balancer to send requests to 5 backend servers.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Caching:</strong> Stores frequently accessed data closer to the user or app to reduce latency and database load.
+                          <ul>
+                            <li>Types: In-memory caches (Redis, Memcached), CDN caching, browser caching.</li>
+                            <li><strong>Example:</strong> Cache popular product pages in Redis to serve 10x faster than querying the database every time.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushDatabases">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Databases & Storage</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="databases-vbtn-radio" id="databases-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="databases-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="databases-vbtn-radio" id="databases-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="databases-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="databases-vbtn-radio" id="databases-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="databases-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Relational vs NoSQL Databases -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-databases-sqlnosql" aria-expanded="false" aria-controls="flush-databases-sqlnosql">
+                      1. Relational vs NoSQL Databases
+                    </button>
+                  </h2>
+                  <div id="flush-databases-sqlnosql" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabases">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Relational (SQL) databases:</strong>
+                          <ul>
+                            <li>Structured tables with rows and columns.</li>
+                            <li>Use SQL queries for CRUD operations.</li>
+                            <li>Strong ACID guarantees.</li>
+                            <li>Examples: MySQL, PostgreSQL, Oracle.</li>
+                          </ul>
+                        </li>
+                        <li><strong>NoSQL databases:</strong>
+                          <ul>
+                            <li>Schema-less or flexible schema, designed for scalability and high performance.</li>
+                            <li>Types: Document, Key-Value, Column-family, Graph.</li>
+                            <li>Examples: MongoDB (document), Redis (key-value), Cassandra (column-family), Neo4j (graph).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> Use SQL for banking apps (strong consistency), NoSQL for social media feeds (high scalability).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. When to Use SQL vs Document vs Key-Value vs Graph -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-databases-types" aria-expanded="false" aria-controls="flush-databases-types">
+                      2. When to Use SQL vs Document vs Key-Value vs Graph
+                    </button>
+                  </h2>
+                  <div id="flush-databases-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabases">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>SQL:</strong> Structured data, complex queries, transactions.</li>
+                        <li><strong>Document (NoSQL):</strong> Flexible JSON-like storage, hierarchical data, fast retrieval.</li>
+                        <li><strong>Key-Value:</strong> Ultra-fast lookup, simple data models, caching.</li>
+                        <li><strong>Graph:</strong> Relationships-heavy data, social networks, recommendation engines.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Database Scaling Techniques -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-databases-scaling" aria-expanded="false" aria-controls="flush-databases-scaling">
+                      3. Database Scaling Techniques
+                    </button>
+                  </h2>
+                  <div id="flush-databases-scaling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabases">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Replication:</strong> Copy data to multiple nodes for high availability and read performance.</li>
+                        <li><strong>Sharding (horizontal partitioning):</strong> Split data across multiple databases to handle large datasets and writes.</li>
+                        <li><strong>Partitioning (vertical/horizontal):</strong> Divide tables by columns (vertical) or rows (horizontal) for better performance.</li>
+                        <li><strong>Example:</strong> User data split across servers based on user ID to distribute load.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Indexing, Transactions, and ACID Properties -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-databases-acid" aria-expanded="false" aria-controls="flush-databases-acid">
+                      4. Indexing, Transactions, and ACID Properties
+                    </button>
+                  </h2>
+                  <div id="flush-databases-acid" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabases">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Indexing:</strong> Creates a data structure to speed up query lookups.
+                          <ul>
+                            <li>Example: Indexing email column in users table for fast search.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Transactions:</strong> Ensure a group of operations either all succeed or all fail.</li>
+                        <li><strong>ACID properties:</strong>
+                          <ul>
+                            <li><strong>Atomicity:</strong> All-or-nothing.</li>
+                            <li><strong>Consistency:</strong> Database remains in a valid state.</li>
+                            <li><strong>Isolation:</strong> Concurrent transactions do not interfere.</li>
+                            <li><strong>Durability:</strong> Committed changes survive crashes.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Caching Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-databases-caching" aria-expanded="false" aria-controls="flush-databases-caching">
+                      5. Caching Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-databases-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDatabases">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Purpose: Reduce database load and improve performance.</li>
+                        <li>Types of caching:
+                          <ul>
+                            <li><strong>LRU cache (Least Recently Used):</strong> Evicts the least recently accessed items when full.</li>
+                            <li><strong>Write-through cache:</strong> Writes go to cache and database simultaneously (ensures consistency).</li>
+                            <li><strong>Write-back cache:</strong> Writes go first to cache, then asynchronously to database (faster, less DB load).</li>
+                          </ul>
+                        </li>
+                        <li>Tools: Redis, Memcached.</li>
+                        <li><strong>Example:</strong> Store popular product data in Redis to serve millions of users without hitting the database each time.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushNetworking">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>3. Networking & Communication</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="networking-vbtn-radio" id="networking-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="networking-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="networking-vbtn-radio" id="networking-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="networking-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="networking-vbtn-radio" id="networking-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="networking-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. HTTP/HTTPS Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-http" aria-expanded="false" aria-controls="flush-networking-http">
+                      1. HTTP/HTTPS Basics
+                    </button>
+                  </h2>
+                  <div id="flush-networking-http" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>HTTP:</strong> Protocol for transferring data between client and server. Stateless, request-response model.</li>
+                        <li><strong>HTTPS:</strong> HTTP + TLS/SSL encryption for secure communication.</li>
+                        <li><strong>Example:</strong> Login forms, API requests, and web page loads should use HTTPS to prevent eavesdropping.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. TCP vs UDP -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-tcpudp" aria-expanded="false" aria-controls="flush-networking-tcpudp">
+                      2. TCP vs UDP
+                    </button>
+                  </h2>
+                  <div id="flush-networking-tcpudp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>TCP (Transmission Control Protocol):</strong> Reliable, connection-oriented, ensures data arrives in order. <em>Example:</em> Web browsing, file transfer.</li>
+                        <li><strong>UDP (User Datagram Protocol):</strong> Unreliable, connectionless, faster, low overhead. <em>Example:</em> Video streaming, online gaming.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. API Communication Patterns -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-api" aria-expanded="false" aria-controls="flush-networking-api">
+                      3. API Communication Patterns
+                    </button>
+                  </h2>
+                  <div id="flush-networking-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Synchronous APIs:</strong> Client waits for server response. <em>Example:</em> REST API call to fetch user data.</li>
+                        <li><strong>Asynchronous APIs:</strong> Client continues processing; server responds later. <em>Example:</em> Message queues or webhooks.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. REST vs GraphQL vs gRPC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-rest" aria-expanded="false" aria-controls="flush-networking-rest">
+                      4. REST vs GraphQL vs gRPC
+                    </button>
+                  </h2>
+                  <div id="flush-networking-rest" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>REST:</strong> Standard HTTP methods (GET, POST, PUT, DELETE). Easy, widely used, resource-based.</li>
+                        <li><strong>GraphQL:</strong> Query exactly what you need, single endpoint, reduces over-fetching/under-fetching.</li>
+                        <li><strong>gRPC:</strong> High-performance, uses Protocol Buffers, supports streaming, ideal for microservices.</li>
+                        <li><strong>Example:</strong> Use GraphQL for flexible frontend queries; use gRPC for service-to-service communication.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Message Queues & Event-Driven Architectures -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-queues" aria-expanded="false" aria-controls="flush-networking-queues">
+                      5. Message Queues & Event-Driven Architectures
+                    </button>
+                  </h2>
+                  <div id="flush-networking-queues" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Decouple services and enable asynchronous communication.</li>
+                        <li>Producers send messages to a queue; consumers process them independently.</li>
+                        <li>Supports scaling, retry logic, and loose coupling.</li>
+                        <li><strong>Example:</strong> Order service pushes “order created” event; inventory service consumes it to update stock.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Kafka, RabbitMQ, SQS -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-tools" aria-expanded="false" aria-controls="flush-networking-tools">
+                      6. Kafka, RabbitMQ, SQS
+                    </button>
+                  </h2>
+                  <div id="flush-networking-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Kafka:</strong> High-throughput, distributed log, used for streaming events.</li>
+                        <li><strong>RabbitMQ:</strong> Reliable message broker, supports routing, queuing, and delivery guarantees.</li>
+                        <li><strong>SQS (AWS):</strong> Fully managed queue service, scalable, reliable for cloud apps.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. WebSockets and Real-Time Communication -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-networking-websockets" aria-expanded="false" aria-controls="flush-networking-websockets">
+                      7. WebSockets and Real-Time Communication
+                    </button>
+                  </h2>
+                  <div id="flush-networking-websockets" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworking">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Full-duplex communication between client and server over a single TCP connection.</li>
+                        <li>Enables real-time updates without repeated HTTP requests.</li>
+                        <li><strong>Example:</strong> Chat apps, live notifications, multiplayer games.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSystemArchitecture">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>4. System Components & Architecture</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="systemarchitecture-vbtn-radio" id="systemarchitecture-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="systemarchitecture-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="systemarchitecture-vbtn-radio" id="systemarchitecture-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="systemarchitecture-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="systemarchitecture-vbtn-radio" id="systemarchitecture-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="systemarchitecture-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Load Balancers and Reverse Proxies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-loadbalancers" aria-expanded="false" aria-controls="flush-architecture-loadbalancers">
+                      1. Load Balancers and Reverse Proxies
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-loadbalancers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Load balancers:</strong> Distribute incoming traffic across multiple servers to prevent overload and improve reliability.</li>
+                        <li>Types: Round-robin, least connections, IP hash.</li>
+                        <li><strong>Example:</strong> A web app with 5 backend servers uses a load balancer to ensure no single server is overwhelmed.</li>
+                        <li><strong>Reverse proxies:</strong> Sit between clients and servers, handling requests on behalf of servers. Often used for caching, SSL termination, and security.</li>
+                        <li><strong>Example:</strong> Nginx or HAProxy acting as a reverse proxy for a web application.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. CDNs (Content Delivery Networks) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-cdn" aria-expanded="false" aria-controls="flush-architecture-cdn">
+                      2. CDNs (Content Delivery Networks)
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-cdn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Networks of servers located globally to deliver static content (images, videos, scripts) quickly.</li>
+                        <li>Reduce latency and server load by caching content closer to users.</li>
+                        <li><strong>Example:</strong> A video streaming service uses CloudFront or Akamai to serve videos faster to users worldwide.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Microservices vs Monolith vs Serverless -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-microservices" aria-expanded="false" aria-controls="flush-architecture-microservices">
+                      3. Microservices vs Monolith vs Serverless
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-microservices" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Monolith:</strong> Single, unified codebase. Simple initially, harder to scale or maintain over time.</li>
+                        <li><strong>Microservices:</strong> Application split into independent services communicating via APIs. Scalable, maintainable, but adds complexity.</li>
+                        <li><strong>Serverless:</strong> Functions run in response to events; no server management. Great for variable workloads, but limited control and cold-start latency.</li>
+                        <li><strong>Example:</strong> E-commerce platform: microservices for payments, orders, and inventory; serverless for email notifications.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Asynchronous Processing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-async" aria-expanded="false" aria-controls="flush-architecture-async">
+                      4. Asynchronous Processing
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-async" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tasks executed in the background, without blocking the main request flow.</li>
+                        <li>Useful for time-consuming tasks like sending emails, generating reports, or processing videos.</li>
+                        <li><strong>Example:</strong> User uploads a video; encoding happens asynchronously while the user continues browsing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Background Jobs, Worker Queues -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-workers" aria-expanded="false" aria-controls="flush-architecture-workers">
+                      5. Background Jobs, Worker Queues
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-workers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Worker queues hold tasks to be processed asynchronously by background workers.</li>
+                        <li>Ensures reliability and scalability by decoupling task execution from the main application flow.</li>
+                        <li>Tools: RabbitMQ, Kafka, Celery, SQS.</li>
+                        <li><strong>Example:</strong> Order service pushes a “send receipt email” task to a queue; workers process it independently.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Rate Limiting, Throttling, and Circuit Breakers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-architecture-resilience" aria-expanded="false" aria-controls="flush-architecture-resilience">
+                      6. Rate Limiting, Throttling, and Circuit Breakers
+                    </button>
+                  </h2>
+                  <div id="flush-architecture-resilience" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemArchitecture">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Rate limiting:</strong> Limits number of requests a user or client can make in a given time. Prevents abuse.</li>
+                        <li><strong>Throttling:</strong> Controls the traffic sent to a service to avoid overload.</li>
+                        <li><strong>Circuit breakers:</strong> Detect failing services and stop sending requests temporarily to avoid cascading failures.</li>
+                        <li><strong>Example:</strong> An API allows 100 requests/minute per user; if a downstream service is failing, the circuit breaker prevents further requests until it recovers.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushDesignPatterns">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>5. Design Patterns & Principles</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="designpatterns-vbtn-radio" id="designpatterns-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="designpatterns-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="designpatterns-vbtn-radio" id="designpatterns-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="designpatterns-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="designpatterns-vbtn-radio" id="designpatterns-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="designpatterns-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. High-level Design Patterns -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-patterns-highlevel" aria-expanded="false" aria-controls="flush-patterns-highlevel">
+                      1. High-level Design Patterns
+                    </button>
+                  </h2>
+                  <div id="flush-patterns-highlevel" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDesignPatterns">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Common architectural patterns help structure systems for scalability, maintainability, and reliability.</li>
+                        <li>Examples:
+                          <ul>
+                            <li>Client-server: Central server serves multiple clients.</li>
+                            <li>Peer-to-peer (P2P): Each node can act as client and server.</li>
+                            <li>Publish-subscribe (pub-sub): Publishers send messages to channels; subscribers receive updates asynchronously.</li>
+                            <li>Event sourcing: All state changes are stored as a sequence of events, allowing reconstruction of state at any point.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> Chat apps often use pub-sub to broadcast messages to multiple users.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. SOLID Principles and Modular Design -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-patterns-solid" aria-expanded="false" aria-controls="flush-patterns-solid">
+                      2. SOLID Principles and Modular Design
+                    </button>
+                  </h2>
+                  <div id="flush-patterns-solid" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDesignPatterns">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>SOLID principles: Guidelines for writing clean, maintainable, and flexible object-oriented code:
+                          <ul>
+                            <li><strong>S:</strong> Single Responsibility Principle (one class = one purpose)</li>
+                            <li><strong>O:</strong> Open/Closed Principle (open for extension, closed for modification)</li>
+                            <li><strong>L:</strong> Liskov Substitution Principle (subtypes can replace base types without issues)</li>
+                            <li><strong>I:</strong> Interface Segregation Principle (prefer many small interfaces over a large one)</li>
+                            <li><strong>D:</strong> Dependency Inversion Principle (depend on abstractions, not concrete classes)</li>
+                          </ul>
+                        </li>
+                        <li>Modular design: Break the system into independent, reusable modules for easier development and testing.</li>
+                        <li><strong>Example:</strong> Separate payment processing, notifications, and user management into independent modules.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Idempotency in Distributed Systems -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-patterns-idempotency" aria-expanded="false" aria-controls="flush-patterns-idempotency">
+                      3. Idempotency in Distributed Systems
+                    </button>
+                  </h2>
+                  <div id="flush-patterns-idempotency" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDesignPatterns">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Idempotent operations produce the same result even if repeated.</li>
+                        <li>Important in distributed systems where network retries can cause duplicate requests.</li>
+                        <li><strong>Example:</strong> Submitting an order payment multiple times due to network failure should charge the customer only once.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Retry Mechanisms and Backoff Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-patterns-retry" aria-expanded="false" aria-controls="flush-patterns-retry">
+                      4. Retry Mechanisms and Backoff Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-patterns-retry" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDesignPatterns">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Used to handle temporary failures in distributed systems.</li>
+                        <li>Types:
+                          <ul>
+                            <li>Simple retry: Try again after failure.</li>
+                            <li>Exponential backoff: Gradually increase delay between retries to reduce load.</li>
+                            <li>Jitter: Add randomness to prevent thundering herd problem.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> If a service call fails due to network issues, retry after 1s, 2s, 4s… with small random jitter.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushScalabilityPerformance">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>6. Scalability & Performance</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="scalabilityperformance-vbtn-radio" id="scalabilityperformance-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="scalabilityperformance-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="scalabilityperformance-vbtn-radio" id="scalabilityperformance-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="scalabilityperformance-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="scalabilityperformance-vbtn-radio" id="scalabilityperformance-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="scalabilityperformance-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Horizontal Scaling Techniques -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scalability-horizontal" aria-expanded="false" aria-controls="flush-scalability-horizontal">
+                      1. Horizontal Scaling Techniques
+                    </button>
+                  </h2>
+                  <div id="flush-scalability-horizontal" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Adding more servers/nodes to distribute load across multiple machines.</li>
+                        <li>Improves system capacity and reliability.</li>
+                        <li><strong>Example:</strong> A web application adds 3 more backend servers behind a load balancer to handle increased traffic.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Partitioning and Replication Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scalability-partitioning" aria-expanded="false" aria-controls="flush-scalability-partitioning">
+                      2. Partitioning and Replication Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-scalability-partitioning" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Partitioning (Sharding): Divide data across multiple databases or servers to reduce load per node.
+                          <ul>
+                            <li>Horizontal partitioning splits by rows (e.g., user ID ranges).</li>
+                            <li>Vertical partitioning splits by columns (e.g., user info vs analytics).</li>
+                          </ul>
+                        </li>
+                        <li>Replication: Copy data to multiple nodes to improve read performance and provide high availability.</li>
+                        <li><strong>Example:</strong> User data is sharded by user ID across multiple database servers, with each shard replicated twice for redundancy.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Caching for Performance Improvement -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scalability-caching" aria-expanded="false" aria-controls="flush-scalability-caching">
+                      3. Caching for Performance Improvement
+                    </button>
+                  </h2>
+                  <div id="flush-scalability-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Temporarily store frequently accessed data closer to the application to reduce latency and database load.</li>
+                        <li>Types of caching:
+                          <ul>
+                            <li>In-memory: Redis, Memcached</li>
+                            <li>CDN caching: For static content like images, scripts, and videos</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> Cache product catalog in Redis to serve thousands of requests per second without hitting the database.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Database Connection Pooling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scalability-connectionpool" aria-expanded="false" aria-controls="flush-scalability-connectionpool">
+                      4. Database Connection Pooling
+                    </button>
+                  </h2>
+                  <div id="flush-scalability-connectionpool" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Reuse a pool of database connections instead of creating a new connection per request.</li>
+                        <li>Reduces latency and resource overhead for high-traffic applications.</li>
+                        <li><strong>Example:</strong> Web server maintains 50 open connections to a database, reusing them for incoming requests.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. CDN for Static Content -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scalability-cdn" aria-expanded="false" aria-controls="flush-scalability-cdn">
+                      5. CDN for Static Content
+                    </button>
+                  </h2>
+                  <div id="flush-scalability-cdn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Content Delivery Network (CDN) caches static assets (images, CSS, JS) on servers distributed globally.</li>
+                        <li>Reduces latency, improves load times, and decreases origin server load.</li>
+                        <li><strong>Example:</strong> A website uses CloudFront or Akamai to deliver images and videos faster to users worldwide.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushReliabilityMonitoring">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>7. Reliability & Monitoring</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="reliabilitymonitoring-vbtn-radio" id="reliabilitymonitoring-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="reliabilitymonitoring-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="reliabilitymonitoring-vbtn-radio" id="reliabilitymonitoring-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="reliabilitymonitoring-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="reliabilitymonitoring-vbtn-radio" id="reliabilitymonitoring-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="reliabilitymonitoring-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Health Checks and Failover Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-reliability-health" aria-expanded="false" aria-controls="flush-reliability-health">
+                      1. Health Checks and Failover Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-reliability-health" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Health checks: Regularly check if servers, services, or databases are operational.</li>
+                        <li>Can be simple HTTP endpoint checks or custom scripts.</li>
+                        <li>Failover strategies: Automatically switch traffic to backup systems if the primary system fails.</li>
+                        <li>Improves system availability and fault tolerance.</li>
+                        <li><strong>Example:</strong> Load balancer detects a downed server via health check and reroutes requests to healthy servers.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Logging and Monitoring (Prometheus, Grafana) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-reliability-logging" aria-expanded="false" aria-controls="flush-reliability-logging">
+                      2. Logging and Monitoring (Prometheus, Grafana)
+                    </button>
+                  </h2>
+                  <div id="flush-reliability-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Logging: Record events, errors, and system activity for debugging and auditing.</li>
+                        <li>Best practice: Include timestamps, request IDs, and context.</li>
+                        <li>Monitoring: Track system health, performance, and resource usage in real-time.</li>
+                        <li>Prometheus: Collects and stores metrics from applications/services.</li>
+                        <li>Grafana: Visualizes metrics in dashboards for easy analysis.</li>
+                        <li><strong>Example:</strong> Track CPU/memory usage of all servers and display trends on a Grafana dashboard.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Alerting and Incident Response -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-reliability-alerting" aria-expanded="false" aria-controls="flush-reliability-alerting">
+                      3. Alerting and Incident Response
+                    </button>
+                  </h2>
+                  <div id="flush-reliability-alerting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Set up alerts for abnormal behavior (high latency, failed requests, low disk space).</li>
+                        <li>Integrate with incident response workflows to quickly investigate and resolve issues.</li>
+                        <li><strong>Example:</strong> PagerDuty triggers an alert if API response time exceeds 2 seconds for 5 consecutive minutes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Metrics for System Performance -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-reliability-metrics" aria-expanded="false" aria-controls="flush-reliability-metrics">
+                      4. Metrics for System Performance
+                    </button>
+                  </h2>
+                  <div id="flush-reliability-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Latency: Time to respond to a request.</li>
+                        <li>Throughput: Number of requests processed per unit time.</li>
+                        <li>Error rate: Percentage of failed requests.</li>
+                        <li>Resource utilization: CPU, memory, disk, and network usage.</li>
+                        <li><strong>Example:</strong> Monitoring error rates helps identify failing services before users notice.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSecurityDesign">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>8. Security Considerations in Design</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="securitydesign-vbtn-radio" id="securitydesign-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="securitydesign-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitydesign-vbtn-radio" id="securitydesign-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="securitydesign-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitydesign-vbtn-radio" id="securitydesign-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="securitydesign-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Authentication & Authorization at Scale -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-auth" aria-expanded="false" aria-controls="flush-security-auth">
+                      1. Authentication & Authorization at Scale
+                    </button>
+                  </h2>
+                  <div id="flush-security-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensure users and services are properly identified (authentication) and can only access permitted resources (authorization).</li>
+                        <li>Use centralized identity providers (OAuth2, OpenID Connect, JWT) for consistent and scalable security.</li>
+                        <li><strong>Example:</strong> A multi-service platform uses a single identity server to issue tokens, allowing all services to verify user access without separate login systems.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Secure API Design -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-api" aria-expanded="false" aria-controls="flush-security-api">
+                      2. Secure API Design
+                    </button>
+                  </h2>
+                  <div id="flush-security-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Protect APIs from misuse and attacks:</li>
+                        <li>Validate input and output to prevent SQL injection or XSS.</li>
+                        <li>Use HTTPS for secure communication.</li>
+                        <li>Implement proper authentication and authorization.</li>
+                        <li><strong>Example:</strong> A payment API requires an access token for each request and validates the request body before processing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Rate Limiting and Preventing DDoS -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-rate" aria-expanded="false" aria-controls="flush-security-rate">
+                      3. Rate Limiting and Preventing DDoS
+                    </button>
+                  </h2>
+                  <div id="flush-security-rate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Rate limiting: Restrict number of requests per client to prevent abuse.</li>
+                        <li>DDoS protection: Use load balancers, WAFs, and CDNs to absorb and mitigate traffic spikes.</li>
+                        <li><strong>Example:</strong> API allows 100 requests/minute per user; traffic beyond this is throttled to protect the system.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Data Encryption in Transit and at Rest -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-encryption" aria-expanded="false" aria-controls="flush-security-encryption">
+                      4. Data Encryption in Transit and at Rest
+                    </button>
+                  </h2>
+                  <div id="flush-security-encryption" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>In transit: Encrypt data sent between clients and servers using TLS/HTTPS.</li>
+                        <li>At rest: Encrypt stored data in databases or storage systems to prevent exposure if compromised.</li>
+                        <li><strong>Example:</strong> Customer payment info is encrypted in the database and all API requests use HTTPS to prevent interception.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushCaseStudies">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>9. Real-world Design Case Studies</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="casestudies-vbtn-radio" id="casestudies-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="casestudies-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="casestudies-vbtn-radio" id="casestudies-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="casestudies-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="casestudies-vbtn-radio" id="casestudies-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="casestudies-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. URL Shortener -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-urlshortener" aria-expanded="false" aria-controls="flush-case-urlshortener">
+                      1. URL Shortener
+                    </button>
+                  </h2>
+                  <div id="flush-case-urlshortener" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Objective: Convert long URLs into short, unique links.</li>
+                        <li>Considerations:
+                          <ul>
+                            <li>Generate unique keys (hashing, base62 encoding).</li>
+                            <li>Store mappings efficiently in a database (key-value store like Redis or DynamoDB).</li>
+                            <li>Handle high read traffic using caching.</li>
+                          </ul>
+                        </li>
+                        <li>Scaling strategies: Partition data by key ranges, replicate database for reliability.</li>
+                        <li><strong>Example:</strong> bit.ly serves billions of short links with minimal latency.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Social Media Feed -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-socialfeed" aria-expanded="false" aria-controls="flush-case-socialfeed">
+                      2. Social Media Feed
+                    </button>
+                  </h2>
+                  <div id="flush-case-socialfeed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Objective: Show users a personalized, timely feed.</li>
+                        <li>Considerations:
+                          <ul>
+                            <li>Feed generation: push (precompute) vs pull (compute on request).</li>
+                            <li>Store user posts, likes, comments efficiently.</li>
+                            <li>Handle millions of concurrent users and updates.</li>
+                          </ul>
+                        </li>
+                        <li>Scaling strategies: Caching popular feeds, sharding user data, using message queues for asynchronous feed updates.</li>
+                        <li><strong>Example:</strong> Twitter uses distributed storage and caching to serve feeds quickly.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Chat Application -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-chatapp" aria-expanded="false" aria-controls="flush-case-chatapp">
+                      3. Chat Application
+                    </button>
+                  </h2>
+                  <div id="flush-case-chatapp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Objective: Real-time messaging between users.</li>
+                        <li>Considerations:
+                          <ul>
+                            <li>Low-latency delivery using WebSockets.</li>
+                            <li>Message persistence in database or distributed log.</li>
+                            <li>Presence and typing indicators.</li>
+                          </ul>
+                        </li>
+                        <li>Scaling strategies: Partition users across multiple servers, use pub-sub or message brokers (Kafka, RabbitMQ) for message delivery.</li>
+                        <li><strong>Example:</strong> WhatsApp uses Erlang servers for scalable, real-time messaging.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Video Streaming Service -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-videostream" aria-expanded="false" aria-controls="flush-case-videostream">
+                      4. Video Streaming Service
+                    </button>
+                  </h2>
+                  <div id="flush-case-videostream" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Objective: Deliver video content efficiently to users.</li>
+                        <li>Considerations:
+                          <ul>
+                            <li>Store and encode videos in multiple resolutions.</li>
+                            <li>Use CDNs to reduce latency.</li>
+                            <li>Adaptive bitrate streaming to adjust quality per user bandwidth.</li>
+                          </ul>
+                        </li>
+                        <li>Scaling strategies: Cache popular videos at edge servers, partition storage and replicate content.</li>
+                        <li><strong>Example:</strong> YouTube serves billions of videos using distributed storage and global CDNs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Ride-Hailing App -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-rideapp" aria-expanded="false" aria-controls="flush-case-rideapp">
+                      5. Ride-Hailing App
+                    </button>
+                  </h2>
+                  <div id="flush-case-rideapp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Objective: Match riders with nearby drivers in real-time.</li>
+                        <li>Considerations:
+                          <ul>
+                            <li>Real-time location tracking and geospatial queries.</li>
+                            <li>Dynamic pricing and surge calculation.</li>
+                            <li>High concurrency during peak hours.</li>
+                          </ul>
+                        </li>
+                        <li>Scaling strategies: Use sharded databases for trip and driver data, employ in-memory caches for nearby driver lookups, asynchronous queues for notifications and payment processing.</li>
+                        <li><strong>Example:</strong> Uber uses distributed services, caching, and real-time geolocation to handle millions of rides.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Bottlenecks, Data Flow, and Scaling Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-case-bottlenecks" aria-expanded="false" aria-controls="flush-case-bottlenecks">
+                      6. Bottlenecks, Data Flow, and Scaling Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-case-bottlenecks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Identify hotspots: database writes, API endpoints, or caching layers.</li>
+                        <li>Optimize data flow: asynchronous processing, message queues, caching.</li>
+                        <li>Plan scaling strategies: vertical/horizontal scaling, sharding, replication, CDNs.</li>
+                        <li>Monitor metrics: latency, throughput, error rates, and adjust system design accordingly.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>              
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
