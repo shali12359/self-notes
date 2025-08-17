@@ -31,7 +31,7 @@
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Fundamentals of Microservices</h3>
+                    <h3>1. Fundamentals of Microservices</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -183,21 +183,21 @@
                     </div>
                   </div>
                 </div>
-            </div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
+            </div><br>
+            <div class="accordion accordion-flush" id="accordionFlushExample2">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Microservices Design Patterns</h3>
+                    <h3>2. Microservices Design Patterns</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
                       <span>Progress:</span>
-                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio1" autocomplete="off" checked>
-                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1"><i class="fas fa-frown"></i></label>
-                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio2" autocomplete="off">
-                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2"><i class="fas fa-smile"></i></label>
-                      <input type="radio" class="btn-check" name="vbtn-radio" id="vbtn-radio3" autocomplete="off">
-                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio-2" id="vbtn-radio1-2" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vbtn-radio1-2"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio-2" id="vbtn-radio2-2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vbtn-radio2-2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="vbtn-radio-2" id="vbtn-radio3-2" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vbtn-radio3-2"><i class="fas fa-grin-hearts"></i></label>
                     </div>
                   </div>
                 </div>
@@ -206,11 +206,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      data-bs-target="#flush-collapseOne-1" aria-expanded="false" aria-controls="flush-collapseOne">
                       1. API Gateway Pattern
                     </button>
                   </h2>
-                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseOne-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> A single entry point for all client requests, which routes them to the correct microservice.</li>
@@ -225,11 +225,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                      data-bs-target="#flush-collapseTwo-1" aria-expanded="false" aria-controls="flush-collapseTwo">
                       2. Service Registry & Discovery
                     </button>
                   </h2>
-                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseTwo-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> Mechanism that helps microservices automatically find each other at runtime.</li>
@@ -245,11 +245,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      data-bs-target="#flush-collapseThree-1" aria-expanded="false" aria-controls="flush-collapseThree">
                       3. Database per Service Pattern
                     </button>
                   </h2>
-                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseThree-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> Each microservice has its own database, instead of sharing a single one.</li>
@@ -264,11 +264,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                      data-bs-target="#flush-collapseFour-1" aria-expanded="false" aria-controls="flush-collapseFour">
                       4. CQRS (Command Query Responsibility Segregation)
                     </button>
                   </h2>
-                  <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseFour-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> Separates read (queries) and write (commands) operations into different models.</li>
@@ -283,11 +283,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                      data-bs-target="#flush-collapseFive-1" aria-expanded="false" aria-controls="flush-collapseFive">
                       5. Saga Pattern (for Distributed Transactions)
                     </button>
                   </h2>
-                  <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseFive-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> Manages transactions across multiple services using a sequence of local transactions with compensation steps.</li>
@@ -307,11 +307,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                      data-bs-target="#flush-collapseSix-1" aria-expanded="false" aria-controls="flush-collapseSix">
                       6. Event Sourcing
                     </button>
                   </h2>
-                  <div id="flush-collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseSix-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> Instead of storing just the current state in the database, store a log of all state-changing events.</li>
@@ -326,11 +326,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                      data-bs-target="#flush-collapseSeven-1" aria-expanded="false" aria-controls="flush-collapseSeven">
                       7. Strangler Fig Pattern (Gradual Migration)
                     </button>
                   </h2>
-                  <div id="flush-collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                  <div id="flush-collapseSeven-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample2">
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Definition:</strong> A strategy for migrating from a monolith to microservices gradually.</li>
@@ -340,11 +340,11 @@
                     </div>
                   </div>
                 </div>
-            </div>
+            </div><br>
             <div class="accordion accordion-flush" id="accordionFlushServiceComm">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Service Communication</h3>
+                    <h3>3. Service Communication</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -476,11 +476,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushDataMgmt">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Data Management in Microservices</h3>
+                    <h3>4. Data Management in Microservices</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -606,11 +606,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushServiceDiscovery">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Service Discovery</h3>
+                    <h3>5. Service Discovery</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -628,11 +628,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-discovery-client" aria-expanded="false" aria-controls="flush-discovery-client">
-                      1. What
+                      data-bs-target="#flush-discovery-client-1" aria-expanded="false" aria-controls="flush-discovery-client">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-discovery-client" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
+                  <div id="flush-discovery-client-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -649,7 +649,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-discovery-client" aria-expanded="false" aria-controls="flush-discovery-client">
-                      1. Client-side discovery
+                      2. Client-side discovery
                     </button>
                   </h2>
                   <div id="flush-discovery-client" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
@@ -672,7 +672,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-discovery-server" aria-expanded="false" aria-controls="flush-discovery-server">
-                      2. Server-side discovery
+                      3. Server-side discovery
                     </button>
                   </h2>
                   <div id="flush-discovery-server" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
@@ -695,7 +695,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-discovery-tools" aria-expanded="false" aria-controls="flush-discovery-tools">
-                      3. Tools
+                      4. Tools
                     </button>
                   </h2>
                   <div id="flush-discovery-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushServiceDiscovery">
@@ -727,11 +727,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushApiGateway">
                 <div class="row">
                   <div class="col-10">
-                    <h3>API Gateway</h3>
+                    <h3>6. API Gateway</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -749,11 +749,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-api-role" aria-expanded="false" aria-controls="flush-api-role">
-                      1. What
+                      data-bs-target="#flush-api-role-1" aria-expanded="false" aria-controls="flush-api-role">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-api-role" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
+                  <div id="flush-api-role-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -769,7 +769,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-api-role" aria-expanded="false" aria-controls="flush-api-role">
-                      1. Role & Benefits of API Gateway
+                      2. Role & Benefits of API Gateway
                     </button>
                   </h2>
                   <div id="flush-api-role" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
@@ -794,7 +794,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-api-auth" aria-expanded="false" aria-controls="flush-api-auth">
-                      2. Authentication & Authorization
+                      3. Authentication & Authorization
                     </button>
                   </h2>
                   <div id="flush-api-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
@@ -819,7 +819,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-api-routing" aria-expanded="false" aria-controls="flush-api-routing">
-                      3. Routing & Load Balancing
+                      4. Routing & Load Balancing
                     </button>
                   </h2>
                   <div id="flush-api-routing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
@@ -837,7 +837,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-api-rate-cache" aria-expanded="false" aria-controls="flush-api-rate-cache">
-                      4. Rate Limiting & Caching
+                      5. Rate Limiting & Caching
                     </button>
                   </h2>
                   <div id="flush-api-rate-cache" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
@@ -856,7 +856,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-api-tools" aria-expanded="false" aria-controls="flush-api-tools">
-                      5. Popular Tools
+                      6. Popular Tools
                     </button>
                   </h2>
                   <div id="flush-api-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushApiGateway">
@@ -870,11 +870,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushSecurity">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Security in Microservices</h3>
+                    <h3>7. Security in Microservices</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -892,11 +892,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-sec-auth" aria-expanded="false" aria-controls="flush-sec-auth">
-                      1. What
+                      data-bs-target="#flush-sec-auth-1" aria-expanded="false" aria-controls="flush-sec-auth">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-sec-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                  <div id="flush-sec-auth-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -912,7 +912,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-sec-auth" aria-expanded="false" aria-controls="flush-sec-auth">
-                      1. Authentication & Authorization
+                      2. Authentication & Authorization
                     </button>
                   </h2>
                   <div id="flush-sec-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
@@ -955,7 +955,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-sec-api" aria-expanded="false" aria-controls="flush-sec-api">
-                      2. API Security Best Practices
+                      3. API Security Best Practices
                     </button>
                   </h2>
                   <div id="flush-sec-api" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
@@ -976,7 +976,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-sec-mtls" aria-expanded="false" aria-controls="flush-sec-mtls">
-                      3. Mutual TLS (mTLS)
+                      4. Mutual TLS (mTLS)
                     </button>
                   </h2>
                   <div id="flush-sec-mtls" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
@@ -996,7 +996,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-sec-secrets" aria-expanded="false" aria-controls="flush-sec-secrets">
-                      4. Secret Management
+                      5. Secret Management
                     </button>
                   </h2>
                   <div id="flush-sec-secrets" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
@@ -1014,11 +1014,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushDeployment">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Deployment & Orchestration</h3>
+                    <h3>8. Deployment & Orchestration</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -1036,11 +1036,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-deploy-container" aria-expanded="false" aria-controls="flush-deploy-container">
-                      1. What
+                      data-bs-target="#flush-deploy-container-1" aria-expanded="false" aria-controls="flush-deploy-container">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-deploy-container" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                  <div id="flush-deploy-container-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -1056,7 +1056,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-deploy-container" aria-expanded="false" aria-controls="flush-deploy-container">
-                      1. Containerization (Docker)
+                      2. Containerization (Docker)
                     </button>
                   </h2>
                   <div id="flush-deploy-container" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
@@ -1081,7 +1081,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-deploy-orchestration" aria-expanded="false" aria-controls="flush-deploy-orchestration">
-                      2. Container Orchestration
+                      3. Container Orchestration
                     </button>
                   </h2>
                   <div id="flush-deploy-orchestration" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
@@ -1116,7 +1116,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-deploy-mesh" aria-expanded="false" aria-controls="flush-deploy-mesh">
-                      3. Service Mesh (Istio, Linkerd)
+                      4. Service Mesh (Istio, Linkerd)
                     </button>
                   </h2>
                   <div id="flush-deploy-mesh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
@@ -1141,7 +1141,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-deploy-strategies" aria-expanded="false" aria-controls="flush-deploy-strategies">
-                      4. Rolling Updates & Blue-Green Deployments
+                      5. Rolling Updates & Blue-Green Deployments
                     </button>
                   </h2>
                   <div id="flush-deploy-strategies" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
@@ -1154,11 +1154,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushMonitoring">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Monitoring & Observability</h3>
+                    <h3>9. Monitoring & Observability</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -1176,11 +1176,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-monitor-logging" aria-expanded="false" aria-controls="flush-monitor-logging">
-                      1. What
+                      data-bs-target="#flush-monitor-logging-1" aria-expanded="false" aria-controls="flush-monitor-logging">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-monitor-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                  <div id="flush-monitor-logging-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -1196,7 +1196,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-monitor-logging" aria-expanded="false" aria-controls="flush-monitor-logging">
-                      1. Centralized Logging
+                      2. Centralized Logging
                     </button>
                   </h2>
                   <div id="flush-monitor-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
@@ -1226,7 +1226,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-monitor-tracing" aria-expanded="false" aria-controls="flush-monitor-tracing">
-                      2. Distributed Tracing
+                      3. Distributed Tracing
                     </button>
                   </h2>
                   <div id="flush-monitor-tracing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
@@ -1255,7 +1255,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-monitor-metrics" aria-expanded="false" aria-controls="flush-monitor-metrics">
-                      3. Metrics
+                      4. Metrics
                     </button>
                   </h2>
                   <div id="flush-monitor-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
@@ -1284,7 +1284,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-monitor-health" aria-expanded="false" aria-controls="flush-monitor-health">
-                      4. Health Checks & Uptime Monitoring
+                      5. Health Checks & Uptime Monitoring
                     </button>
                   </h2>
                   <div id="flush-monitor-health" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
@@ -1307,11 +1307,11 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div><br>
               <div class="accordion accordion-flush" id="accordionFlushResilience">
                 <div class="row">
                   <div class="col-10">
-                    <h3>Resilience & Fault Tolerance</h3>
+                    <h3>10. Resilience & Fault Tolerance</h3>
                   </div>
                   <div class="col-2">
                     <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
@@ -1329,11 +1329,11 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                      data-bs-target="#flush-resilience-circuit" aria-expanded="false" aria-controls="flush-resilience-circuit">
-                      1. What
+                      data-bs-target="#flush-resilience-circuit-1" aria-expanded="false" aria-controls="flush-resilience-circuit">
+                      1. What?
                     </button>
                   </h2>
-                  <div id="flush-resilience-circuit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
+                  <div id="flush-resilience-circuit-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
                     <div class="accordion-body">
                       <ul>
                         <li>
@@ -1349,7 +1349,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-resilience-circuit" aria-expanded="false" aria-controls="flush-resilience-circuit">
-                      1. Circuit Breaker Pattern
+                      2. Circuit Breaker Pattern
                     </button>
                   </h2>
                   <div id="flush-resilience-circuit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
@@ -1374,7 +1374,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-resilience-retry" aria-expanded="false" aria-controls="flush-resilience-retry">
-                      2. Retry Mechanism & Exponential Backoff
+                      3. Retry Mechanism & Exponential Backoff
                     </button>
                   </h2>
                   <div id="flush-resilience-retry" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
@@ -1393,7 +1393,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-resilience-bulkhead" aria-expanded="false" aria-controls="flush-resilience-bulkhead">
-                      3. Bulkhead Pattern
+                      4. Bulkhead Pattern
                     </button>
                   </h2>
                   <div id="flush-resilience-bulkhead" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
@@ -1412,7 +1412,7 @@
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                       data-bs-target="#flush-resilience-failover" aria-expanded="false" aria-controls="flush-resilience-failover">
-                      4. Failover Strategies
+                      5. Failover Strategies
                     </button>
                   </h2>
                   <div id="flush-resilience-failover" class="accordion-collapse collapse" data-bs-parent="#accordionFlushResilience">
@@ -1430,9 +1430,831 @@
                     </div>
                   </div>
                 </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>11. Testing Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="test-vbtn-radio" id="test-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="test-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="test-vbtn-radio" id="test-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="test-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="test-vbtn-radio" id="test-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="test-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Unit Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-test-unit" aria-expanded="false" aria-controls="flush-test-unit">
+                      1. Unit Testing
+                    </button>
+                  </h2>
+                  <div id="flush-test-unit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Focuses on testing small, isolated pieces of code (functions, classes, methods).</li>
+                        <li><strong>Purpose:</strong> Ensures microservice logic works as expected.</li>
+                        <li><strong>Frameworks:</strong> JUnit (Java), pytest (Python), Jest (JavaScript).</li>
+                        <li><strong>Benefits:</strong> Fast execution, immediate developer feedback.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Integration Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-test-integration" aria-expanded="false" aria-controls="flush-test-integration">
+                      2. Integration Testing
+                    </button>
+                  </h2>
+                  <div id="flush-test-integration" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Validates how different modules or services work together.</li>
+                        <li><strong>Example:</strong> Checking whether a service properly stores and retrieves data from a database.</li>
+                        <li><strong>Focus:</strong> Ensures correct communication via APIs, databases, or messaging systems.</li>
+                        <li><strong>Note:</strong> Slower than unit tests but essential for detecting interface issues.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Contract Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-test-contract" aria-expanded="false" aria-controls="flush-test-contract">
+                      3. Contract Testing (Pact)
+                    </button>
+                  </h2>
+                  <div id="flush-test-contract" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Ensures services agree on request and response structures.</li>
+                        <li><strong>Use Case:</strong> Useful when multiple teams independently build services that must communicate.</li>
+                        <li><strong>Example:</strong> Consumer (frontend) defines expected request/response; Provider (backend) ensures compliance.</li>
+                        <li><strong>Tool:</strong> Pact for consumer-driven contract testing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. End-to-End Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-test-e2e" aria-expanded="false" aria-controls="flush-test-e2e">
+                      4. End-to-End Testing
+                    </button>
+                  </h2>
+                  <div id="flush-test-e2e" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Validates entire system flows across multiple microservices.</li>
+                        <li><strong>Example:</strong> Simulating a user placing an order in an e-commerce app.</li>
+                        <li><strong>Purpose:</strong> Ensures frontend, backend, and services work together correctly.</li>
+                        <li><strong>Note:</strong> Slowest type of test but crucial for verifying business workflows.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Mocking Dependencies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-test-mocking" aria-expanded="false" aria-controls="flush-test-mocking">
+                      5. Mocking Dependencies & Services
+                    </button>
+                  </h2>
+                  <div id="flush-test-mocking" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Used when external systems (databases, APIs, payment gateways) are unavailable or costly during testing.</li>
+                        <li><strong>Purpose:</strong> Simulates behavior of real dependencies to isolate tests.</li>
+                        <li><strong>Benefit:</strong> Speeds up testing, avoids dependency costs.</li>
+                        <li><strong>Example:</strong> Mock a payment API to always return success.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushScalability">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>12. Scalability & Performance</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="scale-vbtn-radio" id="scale-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="scale-vbtn-radio1"><i class="fas fa-frown"></i></label>
+                      <input type="radio" class="btn-check" name="scale-vbtn-radio" id="scale-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="scale-vbtn-radio2"><i class="fas fa-smile"></i></label>
+                      <input type="radio" class="btn-check" name="scale-vbtn-radio" id="scale-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="scale-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Horizontal vs Vertical Scaling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scale-hv" aria-expanded="false" aria-controls="flush-scale-hv">
+                      1. Horizontal vs Vertical Scaling
+                    </button>
+                  </h2>
+                  <div id="flush-scale-hv" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalability">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Vertical Scaling (Scaling Up):</strong>
+                          <ul>
+                            <li>Adding more resources (CPU, RAM, storage) to a single server.</li>
+                            <li><strong>Example:</strong> Upgrading a 4-core CPU server to 16 cores.</li>
+                            <li><strong>Pros:</strong> Simple to implement, no app changes required.</li>
+                            <li><strong>Cons:</strong> Hardware limit, single point of failure, costly.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Horizontal Scaling (Scaling Out):</strong>
+                          <ul>
+                            <li>Adding more servers/machines to distribute the load.</li>
+                            <li><strong>Example:</strong> Adding 10 smaller servers instead of one large server.</li>
+                            <li><strong>Pros:</strong> Better fault tolerance, virtually unlimited scaling, cost-effective with cloud.</li>
+                            <li><strong>Cons:</strong> Requires load balancing, data distribution, more complex architecture.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Interview Tip:</strong> In microservices, <em>horizontal scaling</em> is preferred since services are stateless and easy to replicate.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Load Balancing Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scale-lb" aria-expanded="false" aria-controls="flush-scale-lb">
+                      2. Load Balancing Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-scale-lb" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalability">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Ensures traffic is evenly distributed across multiple service instances.</li>
+                        <li><strong>Strategies:</strong>
+                          <ul>
+                            <li><strong>Round Robin:</strong> Requests distributed sequentially. Simple and fair.</li>
+                            <li><strong>Least Connections:</strong> Sends requests to the server with the fewest active connections. Best for uneven workloads.</li>
+                            <li><strong>IP Hash / Session Affinity:</strong> Routes client requests to the same server. Useful when sessions are stateful (though stateless is preferred).</li>
+                            <li><strong>Weighted Load Balancing:</strong> Assigns more requests to higher-capacity servers.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Interview Tip:</strong> Load balancers also improve availability and handle failover.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Caching Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scale-cache" aria-expanded="false" aria-controls="flush-scale-cache">
+                      3. Caching Strategies (Redis, Memcached)
+                    </button>
+                  </h2>
+                  <div id="flush-scale-cache" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalability">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Reduces latency and offloads databases.</li>
+                        <li><strong>Types of Caching:</strong>
+                          <ul>
+                            <li><strong>Client-side:</strong> Stored in browser/local device.</li>
+                            <li><strong>Server-side:</strong> Cached in API gateway or application.</li>
+                            <li><strong>Database caching:</strong> Stores query results for faster responses.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Tools:</strong>
+                          <ul>
+                            <li><strong>Redis:</strong> In-memory caching with persistence, pub/sub, advanced data structures.</li>
+                            <li><strong>Memcached:</strong> Simple, fast key-value caching, no persistence.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Interview Tip:</strong> Caching reduces DB load, speeds response, but cache invalidation is tricky.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Performance Testing Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scale-perf" aria-expanded="false" aria-controls="flush-scale-perf">
+                      4. Performance Testing Tools
+                    </button>
+                  </h2>
+                  <div id="flush-scale-perf" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalability">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Validates system behavior under load.</li>
+                        <li><strong>JMeter:</strong>
+                          <ul>
+                            <li>GUI-based and scriptable.</li>
+                            <li>Supports load testing for web apps, APIs, DBs.</li>
+                            <li>Good for functional + performance testing.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Gatling:</strong>
+                          <ul>
+                            <li>Code-based tool (Scala DSL).</li>
+                            <li>High performance, CI/CD friendly.</li>
+                            <li>Efficient for large-scale load tests.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Interview Tip:</strong> Performance testing ensures scalability, stability, and reliability at peak workloads.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushEventDriven">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>13. Event-Driven Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="event-vbtn-radio" id="event-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="event-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="event-vbtn-radio" id="event-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="event-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="event-vbtn-radio" id="event-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="event-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Event Sourcing Concepts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-sourcing" aria-expanded="false" aria-controls="flush-event-sourcing">
+                      1. Event Sourcing Concepts
+                    </button>
+                  </h2>
+                  <div id="flush-event-sourcing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Idea:</strong> Instead of storing only the latest state, every change (event) is stored as a sequence.</li>
+                        <li><strong>Example:</strong> In a bank account, all deposits and withdrawals are recorded as events instead of just storing the balance.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Full audit trail (history of all changes).</li>
+                            <li>Easy to rebuild state by replaying events.</li>
+                            <li>Supports temporal queries (e.g., “Balance last week”).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Message Brokers (Kafka, RabbitMQ) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-message-brokers" aria-expanded="false" aria-controls="flush-message-brokers">
+                      2. Message Brokers (Kafka, RabbitMQ)
+                    </button>
+                  </h2>
+                  <div id="flush-message-brokers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Message Broker:</strong> Middleware system that handles communication between microservices via messages/events.</li>
+                        <li><strong>Apache Kafka:</strong>
+                          <ul>
+                            <li>Distributed streaming platform.</li>
+                            <li>Best for high-throughput event streaming.</li>
+                            <li>Stores events in a durable, scalable log.</li>
+                          </ul>
+                        </li>
+                        <li><strong>RabbitMQ:</strong>
+                          <ul>
+                            <li>Traditional message broker.</li>
+                            <li>Reliable message delivery, routing, and queuing.</li>
+                            <li>Often used for task queues and async communication.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Why Use Them?:</strong> Decouples services, improves scalability, and enables async processing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Event Streaming Patterns -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-patterns" aria-expanded="false" aria-controls="flush-event-patterns">
+                      3. Event Streaming Patterns
+                    </button>
+                  </h2>
+                  <div id="flush-event-patterns" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Event Notification:</strong> Lightweight events notifying other services that something happened.</li>
+                        <li><strong>Event-Carried State Transfer:</strong> Events contain full state, so consumers don’t need to query back.</li>
+                        <li><strong>Event Sourcing:</strong> Events are the source of truth, state rebuilt by replaying events.</li>
+                        <li><strong>CQRS (Command Query Responsibility Segregation):</strong>
+                          <ul>
+                            <li>Commands → change state (via events).</li>
+                            <li>Queries → read from optimized read models.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Event Schema Design & Versioning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-event-schema" aria-expanded="false" aria-controls="flush-event-schema">
+                      4. Event Schema Design & Versioning
+                    </button>
+                  </h2>
+                  <div id="flush-event-schema" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEventDriven">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Schema Design:</strong> Define how event data is structured (fields, types, metadata).
+                          <pre><code>{
+  "event": "UserRegisteredEvent",
+  "userId": "123",
+  "email": "test@example.com",
+  "registeredAt": "2024-08-17T10:00:00Z"
+}</code></pre>
+                        </li>
+                        <li><strong>Versioning:</strong>
+                          <ul>
+                            <li>Add optional fields (don’t break old readers).</li>
+                            <li>Never remove required fields.</li>
+                            <li>Use schema registries (e.g., Confluent Schema Registry for Kafka).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushCICD">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>14. CI/CD in Microservices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="cicd-vbtn-radio" id="cicd-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="cicd-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cicd-vbtn-radio" id="cicd-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="cicd-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cicd-vbtn-radio" id="cicd-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="cicd-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. GitOps -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-gitops" aria-expanded="false" aria-controls="flush-gitops">
+                      1. GitOps
+                    </button>
+                  </h2>
+                  <div id="flush-gitops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCICD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Git as the single source of truth for managing infra & apps.</li>
+                        <li><strong>How it works:</strong> Store configs (YAMLs, Helm charts, Terraform) in Git → changes merged → automation tools (ArgoCD, Flux) sync with cluster.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Clear audit history.</li>
+                            <li>Easy rollback.</li>
+                            <li>Automation & consistency across environments.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. CI/CD pipelines for multiple services -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-pipelines" aria-expanded="false" aria-controls="flush-pipelines">
+                      2. CI/CD Pipelines for Multiple Services
+                    </button>
+                  </h2>
+                  <div id="flush-pipelines" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCICD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>CI (Continuous Integration):</strong> Runs unit tests, builds Docker images, scans code quality/security.</li>
+                        <li><strong>CD (Continuous Delivery/Deployment):</strong> Deploys new version to staging/production.</li>
+                        <li><strong>Pipelines must handle:</strong>
+                          <ul>
+                            <li>Independent deployments.</li>
+                            <li>Dependency management (shared APIs/contracts).</li>
+                            <li>Automation (test → build → deploy).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Tools:</strong> Jenkins, GitHub Actions, GitLab CI, CircleCI.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Canary Deployments -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-canary" aria-expanded="false" aria-controls="flush-canary">
+                      3. Canary Deployments
+                    </button>
+                  </h2>
+                  <div id="flush-canary" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCICD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Release strategy where a small % of traffic (e.g., 5%) is routed to new version first.</li>
+                        <li><strong>Process:</strong> Gradually increase traffic until 100% if no errors.</li>
+                        <li><strong>Tools:</strong> Kubernetes, Istio, Argo Rollouts.</li>
+                        <li><strong>Benefits:</strong> Reduces risk, enables quick rollback if issues arise.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Infrastructure as Code (IaC) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-iac" aria-expanded="false" aria-controls="flush-iac">
+                      4. Infrastructure as Code (Terraform, Ansible)
+                    </button>
+                  </h2>
+                  <div id="flush-iac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCICD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Manage infrastructure (servers, networks, DBs) using code.</li>
+                        <li><strong>Terraform:</strong>
+                          <ul>
+                            <li>Declarative (“what infra should look like”).</li>
+                            <li>Supports multi-cloud (AWS, GCP, Azure).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Ansible:</strong>
+                          <ul>
+                            <li>Procedural/config management (“how to configure”).</li>
+                            <li>Used for automating server setup & deployments.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong> Consistency, scalability, repeatability, easier disaster recovery.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushDDD">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>15. Domain-Driven Design (DDD)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="ddd-vbtn-radio" id="ddd-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="ddd-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ddd-vbtn-radio" id="ddd-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="ddd-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ddd-vbtn-radio" id="ddd-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="ddd-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bounded-contexts-1" aria-expanded="false" aria-controls="flush-bounded-contexts">
+                      1. what?
+                    </button>
+                  </h2>
+                  <div id="flush-bounded-contexts-1" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDDD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li> 
+                          DDD is an approach to software design that focuses on modeling the software based on the business domain. The goal is to ensure that the system structure and language align closely with the business needs and rules.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 1. Bounded Contexts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bounded-contexts" aria-expanded="false" aria-controls="flush-bounded-contexts">
+                      2. Bounded Contexts
+                    </button>
+                  </h2>
+                  <div id="flush-bounded-contexts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDDD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Defines clear boundaries around a domain model. Terms & concepts have specific meanings within each context.</li>
+                        <li><strong>Example:</strong> In e-commerce:
+                          <ul>
+                            <li><em>Order Context</em> → placing & tracking orders.</li>
+                            <li><em>Payment Context</em> → billing & transactions.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Communication:</strong> Contexts interact via APIs or messaging.</li>
+                        <li>Ensures clarity & prevents mixing business rules.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Entities, Aggregates & Value Objects -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-entities" aria-expanded="false" aria-controls="flush-entities">
+                      3. Entities, Aggregates & Value Objects
+                    </button>
+                  </h2>
+                  <div id="flush-entities" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDDD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Entities:</strong> Have unique identity (e.g., <em>Customer</em> with ID).</li>
+                        <li><strong>Value Objects:</strong> Defined by attributes, no ID (e.g., <em>Address</em>).</li>
+                        <li><strong>Aggregates:</strong> Cluster of entities & value objects as one unit.
+                          <ul>
+                            <li>Aggregate root enforces consistency.</li>
+                            <li><em>Example:</em> Order aggregate → contains OrderItems.</li>
+                          </ul>
+                        </li>
+                        <li>Prevents inconsistent updates & keeps model robust.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Anti-Corruption Layer (ACL) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-acl" aria-expanded="false" aria-controls="flush-acl">
+                      4. Anti-Corruption Layer (ACL)
+                    </button>
+                  </h2>
+                  <div id="flush-acl" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDDD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Translator between bounded contexts with different models/terminologies.</li>
+                        <li><strong>Example:</strong> Payment expects <code>amountInCents</code>, Order uses <code>amountInDollars</code> → ACL handles conversion.</li>
+                        <li>Keeps services independent & prevents "corruption" of domain logic.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Strategic & Tactical Design -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-strategic-tactical" aria-expanded="false" aria-controls="flush-strategic-tactical">
+                      5. Strategic & Tactical Design
+                    </button>
+                  </h2>
+                  <div id="flush-strategic-tactical" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDDD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Strategic Design:</strong> High-level structure → focuses on bounded contexts & relationships (e.g., Order, Inventory, Payment contexts).</li>
+                        <li><strong>Tactical Design:</strong> Detailed design → entities, aggregates, value objects, repositories, services.</li>
+                        <li><em>Example:</em> Order aggregate validation belongs in tactical design.</li>
+                        <li>Strategic = big picture; Tactical = implementation details.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushGovernance">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>16. Governance & Best Practices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="gov-vbtn-radio" id="gov-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="gov-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="gov-vbtn-radio" id="gov-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="gov-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="gov-vbtn-radio" id="gov-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="gov-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. API Versioning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-api-versioning" aria-expanded="false" aria-controls="flush-api-versioning">
+                      1. API Versioning
+                    </button>
+                  </h2>
+                  <div id="flush-api-versioning" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGovernance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why it matters:</strong> APIs evolve, and backward-incompatible changes can break clients. Versioning ensures smooth transitions.</li>
+                        <li><strong>Approaches:</strong>
+                          <ul>
+                            <li><em>URI versioning</em> → <code>/api/v1/users</code></li>
+                            <li><em>Header versioning</em> → <code>Accept: application/vnd.myapp.v1+json</code></li>
+                            <li><em>Query parameter versioning</em> → <code>/api/users?version=1</code></li>
+                          </ul>
+                        </li>
+                        <li><strong>Best practice:</strong> Communicate deprecation timelines & keep multiple versions only as needed.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Documentation (OpenAPI/Swagger) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-docs" aria-expanded="false" aria-controls="flush-docs">
+                      2. Documentation (OpenAPI/Swagger)
+                    </button>
+                  </h2>
+                  <div id="flush-docs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGovernance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why it matters:</strong> Helps developers & teams understand how to use a service, reducing miscommunication.</li>
+                        <li><strong>Key points:</strong>
+                          <ul>
+                            <li>Industry standard for describing REST APIs.</li>
+                            <li>Provides interactive docs (Swagger UI).</li>
+                            <li>Enables contract-first development.</li>
+                            <li>Generates client SDKs automatically.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Best practice:</strong> Keep docs in sync with code (prefer auto-generation).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Dependency Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dependencies" aria-expanded="false" aria-controls="flush-dependencies">
+                      3. Dependency Management
+                    </button>
+                  </h2>
+                  <div id="flush-dependencies" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGovernance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why it matters:</strong> Poor dependency management causes version conflicts, security issues, & bloated builds.</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Use dependency lock files (e.g., <code>package-lock.json</code>, <code>pom.xml</code>).</li>
+                            <li>Update dependencies regularly to patch vulnerabilities.</li>
+                            <li>Avoid tight coupling → define clear contracts (API, events).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Service Ownership & Team Boundaries -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ownership" aria-expanded="false" aria-controls="flush-ownership">
+                      4. Service Ownership & Team Boundaries
+                    </button>
+                  </h2>
+                  <div id="flush-ownership" class="accordion-collapse collapse" data-bs-parent="#accordionFlushGovernance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why it matters:</strong> Each service must have a clear owner to avoid “no one’s responsible.”</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Apply <em>Conway’s Law</em> → service boundaries reflect team boundaries.</li>
+                            <li>Teams own services end-to-end (code → production).</li>
+                            <li>Define SLAs (agreements) & SLOs (objectives).</li>
+                            <li>Encourage autonomy while enforcing shared governance (security, logging, monitoring).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushMigration">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>17. Migration Strategies</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="migration-vbtn-radio" id="migration-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="migration-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="migration-vbtn-radio" id="migration-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="migration-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="migration-vbtn-radio" id="migration-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="migration-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Breaking down monoliths -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-breaking-monolith" aria-expanded="false" aria-controls="flush-breaking-monolith">
+                      1. Breaking down monoliths
+                    </button>
+                  </h2>
+                  <div id="flush-breaking-monolith" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMigration">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it is:</strong> A monolith is a single, tightly coupled application where all modules share the same codebase & database.</li>
+                        <li><strong>How migration works:</strong>
+                          <ul>
+                            <li>Identify modules (e.g., <em>user management, billing, catalog</em>).</li>
+                            <li>Extract modules into independent microservices with their own APIs & data stores.</li>
+                            <li>Use the <em>Strangler Fig Pattern</em> → gradually replace monolith parts until fully phased out.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Incremental migration approaches -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-incremental" aria-expanded="false" aria-controls="flush-incremental">
+                      2. Incremental migration approaches
+                    </button>
+                  </h2>
+                  <div id="flush-incremental" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMigration">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why incremental:</strong> Avoids risky “big bang” rewrites by migrating step by step.</li>
+                        <li><strong>Approaches:</strong>
+                          <ul>
+                            <li><em>API façade</em> → Monolith stays intact, new features come from microservices.</li>
+                            <li><em>Data ownership shift</em> → Move data responsibility to microservices in chunks.</li>
+                            <li><em>Feature toggles</em> → Route selected features to microservices while others stay in monolith.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefit:</strong> Lower risk, continuous delivery, and stable transitions.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Hybrid architecture during migration -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-hybrid" aria-expanded="false" aria-controls="flush-hybrid">
+                      3. Hybrid architecture during migration
+                    </button>
+                  </h2>
+                  <div id="flush-hybrid" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMigration">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it is:</strong> Monolith & microservices coexist during migration.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>Monolith handles core functions, new features go into microservices.</li>
+                            <li>Gateway routes requests between monolith & microservices.</li>
+                            <li>Temporary shared databases may exist, but goal = service owns its own data.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefit:</strong> Ensures business continuity during transition.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-                                                                   
-            
           </div>
       </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>

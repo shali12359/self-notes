@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Testing</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushTestingFundamentals">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. Fundamentals of Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="testingfundamentals-vbtn-radio" id="testingfundamentals-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="testingfundamentals-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="testingfundamentals-vbtn-radio" id="testingfundamentals-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="testingfundamentals-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="testingfundamentals-vbtn-radio" id="testingfundamentals-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="testingfundamentals-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Purpose of Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-purpose-testing" aria-expanded="false" aria-controls="flush-purpose-testing">
+                      1. Purpose of Testing: Correctness, Reliability, Performance
+                    </button>
+                  </h2>
+                  <div id="flush-purpose-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestingFundamentals">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Correctness:</strong> Ensures the software meets requirements.  
+                          <em>Example:</em> Checking if login works with valid credentials.
+                        </li>
+                        <li><strong>Reliability:</strong> Ensures the software works consistently under expected conditions.  
+                          <em>Example:</em> App doesn’t crash when thousands of users log in daily.
+                        </li>
+                        <li><strong>Performance:</strong> Ensures the software runs efficiently (speed, scalability, resource usage).  
+                          <em>Example:</em> Website loads within 2 seconds even under heavy traffic.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Types of Testing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-types-testing" aria-expanded="false" aria-controls="flush-types-testing">
+                      2. Types of Testing
+                    </button>
+                  </h2>
+                  <div id="flush-types-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestingFundamentals">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>a) Manual vs Automated</strong>
+                          <ul>
+                            <li><strong>Manual testing:</strong> Executed by humans. Good for exploratory/usability/small projects. Slower, prone to errors.</li>
+                            <li><strong>Automated testing:</strong> Uses scripts/tools. Good for regression, performance, large-scale testing. Faster, repeatable, requires setup/maintenance.</li>
+                          </ul>
+                        </li>
+                        <li><strong>b) Functional vs Non-functional</strong>
+                          <ul>
+                            <li><strong>Functional:</strong> What the system does. Verifies features against requirements.  
+                              <em>Examples:</em> unit tests, integration tests, UAT.
+                            </li>
+                            <li><strong>Non-functional:</strong> How the system works. Tests performance, security, usability, scalability.  
+                              <em>Example:</em> load testing for response time under stress.
+                            </li>
+                          </ul>
+                        </li>
+                        <li><strong>c) White-box vs Black-box vs Grey-box</strong>
+                          <ul>
+                            <li><strong>White-box:</strong> Tester knows internal code/logic.  
+                              <em>Example:</em> unit tests by developers.
+                            </li>
+                            <li><strong>Black-box:</strong> Tester only knows inputs/outputs, not code.  
+                              <em>Example:</em> QA testing login with different usernames/passwords.
+                            </li>
+                            <li><strong>Grey-box:</strong> Tester has partial knowledge.  
+                              <em>Example:</em> Security testing with DB knowledge but not full code.
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushUnitTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Unit Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="unittesting-vbtn-radio" id="unittesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="unittesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="unittesting-vbtn-radio" id="unittesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="unittesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="unittesting-vbtn-radio" id="unittesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="unittesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. What it is -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unit-what" aria-expanded="false" aria-controls="flush-unit-what">
+                      1. What it is
+                    </button>
+                  </h2>
+                  <div id="flush-unit-what" class="accordion-collapse collapse" data-bs-parent="#accordionFlushUnitTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Unit testing focuses on testing the smallest parts of the code (functions, methods, or classes) in isolation.</li>
+                        <li><strong>Example:</strong> Testing a function that calculates the sum of two numbers without involving the database or UI.</li>
+                        <li><strong>Goal:</strong> Ensure each small unit works correctly before combining them into a bigger system.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Writing Testable Code -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unit-testable" aria-expanded="false" aria-controls="flush-unit-testable">
+                      2. Writing Testable Code
+                    </button>
+                  </h2>
+                  <div id="flush-unit-testable" class="accordion-collapse collapse" data-bs-parent="#accordionFlushUnitTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Keep functions small and focused on one task.</li>
+                            <li>Use clear inputs and outputs (avoid hidden dependencies).</li>
+                            <li>Avoid hardcoding values (use parameters/configs).</li>
+                            <li>Use Dependency Injection to make replacing real services with mocks easier.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Common Frameworks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unit-frameworks" aria-expanded="false" aria-controls="flush-unit-frameworks">
+                      3. Common Frameworks
+                    </button>
+                  </h2>
+                  <div id="flush-unit-frameworks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushUnitTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Java:</strong>
+                          <ul>
+                            <li>JUnit → Most common testing framework, provides annotations like <code>@Test</code> for easy test methods.</li>
+                            <li>TestNG → More advanced, supports parallel tests and better test configuration.</li>
+                          </ul>
+                        </li>
+                        <li><strong>JavaScript:</strong>
+                          <ul>
+                            <li>Jest → Widely used with React, supports mocking and snapshot testing.</li>
+                            <li>Mocha → Flexible test framework, often used with Chai (assertion library).</li>
+                            <li>Jasmine → BDD-style testing, older but still used in Angular.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Python:</strong>
+                          <ul>
+                            <li>unittest → Built-in framework.</li>
+                            <li>pytest → Popular because of simple syntax and powerful plugins.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Mocking Dependencies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-unit-mocking" aria-expanded="false" aria-controls="flush-unit-mocking">
+                      4. Mocking Dependencies
+                    </button>
+                  </h2>
+                  <div id="flush-unit-mocking" class="accordion-collapse collapse" data-bs-parent="#accordionFlushUnitTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Sometimes, a unit depends on external systems (database, API, files).</li>
+                        <li><strong>Mocking</strong> replaces these real dependencies with fake ones, so tests stay fast and independent.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>Java: Mockito (most common mocking framework).</li>
+                            <li>JavaScript: Sinon (for mocking, stubbing, and spying).</li>
+                            <li>Python: unittest.mock (standard library for mocking).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushIntegrationTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>3. Integration Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="integrationtesting-vbtn-radio" id="integrationtesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="integrationtesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="integrationtesting-vbtn-radio" id="integrationtesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="integrationtesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="integrationtesting-vbtn-radio" id="integrationtesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="integrationtesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Testing Interaction -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-integration-interaction" aria-expanded="false" aria-controls="flush-integration-interaction">
+                      1. Testing Interaction Between Modules or Services
+                    </button>
+                  </h2>
+                  <div id="flush-integration-interaction" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIntegrationTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Integration testing checks whether different parts of the application (modules, services, or components) work correctly when combined.</li>
+                        <li><strong>Example:</strong> If you have a user service and an authentication service, integration testing ensures that a user created in the user service can successfully log in via the authentication service.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Detecting Issues -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-integration-issues" aria-expanded="false" aria-controls="flush-integration-issues">
+                      2. Detecting Interface or API Issues
+                    </button>
+                  </h2>
+                  <div id="flush-integration-issues" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIntegrationTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Many failures in real systems occur at the <strong>boundaries where modules interact</strong>.</li>
+                        <li>Integration testing focuses on catching issues such as:
+                          <ul>
+                            <li>Incorrect data formats between APIs.</li>
+                            <li>Wrong method calls or parameter mismatches.</li>
+                            <li>Network/communication errors in distributed systems.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Example:</strong> If a frontend expects <code>userEmail</code> but the backend API returns <code>emailId</code>, integration tests will detect this mismatch.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Tools and Frameworks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-integration-frameworks" aria-expanded="false" aria-controls="flush-integration-frameworks">
+                      3. Tools and Frameworks
+                    </button>
+                  </h2>
+                  <div id="flush-integration-frameworks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIntegrationTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Spring Boot Test (Java):</strong>
+                          <ul>
+                            <li>Provides annotations like <code>@SpringBootTest</code> to load the application context and test how beans, services, and repositories interact.</li>
+                            <li>Can test REST endpoints and database interactions in a real or in-memory environment.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Supertest (Node.js):</strong>
+                          <ul>
+                            <li>A library for testing HTTP APIs built with frameworks like Express.js.</li>
+                            <li>Allows you to send requests (<code>GET</code>, <code>POST</code>, <code>PUT</code>, <code>DELETE</code>) and assert responses.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Postman / Newman (API integration):</strong>
+                          <ul>
+                            <li><strong>Postman</strong> is a GUI tool for manually testing APIs.</li>
+                            <li><strong>Newman</strong> is the CLI companion that can run Postman test collections automatically in CI/CD pipelines.</li>
+                            <li>Useful for end-to-end API flow testing across services.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushE2ETesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>4. End-to-End (E2E) Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="e2etesting-vbtn-radio" id="e2etesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="e2etesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="e2etesting-vbtn-radio" id="e2etesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="e2etesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="e2etesting-vbtn-radio" id="e2etesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="e2etesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Testing Full Application Flow -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-e2e-flow" aria-expanded="false" aria-controls="flush-e2e-flow">
+                      1. Testing Full Application Flow
+                    </button>
+                  </h2>
+                  <div id="flush-e2e-flow" class="accordion-collapse collapse" data-bs-parent="#accordionFlushE2ETesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>E2E testing verifies the entire user journey in an application, from start to finish.</li>
+                        <li><strong>Example:</strong> For an e-commerce app, E2E testing would cover logging in, searching for a product, adding it to the cart, and completing checkout.</li>
+                        <li><strong>Goal:</strong> Ensure the system works as expected in a real-world scenario.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Ensuring All Components Work Together -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-e2e-components" aria-expanded="false" aria-controls="flush-e2e-components">
+                      2. Ensuring All Components Work Together
+                    </button>
+                  </h2>
+                  <div id="flush-e2e-components" class="accordion-collapse collapse" data-bs-parent="#accordionFlushE2ETesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Unlike unit or integration testing (which focus on smaller parts), E2E tests check how frontend, backend, databases, APIs, and third-party services work together.</li>
+                        <li>Helps catch issues like:
+                          <ul>
+                            <li>Misconfigured APIs</li>
+                            <li>Broken UI flows</li>
+                            <li>Incorrect data handling</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-e2e-tools" aria-expanded="false" aria-controls="flush-e2e-tools">
+                      3. Tools
+                    </button>
+                  </h2>
+                  <div id="flush-e2e-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushE2ETesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Selenium:</strong>
+                          <ul>
+                            <li>Widely used for automating browser actions.</li>
+                            <li>Supports multiple languages (Java, Python, JavaScript).</li>
+                            <li>Great for cross-browser testing.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Cypress:</strong>
+                          <ul>
+                            <li>Modern JavaScript-based testing tool.</li>
+                            <li>Fast execution with real-time reloading.</li>
+                            <li>Popular for testing React, Angular, and Vue apps.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Playwright:</strong>
+                          <ul>
+                            <li>Developed by Microsoft.</li>
+                            <li>Supports multiple browsers (Chromium, Firefox, WebKit).</li>
+                            <li>Can handle modern features like multi-tab testing and network mocking.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushRegressionTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>5. Regression Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="regressiontesting-vbtn-radio" id="regressiontesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="regressiontesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="regressiontesting-vbtn-radio" id="regressiontesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="regressiontesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="regressiontesting-vbtn-radio" id="regressiontesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="regressiontesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Ensuring New Changes Do Not Break Existing Functionality -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-regression-purpose" aria-expanded="false" aria-controls="flush-regression-purpose">
+                      1. Ensuring New Changes Do Not Break Existing Functionality
+                    </button>
+                  </h2>
+                  <div id="flush-regression-purpose" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRegressionTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Regression testing verifies that new code changes (like adding features or fixing bugs) do not unintentionally cause issues in parts of the system that were previously working.</li>
+                        <li><strong>Example:</strong> You fix a login bug, but regression testing ensures the signup, password reset, and dashboard still work correctly.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Automated Regression Suites -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-regression-automation" aria-expanded="false" aria-controls="flush-regression-automation">
+                      2. Automated Regression Suites
+                    </button>
+                  </h2>
+                  <div id="flush-regression-automation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRegressionTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Since regression testing needs to be repeated frequently, automation is highly effective.</li>
+                        <li>Automated regression suites are a collection of tests that run automatically whenever changes are made.</li>
+                        <li><strong>Example tools:</strong> JUnit/TestNG (Java), Jest (JavaScript), Pytest (Python), Selenium/Cypress (UI).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Continuous Testing in CI/CD Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-regression-cicd" aria-expanded="false" aria-controls="flush-regression-cicd">
+                      3. Continuous Testing in CI/CD Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-regression-cicd" class="accordion-collapse collapse" data-bs-parent="#accordionFlushRegressionTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Regression testing is often integrated into CI/CD pipelines so tests run automatically whenever code is pushed, built, or deployed.</li>
+                        <li>This ensures that issues are caught early, before reaching production.</li>
+                        <li><strong>Example:</strong> In a GitHub Actions pipeline, every pull request triggers the regression test suite to validate changes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushPerformanceTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>6. Performance & Load Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="performancetesting-vbtn-radio" id="performancetesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="performancetesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="performancetesting-vbtn-radio" id="performancetesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="performancetesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="performancetesting-vbtn-radio" id="performancetesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="performancetesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Testing Scalability and Performance -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-performance-purpose" aria-expanded="false" aria-controls="flush-performance-purpose">
+                      1. Testing Scalability and Performance
+                    </button>
+                  </h2>
+                  <div id="flush-performance-purpose" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformanceTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Performance testing checks how fast, stable, and efficient the system is under different workloads.</li>
+                        <li>Load testing checks how the system behaves when many users access it at the same time.</li>
+                        <li>Scalability testing ensures the system can handle increased load by adding resources (e.g., more servers).</li>
+                        <li><strong>💡 Example:</strong> Making sure an e-commerce website works smoothly on Black Friday when traffic spikes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-performance-tools" aria-expanded="false" aria-controls="flush-performance-tools">
+                      2. Tools
+                    </button>
+                  </h2>
+                  <div id="flush-performance-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformanceTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>JMeter:</strong> Widely used open-source tool for simulating heavy loads on web servers and analyzing performance.</li>
+                        <li><strong>Gatling:</strong> Focuses on load and stress testing, written in Scala, great for automating performance tests in CI/CD.</li>
+                        <li><strong>Locust:</strong> Python-based tool that lets you write load tests in code, making it flexible and easy to scale with distributed users.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Metrics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-performance-metrics" aria-expanded="false" aria-controls="flush-performance-metrics">
+                      3. Metrics
+                    </button>
+                  </h2>
+                  <div id="flush-performance-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformanceTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Response time:</strong> How long it takes for the system to respond to a request.</li>
+                        <li><strong>Throughput:</strong> Number of requests the system can handle per second/minute.</li>
+                        <li><strong>Latency:</strong> Delay between sending a request and receiving the first response.</li>
+                        <li><strong>Resource usage:</strong> CPU, memory, disk, and network utilization under load.</li>
+                        <li><strong>💡 Note:</strong> These metrics help identify bottlenecks, like slow queries or insufficient server capacity.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSecurityTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>7. Security & Vulnerability Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="securitytesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="securitytesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="securitytesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Basic Security Checks in Code -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-code" aria-expanded="false" aria-controls="flush-security-code">
+                      1. Basic Security Checks in Code
+                    </button>
+                  </h2>
+                  <div id="flush-security-code" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Security testing ensures the system is protected from potential attacks and data breaches.</li>
+                        <li>Code-level checks often include input validation, avoiding hardcoded credentials, proper authentication, and safe handling of sensitive data.</li>
+                        <li><strong>💡 Example:</strong> Preventing SQL Injection by using parameterized queries instead of string concatenation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Penetration Testing Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-penetration" aria-expanded="false" aria-controls="flush-security-penetration">
+                      2. Penetration Testing Basics
+                    </button>
+                  </h2>
+                  <div id="flush-security-penetration" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Penetration testing (pen testing) simulates real-world attacks to find weaknesses before hackers do.</li>
+                        <li>It can involve testing login systems, APIs, session handling, and access controls to ensure no unauthorized access is possible.</li>
+                        <li><strong>💡 Example:</strong> Trying to access admin pages without proper login to test if the system blocks it.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Common Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-security-tools" aria-expanded="false" aria-controls="flush-security-tools">
+                      3. Common Tools
+                    </button>
+                  </h2>
+                  <div id="flush-security-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>OWASP ZAP:</strong> Free, open-source tool for finding vulnerabilities in web applications (SQL injection, XSS, etc.).</li>
+                        <li><strong>Burp Suite:</strong> Popular commercial tool for manual and automated penetration testing, offering features like proxy interception, scanning, and exploitation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushTestAutomation">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>8. Test Automation & CI/CD</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="testautomation-vbtn-radio" id="testautomation-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="testautomation-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="testautomation-vbtn-radio" id="testautomation-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="testautomation-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="testautomation-vbtn-radio" id="testautomation-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="testautomation-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Writing Automated Test Suites -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-automation-suites" aria-expanded="false" aria-controls="flush-automation-suites">
+                      1. Writing Automated Test Suites
+                    </button>
+                  </h2>
+                  <div id="flush-automation-suites" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automated test suites are collections of tests that run without manual intervention.</li>
+                        <li>They can cover unit, integration, regression, and E2E tests to ensure consistent quality.</li>
+                        <li><strong>💡 Example:</strong> Writing a Jest suite for a React app that tests login, signup, and logout flows automatically.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Integrating Tests into Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-automation-pipelines" aria-expanded="false" aria-controls="flush-automation-pipelines">
+                      2. Integrating Tests into Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-automation-pipelines" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automated tests are integrated into CI/CD pipelines to run on every code change.</li>
+                        <li>This ensures that new commits or deployments do not break existing functionality.</li>
+                        <li><strong>💡 Example:</strong> Using GitHub Actions to run unit and integration tests every time a pull request is opened.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Continuous Testing Best Practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-automation-bestpractices" aria-expanded="false" aria-controls="flush-automation-bestpractices">
+                      3. Continuous Testing Best Practices
+                    </button>
+                  </h2>
+                  <div id="flush-automation-bestpractices" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Run tests frequently on code changes.</li>
+                        <li>Prioritize fast-running tests in CI to get quick feedback.</li>
+                        <li>Maintain reliable and stable test suites to avoid false positives/negatives.</li>
+                        <li>Monitor and report test results clearly for the team to take action.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushBestPracticesTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>9. Best Practices in Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="bestpracticestesting-vbtn-radio" id="bestpracticestesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="bestpracticestesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="bestpracticestesting-vbtn-radio" id="bestpracticestesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="bestpracticestesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="bestpracticestesting-vbtn-radio" id="bestpracticestesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="bestpracticestesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Writing Maintainable, Readable Tests -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bestpractices-maintainable" aria-expanded="false" aria-controls="flush-bestpractices-maintainable">
+                      1. Writing Maintainable, Readable Tests
+                    </button>
+                  </h2>
+                  <div id="flush-bestpractices-maintainable" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPracticesTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tests should be easy to understand and update as the code evolves.</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Use clear, descriptive test names (e.g., <code>test_user_can_login_with_valid_credentials</code>).</li>
+                            <li>Keep tests small and focused on a single behavior.</li>
+                            <li>Follow consistent formatting and naming conventions.</li>
+                          </ul>
+                        </li>
+                        <li><strong>💡 Example:</strong> Instead of one big test for all user actions, create separate tests for login, signup, and logout.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Using Assertions Effectively -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bestpractices-assertions" aria-expanded="false" aria-controls="flush-bestpractices-assertions">
+                      2. Using Assertions Effectively
+                    </button>
+                  </h2>
+                  <div id="flush-bestpractices-assertions" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPracticesTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Assertions are used to verify expected outcomes in tests.</li>
+                        <li>Effective assertions make tests precise and informative.</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Check specific results, not too broad.</li>
+                            <li>Include messages to clarify failures.</li>
+                          </ul>
+                        </li>
+                        <li><strong>💡 Example:</strong> <code>assertEquals(actualEmail, expectedEmail, "Email should match user input")</code></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Test Coverage vs Quality -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bestpractices-coverage" aria-expanded="false" aria-controls="flush-bestpractices-coverage">
+                      3. Test Coverage vs Quality
+                    </button>
+                  </h2>
+                  <div id="flush-bestpractices-coverage" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPracticesTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Test coverage measures how much of your code is exercised by tests (lines, branches, functions).</li>
+                        <li>Quality focuses on whether tests catch real issues and verify correct behavior.</li>
+                        <li><strong>Best practice:</strong> High coverage does not guarantee quality. Aim for meaningful tests that cover critical paths.</li>
+                        <li><strong>💡 Example:</strong> A test may cover 90% of code but miss edge cases like empty inputs or invalid data.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Isolating Tests to Avoid Side Effects -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-bestpractices-isolation" aria-expanded="false" aria-controls="flush-bestpractices-isolation">
+                      4. Isolating Tests to Avoid Side Effects
+                    </button>
+                  </h2>
+                  <div id="flush-bestpractices-isolation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPracticesTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tests should not depend on or affect each other; each test should run independently.</li>
+                        <li>Use mocks, stubs, and setup/teardown methods to isolate environment and dependencies.</li>
+                        <li><strong>💡 Example:</strong> When testing a payment function, mock the database and API calls so one test doesn’t change the state for others.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>                                          
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

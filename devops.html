@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Devops</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushDevOps">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. DevOps Fundamentals</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="devops-vbtn-radio" id="devops-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="devops-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="devops-vbtn-radio" id="devops-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="devops-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="devops-vbtn-radio" id="devops-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="devops-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Definition & Principles of DevOps -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-definition" aria-expanded="false" aria-controls="flush-devops-definition">
+                      1. Definition & Principles of DevOps
+                    </button>
+                  </h2>
+                  <div id="flush-devops-definition" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> DevOps combines development & IT operations to shorten development lifecycle and deliver high-quality software continuously.</li>
+                        <li><strong>Key Principles:</strong>
+                          <ul>
+                            <li>Continuous Integration (CI) – Frequent merges & automated tests.</li>
+                            <li>Continuous Delivery/Deployment (CD) – Automate deployment to production.</li>
+                            <li>Automation – Reduce manual work in building, testing, deployment.</li>
+                            <li>Monitoring & Feedback – Continuous monitoring & process improvement.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. DevOps vs. Traditional SDLC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-vs-sdlc" aria-expanded="false" aria-controls="flush-devops-vs-sdlc">
+                      2. DevOps vs. Traditional SDLC
+                    </button>
+                  </h2>
+                  <div id="flush-devops-vs-sdlc" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Aspect Comparison:</strong>
+                          <table class="table table-bordered table-sm">
+                            <thead>
+                              <tr>
+                                <th>Aspect</th>
+                                <th>Traditional SDLC</th>
+                                <th>DevOps</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Development & Operations</td>
+                                <td>Separate teams, handoffs</td>
+                                <td>Integrated teams, collaboration</td>
+                              </tr>
+                              <tr>
+                                <td>Deployment frequency</td>
+                                <td>Months or weeks</td>
+                                <td>Daily or multiple times a day</td>
+                              </tr>
+                              <tr>
+                                <td>Feedback</td>
+                                <td>Late in process</td>
+                                <td>Continuous feedback loops</td>
+                              </tr>
+                              <tr>
+                                <td>Automation</td>
+                                <td>Limited</td>
+                                <td>Extensive automation in testing, deployment, monitoring</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Key Benefits & Challenges -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-benefits" aria-expanded="false" aria-controls="flush-devops-benefits">
+                      3. Key Benefits & Challenges
+                    </button>
+                  </h2>
+                  <div id="flush-devops-benefits" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Faster software delivery</li>
+                            <li>Improved collaboration & communication</li>
+                            <li>Higher quality, fewer production issues</li>
+                            <li>Greater scalability & reliability</li>
+                          </ul>
+                        </li>
+                        <li><strong>Challenges:</strong>
+                          <ul>
+                            <li>Requires cultural change</li>
+                            <li>Toolchain complexity</li>
+                            <li>Resistance from teams used to traditional methods</li>
+                            <li>Security & compliance integration in CI/CD pipelines</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. DevOps Culture & Mindset -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-culture" aria-expanded="false" aria-controls="flush-devops-culture">
+                      4. DevOps Culture & Mindset
+                    </button>
+                  </h2>
+                  <div id="flush-devops-culture" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Collaboration, shared responsibility, continuous improvement.</li>
+                        <li>Encourages automation, transparency, learning from failures.</li>
+                        <li>Teams focus on end-to-end accountability (code → production).</li>
+                        <li>Breaking silos between Dev & Ops.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Collaboration Between Dev & Ops -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-collaboration" aria-expanded="false" aria-controls="flush-devops-collaboration">
+                      5. Collaboration Between Dev & Ops
+                    </button>
+                  </h2>
+                  <div id="flush-devops-collaboration" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Shared responsibilities: deployment, monitoring, incident resolution.</li>
+                        <li>Communication tools: ChatOps (Slack, Teams), Jira, shared dashboards.</li>
+                        <li>Automation: CI/CD pipelines reduce friction & improve reliability.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. DevOps Lifecycle Stages -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-devops-lifecycle" aria-expanded="false" aria-controls="flush-devops-lifecycle">
+                      6. DevOps Lifecycle Stages
+                    </button>
+                  </h2>
+                  <div id="flush-devops-lifecycle" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Stages:</strong>
+                          <ul>
+                            <li>Plan → Define features, tasks, backlog</li>
+                            <li>Code → Development using version control (Git)</li>
+                            <li>Build → Compile code, run tests, create artifacts</li>
+                            <li>Test → Automated testing for quality</li>
+                            <li>Release → Deploy to staging/production via CI/CD</li>
+                            <li>Deploy → Automated/orchestrated production deployment</li>
+                            <li>Operate → Monitor & manage applications</li>
+                            <li>Monitor → Collect metrics, logs, feedback for continuous improvement</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushVCS">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Version Control Systems (VCS)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="vcs-vbtn-radio" id="vcs-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="vcs-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="vcs-vbtn-radio" id="vcs-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="vcs-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="vcs-vbtn-radio" id="vcs-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="vcs-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Git Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-git-basics" aria-expanded="false" aria-controls="flush-git-basics">
+                      1. Git Basics
+                    </button>
+                  </h2>
+                  <div id="flush-git-basics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVCS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Distributed version control system for tracking changes in source code.</li>
+                        <li><strong>Common Commands:</strong>
+                          <ul>
+                            <li><em>clone</em> → Copies a remote repository to your local machine.</li>
+                            <li><em>commit</em> → Saves changes locally with a descriptive message.</li>
+                            <li><em>push</em> → Sends committed changes to remote repository.</li>
+                            <li><em>pull</em> → Fetches & merges changes from remote to local.</li>
+                            <li><em>branch</em> → Creates separate lines of development.</li>
+                            <li><em>merge</em> → Combines changes from one branch into another.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Git Workflows -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-git-workflows" aria-expanded="false" aria-controls="flush-git-workflows">
+                      2. Git Workflows
+                    </button>
+                  </h2>
+                  <div id="flush-git-workflows" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVCS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Gitflow:</strong> Structured workflow with master/main, develop, feature, release, hotfix branches. Best for scheduled releases.</li>
+                        <li><strong>Trunk-Based Development:</strong> Frequent commits directly to a single main branch. Encourages CI/CD & reduces long-lived branches.</li>
+                        <li><strong>Feature Branching:</strong> Each feature in its own branch, merged back to main after review/testing.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Merge Conflicts & Resolution -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-merge-conflicts" aria-expanded="false" aria-controls="flush-merge-conflicts">
+                      3. Merge Conflicts & Resolution
+                    </button>
+                  </h2>
+                  <div id="flush-merge-conflicts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVCS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>What it is:</strong> Occurs when Git cannot automatically merge changes from different branches.</li>
+                        <li><strong>Resolution:</strong>
+                          <ul>
+                            <li>Manually edit conflicting file(s).</li>
+                            <li>Decide which changes to keep.</li>
+                            <li>Commit the resolved file(s).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Best practices:</strong> Frequently pull changes, communicate with team, keep branches short-lived.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Git Hooks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-git-hooks" aria-expanded="false" aria-controls="flush-git-hooks">
+                      4. Git Hooks
+                    </button>
+                  </h2>
+                  <div id="flush-git-hooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVCS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Scripts that run automatically on specific Git events (commit, push, merge).</li>
+                        <li><strong>Types:</strong>
+                          <ul>
+                            <li>Pre-commit → Runs before commit (check formatting, run tests).</li>
+                            <li>Post-commit → Runs after commit (notifications).</li>
+                            <li>Pre-push → Validates before pushing to remote.</li>
+                          </ul>
+                        </li>
+                        <li>Enforces coding standards & automates repetitive tasks.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Using GitHub / GitLab / Bitbucket -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-git-platforms" aria-expanded="false" aria-controls="flush-git-platforms">
+                      5. Using GitHub / GitLab / Bitbucket
+                    </button>
+                  </h2>
+                  <div id="flush-git-platforms" class="accordion-collapse collapse" data-bs-parent="#accordionFlushVCS">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Remote Git repository hosting for collaboration.</li>
+                        <li><strong>Features:</strong>
+                          <ul>
+                            <li>Pull/Merge requests for code review</li>
+                            <li>Issue tracking & project boards</li>
+                            <li>CI/CD pipeline integration</li>
+                            <li>Team management & permissions</li>
+                          </ul>
+                        </li>
+                        <li><strong>Popular Platforms:</strong>
+                          <ul>
+                            <li>GitHub → Widely used, strong open-source community</li>
+                            <li>GitLab → Integrated CI/CD & DevOps features</li>
+                            <li>Bitbucket → Works well with Atlassian tools like Jira</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushCI">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>3. Continuous Integration (CI)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="ci-vbtn-radio" id="ci-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="ci-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ci-vbtn-radio" id="ci-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="ci-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ci-vbtn-radio" id="ci-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="ci-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. CI Concepts & Benefits -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ci-concepts" aria-expanded="false" aria-controls="flush-ci-concepts">
+                      1. CI Concepts & Benefits
+                    </button>
+                  </h2>
+                  <div id="flush-ci-concepts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Practice of frequently merging all developers’ code into a shared main branch, followed by automated builds & tests.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Detects bugs & integration issues early.</li>
+                            <li>Reduces integration problems at release time.</li>
+                            <li>Ensures an always-deployable codebase.</li>
+                            <li>Improves collaboration between developers.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Automated Builds & Testing in CI -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ci-automation" aria-expanded="false" aria-controls="flush-ci-automation">
+                      2. Automated Builds & Testing in CI
+                    </button>
+                  </h2>
+                  <div id="flush-ci-automation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Each code commit triggers automated build to compile & verify dependencies.</li>
+                        <li>Automated tests (unit, integration, functional) ensure code quality before merging.</li>
+                        <li>Early detection of failing tests prevents broken code from reaching production.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Popular CI Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ci-tools" aria-expanded="false" aria-controls="flush-ci-tools">
+                      3. Popular CI Tools
+                    </button>
+                  </h2>
+                  <div id="flush-ci-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Jenkins → Open-source, highly customizable, widely used.</li>
+                        <li>GitHub Actions → Integrated with GitHub, easy CI workflows.</li>
+                        <li>GitLab CI/CD → Integrated pipelines, auto-deploy, monitoring.</li>
+                        <li>CircleCI → Cloud-based CI/CD, containerized builds.</li>
+                        <li>Travis CI → Popular in open-source, simple configuration.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. CI Pipeline Configuration -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ci-pipeline" aria-expanded="false" aria-controls="flush-ci-pipeline">
+                      4. CI Pipeline Configuration
+                    </button>
+                  </h2>
+                  <div id="flush-ci-pipeline" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Pipeline Steps:</strong>
+                          <ul>
+                            <li>Checkout code from version control.</li>
+                            <li>Build the project.</li>
+                            <li>Run automated tests.</li>
+                            <li>Static code analysis (optional).</li>
+                            <li>Package artifacts for deployment.</li>
+                          </ul>
+                        </li>
+                        <li>Pipelines often defined via YAML or DSLs (Jenkinsfile, .github/workflows/*.yml).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Build Automation Scripts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-build-scripts" aria-expanded="false" aria-controls="flush-build-scripts">
+                      5. Build Automation Scripts
+                    </button>
+                  </h2>
+                  <div id="flush-build-scripts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCI">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tools automate building, testing, and packaging applications.</li>
+                        <li>Examples:
+                          <ul>
+                            <li>Maven → Java projects, uses <code>pom.xml</code>.</li>
+                            <li>Gradle → Flexible, faster builds; uses Groovy/Kotlin DSL.</li>
+                            <li>npm/Yarn → Node.js automation for build/test scripts.</li>
+                          </ul>
+                        </li>
+                        <li>Benefit: Reduces manual errors, ensures consistent builds across environments.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushCD">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>4. Continuous Delivery & Deployment (CD)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="cd-vbtn-radio" id="cd-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="cd-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cd-vbtn-radio" id="cd-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="cd-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cd-vbtn-radio" id="cd-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="cd-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Difference Between CI, CD, and Continuous Deployment -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cd-diff" aria-expanded="false" aria-controls="flush-cd-diff">
+                      1. Difference Between CI, CD, and Continuous Deployment
+                    </button>
+                  </h2>
+                  <div id="flush-cd-diff" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>CI (Continuous Integration):</strong> Frequent merging of code with automated builds & tests.</li>
+                        <li><strong>CD (Continuous Delivery):</strong> Extends CI by preparing code automatically for release; deployment is manual or gated.</li>
+                        <li><strong>Continuous Deployment:</strong> Every successful change is automatically deployed to production without manual approval.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Deployment Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cd-strategies" aria-expanded="false" aria-controls="flush-cd-strategies">
+                      2. Deployment Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-cd-strategies" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Blue-Green Deployment:</strong>
+                          <ul>
+                            <li>Two environments: blue (current) & green (new version).</li>
+                            <li>Switch traffic to green after verification.</li>
+                            <li>Quick rollback to blue if issues occur.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Rolling Deployment:</strong>
+                          <ul>
+                            <li>Gradually replaces old instances with new ones.</li>
+                            <li>Traffic shifts incrementally → minimal downtime.</li>
+                            <li>Suitable for high-availability systems.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Canary Deployment:</strong>
+                          <ul>
+                            <li>Deploy new version to a small user subset first.</li>
+                            <li>Monitor performance, then increase user coverage if successful.</li>
+                            <li>Reduces risk for critical services.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Recreate Strategy:</strong>
+                          <ul>
+                            <li>Shuts down old version completely before deploying new one.</li>
+                            <li>Simple but causes temporary downtime.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Automated Deployments -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cd-automation" aria-expanded="false" aria-controls="flush-cd-automation">
+                      3. Automated Deployments
+                    </button>
+                  </h2>
+                  <div id="flush-cd-automation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use scripts & pipelines to deploy automatically to staging/production.</li>
+                        <li>Reduces human error, ensures consistency, speeds up release cycles.</li>
+                        <li>Tools: Jenkins, GitHub Actions, GitLab CI/CD, ArgoCD, Spinnaker.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Deployment Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cd-pipeline" aria-expanded="false" aria-controls="flush-cd-pipeline">
+                      4. Deployment Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-cd-pipeline" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Steps from code merge to production release:
+                          <ul>
+                            <li>Build & test</li>
+                            <li>Package artifacts</li>
+                            <li>Deploy to staging</li>
+                            <li>Automated tests in staging</li>
+                            <li>Deploy to production (manual or automated)</li>
+                          </ul>
+                        </li>
+                        <li>Pipelines integrate with monitoring to validate deployments before full rollout.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Infrastructure as Code (IaC) Integration -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cd-iac" aria-expanded="false" aria-controls="flush-cd-iac">
+                      5. Infrastructure as Code (IaC) Integration
+                    </button>
+                  </h2>
+                  <div id="flush-cd-iac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCD">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automates provisioning & configuration of infrastructure using code (Terraform, Ansible, CloudFormation).</li>
+                        <li>CD pipelines can spin up environments, deploy services, and manage scaling.</li>
+                        <li>Ensures repeatable, consistent, and versioned infrastructure across environments.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushBuildTools">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>5. Build Tools</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="build-vbtn-radio" id="build-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="build-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="build-vbtn-radio" id="build-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="build-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="build-vbtn-radio" id="build-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="build-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Java Builds: Maven, Gradle -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-java-builds" aria-expanded="false" aria-controls="flush-java-builds">
+                      1. Java Builds: Maven, Gradle
+                    </button>
+                  </h2>
+                  <div id="flush-java-builds" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBuildTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Maven:</strong>
+                          <ul>
+                            <li>Uses <code>pom.xml</code> for project structure, dependencies & build lifecycle.</li>
+                            <li>Convention over configuration → standard project layout.</li>
+                            <li>Handles dependency resolution & plugin management.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Gradle:</strong>
+                          <ul>
+                            <li>Uses Groovy/Kotlin DSL (<code>build.gradle</code>) for flexible builds.</li>
+                            <li>Faster incremental builds & more customizable than Maven.</li>
+                            <li>Supports multi-project builds easily.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. JavaScript Builds: npm, Yarn, Webpack -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-js-builds" aria-expanded="false" aria-controls="flush-js-builds">
+                      2. JavaScript Builds: npm, Yarn, Webpack
+                    </button>
+                  </h2>
+                  <div id="flush-js-builds" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBuildTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>npm / Yarn:</strong>
+                          <ul>
+                            <li>Package managers → install dependencies, run scripts, manage versions.</li>
+                            <li>Support building, testing, and packaging JS applications.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Webpack:</strong>
+                          <ul>
+                            <li>Module bundler for JS applications.</li>
+                            <li>Combines JS, CSS, images into optimized bundles.</li>
+                            <li>Supports code splitting, tree shaking, hot module replacement.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Docker Builds -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-docker-builds" aria-expanded="false" aria-controls="flush-docker-builds">
+                      3. Docker Builds
+                    </button>
+                  </h2>
+                  <div id="flush-docker-builds" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBuildTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Docker build creates container images from a <code>Dockerfile</code>.</li>
+                        <li>Each step (FROM, COPY, RUN) forms a layer → enables caching for faster builds.</li>
+                        <li>Packages apps with dependencies → ensures consistent deployments across environments.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Dependency Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dependency-management" aria-expanded="false" aria-controls="flush-dependency-management">
+                      4. Dependency Management
+                    </button>
+                  </h2>
+                  <div id="flush-dependency-management" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBuildTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Build tools manage external libraries/modules required by projects.</li>
+                        <li>Maven/Gradle → Java dependencies; npm/Yarn → JS dependencies.</li>
+                        <li>Benefits: Prevent version conflicts, ensure reproducible builds, simplify updates.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Build Optimization Techniques -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-build-optimization" aria-expanded="false" aria-controls="flush-build-optimization">
+                      5. Build Optimization Techniques
+                    </button>
+                  </h2>
+                  <div id="flush-build-optimization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBuildTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Incremental builds → rebuild only changed modules.</li>
+                        <li>Parallel builds → compile multiple modules simultaneously.</li>
+                        <li>Caching dependencies & layers → reduce network calls & rebuild time.</li>
+                        <li>Minification & tree shaking → remove unused JS code.</li>
+                        <li>Docker layer caching → reuse unchanged layers for faster image builds.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushIaC">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>6. Infrastructure as Code (IaC)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="iac-vbtn-radio" id="iac-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="iac-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="iac-vbtn-radio" id="iac-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="iac-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="iac-vbtn-radio" id="iac-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="iac-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Concepts & Benefits of IaC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-iac-concepts" aria-expanded="false" aria-controls="flush-iac-concepts">
+                      1. Concepts & Benefits of IaC
+                    </button>
+                  </h2>
+                  <div id="flush-iac-concepts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIaC">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Definition:</strong> Manage & provision infrastructure using machine-readable configuration files instead of manual steps.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Consistency → reproducible environments across dev, test, prod.</li>
+                            <li>Automation → reduces errors & speeds provisioning.</li>
+                            <li>Version control → track, review, and rollback changes.</li>
+                            <li>Scalability → replicate or scale environments easily.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Terraform Basics & Advanced Modules -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-terraform" aria-expanded="false" aria-controls="flush-terraform">
+                      2. Terraform Basics & Advanced Modules
+                    </button>
+                  </h2>
+                  <div id="flush-terraform" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIaC">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Basics:</strong>
+                          <ul>
+                            <li>Define resources (VMs, networks, databases) in <code>.tf</code> files.</li>
+                            <li><code>terraform plan</code> → preview changes; <code>terraform apply</code> → provision resources.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Advanced Modules:</strong>
+                          <ul>
+                            <li>Reusable, parameterized configurations for common patterns.</li>
+                            <li>Enforce standards & reduce duplication.</li>
+                            <li>State management → tracks infrastructure state for safe incremental changes.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. AWS CloudFormation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cloudformation" aria-expanded="false" aria-controls="flush-cloudformation">
+                      3. AWS CloudFormation
+                    </button>
+                  </h2>
+                  <div id="flush-cloudformation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIaC">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>AWS-native IaC tool using YAML or JSON templates.</li>
+                        <li>Define resources: EC2, S3, RDS, etc.</li>
+                        <li>Automated provisioning, updating, and deletion.</li>
+                        <li>Supports stack management to group related resources.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Ansible, Chef, Puppet Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-config-tools" aria-expanded="false" aria-controls="flush-config-tools">
+                      4. Ansible, Chef, Puppet Basics
+                    </button>
+                  </h2>
+                  <div id="flush-config-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIaC">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Ansible:</strong> Agentless, uses YAML playbooks to automate configuration, deployment & orchestration.</li>
+                        <li><strong>Chef:</strong> Ruby DSL → define recipes for configuring servers.</li>
+                        <li><strong>Puppet:</strong> Declarative config tool → ensures desired state of infrastructure.</li>
+                        <li>Goal: automate server setup, software installation, & configuration.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Configuration Management Best Practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-config-best-practices" aria-expanded="false" aria-controls="flush-config-best-practices">
+                      5. Configuration Management Best Practices
+                    </button>
+                  </h2>
+                  <div id="flush-config-best-practices" class="accordion-collapse collapse" data-bs-parent="#accordionFlushIaC">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Keep infrastructure code in version control.</li>
+                        <li>Use modular & reusable components.</li>
+                        <li>Automate testing of configurations (linting, syntax checks, dry runs).</li>
+                        <li>Maintain environment parity across dev, staging, production.</li>
+                        <li>Use secrets management for credentials (Vault, AWS Secrets Manager).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushContainers">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>7. Containerization & Orchestration</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="containers-vbtn-radio" id="containers-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="containers-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="containers-vbtn-radio" id="containers-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="containers-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="containers-vbtn-radio" id="containers-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="containers-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Docker Fundamentals -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-docker" aria-expanded="false" aria-controls="flush-docker">
+                      1. Docker Fundamentals
+                    </button>
+                  </h2>
+                  <div id="flush-docker" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Docker:</strong> Packages apps & dependencies into containers for consistent execution.</li>
+                        <li><strong>Images:</strong> Immutable templates defining app + environment.</li>
+                        <li><strong>Containers:</strong> Running instances of images; lightweight & isolated.</li>
+                        <li><strong>Volumes:</strong> Persistent storage, independent of container lifecycle.</li>
+                        <li><strong>Networking:</strong> Container communication via bridge, overlay, or host networks.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Docker Compose -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-compose" aria-expanded="false" aria-controls="flush-compose">
+                      2. Docker Compose
+                    </button>
+                  </h2>
+                  <div id="flush-compose" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tool for defining & running multi-container Docker apps via <code>docker-compose.yml</code>.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Define services, networks, & volumes together.</li>
+                            <li>Start, stop, & scale multiple containers locally easily.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Kubernetes Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-k8s" aria-expanded="false" aria-controls="flush-k8s">
+                      3. Kubernetes Basics
+                    </button>
+                  </h2>
+                  <div id="flush-k8s" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Kubernetes:</strong> Orchestration platform for containerized apps.</li>
+                        <li><strong>Pods:</strong> Smallest deployable unit; can contain one or more containers.</li>
+                        <li><strong>Deployments:</strong> Manage pod lifecycle, replicas, rolling updates.</li>
+                        <li><strong>Services:</strong> Stable networking & load balancing to access pods.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Helm Charts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-helm" aria-expanded="false" aria-controls="flush-helm">
+                      4. Helm Charts
+                    </button>
+                  </h2>
+                  <div id="flush-helm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Helm:</strong> Package manager for Kubernetes.</li>
+                        <li><strong>Charts:</strong> Pre-configured templates for deploying apps in K8s.</li>
+                        <li><strong>Benefits:</strong> Simplifies deployment, supports parameterization & version control of K8s resources.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Service Mesh -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-mesh" aria-expanded="false" aria-controls="flush-mesh">
+                      5. Service Mesh (Istio, Linkerd)
+                    </button>
+                  </h2>
+                  <div id="flush-mesh" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Manages communication between microservices in a K8s cluster.</li>
+                        <li><strong>Provides:</strong> Traffic routing, load balancing, security (mTLS), observability (metrics, tracing, logging).</li>
+                        <li>Examples: Istio, Linkerd.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Scaling & Load Balancing -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scaling" aria-expanded="false" aria-controls="flush-scaling">
+                      6. Scaling & Load Balancing in Kubernetes
+                    </button>
+                  </h2>
+                  <div id="flush-scaling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushContainers">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Scaling:</strong> Adjust pod replicas based on demand.</li>
+                        <li>Manual → <code>kubectl scale</code>; Auto → Horizontal Pod Autoscaler (HPA).</li>
+                        <li><strong>Load balancing:</strong> K8s Services distribute traffic across pods for high availability & performance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushMonitoring">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>8. Monitoring & Logging</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="monitoring-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="monitoring-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="monitoring-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Importance of Observability -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-observability" aria-expanded="false" aria-controls="flush-observability">
+                      1. Importance of Observability in DevOps
+                    </button>
+                  </h2>
+                  <div id="flush-observability" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Observability = understanding system’s internal state via logs, metrics, and traces.</li>
+                        <li>Ensures early detection of issues, performance bottlenecks, and failures.</li>
+                        <li>Helps teams maintain uptime and improve user experience proactively.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Monitoring Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-monitoring-tools" aria-expanded="false" aria-controls="flush-monitoring-tools">
+                      2. Monitoring Tools: Prometheus, Grafana
+                    </button>
+                  </h2>
+                  <div id="flush-monitoring-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Prometheus:</strong> Open-source monitoring & alerting toolkit; collects metrics, supports PromQL queries.</li>
+                        <li><strong>Grafana:</strong> Visualization tool for metrics; creates dashboards, charts, alerts.</li>
+                        <li>Together → provide real-time observability and alerting.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Logging Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-logging-tools" aria-expanded="false" aria-controls="flush-logging-tools">
+                      3. Logging Tools: ELK Stack, Loki
+                    </button>
+                  </h2>
+                  <div id="flush-logging-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>ELK Stack:</strong> Centralized logging solution.
+                          <ul>
+                            <li>Elasticsearch → store & index logs for fast search.</li>
+                            <li>Logstash → collect, transform, forward logs.</li>
+                            <li>Kibana → visualize logs with dashboards & queries.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Loki:</strong> Lightweight logging optimized for Kubernetes.</li>
+                        <li>Centralized logging → faster debugging & compliance audits.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. APM Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-apm" aria-expanded="false" aria-controls="flush-apm">
+                      4. Application Performance Monitoring (APM) Tools
+                    </button>
+                  </h2>
+                  <div id="flush-apm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Monitor app-level performance: response times, error rates, transaction traces.</li>
+                        <li>Provide distributed tracing for microservices.</li>
+                        <li>Examples:
+                          <ul>
+                            <li>New Relic → infrastructure, apps, & end-user experience monitoring.</li>
+                            <li>Datadog → integrates logs, metrics, & traces in one platform.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Alerts & Incident Response -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-alerts" aria-expanded="false" aria-controls="flush-alerts">
+                      5. Alerts & Incident Response
+                    </button>
+                  </h2>
+                  <div id="flush-alerts" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoring">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Alerts notify teams of anomalies, threshold breaches, or failures.</li>
+                        <li>Should be actionable to reduce alert fatigue.</li>
+                        <li>Incident response steps:
+                          <ul>
+                            <li>Detect → Identify the issue.</li>
+                            <li>Diagnose → Find root cause.</li>
+                            <li>Mitigate → Apply fix or rollback.</li>
+                            <li>Post-mortem → Analyze incident for prevention.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushCloud">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>9. Cloud Platforms for DevOps</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="cloud-vbtn-radio" id="cloud-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="cloud-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cloud-vbtn-radio" id="cloud-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="cloud-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="cloud-vbtn-radio" id="cloud-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="cloud-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. AWS DevOps Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-aws-devops" aria-expanded="false" aria-controls="flush-aws-devops">
+                      1. AWS DevOps Tools (CodeBuild, CodeDeploy, CodePipeline)
+                    </button>
+                  </h2>
+                  <div id="flush-aws-devops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCloud">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>CodeBuild:</strong> Managed build service → compiles code, runs tests, produces artifacts.</li>
+                        <li><strong>CodeDeploy:</strong> Automates deployment to EC2, Lambda, or on-prem servers.</li>
+                        <li><strong>CodePipeline:</strong> Orchestrates CI/CD workflows connecting source, build, test, and deployment stages.</li>
+                        <li><strong>Benefits:</strong> Tight AWS integration, fully managed, scalable, reduces manual effort.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Azure DevOps -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-azure-devops" aria-expanded="false" aria-controls="flush-azure-devops">
+                      2. Azure DevOps
+                    </button>
+                  </h2>
+                  <div id="flush-azure-devops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCloud">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Azure Repos:</strong> Git repositories for version control.</li>
+                        <li><strong>Azure Pipelines:</strong> CI/CD automation for any platform or language.</li>
+                        <li><strong>Azure Boards:</strong> Work item tracking and project management.</li>
+                        <li><strong>Azure Artifacts:</strong> Package management.</li>
+                        <li>Supports hybrid cloud & integrates with Microsoft and third-party tools.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Google Cloud Build -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-gcp-build" aria-expanded="false" aria-controls="flush-gcp-build">
+                      3. Google Cloud Build
+                    </button>
+                  </h2>
+                  <div id="flush-gcp-build" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCloud">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Managed CI/CD platform on GCP.</li>
+                        <li>Automates building, testing, deploying apps in containers, serverless environments, or VMs.</li>
+                        <li>Integrates with GCP services: Kubernetes Engine, Cloud Run, Artifact Registry.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Cloud-native Deployment Patterns -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cloud-patterns" aria-expanded="false" aria-controls="flush-cloud-patterns">
+                      4. Cloud-native Deployment Patterns
+                    </button>
+                  </h2>
+                  <div id="flush-cloud-patterns" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCloud">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Immutable infrastructure → Replace servers/containers rather than modifying them.</li>
+                        <li>Blue-Green Deployment → Deploy new version alongside old, switch traffic after verification.</li>
+                        <li>Canary Deployment → Gradually roll out to a small subset of users.</li>
+                        <li>Serverless Deployments → Managed functions (AWS Lambda, Azure Functions, Cloud Functions) for rapid scaling.</li>
+                        <li>Benefits: Faster releases, scalability, resilience, simplified rollback.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>10. Security in DevOps (DevSecOps)</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="security-vbtn-radio" id="security-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="security-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="security-vbtn-radio" id="security-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="security-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="security-vbtn-radio" id="security-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="security-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Secure Coding Practices in Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-secure-coding" aria-expanded="false" aria-controls="flush-secure-coding">
+                      1. Secure Coding Practices in Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-secure-coding" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Integrate security checks into CI/CD pipelines.</li>
+                        <li>Examples: input validation, avoid hard-coded secrets, enforce proper authentication/authorization, code reviews.</li>
+                        <li>Benefit: Detect vulnerabilities early in development rather than post-deployment.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Secrets Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-secrets-management" aria-expanded="false" aria-controls="flush-secrets-management">
+                      2. Secrets Management (Vault, AWS Secrets Manager)
+                    </button>
+                  </h2>
+                  <div id="flush-secrets-management" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Secrets: Credentials, API keys, tokens, certificates used by applications.</li>
+                        <li>Tools:
+                          <ul>
+                            <li>HashiCorp Vault → Centralized secret storage with dynamic secrets & access control.</li>
+                            <li>AWS Secrets Manager → Managed service to store, rotate, and access secrets securely.</li>
+                          </ul>
+                        </li>
+                        <li>Benefit: Prevents secrets from being hard-coded or exposed in source code.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Static Application Security Testing (SAST) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sast" aria-expanded="false" aria-controls="flush-sast">
+                      3. Static Application Security Testing (SAST)
+                    </button>
+                  </h2>
+                  <div id="flush-sast" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Analyzes source code or binaries without executing the app.</li>
+                        <li>Detects vulnerabilities: SQL injection, XSS, insecure patterns, hard-coded secrets.</li>
+                        <li>Tools: SonarQube, Checkmarx, Fortify.</li>
+                        <li>Benefit: Catch security issues before deployment.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Dynamic Application Security Testing (DAST) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dast" aria-expanded="false" aria-controls="flush-dast">
+                      4. Dynamic Application Security Testing (DAST)
+                    </button>
+                  </h2>
+                  <div id="flush-dast" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tests running application to identify runtime vulnerabilities.</li>
+                        <li>Focus: Authentication flaws, SQL injections, XSS.</li>
+                        <li>Typically done in staging during CI/CD pipeline.</li>
+                        <li>Tools: OWASP ZAP, Burp Suite.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Dependency Scanning Tools -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dependency-scanning" aria-expanded="false" aria-controls="flush-dependency-scanning">
+                      5. Dependency Scanning Tools (OWASP Dependency-Check, Snyk)
+                    </button>
+                  </h2>
+                  <div id="flush-dependency-scanning" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Scan third-party libraries for known vulnerabilities.</li>
+                        <li>Tools:
+                          <ul>
+                            <li>OWASP Dependency-Check → Detects vulnerable libraries (Java, .NET, Python, etc.).</li>
+                            <li>Snyk → Monitors dependencies continuously and provides automatic fixes.</li>
+                          </ul>
+                        </li>
+                        <li>Benefit: Reduces supply chain risks in applications.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushDeployment">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>11. Deployment Environments</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="deployment-vbtn-radio" id="deployment-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="deployment-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="deployment-vbtn-radio" id="deployment-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="deployment-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="deployment-vbtn-radio" id="deployment-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="deployment-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Development, Testing, Staging, Production -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-env-types" aria-expanded="false" aria-controls="flush-env-types">
+                      1. Development, Testing, Staging, Production
+                    </button>
+                  </h2>
+                  <div id="flush-env-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Development (Dev):</strong> Local environment for writing and testing code. Frequent changes and unstable builds allowed.</li>
+                        <li><strong>Testing (QA):</strong> Test functionality, integration, and bugs before release. Mirrors some production aspects.</li>
+                        <li><strong>Staging:</strong> Pre-production environment closely replicating production. Used for final verification, load testing, and UAT.</li>
+                        <li><strong>Production (Prod):</strong> Live environment for end-users. High stability and availability are critical.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Environment Parity -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-env-parity" aria-expanded="false" aria-controls="flush-env-parity">
+                      2. Environment Parity
+                    </button>
+                  </h2>
+                  <div id="flush-env-parity" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensures consistency across all environments to reduce “works on my machine” issues.</li>
+                        <li>Factors: OS, runtime versions, database schema, configuration, dependencies.</li>
+                        <li>Tools like Docker help maintain parity by containerizing applications.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Managing Multiple Environments with Configs -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-env-configs" aria-expanded="false" aria-controls="flush-env-configs">
+                      3. Managing Multiple Environments with Configs
+                    </button>
+                  </h2>
+                  <div id="flush-env-configs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use separate configuration files (e.g., <code>application-dev.yml</code>, <code>application-prod.yml</code>) or environment variables.</li>
+                        <li>Allows same codebase to behave differently based on environment.</li>
+                        <li>Supports CI/CD pipelines to deploy correct configuration automatically per environment.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Feature Toggles -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-feature-toggles" aria-expanded="false" aria-controls="flush-feature-toggles">
+                      4. Feature Toggles
+                    </button>
+                  </h2>
+                  <div id="flush-feature-toggles" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDeployment">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Enable or disable features without redeploying code.</li>
+                        <li>Use cases: gradual feature rollout, A/B testing, safe experimentation in production.</li>
+                        <li>Controlled via configuration, flags, or feature management tools (e.g., LaunchDarkly, Flagsmith).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushAutomation">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>12. Automation in DevOps</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="automation-vbtn-radio" id="automation-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="automation-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="automation-vbtn-radio" id="automation-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="automation-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="automation-vbtn-radio" id="automation-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="automation-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Scripting with Bash, Python, PowerShell -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-scripting" aria-expanded="false" aria-controls="flush-scripting">
+                      1. Scripting with Bash, Python, PowerShell
+                    </button>
+                  </h2>
+                  <div id="flush-scripting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Bash:</strong> Linux automation, file manipulation, process control.</li>
+                        <li><strong>Python:</strong> Cross-platform automation, API calls, orchestration.</li>
+                        <li><strong>PowerShell:</strong> Windows automation, system tasks, deployments.</li>
+                        <li><strong>Benefits:</strong> Reduces manual effort, ensures repeatability, improves efficiency.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Automating Builds & Deployments -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-build-deploy" aria-expanded="false" aria-controls="flush-build-deploy">
+                      2. Automating Builds & Deployments
+                    </button>
+                  </h2>
+                  <div id="flush-build-deploy" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automate compilation, testing, packaging, and deployment to staging or production.</li>
+                        <li>Reduces human errors and ensures consistent, repeatable builds.</li>
+                        <li>Integrated in CI/CD pipelines using Jenkins, GitHub Actions, GitLab CI/CD, or CircleCI.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Automated Rollbacks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rollbacks" aria-expanded="false" aria-controls="flush-rollbacks">
+                      3. Automated Rollbacks
+                    </button>
+                  </h2>
+                  <div id="flush-rollbacks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automatically revert to a previous stable version if deployment fails.</li>
+                        <li>Minimizes downtime and reduces release risks.</li>
+                        <li>Implemented using Blue-Green, Canary, or automated rollback scripts in CI/CD pipelines.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Infrastructure Provisioning Automation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-infra-provision" aria-expanded="false" aria-controls="flush-infra-provision">
+                      4. Infrastructure Provisioning Automation
+                    </button>
+                  </h2>
+                  <div id="flush-infra-provision" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAutomation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automates creation and configuration of servers, networks, and cloud resources.</li>
+                        <li>Tools: Terraform, Ansible, CloudFormation, Chef, Puppet.</li>
+                        <li>Benefits: Rapid, consistent environment setup, reduced human errors, supports scaling & disaster recovery.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushCollabDoc">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>13. Collaboration & Documentation in DevOps</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="collabdoc-vbtn-radio" id="collabdoc-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="collabdoc-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="collabdoc-vbtn-radio" id="collabdoc-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="collabdoc-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="collabdoc-vbtn-radio" id="collabdoc-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="collabdoc-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Using Jira, Confluence, Trello in DevOps -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tools" aria-expanded="false" aria-controls="flush-tools">
+                      1. Using Jira, Confluence, Trello in DevOps
+                    </button>
+                  </h2>
+                  <div id="flush-tools" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollabDoc">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Jira:</strong> Task & project management, issue tracking, sprints, releases.</li>
+                        <li><strong>Confluence:</strong> Documentation platform for design docs, decisions, and knowledge sharing.</li>
+                        <li><strong>Trello:</strong> Lightweight Kanban-style boards for task tracking & collaboration.</li>
+                        <li><strong>Benefits:</strong> Improves visibility, planning, and communication across DevOps teams.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. ChatOps (Slack, Microsoft Teams Integration) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-chatops" aria-expanded="false" aria-controls="flush-chatops">
+                      2. ChatOps (Slack, Microsoft Teams Integration)
+                    </button>
+                  </h2>
+                  <div id="flush-chatops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollabDoc">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Collaboration through chat platforms with integrated DevOps tools.</li>
+                        <li>Examples: Trigger builds, deploys, or alerts directly from Slack/Teams.</li>
+                        <li><strong>Benefits:</strong> Faster communication, reduced context switching, centralized notifications & operations.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Documentation in Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-doc-pipelines" aria-expanded="false" aria-controls="flush-doc-pipelines">
+                      3. Documentation in Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-doc-pipelines" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollabDoc">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Embed documentation into CI/CD pipelines for transparency and automation visibility.</li>
+                        <li>Examples: Pipeline step descriptions, generated reports for tests, code coverage, or security scans.</li>
+                        <li>Helps teams understand automation flow and maintain transparency.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Runbooks & Playbooks -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-runbooks" aria-expanded="false" aria-controls="flush-runbooks">
+                      4. Runbooks & Playbooks
+                    </button>
+                  </h2>
+                  <div id="flush-runbooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollabDoc">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Runbooks:</strong> Step-by-step instructions for routine operations or incident resolution.</li>
+                        <li><strong>Playbooks:</strong> Predefined workflows for complex tasks, often automated.</li>
+                        <li><strong>Benefits:</strong> Standardizes operations, reduces errors during incidents, and supports onboarding.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushPerformance">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>14. Performance Optimization</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="performance-vbtn-radio" id="performance-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="performance-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="performance-vbtn-radio" id="performance-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="performance-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="performance-vbtn-radio" id="performance-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="performance-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Build Caching -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-build-caching" aria-expanded="false" aria-controls="flush-build-caching">
+                      1. Build Caching
+                    </button>
+                  </h2>
+                  <div id="flush-build-caching" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Reuse previously built components or dependencies to avoid redundant work.</li>
+                        <li>Tools: Gradle, Maven, npm, Docker.</li>
+                        <li><strong>Benefits:</strong> Faster CI/CD pipelines, reduced resource usage, and quicker feedback loops.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Docker Image Optimization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-docker-optimization" aria-expanded="false" aria-controls="flush-docker-optimization">
+                      2. Docker Image Optimization
+                    </button>
+                  </h2>
+                  <div id="flush-docker-optimization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use smaller base images (e.g., alpine).</li>
+                        <li>Multi-stage builds to separate build artifacts from runtime.</li>
+                        <li>Remove unnecessary files and layers.</li>
+                        <li>Order Dockerfile instructions to maximize layer caching.</li>
+                        <li><strong>Benefits:</strong> Faster builds, quicker deployments, and reduced storage costs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Pipeline Speed Improvements -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-pipeline-speed" aria-expanded="false" aria-controls="flush-pipeline-speed">
+                      3. Pipeline Speed Improvements
+                    </button>
+                  </h2>
+                  <div id="flush-pipeline-speed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Parallelize tasks where possible (e.g., multiple test suites).</li>
+                        <li>Use incremental builds to rebuild only changed modules.</li>
+                        <li>Cache dependencies, Docker layers, and artifacts.</li>
+                        <li>Use lightweight container images for pipeline jobs.</li>
+                        <li><strong>Benefits:</strong> Shorter feedback cycles, higher developer productivity, faster releases.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Load Testing (JMeter, Locust) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-load-testing" aria-expanded="false" aria-controls="flush-load-testing">
+                      4. Load Testing (JMeter, Locust)
+                    </button>
+                  </h2>
+                  <div id="flush-load-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPerformance">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Simulates real-world traffic to test application performance under stress.</li>
+                        <li>Tools:
+                          <ul>
+                            <li>JMeter → Java-based, supports HTTP, databases, APIs.</li>
+                            <li>Locust → Python-based, scalable, write test scenarios in code.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Benefits:</strong> Identify bottlenecks, improve scalability, and validate system reliability before production.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div><br>
+              <div class="accordion accordion-flush" id="accordionFlushBestPractices">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>15. Best Practices & Patterns</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="best-practices-vbtn-radio" id="best-practices-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="best-practices-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="best-practices-vbtn-radio" id="best-practices-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="best-practices-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="best-practices-vbtn-radio" id="best-practices-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="best-practices-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Small & Frequent Deployments -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-small-deployments" aria-expanded="false" aria-controls="flush-small-deployments">
+                      1. Small & Frequent Deployments
+                    </button>
+                  </h2>
+                  <div id="flush-small-deployments" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPractices">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Deploy smaller changes more frequently rather than large, infrequent releases.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Easier to test and debug</li>
+                            <li>Faster feedback from users</li>
+                            <li>Reduced risk of major failures</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Immutable Infrastructure -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-immutable-infra" aria-expanded="false" aria-controls="flush-immutable-infra">
+                      2. Immutable Infrastructure
+                    </button>
+                  </h2>
+                  <div id="flush-immutable-infra" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPractices">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Infrastructure is never modified after deployment; instead, it is replaced with a new version.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Ensures consistency across environments</li>
+                            <li>Simplifies rollback</li>
+                            <li>Reduces configuration drift</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Fail-Fast Strategies -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-fail-fast" aria-expanded="false" aria-controls="flush-fail-fast">
+                      3. Fail-Fast Strategies
+                    </button>
+                  </h2>
+                  <div id="flush-fail-fast" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPractices">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Detect errors or failures as early as possible in the pipeline or application lifecycle.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Minimizes wasted resources on faulty builds</li>
+                            <li>Speeds up issue detection and resolution</li>
+                            <li>Improves overall system reliability</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Backup & Disaster Recovery in DevOps Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-backup-dr" aria-expanded="false" aria-controls="flush-backup-dr">
+                      4. Backup & Disaster Recovery in DevOps Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-backup-dr" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPractices">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Integrate automated backups and recovery steps in pipelines.</li>
+                        <li>Ensure databases, configurations, and critical data are regularly backed up.</li>
+                        <li>Plan for disaster recovery (DR) scenarios to minimize downtime in case of failures.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. DRY Principle in Pipeline Scripts -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dry-principle" aria-expanded="false" aria-controls="flush-dry-principle">
+                      5. DRY Principle in Pipeline Scripts
+                    </button>
+                  </h2>
+                  <div id="flush-dry-principle" class="accordion-collapse collapse" data-bs-parent="#accordionFlushBestPractices">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensure scripts and configurations are modular, reusable, and maintainable.</li>
+                        <li><strong>Benefits:</strong>
+                          <ul>
+                            <li>Reduces errors caused by duplication</li>
+                            <li>Simplifies updates and maintenance</li>
+                            <li>Improves readability and collaboration</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div> <br>                                                                                                                                                                                                
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

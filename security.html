@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>Security</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushWebSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. Web Security Fundamentals</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="websec-vbtn-radio" id="websec-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="websec-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="websec-vbtn-radio" id="websec-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="websec-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="websec-vbtn-radio" id="websec-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="websec-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. OWASP Top 10 -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-owasp" aria-expanded="false" aria-controls="flush-owasp">
+                      1. OWASP Top 10 Vulnerabilities
+                    </button>
+                  </h2>
+                  <div id="flush-owasp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>A standard awareness document listing the 10 most critical security risks for web applications, published by OWASP.</li>
+                        <li>Helps developers prioritize fixing common and dangerous vulnerabilities like injection, XSS, broken authentication.</li>                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. SQL Injection -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sql" aria-expanded="false" aria-controls="flush-sql">
+                      2. SQL Injection
+                    </button>
+                  </h2>
+                  <div id="flush-sql" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>An attack where malicious SQL statements are inserted into queries to manipulate the database.</li>
+                        <li><strong>Example:</strong> <code>SELECT * FROM users WHERE username = '' OR '1'='1';</code></li>
+                        <li><strong>Prevention:</strong> Use prepared statements / parameterized queries, ORM frameworks, and input validation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Cross-Site Scripting (XSS) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-xss" aria-expanded="false" aria-controls="flush-xss">
+                      3. Cross-Site Scripting (XSS)
+                    </button>
+                  </h2>
+                  <div id="flush-xss" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>An attack where a hacker injects malicious JavaScript into a web page that runs in other users’ browsers.</li>
+                        <li><strong>Impact:</strong> Stealing cookies, hijacking accounts, showing fake content.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Escape/encode user input before output</li>
+                            <li>Use Content Security Policy (CSP)</li>
+                            <li>Validate & sanitize inputs</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. CSRF -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-csrf" aria-expanded="false" aria-controls="flush-csrf">
+                      4. Cross-Site Request Forgery (CSRF)
+                    </button>
+                  </h2>
+                  <div id="flush-csrf" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Tricks a logged-in user’s browser into sending unintended requests (e.g., transferring money).</li>
+                        <li><strong>Example:</strong> Malicious site triggers a hidden request to your bank while logged in.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Use CSRF tokens</li>
+                            <li>Enable SameSite cookies</li>
+                            <li>Re-authenticate before sensitive actions</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Insecure Deserialization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-deserialization" aria-expanded="false" aria-controls="flush-deserialization">
+                      5. Insecure Deserialization
+                    </button>
+                  </h2>
+                  <div id="flush-deserialization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>When apps deserialize untrusted data, attackers can modify it to execute code or escalate privileges.</li>
+                        <li><strong>Example:</strong> Changing <code>"role":"user"</code> to <code>"role":"admin"</code> in serialized data.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Avoid deserializing untrusted data</li>
+                            <li>Use safe formats (like JSON)</li>
+                            <li>Implement integrity checks</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Broken Authentication -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auth" aria-expanded="false" aria-controls="flush-auth">
+                      6. Broken Authentication & Session Management
+                    </button>
+                  </h2>
+                  <div id="flush-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Weaknesses in login, sessions, and tokens allow attackers to hijack accounts.</li>
+                        <li><strong>Examples:</strong> Weak passwords, session IDs in URL, no session timeout.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Use bcrypt or Argon2 for password storage</li>
+                            <li>Always use HTTPS</li>
+                            <li>Implement session expiration & regeneration</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. HTTPS vs HTTP -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-https" aria-expanded="false" aria-controls="flush-https">
+                      7. Understanding HTTPS vs HTTP
+                    </button>
+                  </h2>
+                  <div id="flush-https" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>HTTP:</strong> Data in plain text, vulnerable to eavesdropping/tampering.</li>
+                        <li><strong>HTTPS:</strong> Uses SSL/TLS for encryption, ensuring confidentiality & integrity.</li>
+                        <li><strong>For interviews:</strong> HTTPS prevents MITM attacks and is required for all modern apps.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 8. Basics of CORS -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cors" aria-expanded="false" aria-controls="flush-cors">
+                      8. Basics of CORS (Cross-Origin Resource Sharing)
+                    </button>
+                  </h2>
+                  <div id="flush-cors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushWebSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Browser security feature that restricts cross-domain requests.</li>
+                        <li><strong>Example:</strong> <code>siteA.com</code> calling an API on <code>siteB.com</code> without proper headers → blocked.</li>
+                        <li><strong>Key headers:</strong>
+                          <ul>
+                            <li><code>Access-Control-Allow-Origin</code></li>
+                            <li><code>Access-Control-Allow-Methods</code></li>
+                          </ul>
+                        </li>
+                        <li><strong>Prevention tip:</strong> Set strict CORS policies, never use <code>*</code> in production for sensitive APIs.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushAuth">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Authentication & Authorization</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="auth-vbtn-radio" id="auth-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="auth-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="auth-vbtn-radio" id="auth-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="auth-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="auth-vbtn-radio" id="auth-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="auth-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Authentication methods -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auth-methods" aria-expanded="false" aria-controls="flush-auth-methods">
+                      1. Authentication Methods
+                    </button>
+                  </h2>
+                  <div id="flush-auth-methods" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Verifying a user’s identity (who they are).</li>
+                        <li><strong>Common methods:</strong>
+                          <ul>
+                            <li>Password-based → Username + password.</li>
+                            <li>Multi-factor authentication (MFA) → Password + OTP/email/biometric.</li>
+                            <li>Token-based → Tokens like JWT or OAuth2 access tokens.</li>
+                            <li>Biometric → Fingerprint, face, voice recognition.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Password-based, OAuth2, JWT, SSO -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-auth-types" aria-expanded="false" aria-controls="flush-auth-types">
+                      2. Password-based, OAuth2, JWT, SSO
+                    </button>
+                  </h2>
+                  <div id="flush-auth-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Password-based:</strong> Simple but vulnerable. Needs hashing (bcrypt/Argon2) & MFA.</li>
+                        <li><strong>OAuth2:</strong> Delegated access protocol (e.g., “Login with Google”). Issues tokens without sharing password.</li>
+                        <li><strong>JWT (JSON Web Token):</strong> Compact format for stateless authentication. 
+                          <br>Example payload: <code>{"userId":123,"role":"admin"}</code>
+                        </li>
+                        <li><strong>SSO (Single Sign-On):</strong> One login works across multiple apps (e.g., Google for Gmail, YouTube, Drive).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Authorization techniques -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-authorization" aria-expanded="false" aria-controls="flush-authorization">
+                      3. Authorization Techniques
+                    </button>
+                  </h2>
+                  <div id="flush-authorization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Determines what an authenticated user can do.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>View vs edit content</li>
+                            <li>Admin vs normal user privileges</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. RBAC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rbac" aria-expanded="false" aria-controls="flush-rbac">
+                      4. Role-Based Access Control (RBAC)
+                    </button>
+                  </h2>
+                  <div id="flush-rbac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Users are assigned roles; roles define permissions.</li>
+                        <li><strong>Example:</strong>
+                          <ul>
+                            <li>Admin → manage users</li>
+                            <li>Editor → create/edit posts</li>
+                            <li>User → read posts</li>
+                          </ul>
+                        </li>
+                        <li><strong>Pros:</strong> Easy to manage at scale.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. ABAC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-abac" aria-expanded="false" aria-controls="flush-abac">
+                      5. Attribute-Based Access Control (ABAC)
+                    </button>
+                  </h2>
+                  <div id="flush-abac" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Access based on user, resource, and environment attributes.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>department=HR → access salary data</li>
+                            <li>time-based → allow only during work hours</li>
+                          </ul>
+                        </li>
+                        <li><strong>Pros:</strong> More flexible than RBAC.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Session management best practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sessions" aria-expanded="false" aria-controls="flush-sessions">
+                      6. Session Management Best Practices
+                    </button>
+                  </h2>
+                  <div id="flush-sessions" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Sessions store login state; weak management = hijacking risk.</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Use secure, random session IDs</li>
+                            <li>Regenerate session IDs on login</li>
+                            <li>Store sessions server-side (or secure tokens)</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. Session expiration, Secure Cookies, HttpOnly, SameSite -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-session-security" aria-expanded="false" aria-controls="flush-session-security">
+                      7. Session Expiration, Secure Cookies, HttpOnly, SameSite
+                    </button>
+                  </h2>
+                  <div id="flush-session-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAuth">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Session expiration:</strong> End after inactivity or max duration.</li>
+                        <li><strong>Secure cookies:</strong> Only sent over HTTPS.</li>
+                        <li><strong>HttpOnly:</strong> Prevents JS from reading cookies (protects against XSS).</li>
+                        <li><strong>SameSite:</strong>
+                          <ul>
+                            <li><strong>Strict:</strong> Only same-site requests</li>
+                            <li><strong>Lax:</strong> Allows safe cross-site (like GET links)</li>
+                            <li><strong>None:</strong> Cross-site allowed, but must use Secure</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushDataSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>3. Data Security</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="datasec-vbtn-radio" id="datasec-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="datasec-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="datasec-vbtn-radio" id="datasec-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="datasec-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="datasec-vbtn-radio" id="datasec-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="datasec-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Encryption -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-encryption" aria-expanded="false" aria-controls="flush-encryption">
+                      1. Encryption
+                    </button>
+                  </h2>
+                  <div id="flush-encryption" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Transforming data into a format that unauthorized users cannot read.</li>
+                        <li>Protect data at rest (databases, files) and in transit (network).</li>
+                        <li>Symmetric and Asymmetric (explained below).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Symmetric vs Asymmetric -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-symm-asymm" aria-expanded="false" aria-controls="flush-symm-asymm">
+                      2. Symmetric vs Asymmetric Encryption
+                    </button>
+                  </h2>
+                  <div id="flush-symm-asymm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Symmetric Encryption:</strong>
+                          <ul>
+                            <li>Same key for encryption & decryption</li>
+                            <li>Fast and efficient for large data</li>
+                            <li>Example: AES (Advanced Encryption Standard)</li>
+                          </ul>
+                        </li>
+                        <li><strong>Asymmetric Encryption:</strong>
+                          <ul>
+                            <li>Uses key pair: public key (encrypt) & private key (decrypt)</li>
+                            <li>Slower but useful for secure communication & digital signatures</li>
+                            <li>Example: RSA, ECC</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Hashing and Salting Passwords -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-hashing" aria-expanded="false" aria-controls="flush-hashing">
+                      3. Hashing and Salting Passwords
+                    </button>
+                  </h2>
+                  <div id="flush-hashing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Hashing:</strong> One-way function converting passwords into fixed-length strings. Cannot be reversed.</li>
+                        <li><strong>Salting:</strong> Adding random data before hashing to prevent rainbow table attacks.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>bcrypt – adaptive, widely used</li>
+                            <li>Argon2 – memory-hard, GPU-resistant</li>
+                          </ul>
+                        </li>
+                        <li><strong>Best practice:</strong> Never store plain passwords; always salt + hash.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. TLS/SSL Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tls" aria-expanded="false" aria-controls="flush-tls">
+                      4. TLS/SSL Basics
+                    </button>
+                  </h2>
+                  <div id="flush-tls" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>TLS/SSL:</strong> Protocols that encrypt data in transit between client & server.</li>
+                        <li>Prevent eavesdropping and tampering.</li>
+                        <li><strong>Key points:</strong>
+                          <ul>
+                            <li>HTTPS = HTTP + TLS</li>
+                            <li>Certificates validate server identity</li>
+                            <li>TLS is more secure than older SSL versions</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Data Privacy -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-privacy" aria-expanded="false" aria-controls="flush-privacy">
+                      5. Data Privacy
+                    </button>
+                  </h2>
+                  <div id="flush-privacy" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Protecting personal & sensitive data from unauthorized access.</li>
+                        <li><strong>Principles:</strong>
+                          <ul>
+                            <li>Collect only necessary data</li>
+                            <li>Limit access to authorized users</li>
+                            <li>Protect data at rest & in transit</li>
+                          </ul>
+                        </li>
+                        <li><strong>Relevance:</strong> Ensures users’ information is confidential.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Sensitive Data Handling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sensitive-data" aria-expanded="false" aria-controls="flush-sensitive-data">
+                      6. Sensitive Data Handling
+                    </button>
+                  </h2>
+                  <div id="flush-sensitive-data" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Safely storing, transmitting, and processing sensitive info (passwords, financial data, health records).</li>
+                        <li><strong>Best practices:</strong>
+                          <ul>
+                            <li>Encrypt sensitive data (AES, RSA)</li>
+                            <li>Mask data in logs (avoid full credit card numbers)</li>
+                            <li>Use access controls for read/write operations</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. GDPR, HIPAA Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-regulations" aria-expanded="false" aria-controls="flush-regulations">
+                      7. GDPR & HIPAA Basics
+                    </button>
+                  </h2>
+                  <div id="flush-regulations" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>GDPR:</strong> EU regulation for user data privacy. Rights: access, erase, correct personal data. Requires consent for processing.</li>
+                        <li><strong>HIPAA:</strong> US regulation protecting health info. Requires secure storage, access control, audit trails for patient data.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSecureCoding">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>4. Secure Coding Practices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="securecode-vbtn-radio" id="securecode-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="securecode-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securecode-vbtn-radio" id="securecode-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="securecode-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securecode-vbtn-radio" id="securecode-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="securecode-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Input Validation & Output Encoding -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-input-output" aria-expanded="false" aria-controls="flush-input-output">
+                      1. Input Validation & Output Encoding
+                    </button>
+                  </h2>
+                  <div id="flush-input-output" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecureCoding">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Input Validation:</strong> Check user input is correct, expected, and safe before processing.</li>
+                        <li><strong>Example:</strong> Ensure email field has valid email format.</li>
+                        <li><strong>Prevents:</strong> SQL Injection, XSS, buffer overflows.</li>
+                        <li><strong>Output Encoding:</strong> Convert data before displaying in HTML, JS, or SQL contexts to prevent code execution.</li>
+                        <li><strong>Example:</strong> Encode <code>&lt;script&gt;</code> tags to <code>&amp;lt;script&amp;gt;</code>.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Avoiding eval & unsafe dynamic code execution -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval" aria-expanded="false" aria-controls="flush-eval">
+                      2. Avoiding eval & Unsafe Dynamic Code Execution
+                    </button>
+                  </h2>
+                  <div id="flush-eval" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecureCoding">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Problem:</strong> Functions like <code>eval()</code> in JS, <code>exec()</code> in Python, or dynamic class loading in Java can execute arbitrary code.</li>
+                        <li><strong>Risk:</strong> Attackers can run malicious commands or scripts.</li>
+                        <li><strong>Best Practice:</strong> Avoid dynamic code execution; use safe APIs or interpreters that don’t execute raw code.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Protecting Against Directory Traversal -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dir-traversal" aria-expanded="false" aria-controls="flush-dir-traversal">
+                      3. Protecting Against Directory Traversal
+                    </button>
+                  </h2>
+                  <div id="flush-dir-traversal" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecureCoding">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Attackers manipulate file paths to access restricted files.</li>
+                        <li><strong>Example:</strong> Using <code>../../</code> in a URL to access parent directories.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Validate & normalize file paths</li>
+                            <li>Restrict access to specific directories</li>
+                            <li>Use APIs that prevent path traversal</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Safe Use of File Uploads -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-file-uploads" aria-expanded="false" aria-controls="flush-file-uploads">
+                      4. Safe Use of File Uploads
+                    </button>
+                  </h2>
+                  <div id="flush-file-uploads" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecureCoding">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Risks:</strong> Attackers may upload malicious files (scripts, malware).</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Restrict file types (.jpg, .png)</li>
+                            <li>Rename files before saving</li>
+                            <li>Scan files for malware</li>
+                            <li>Store uploads outside web root; serve via safe URLs</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushAPISecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>5. API Security</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="api-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="api-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="api-vbtn-radio" id="api-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="api-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Token-Based Authentication (JWT, OAuth2) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-token-auth" aria-expanded="false" aria-controls="flush-token-auth">
+                      1. Token-Based Authentication (JWT, OAuth2)
+                    </button>
+                  </h2>
+                  <div id="flush-token-auth" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAPISecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensures only authorized clients can access APIs.</li>
+                        <li><strong>JWT (JSON Web Token):</strong>
+                          <ul>
+                            <li>Stateless token containing user info (claims) + signature</li>
+                            <li>Used for authentication & session management</li>
+                            <li>Example: <code>{ "userId": 123, "role": "admin" }</code></li>
+                          </ul>
+                        </li>
+                        <li><strong>OAuth2:</strong>
+                          <ul>
+                            <li>Delegated access protocol</li>
+                            <li>Users allow apps to access resources without sharing passwords</li>
+                            <li>Example: “Login with Google” for app API access</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Rate Limiting & Throttling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-rate-limit" aria-expanded="false" aria-controls="flush-rate-limit">
+                      2. Rate Limiting & Throttling
+                    </button>
+                  </h2>
+                  <div id="flush-rate-limit" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAPISecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Rate Limiting:</strong> Restrict number of requests per client in a time period</li>
+                        <li><strong>Throttling:</strong> Slow down or block excessive requests to prevent abuse</li>
+                        <li>Protect APIs from DoS attacks & abuse</li>
+                        <li><strong>Example:</strong> Max 100 requests/minute per user</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Input Validation & Output Sanitization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-input-sanitization" aria-expanded="false" aria-controls="flush-input-sanitization">
+                      3. Input Validation & Output Sanitization
+                    </button>
+                  </h2>
+                  <div id="flush-input-sanitization" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAPISecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Input Validation:</strong> Ensure all API inputs are correct & safe</li>
+                        <li><strong>Example:</strong> Accept only integers where expected, reject invalid strings</li>
+                        <li><strong>Output Sanitization:</strong> Encode data before returning to clients to prevent XSS, injection, or script execution</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. API Key Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-api-key" aria-expanded="false" aria-controls="flush-api-key">
+                      4. API Key Management
+                    </button>
+                  </h2>
+                  <div id="flush-api-key" class="accordion-collapse collapse" data-bs-parent="#accordionFlushAPISecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Control access to APIs using unique keys per client/app</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Generate strong, unique keys</li>
+                            <li>Rotate & revoke keys as needed</li>
+                            <li>Store keys securely (never hardcode in client apps)</li>
+                            <li>Monitor usage & track abuse</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushNetworkSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>6. Network & System Security Basics</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="network-vbtn-radio" id="network-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="network-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="network-vbtn-radio" id="network-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="network-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="network-vbtn-radio" id="network-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="network-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Firewalls, VPNs, and Secure Network Protocols -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-firewall-vpn" aria-expanded="false" aria-controls="flush-firewall-vpn">
+                      1. Firewalls, VPNs, and Secure Network Protocols
+                    </button>
+                  </h2>
+                  <div id="flush-firewall-vpn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworkSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Firewalls:</strong> Barrier between trusted & untrusted networks; filter traffic based on IP, port, protocol. Types: Network firewall, WAF.</li>
+                        <li><strong>VPN (Virtual Private Network):</strong> Encrypts traffic, hides IP, ensures secure remote access.</li>
+                        <li><strong>Secure Network Protocols:</strong> HTTPS, SSH, SFTP, TLS – encrypt data in transit to prevent eavesdropping & tampering.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Secure Configuration of Servers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-secure-config" aria-expanded="false" aria-controls="flush-secure-config">
+                      2. Secure Configuration of Servers
+                    </button>
+                  </h2>
+                  <div id="flush-secure-config" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworkSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Proper server setup to reduce vulnerabilities.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Disable unused ports & services</li>
+                            <li>Apply latest security patches</li>
+                            <li>Use strong passwords / SSH keys</li>
+                            <li>Limit user privileges (principle of least privilege)</li>
+                            <li>Enable logging & monitoring</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Understanding Common Attacks like MITM -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-mitm" aria-expanded="false" aria-controls="flush-mitm">
+                      3. Understanding Common Attacks like MITM
+                    </button>
+                  </h2>
+                  <div id="flush-mitm" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNetworkSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Attacker secretly intercepts or alters communication between two parties.</li>
+                        <li><strong>Example:</strong> Stealing login credentials over unencrypted Wi-Fi.</li>
+                        <li><strong>Prevention:</strong>
+                          <ul>
+                            <li>Use HTTPS / TLS for all communication</li>
+                            <li>Avoid public Wi-Fi for sensitive transactions</li>
+                            <li>Use VPNs for secure remote connections</li>
+                            <li>Enable certificate validation to prevent fake servers</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushMonitoringLogging">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>7. Monitoring & Logging</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="monitoring-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="monitoring-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="monitoring-vbtn-radio" id="monitoring-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="monitoring-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Logging Security Events Safely -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-logging-events" aria-expanded="false" aria-controls="flush-logging-events">
+                      1. Logging Security Events Safely
+                    </button>
+                  </h2>
+                  <div id="flush-logging-events" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoringLogging">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Recording important security-related actions like logins, failed attempts, and admin changes.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Ensure logs are tamper-proof and timestamped</li>
+                            <li>Store logs securely in a centralized location</li>
+                            <li>Monitor logs regularly for unusual patterns</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Detecting Suspicious Activities -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-suspicious-activity" aria-expanded="false" aria-controls="flush-suspicious-activity">
+                      2. Detecting Suspicious Activities
+                    </button>
+                  </h2>
+                  <div id="flush-suspicious-activity" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoringLogging">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Identify potential attacks or anomalies from logs and system behavior.</li>
+                        <li><strong>Examples:</strong>
+                          <ul>
+                            <li>Multiple failed login attempts (possible brute-force)</li>
+                            <li>Unexpected access from unusual IP addresses</li>
+                            <li>Sudden data downloads or privilege escalations</li>
+                          </ul>
+                        </li>
+                        <li><strong>Tools:</strong> SIEM systems, IDS/IPS, automated alerts</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Avoid Logging Sensitive Information -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-avoid-sensitive-logging" aria-expanded="false" aria-controls="flush-avoid-sensitive-logging">
+                      3. Avoid Logging Sensitive Information
+                    </button>
+                  </h2>
+                  <div id="flush-avoid-sensitive-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushMonitoringLogging">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Logging passwords, credit cards, or tokens can lead to data breaches.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Mask sensitive data (****)</li>
+                            <li>Avoid logging full tokens or credentials</li>
+                            <li>Only log necessary details for troubleshooting or security auditing</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSecurityTesting">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>8. Security Testing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="securitytesting-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="securitytesting-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="securitytesting-vbtn-radio" id="securitytesting-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="securitytesting-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Static Application Security Testing (SAST) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-sast" aria-expanded="false" aria-controls="flush-sast">
+                      1. Static Application Security Testing (SAST)
+                    </button>
+                  </h2>
+                  <div id="flush-sast" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Analyzing source code or binaries without executing the program to find security flaws.</li>
+                        <li>Detect vulnerabilities like SQL Injection, XSS, insecure configurations early in development.</li>
+                        <li><strong>Example Tools:</strong> SonarQube, Checkmarx</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Dynamic Application Security Testing (DAST) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dast" aria-expanded="false" aria-controls="flush-dast">
+                      2. Dynamic Application Security Testing (DAST)
+                    </button>
+                  </h2>
+                  <div id="flush-dast" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Testing a running application from the outside to find vulnerabilities.</li>
+                        <li>Detect runtime issues such as authentication problems, input validation issues, and server misconfigurations.</li>
+                        <li><strong>Example Tools:</strong> OWASP ZAP, Burp Suite</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Penetration Testing Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-pen-testing" aria-expanded="false" aria-controls="flush-pen-testing">
+                      3. Penetration Testing Basics
+                    </button>
+                  </h2>
+                  <div id="flush-pen-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ethical hacking to simulate real attacks and identify vulnerabilities before attackers do.</li>
+                        <li>Evaluate security of networks, apps, and systems.</li>
+                        <li><strong>Example Steps:</strong> Reconnaissance → Exploitation → Reporting</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Vulnerability Scanning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-vuln-scan" aria-expanded="false" aria-controls="flush-vuln-scan">
+                      4. Vulnerability Scanning
+                    </button>
+                  </h2>
+                  <div id="flush-vuln-scan" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityTesting">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Automated scanning of systems, apps, and networks to identify known vulnerabilities.</li>
+                        <li>Quick detection of weak spots like unpatched software, open ports, and misconfigurations.</li>
+                        <li><strong>Example Tools:</strong> Nessus, Qualys, OpenVAS</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushDevSecOps">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>9. DevSecOps Practices</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="devsecops-vbtn-radio" id="devsecops-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="devsecops-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="devsecops-vbtn-radio" id="devsecops-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="devsecops-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="devsecops-vbtn-radio" id="devsecops-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="devsecops-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. CI/CD Pipeline Security -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cicd-security" aria-expanded="false" aria-controls="flush-cicd-security">
+                      1. CI/CD Pipeline Security
+                    </button>
+                  </h2>
+                  <div id="flush-cicd-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevSecOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Integrating security checks into the Continuous Integration/Continuous Deployment pipeline.</li>
+                        <li>Catch vulnerabilities early before code reaches production.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Run automated security tests (SAST, DAST) in the pipeline</li>
+                            <li>Enforce code reviews and approval workflows</li>
+                            <li>Ensure build servers and deployment environments are secure</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Dependency and Package Vulnerability Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dependency-management" aria-expanded="false" aria-controls="flush-dependency-management">
+                      2. Dependency and Package Vulnerability Management
+                    </button>
+                  </h2>
+                  <div id="flush-dependency-management" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevSecOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Monitoring and managing third-party libraries or packages used in your application.</li>
+                        <li><strong>Risks:</strong> Outdated or vulnerable dependencies can be exploited.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Regularly update dependencies</li>
+                            <li>Use tools to scan for vulnerabilities (e.g., Dependabot, Snyk, npm audit)</li>
+                            <li>Avoid untrusted packages</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Secret Management -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-secret-management" aria-expanded="false" aria-controls="flush-secret-management">
+                      3. Secret Management
+                    </button>
+                  </h2>
+                  <div id="flush-secret-management" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDevSecOps">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Safely storing sensitive information like API keys, tokens, passwords, and certificates.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Use environment variables or secret management tools (e.g., HashiCorp Vault, AWS Secrets Manager)</li>
+                            <li>Never commit secrets to version control</li>
+                            <li>Rotate secrets regularly</li>
+                            <li>Limit access to secrets using role-based access</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushEmergingSecurity">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>10. Emerging Topics in Security</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="emergingsecurity-vbtn-radio" id="emergingsecurity-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="emergingsecurity-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="emergingsecurity-vbtn-radio" id="emergingsecurity-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="emergingsecurity-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="emergingsecurity-vbtn-radio" id="emergingsecurity-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="emergingsecurity-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Secure Cloud Practices -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-cloud-security" aria-expanded="false" aria-controls="flush-cloud-security">
+                      1. Secure Cloud Practices (AWS, Azure, GCP)
+                    </button>
+                  </h2>
+                  <div id="flush-cloud-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEmergingSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensuring security when using cloud services and infrastructure.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Use identity and access management (IAM) with least privilege</li>
+                            <li>Encrypt data at rest and in transit</li>
+                            <li>Enable logging and monitoring (CloudTrail, CloudWatch, etc.)</li>
+                            <li>Regularly patch virtual machines and services</li>
+                            <li>Use multi-factor authentication (MFA) for accounts</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Container Security -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-container-security" aria-expanded="false" aria-controls="flush-container-security">
+                      2. Container Security (Docker, Kubernetes)
+                    </button>
+                  </h2>
+                  <div id="flush-container-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEmergingSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Protecting containerized applications and orchestration platforms.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Use minimal base images to reduce attack surface</li>
+                            <li>Regularly scan images for vulnerabilities (e.g., Trivy, Clair)</li>
+                            <li>Limit container privileges (avoid running as root)</li>
+                            <li>Use network policies in Kubernetes to control traffic</li>
+                            <li>Keep orchestrators and nodes patched</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Security in Microservices Architecture -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-microservices-security" aria-expanded="false" aria-controls="flush-microservices-security">
+                      3. Security in Microservices Architecture
+                    </button>
+                  </h2>
+                  <div id="flush-microservices-security" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEmergingSecurity">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Ensuring distributed services communicate securely.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Use mutual TLS (mTLS) for service-to-service communication</li>
+                            <li>Implement API authentication and authorization</li>
+                            <li>Monitor logs centrally to detect suspicious activity</li>
+                            <li>Handle secrets securely for each microservice</li>
+                            <li>Rate-limit APIs and validate all inputs</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              
+              
+              
+              
+              
+              
+              
+                                                                                                                                                                                                            
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
