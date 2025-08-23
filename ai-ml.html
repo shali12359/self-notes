@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>    
+    <title>AI/ML</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html">Nerd-Nest  </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+      <div class="container my-5">
+          <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushML">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>1. Machine Learning Fundamentals</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="ml-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="ml-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="ml-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. AI vs ML vs Deep Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-ai" aria-expanded="false" aria-controls="flush-ml-ai">
+                      1. AI vs ML vs Deep Learning
+                    </button>
+                  </h2>
+                  <div id="flush-ml-ai" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Artificial Intelligence (AI):</strong> The broad field of making machines perform tasks that usually require human intelligence (e.g., reasoning, problem-solving, decision-making).</li>
+                        <li><strong>Machine Learning (ML):</strong> A subset of AI where systems learn patterns from data instead of being explicitly programmed. <em>Example:</em> predicting house prices from past sales data.</li>
+                        <li><strong>Deep Learning (DL):</strong> A subset of ML that uses neural networks with many layers to learn complex patterns, often from large amounts of data (e.g., image recognition, speech-to-text).</li>
+                        <li><strong>👉 Think of it as:</strong> AI is the big umbrella → ML is one approach under AI → DL is a powerful technique within ML.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Supervised, Unsupervised, and Reinforcement Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-types" aria-expanded="false" aria-controls="flush-ml-types">
+                      2. Supervised, Unsupervised, and Reinforcement Learning
+                    </button>
+                  </h2>
+                  <div id="flush-ml-types" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Supervised Learning:</strong> Data has input + labeled output. The model learns to map input to output. <em>Example:</em> Email spam detection (email text → spam/ham).</li>
+                        <li><strong>Unsupervised Learning:</strong> Data has input only, no labels. The model finds hidden patterns or groupings. <em>Example:</em> Customer segmentation (grouping buyers by behavior).</li>
+                        <li><strong>Reinforcement Learning (RL):</strong> The model learns by trial and error, receiving rewards/penalties for actions. <em>Example:</em> A robot learning to walk by balancing rewards for stable steps.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Regression vs Classification vs Clustering -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-tasks" aria-expanded="false" aria-controls="flush-ml-tasks">
+                      3. Regression vs Classification vs Clustering
+                    </button>
+                  </h2>
+                  <div id="flush-ml-tasks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Regression:</strong> Predicting a continuous value. <em>Example:</em> Predicting house prices ($200k, $300k).</li>
+                        <li><strong>Classification:</strong> Predicting a category/class. <em>Example:</em> Predicting whether an image is a cat, dog, or bird.</li>
+                        <li><strong>Clustering:</strong> Grouping similar data points without labels. <em>Example:</em> Grouping news articles into topics automatically.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Overfitting vs Underfitting -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-fitting" aria-expanded="false" aria-controls="flush-ml-fitting">
+                      4. Overfitting vs Underfitting
+                    </button>
+                  </h2>
+                  <div id="flush-ml-fitting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Overfitting:</strong> The model learns training data too well, including noise, and performs poorly on unseen data. <em>Example:</em> Memorizing exam questions instead of learning concepts.</li>
+                        <li><strong>Underfitting:</strong> The model is too simple and fails to capture important patterns in the data. <em>Example:</em> Trying to fit a straight line to data that clearly curves.</li>
+                        <li><strong>👉 Goal:</strong> Find the right balance so the model generalizes well.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Bias-Variance Tradeoff -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-tradeoff" aria-expanded="false" aria-controls="flush-ml-tradeoff">
+                      5. Bias-Variance Tradeoff
+                    </button>
+                  </h2>
+                  <div id="flush-ml-tradeoff" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Bias:</strong> Error from overly simplifying the model (underfitting).</li>
+                        <li><strong>Variance:</strong> Error from the model being too sensitive to training data (overfitting).</li>
+                        <li><strong>Tradeoff:</strong> Increasing complexity reduces bias but increases variance, and vice versa.</li>
+                        <li><strong>Goal:</strong> Achieve the sweet spot where both bias and variance are balanced.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Train/Test/Validation Splits and Cross-Validation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-splits" aria-expanded="false" aria-controls="flush-ml-splits">
+                      6. Train/Test/Validation Splits and Cross-Validation
+                    </button>
+                  </h2>
+                  <div id="flush-ml-splits" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Train set:</strong> Used to teach the model.</li>
+                        <li><strong>Validation set:</strong> Used to tune hyperparameters and check performance during training.</li>
+                        <li><strong>Test set:</strong> Used to evaluate final performance on unseen data.</li>
+                        <li><strong>Cross-validation:</strong> Instead of one validation split, data is split into k folds. Each fold gets a chance to be validation, and results are averaged → gives a more reliable performance estimate.</li>
+                        <li><strong>👉 Helps:</strong> Avoid bias from a single lucky/unlucky split of data.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushML">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>2. Machine Learning Algorithms</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="ml-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="ml-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ml-vbtn-radio" id="ml-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="ml-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Supervised Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-supervised" aria-expanded="false" aria-controls="flush-ml-supervised">
+                      1. Supervised Learning
+                    </button>
+                  </h2>
+                  <div id="flush-ml-supervised" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Data has inputs (features) and outputs (labels).</li>
+                        <li>The algorithm learns a mapping from inputs → outputs.</li>
+                        <li><strong>Example:</strong> Predicting house prices from size, location, and features.</li>
+                        <li>
+                            <strong>Algorithms:</strong>
+                            <ol>
+                                <li>Linear & Logistic Regression</li>
+                                <ul>
+                                    <li><strong>Linear Regression:</strong> Predicts continuous values (e.g., house price). Uses a straight-line equation.</li>
+                                    <li><strong>Logistic Regression:</strong> Predicts probabilities for categorical outcomes (e.g., spam/not spam). Uses a sigmoid function for classification.</li>
+                                </ul>
+                                <li>Decision Trees & Random Forests</li>
+                                <ul>
+                                    <li><strong>Decision Trees:</strong> Models decisions as a tree of rules (if-else splits). Easy to interpret but can overfit.</li>
+                                    <li><strong>Random Forests:</strong> An ensemble of many decision trees. Results are averaged/voted, reducing overfitting and improving accuracy.</li>
+                                </ul>
+                                <li>Support Vector Machines (SVM)</li>
+                                <ul>
+                                    <li>Finds the best separating boundary (hyperplane) between classes.</li>
+                                    <li>Works well in high-dimensional spaces.</li>
+                                    <li>Can use kernels to handle non-linear decision boundaries.</li>
+                                </ul>
+                                <li>k-Nearest Neighbors (kNN)</li>
+                                <ul>
+                                    <li>Classifies a new point by looking at the k closest neighbors in training data.</li>
+                                    <li>The majority class among neighbors is assigned.</li>
+                                    <li>Easy to understand but slow for large datasets.</li>
+                                  </ul>
+                            </ol>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+               
+              
+                <!-- 6. Unsupervised Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-unsupervised" aria-expanded="false" aria-controls="flush-ml-unsupervised">
+                      2. Unsupervised Learning
+                    </button>
+                  </h2>
+                  <div id="flush-ml-unsupervised" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Data has no labels.</li>
+                        <li>The algorithm finds hidden patterns or groups.</li>
+                        <li><strong>Example:</strong> Customer segmentation by purchasing behavior.</li>
+                        <li><strong>Algorithms:</strong></li>
+                        <ol>
+                            <li>k-Means & Hierarchical Clustering</li>
+                            <ul>
+                                <li><strong>k-Means:</strong> Groups data into k clusters by minimizing distance to cluster centers.</li>
+                                <li><strong>Hierarchical Clustering:</strong> Builds a tree of clusters (agglomerative or divisive). Good for visualizing relationships.</li>
+                            </ul>
+                            <li>PCA (Principal Component Analysis)</li>
+                            <ul>
+                                <li>A dimensionality reduction technique.</li>
+                                <li>Converts correlated features into fewer principal components while keeping most variance.</li>
+                                <li>Useful for visualization, noise reduction, and speeding up models.</li>
+                              </ul>
+                              <li>Anomaly Detection</li>
+                              <ul>
+                                <li>Identifies rare or unusual patterns in data.</li>
+                                <li>Commonly used in fraud detection, network intrusion detection, and faulty sensor readings.</li>
+                              </ul>
+                        </ol>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 10. Reinforcement Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ml-rl" aria-expanded="false" aria-controls="flush-ml-rl">
+                      3. Reinforcement Learning
+                    </button>
+                  </h2>
+                  <div id="flush-ml-rl" class="accordion-collapse collapse" data-bs-parent="#accordionFlushML">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>An agent learns by interacting with an environment.</li>
+                        <li>Receives rewards/penalties for actions and learns a policy to maximize rewards.</li>
+                        <li><strong>Example:</strong> Training a robot to walk or a game AI to play chess.</li>
+                        <li>Algorithms:</li>
+                        <ol>
+                            <li>Q-Learning & MDP</li>
+                            <ul>
+                                <li><strong>MDP:</strong> A framework for decision-making where outcomes depend on both chance and actions.</li>
+                                <li><strong>Q-Learning:</strong> Learns the value (Q-value) of taking an action in a state, guiding toward the best long-term rewards.</li>
+                              </ul>
+                            <li>Ensemble Methods</li>
+                            <ul>
+                                <li>Combine multiple models to improve accuracy.</li>
+                                <li>Reduces variance and bias compared to single models.</li>
+                                <li><strong>Bagging:</strong> Trains models in parallel on random subsets (e.g., Random Forest).</li>
+                                <li><strong>Boosting:</strong> Trains models sequentially, focusing on errors of previous ones (e.g., AdaBoost, XGBoost).</li>
+                              </ul>
+                        </ol>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushNeuralNetworks">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>3. Neural Networks & Deep Learning</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="nn-vbtn-radio" id="nn-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="nn-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="nn-vbtn-radio" id="nn-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="nn-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="nn-vbtn-radio" id="nn-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="nn-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-basics" aria-expanded="false" aria-controls="flush-nn-basics">
+                      1. Neural Network Basics
+                    </button>
+                  </h2>
+                  <div id="flush-nn-basics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>A neural network is inspired by how the brain works.</li>
+                        <li>It consists of <strong>layers of neurons</strong> connected by weights.</li>
+                        <li>Each neuron: input → weighted sum + bias → activation function → output.</li>
+                        <li>Networks learn by adjusting weights during training to capture complex patterns.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Perceptrons & Activation Functions -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-activation" aria-expanded="false" aria-controls="flush-nn-activation">
+                      2. Perceptrons & Activation Functions
+                    </button>
+                  </h2>
+                  <div id="flush-nn-activation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Perceptron:</strong> Simplest neuron (weighted sum + bias + activation).</li>
+                        <li><strong>Activation Functions:</strong>
+                          <ul>
+                            <li><strong>ReLU:</strong> Fast, outputs 0 if input &lt; 0, else input.</li>
+                            <li><strong>Sigmoid:</strong> Maps values to [0,1], used in binary classification.</li>
+                            <li><strong>Tanh:</strong> Maps values to [-1,1], centered at 0.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Training (Feedforward & Backpropagation) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-training" aria-expanded="false" aria-controls="flush-nn-training">
+                      3. Training: Feedforward & Backpropagation
+                    </button>
+                  </h2>
+                  <div id="flush-nn-training" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Feedforward:</strong> Data flows input → hidden layers → output.</li>
+                        <li><strong>Backpropagation:</strong> Error (predicted – actual) flows backward, updating weights with gradient descent.</li>
+                        <li>Training = repeated feedforward + backprop until good performance.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. CNNs -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-cnn" aria-expanded="false" aria-controls="flush-nn-cnn">
+                      4. Convolutional Neural Networks (CNNs)
+                    </button>
+                  </h2>
+                  <div id="flush-nn-cnn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Specialized for image data.</li>
+                        <li>Use <strong>convolution filters</strong> to detect edges, textures, shapes.</li>
+                        <li>Structure: Convolution → Pooling → Fully Connected → Output.</li>
+                        <li><strong>Applications:</strong> Image classification, object detection, face recognition.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. RNNs & LSTMs -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-rnn" aria-expanded="false" aria-controls="flush-nn-rnn">
+                      5. RNNs & LSTMs
+                    </button>
+                  </h2>
+                  <div id="flush-nn-rnn" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>RNN:</strong> For sequential data, remembers past context.</li>
+                        <li>Problem: <strong>Vanishing gradients</strong> → forgets long dependencies.</li>
+                        <li><strong>LSTM:</strong> Adds gates (input, forget, output) → solves long-term memory issue.</li>
+                        <li><strong>Applications:</strong> Text, speech, stock prediction, time-series analysis.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 6. Transformers -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-transformers" aria-expanded="false" aria-controls="flush-nn-transformers">
+                      6. Transformers & Attention
+                    </button>
+                  </h2>
+                  <div id="flush-nn-transformers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Use <strong>Attention Mechanism</strong> → model focuses on important words.</li>
+                        <li>Unlike RNNs, transformers process all tokens in parallel.</li>
+                        <li><strong>Example:</strong> "The dog chased the cat because <em>it</em> was hungry" → attention helps link "it" to "dog".</li>
+                        <li><strong>Applications:</strong> NLP (BERT, GPT, T5), translation, summarization.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 7. Overfitting Mitigation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-nn-overfitting" aria-expanded="false" aria-controls="flush-nn-overfitting">
+                      7. Overfitting Mitigation
+                    </button>
+                  </h2>
+                  <div id="flush-nn-overfitting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushNeuralNetworks">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Dropout:</strong> Randomly disable neurons during training.</li>
+                        <li><strong>Regularization:</strong> Penalize large weights (L1, L2).</li>
+                        <li>Other methods: Early stopping, data augmentation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushDataPreprocessing">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>4. Data Preprocessing</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="dp-vbtn-radio" id="dp-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="dp-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="dp-vbtn-radio" id="dp-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="dp-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="dp-vbtn-radio" id="dp-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="dp-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Handling Missing Data -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dp-missing" aria-expanded="false" aria-controls="flush-dp-missing">
+                      1. Handling Missing Data
+                    </button>
+                  </h2>
+                  <div id="flush-dp-missing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataPreprocessing">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Real-world datasets often have missing values (e.g., surveys with unanswered questions).</li>
+                        <li><strong>Approaches:</strong>
+                          <ul>
+                            <li>Remove rows/columns with too many missing values.</li>
+                            <li>Imputation:
+                              <ul>
+                                <li>Mean/median (numeric).</li>
+                                <li>Mode (categorical).</li>
+                                <li>Advanced: KNN or regression-based imputation.</li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><strong>Goal:</strong> Complete dataset so ML algorithms can work effectively.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Encoding Categorical Variables -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dp-encoding" aria-expanded="false" aria-controls="flush-dp-encoding">
+                      2. Encoding Categorical Variables
+                    </button>
+                  </h2>
+                  <div id="flush-dp-encoding" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataPreprocessing">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>ML models need numeric input → categorical values must be encoded.</li>
+                        <li><strong>Methods:</strong>
+                          <ul>
+                            <li><strong>Label Encoding:</strong> Assign numbers (red=0, green=1, blue=2). ⚠️ Good for ordinal, risky for nominal.</li>
+                            <li><strong>One-Hot Encoding:</strong> Create binary columns (red → [1,0,0], green → [0,1,0], blue → [0,0,1]).</li>
+                            <li><strong>Target Encoding:</strong> Replace categories with target mean (good for high-cardinality).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Feature Scaling -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dp-scaling" aria-expanded="false" aria-controls="flush-dp-scaling">
+                      3. Feature Scaling (Normalization, Standardization)
+                    </button>
+                  </h2>
+                  <div id="flush-dp-scaling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataPreprocessing">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>Different features may have different scales (e.g., age=20–60 vs income=30k–150k).</li>
+                        <li>Scaling is essential for KNN, SVM, gradient-descent models.</li>
+                        <li><strong>Normalization (Min-Max Scaling):</strong>
+                          <ul>
+                            <li>Scales values to [0,1].</li>
+                            <li>Formula: <code>x' = (x - xmin) / (xmax - xmin)</code></li>
+                            <li>Best when bounded features are needed.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Standardization (Z-score):</strong>
+                          <ul>
+                            <li>Centers around mean 0, std 1.</li>
+                            <li>Formula: <code>x' = (x - μ) / σ</code></li>
+                            <li>Good for Gaussian-like distributions.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Feature Engineering & Selection -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-dp-features" aria-expanded="false" aria-controls="flush-dp-features">
+                      4. Feature Engineering & Selection
+                    </button>
+                  </h2>
+                  <div id="flush-dp-features" class="accordion-collapse collapse" data-bs-parent="#accordionFlushDataPreprocessing">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Feature Engineering:</strong> Create new features.
+                          <ul>
+                            <li>From "DOB" → "Age".</li>
+                            <li>Combine features (BMI = weight/height²).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Feature Selection:</strong> Keep the most important features.
+                          <ul>
+                            <li><strong>Filter:</strong> Correlation, chi-square test.</li>
+                            <li><strong>Wrapper:</strong> Forward/backward selection, RFE.</li>
+                            <li><strong>Embedded:</strong> Feature importance (Random Forest, Lasso).</li>
+                          </ul>
+                        </li>
+                      </ul>
+                      <p><strong>✅ In short:</strong> Handle missing data → Encode categoricals → Scale → Engineer & select features.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushEvaluation">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>5. Model Evaluation & Metrics</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="eval-vbtn-radio" id="eval-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="eval-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="eval-vbtn-radio" id="eval-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="eval-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="eval-vbtn-radio" id="eval-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="eval-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Classification Metrics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval-classification" aria-expanded="false" aria-controls="flush-eval-classification">
+                      1. Accuracy, Precision, Recall, F1 (Classification)
+                    </button>
+                  </h2>
+                  <div id="flush-eval-classification" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEvaluation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Accuracy:</strong> <code>(TP + TN) / (TP + TN + FP + FN)</code> → unreliable with imbalanced data.</li>
+                        <li><strong>Precision:</strong> <code>TP / (TP + FP)</code> → focus on false positives (e.g., spam).</li>
+                        <li><strong>Recall (Sensitivity):</strong> <code>TP / (TP + FN)</code> → focus on false negatives (e.g., disease detection).</li>
+                        <li><strong>F1 Score:</strong> <code>2 * (Precision * Recall) / (Precision + Recall)</code> → balance between precision & recall.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. ROC & AUC -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval-roc" aria-expanded="false" aria-controls="flush-eval-roc">
+                      2. ROC Curve & AUC
+                    </button>
+                  </h2>
+                  <div id="flush-eval-roc" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEvaluation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>ROC Curve:</strong> Plots TPR (Recall) vs. FPR at different thresholds.</li>
+                        <li><strong>AUC:</strong> Measures discrimination ability.
+                          <ul>
+                            <li>0.5 → Random guessing</li>
+                            <li>1.0 → Perfect classification</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Confusion Matrix -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval-confusion" aria-expanded="false" aria-controls="flush-eval-confusion">
+                      3. Confusion Matrix
+                    </button>
+                  </h2>
+                  <div id="flush-eval-confusion" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEvaluation">
+                    <div class="accordion-body">
+                      <pre>
+                           Predicted
+                         Positive   Negative
+              Actual +    TP          FN
+              Actual -    FP          TN
+                      </pre>
+                      <p>✔️ Helps visualize <strong>false positives vs. false negatives</strong>.</p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Regression Metrics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval-regression" aria-expanded="false" aria-controls="flush-eval-regression">
+                      4. Regression Metrics
+                    </button>
+                  </h2>
+                  <div id="flush-eval-regression" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEvaluation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>MSE:</strong> <code>(1/n) Σ (yᵢ - ŷᵢ)²</code> → average squared error.</li>
+                        <li><strong>RMSE:</strong> √MSE → interpretable in original units.</li>
+                        <li><strong>R²:</strong> <code>1 - (SS_res / SS_tot)</code> → variance explained by model (closer to 1 = better).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 5. Cross-Validation & Hyperparameter Tuning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-eval-cv" aria-expanded="false" aria-controls="flush-eval-cv">
+                      5. Cross-Validation & Hyperparameter Tuning
+                    </button>
+                  </h2>
+                  <div id="flush-eval-cv" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEvaluation">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Cross-validation:</strong> Splits data into folds for stable evaluation.
+                          <ul>
+                            <li><strong>k-fold:</strong> Train on k-1 folds, test on 1 fold, repeat.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Hyperparameter Tuning:</strong>
+                          <ul>
+                            <li>Grid Search → exhaustive.</li>
+                            <li>Random Search → sample random combinations.</li>
+                            <li>Bayesian / Hyperopt / Optuna → efficient, fewer trials.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushTools">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>6. Tools & Libraries</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="tools-vbtn-radio" id="tools-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="tools-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="tools-vbtn-radio" id="tools-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="tools-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="tools-vbtn-radio" id="tools-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="tools-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Python Libraries -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tools-python" aria-expanded="false" aria-controls="flush-tools-python">
+                      1. Python Libraries
+                    </button>
+                  </h2>
+                  <div id="flush-tools-python" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>scikit-learn:</strong> Classical ML algorithms, preprocessing, evaluation.</li>
+                        <li><strong>pandas:</strong> Data manipulation and tabular data handling.</li>
+                        <li><strong>numpy:</strong> Numerical computations, arrays, linear algebra.</li>
+                        <li><strong>matplotlib:</strong> Basic data visualization.</li>
+                        <li><strong>seaborn:</strong> Statistical data visualization.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Deep Learning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tools-dl" aria-expanded="false" aria-controls="flush-tools-dl">
+                      2. Deep Learning
+                    </button>
+                  </h2>
+                  <div id="flush-tools-dl" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>TensorFlow:</strong> Large-scale deep learning framework.</li>
+                        <li><strong>Keras:</strong> High-level API for TensorFlow (quick prototyping).</li>
+                        <li><strong>PyTorch:</strong> Flexible, research-friendly deep learning framework.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Data Manipulation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tools-data" aria-expanded="false" aria-controls="flush-tools-data">
+                      3. Data Manipulation
+                    </button>
+                  </h2>
+                  <div id="flush-tools-data" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>NumPy:</strong> Efficient array operations, mathematical functions.</li>
+                        <li><strong>Pandas:</strong> DataFrames, cleaning, transformation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Visualization -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-tools-viz" aria-expanded="false" aria-controls="flush-tools-viz">
+                      4. Visualization
+                    </button>
+                  </h2>
+                  <div id="flush-tools-viz" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTools">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Matplotlib:</strong> Customizable plots (low-level).</li>
+                        <li><strong>Seaborn:</strong> Statistical plots with clean design.</li>
+                        <li><strong>Plotly:</strong> Interactive, web-based visualizations.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushPractice">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>7. ML in Practice</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="practice-vbtn-radio" id="practice-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="practice-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="practice-vbtn-radio" id="practice-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="practice-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="practice-vbtn-radio" id="practice-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="practice-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Pipeline Creation -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-practice-pipeline" aria-expanded="false" aria-controls="flush-practice-pipeline">
+                      1. Pipeline Creation
+                    </button>
+                  </h2>
+                  <div id="flush-practice-pipeline" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPractice">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Why pipelines?:</strong> Automate workflows → preprocessing → training → evaluation → deployment.</li>
+                        <li><strong>Scikit-learn Pipelines:</strong> Combine preprocessing (scaling, encoding) + estimator into one workflow.</li>
+                        <li><strong>Advantages:</strong> Reproducibility, reduced data leakage, easier experimentation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Hyperparameter Tuning -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-practice-tuning" aria-expanded="false" aria-controls="flush-practice-tuning">
+                      2. Hyperparameter Tuning
+                    </button>
+                  </h2>
+                  <div id="flush-practice-tuning" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPractice">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Grid Search:</strong> Exhaustive search over parameter grid (e.g., learning rate = [0.01, 0.1, 1]).</li>
+                        <li><strong>Random Search:</strong> Randomly samples parameter combinations → faster than grid search.</li>
+                        <li><strong>Bayesian Optimization:</strong> Models objective function, selects next best hyperparameters (Optuna, Hyperopt).</li>
+                        <li><strong>Best Practice:</strong> Always combine with cross-validation.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Model Deployment Basics -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-practice-deployment" aria-expanded="false" aria-controls="flush-practice-deployment">
+                      3. Model Deployment Basics
+                    </button>
+                  </h2>
+                  <div id="flush-practice-deployment" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPractice">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>REST API:</strong> Flask/FastAPI → expose model as API endpoint.</li>
+                        <li><strong>Example:</strong> <code>/predict</code> endpoint takes JSON input, returns predictions.</li>
+                        <li><strong>Serialization:</strong> Save trained model (<code>joblib</code>, <code>pickle</code>, <code>torch.save</code>).</li>
+                        <li><strong>Cloud Deployment:</strong> AWS (SageMaker, Lambda, EC2), GCP (Vertex AI), Azure ML.</li>
+                        <li><strong>Scaling:</strong> Containerization with Docker + deployment via Kubernetes.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 4. Handling Imbalanced Data -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-practice-imbalance" aria-expanded="false" aria-controls="flush-practice-imbalance">
+                      4. Handling Imbalanced Data
+                    </button>
+                  </h2>
+                  <div id="flush-practice-imbalance" class="accordion-collapse collapse" data-bs-parent="#accordionFlushPractice">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Oversampling:</strong> Duplicate minority class samples (risk: overfitting).</li>
+                        <li><strong>Undersampling:</strong> Reduce majority class samples (risk: losing information).</li>
+                        <li><strong>SMOTE:</strong> Generate synthetic minority samples → more balanced.</li>
+                        <li><strong>Algorithmic Methods:</strong> Use class weights (<code>class_weight='balanced'</code> in scikit-learn, focal loss in DL).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushSystemDesign">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>8. AI/ML System Design Concepts</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="system-vbtn-radio" id="system-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="system-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="system-vbtn-radio" id="system-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="system-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="system-vbtn-radio" id="system-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="system-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- a) Building Recommendation Systems -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-reco" aria-expanded="false" aria-controls="flush-system-reco">
+                      a) Building Recommendation Systems
+                    </button>
+                  </h2>
+                  <div id="flush-system-reco" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Collaborative Filtering:</strong> Based on user-user or item-item similarity. Example: “Users who liked X also liked Y.”</li>
+                        <li><strong>Content-Based Filtering:</strong> Uses item features (genre, tags, description).</li>
+                        <li><strong>Hybrid Approaches:</strong> Combine collaborative + content-based to overcome limitations.</li>
+                        <li><strong>Scaling Challenges:</strong> Cold start problem, real-time recommendations (low latency), distributed matrix factorization (Spark, GPUs).</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- b) Real-time Prediction Systems -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-realtime" aria-expanded="false" aria-controls="flush-system-realtime">
+                      b) Real-time Prediction Systems
+                    </button>
+                  </h2>
+                  <div id="flush-system-realtime" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Use Cases:</strong> Fraud detection, recommendation, ad targeting, autonomous driving.</li>
+                        <li><strong>System Requirements:</strong> Low-latency predictions (ms), high throughput (thousands/millions req/s).</li>
+                        <li><strong>Architecture:</strong> Model served via REST API / gRPC, inference-optimized runtimes (TensorRT, ONNX Runtime), cache frequent results (Redis).</li>
+                        <li><strong>Scaling:</strong> Auto-scaling with Kubernetes, message queues (Kafka, RabbitMQ) for async workloads.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- c) Batch vs Streaming Data Pipelines -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-pipelines" aria-expanded="false" aria-controls="flush-system-pipelines">
+                      c) Batch vs Streaming Data Pipelines
+                    </button>
+                  </h2>
+                  <div id="flush-system-pipelines" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Batch Processing:</strong> Large datasets processed periodically (daily/weekly). Tools: Hadoop, Spark. Use case: training recommendation models.</li>
+                        <li><strong>Streaming Processing:</strong> Continuous, real-time ingestion & processing. Tools: Kafka, Flink, Spark Streaming. Use case: fraud detection, live dashboards.</li>
+                        <li><strong>Lambda Architecture:</strong> 
+                          <ul>
+                            <li><strong>Batch layer:</strong> Stores historical data.</li>
+                            <li><strong>Speed layer:</strong> Processes real-time events.</li>
+                            <li><strong>Serving layer:</strong> Merges both.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- d) Scaling ML Models -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-scaling" aria-expanded="false" aria-controls="flush-system-scaling">
+                      d) Scaling ML Models
+                    </button>
+                  </h2>
+                  <div id="flush-system-scaling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Challenges:</strong> Large models (billions of parameters), high memory & compute demand.</li>
+                        <li><strong>Techniques:</strong> 
+                          <ul>
+                            <li><strong>Model Parallelism:</strong> Split model across GPUs.</li>
+                            <li><strong>Data Parallelism:</strong> Split training data across nodes.</li>
+                            <li><strong>Distillation:</strong> Compress large models into smaller ones.</li>
+                            <li><strong>Quantization & Pruning:</strong> Reduce precision (FP32 → FP16/INT8).</li>
+                          </ul>
+                        </li>
+                        <li><strong>Deployment Strategies:</strong> Use cloud ML platforms (SageMaker, Vertex AI), load balancing across inference servers, edge deployment for low-latency.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="accordion accordion-flush" id="accordionFlushEthics">
+                <div class="row">
+                  <div class="col-10">
+                    <h3>9. Ethics & Responsible AI</h3>
+                  </div>
+                  <div class="col-2">
+                    <div class="btn-group-horizontal" role="group" aria-label="Vertical radio toggle button group">
+                      <span>Progress:</span>
+                      <input type="radio" class="btn-check" name="ethics-vbtn-radio" id="ethics-vbtn-radio1" autocomplete="off" checked>
+                      <label class="btn btn-outline-danger btn-sm" for="ethics-vbtn-radio1"><i class="fas fa-frown"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ethics-vbtn-radio" id="ethics-vbtn-radio2" autocomplete="off">
+                      <label class="btn btn-outline-warning btn-sm" for="ethics-vbtn-radio2"><i class="fas fa-smile"></i></label>
+              
+                      <input type="radio" class="btn-check" name="ethics-vbtn-radio" id="ethics-vbtn-radio3" autocomplete="off">
+                      <label class="btn btn-outline-success btn-sm" for="ethics-vbtn-radio3"><i class="fas fa-grin-hearts"></i></label>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 1. Bias and Fairness in ML -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ethics-bias" aria-expanded="false" aria-controls="flush-ethics-bias">
+                      1. Bias and Fairness in ML
+                    </button>
+                  </h2>
+                  <div id="flush-ethics-bias" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEthics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Problem:</strong> Models inherit biases from training data → unfair outcomes. Example: hiring favoring one gender.</li>
+                        <li><strong>Types of Bias:</strong>
+                          <ul>
+                            <li>Sampling bias: Data not representative.</li>
+                            <li>Measurement bias: Features/labels inaccurately recorded.</li>
+                            <li>Algorithmic bias: Model amplifies existing biases.</li>
+                          </ul>
+                        </li>
+                        <li><strong>Mitigation:</strong> Diverse datasets, fairness-aware algorithms (reweighting, adversarial debiasing), regular audits.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 2. Privacy and Security Considerations -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ethics-privacy" aria-expanded="false" aria-controls="flush-ethics-privacy">
+                      2. Privacy and Security Considerations
+                    </button>
+                  </h2>
+                  <div id="flush-ethics-privacy" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEthics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Risks:</strong> Data leaks, re-identification, model inversion attacks.</li>
+                        <li><strong>Best Practices:</strong>
+                          <ul>
+                            <li>Data anonymization & pseudonymization.</li>
+                            <li>Differential privacy: add noise to protect individuals.</li>
+                            <li>Secure storage, access controls, encryption in transit and at rest.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- 3. Explainable AI (XAI) -->
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-ethics-xai" aria-expanded="false" aria-controls="flush-ethics-xai">
+                      3. Explainable AI (XAI)
+                    </button>
+                  </h2>
+                  <div id="flush-ethics-xai" class="accordion-collapse collapse" data-bs-parent="#accordionFlushEthics">
+                    <div class="accordion-body">
+                      <ul>
+                        <li><strong>Purpose:</strong> Understand why a model made a prediction; improves trust, compliance, debugging.</li>
+                        <li><strong>Techniques:</strong>
+                          <ul>
+                            <li>SHAP / LIME → feature importance explanations.</li>
+                            <li>Attention visualization → NLP/vision models.</li>
+                            <li>Rule extraction / surrogate models → simpler interpretable models mimicking complex ones.</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>              
+          </div>
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

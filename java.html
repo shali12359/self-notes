@@ -39,7 +39,7 @@
                   <div id="flush-java-basics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJavaBasics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Java is a <strong>popular, platform-independent, object-oriented </strong>programming language.</li>
+                        <li><strong>Popular, platform-independent, object-oriented </strong>programming language.</li>
                         <li><strong>Write once, run anywhere</strong> (thanks to JVM).</li>
                         <li><strong>Strongly typed and compiled to bytecode.</strong></li>
                       </ul>
@@ -255,8 +255,9 @@ String line = br.readLine();</code></pre>
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Wrapping data (variables) and methods that operate on data into a single unit (class).</strong></li>
-                        <li>Use private fields and provide public getters/setters to control access.</li>
+                        <li><strong>Use private fields and provide public getters/setters to control access.</strong></li>
                         <li>Benefits: Data hiding, protects object state.</li>
+                        <li>Ex: A capsule which is a collection of several medicines.</li>
                       </ul>
                     </div>
                   </div>
@@ -286,6 +287,7 @@ String line = br.readLine();</code></pre>
                           <pre><code>class Parent { ... }
 class Child extends Parent { ... }</code></pre>
                         </li>
+                        <li>Ex: Cars are inherited from automobiles.</li>
                       </ul>
                     </div>
                   </div>
@@ -319,6 +321,7 @@ void print(String s) { }</code></pre>
                       <pre><code>@Override
 void print() { System.out.println("Child"); }</code></pre>
                         </li>
+                        <li>Ex: A person can be employee at office, father at home, a player at playground.</li>
                       </ul>
                     </div>
                   </div>
@@ -348,6 +351,7 @@ void print() { System.out.println("Child"); }</code></pre>
                           <pre><code>abstract class Animal { abstract void sound(); }
 interface Flyable { void fly(); }</code></pre>
                         </li>
+                        <li>Ex: Receive cash using ATM card. Internal process is hidden, only receive cash via ATM.</li>
                       </ul>
                     </div>
                   </div>
@@ -407,8 +411,8 @@ interface Flyable { void fly(); }</code></pre>
                   <div id="flush-oop-this-super" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOOP">
                     <div class="accordion-body">
                       <ul>
-                        <li><code>this</code> → Refers to current object instance. Used to resolve naming conflicts or call other constructors.</li>
-                        <li><code>super</code> → Refers to parent class. Used to call parent constructor or overridden methods.</li>
+                        <li><code>this</code> → <strong>Refers to current object instance.</strong> Used to resolve naming conflicts or call other constructors.</li>
+                        <li><code>super</code> → <strong>Refers to parent class.</strong> Used to call parent constructor or overridden methods.</li>
                       </ul>
                     </div>
                   </div>
@@ -601,7 +605,7 @@ public final class Square extends Shape {}</code></pre>
                       <div class="accordion-body">
                         <ul>
                           <li>
-                            The Collections Framework provides a standard set of interfaces to store and manipulate groups of objects:
+                            Provides a standard set of interfaces to store and manipulate groups of objects:
                           <ul>
                               <li><strong>List</strong> – Ordered collection, allows duplicates.</li>
                               <li><strong>Set</strong> – Unordered collection, no duplicates.</li>
@@ -719,6 +723,200 @@ public final class Square extends Shape {}</code></pre>
                       </div>
                   </div>
               </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-comparison" aria-expanded="false" aria-controls="flush-comparison">
+                        7. Comparison
+                    </button>
+                </h2>
+                <div id="flush-comparison" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCollectionsComparison">
+                    <div class="accordion-body">
+                      <ul>
+                        <li>
+                          <strong>List:</strong>
+                          <table class="table table-bordered table-hover table-striped align-middle text-center">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>Implementation</th>
+                                <th>Order</th>
+                                <th>Duplicates</th>
+                                <th>Nulls</th>
+                                <th>Access</th>
+                                <th>Use Case</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>ArrayList</td>
+                                <td>Maintains insertion order</td>
+                                <td>Allowed</td>
+                                <td>Multiple</td>
+                                <td>Index-based (fast random access)</td>
+                                <td>Playlist, dynamic arrays</td>
+                              </tr>
+                              <tr>
+                                <td>LinkedList</td>
+                                <td>Maintains insertion order</td>
+                                <td>Allowed</td>
+                                <td>Multiple</td>
+                                <td>Sequential access, fast insert/delete</td>
+                                <td>Queue, frequent insert/delete</td>
+                              </tr>
+                              <tr>
+                                <td>Vector</td>
+                                <td>Maintains insertion order</td>
+                                <td>Allowed</td>
+                                <td>Multiple</td>
+                                <td>Index-based, synchronized</td>
+                                <td>Legacy, thread-safe list</td>
+                              </tr>
+                              <tr>
+                                <td>Stack</td>
+                                <td>LIFO order</td>
+                                <td>Allowed</td>
+                                <td>Multiple</td>
+                                <td>Top element access</td>
+                                <td>Undo operations, expression evaluation</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                                                   
+                        </li>
+                        <li>
+                          <strong>Set:</strong>
+                          <table class="table table-bordered table-hover table-striped align-middle text-center">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>Implementation</th>
+                                <th>Order</th>
+                                <th>Duplicates</th>
+                                <th>Nulls</th>
+                                <th>Access</th>
+                                <th>Use Case</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>HashSet</td>
+                                <td>No guaranteed order</td>
+                                <td>Not allowed</td>
+                                <td>One null allowed</td>
+                                <td>By element only</td>
+                                <td>Unique IDs, membership check</td>
+                              </tr>
+                              <tr>
+                                <td>LinkedHashSet</td>
+                                <td>Maintains insertion order</td>
+                                <td>Not allowed</td>
+                                <td>One null allowed</td>
+                                <td>By element only</td>
+                                <td>Caches, preserve order</td>
+                              </tr>
+                              <tr>
+                                <td>TreeSet</td>
+                                <td>Sorted (natural/comparator)</td>
+                                <td>Not allowed</td>
+                                <td>Not allowed</td>
+                                <td>By element only (sorted access)</td>
+                                <td>Sorted unique data, leaderboards</td>
+                              </tr>
+                            </tbody>
+                          </table>                                                   
+                        </li>
+                        <li>
+                          <strong>Queue:</strong>
+                          <table class="table table-bordered table-hover table-striped align-middle text-center">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>Implementation</th>
+                                <th>Order</th>
+                                <th>Duplicates</th>
+                                <th>Nulls</th>
+                                <th>Access</th>
+                                <th>Use Case</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Queue/Deque</td>
+                                <td>FIFO / Both ends</td>
+                                <td>Allowed</td>
+                                <td>One null allowed</td>
+                                <td>Head / Tail access</td>
+                                <td>Task scheduling, double-ended queue</td>
+                              </tr>
+                              <tr>
+                                <td>PriorityQueue</td>
+                                <td>Priority order</td>
+                                <td>Allowed</td>
+                                <td>Not allowed</td>
+                                <td>Head (highest priority)</td>
+                                <td>Job scheduling, task prioritization</td>
+                              </tr>
+                              <tr>
+                                <td>ArrayDeque</td>
+                                <td>FIFO / LIFO (Deque)</td>
+                                <td>Allowed</td>
+                                <td>Not allowed</td>
+                                <td>Both ends</td>
+                                <td>Stack/Queue replacement</td>
+                              </tr>
+                            </tbody>
+                          </table>                                                    
+                        </li>
+                        <li>
+                          <strong>Map:</strong>
+                          <table class="table table-bordered table-hover table-striped align-middle text-center">
+                            <thead class="table-dark">
+                              <tr>
+                                <th>Implementation</th>
+                                <th>Order</th>
+                                <th>Duplicate Keys</th>
+                                <th>Duplicate Values</th>
+                                <th>Nulls</th>
+                                <th>Use Case</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>HashMap</td>
+                                <td>No guaranteed order</td>
+                                <td>Not allowed</td>
+                                <td>Allowed</td>
+                                <td>One null key, multiple null values</td>
+                                <td>General key-value mapping</td>
+                              </tr>
+                              <tr>
+                                <td>LinkedHashMap</td>
+                                <td>Maintains insertion order</td>
+                                <td>Not allowed</td>
+                                <td>Allowed</td>
+                                <td>One null key, multiple null values</td>
+                                <td>Caches, preserve order</td>
+                              </tr>
+                              <tr>
+                                <td>TreeMap</td>
+                                <td>Sorted by keys</td>
+                                <td>Not allowed</td>
+                                <td>Allowed</td>
+                                <td>No null keys, null values allowed</td>
+                                <td>Sorted dictionary, range queries</td>
+                              </tr>
+                              <tr>
+                                <td>Hashtable</td>
+                                <td>No guaranteed order</td>
+                                <td>Not allowed</td>
+                                <td>Allowed</td>
+                                <td>No null keys/values</td>
+                                <td>Legacy, thread-safe map</td>
+                              </tr>
+                            </tbody>
+                          </table>                                                   
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
             </div>
             <div class="accordion accordion-flush my-3" id="accordionFlushExceptions">
               <h3>5. Exception Handling</h3>
@@ -897,7 +1095,7 @@ void validate(int value) throws InvalidInputException {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        Java provides APIs to read/write data from different sources (files, network, memory, etc.). These APIs are mainly in:
+                        APIs to read/write data from different sources (files, network, memory, etc.). These APIs are mainly in:
                       <ul>
                         <li><code>java.io</code> package → Traditional I/O (byte streams & character streams)</li>
                         <li><code>java.nio</code> and <code>java.nio.file</code> → New I/O with better performance and features (introduced in Java 1.4 & enhanced in Java 7)</li>
@@ -1145,7 +1343,7 @@ public class NIOExample {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        Generics let you parameterize types (classes, interfaces, methods) so you get compile-time type safety and reusable code without casts.
+                        Generics let you <strong>parameterize types (classes, interfaces, methods)</strong> so you get compile-time type safety and reusable code without casts.
                       </li>
                     </ul>
                   </div>
@@ -1161,10 +1359,10 @@ public class NIOExample {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        <b>What:</b> Generic classes take type parameters (e.g. <code>Box&lt;T&gt;</code>). Generic methods declare their own type parameters and can be used even in non-generic classes.
+                        Generic classes take type parameters (e.g. <code>Box&lt;T&gt;</code>). Generic methods declare their own type parameters and can be used even in non-generic classes.
                       </li>
                       <li>
-                        <b>Why:</b> Reuse code with different types while avoiding casts.
+                        Reuse code with different types while avoiding casts.
                       </li>
                       <li>
                         <b>Example: Generic Class</b><pre><code class="language-java">public class Box&lt;T&gt; {
@@ -1212,7 +1410,7 @@ Integer m = Utils.max(4, 7); </code></pre>
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        <b>What:</b> Restrict type parameters with <code>extends</code> so you can use methods of that bound.
+                        Restrict type parameters with <code>extends</code> so you can use methods of that bound.
                       </li>
                       <li>
                         <b>Syntax:</b> <code>&lt;T extends SomeClassOrInterface&gt;</code>
@@ -1252,7 +1450,7 @@ public class Bounded&lt;T extends Number &amp; Comparable&lt;T&gt;&gt; {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        <b>What:</b> Wildcards make APIs flexible by allowing "some unknown type" rather than a concrete type parameter.
+                        Wildcards make APIs flexible by allowing "some unknown type" rather than a concrete type parameter.
                         <ul>
                           <li><code>List&lt;?&gt;</code> — list of some unknown type (read-only except <code>null</code>).</li>
                           <li><code>List&lt;? extends T&gt;</code> — list of some subtype of T (read as T, cannot add T).</li>
@@ -1295,7 +1493,7 @@ public static &lt;T&gt; void copy(List&lt;? super T&gt; dest, List&lt;? extends 
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        <b>What:</b> Java generics are implemented via type erasure — type parameters exist only at compile time.
+                        Java generics are implemented via type erasure — type parameters exist only at compile time.
                       </li>
                       <ul>
                         <li><code>List&lt;String&gt;</code> and <code>List&lt;Integer&gt;</code> are the same class at runtime.</li>
@@ -1443,7 +1641,7 @@ try {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        Ensures visibility of changes to a variable across threads. Without <code>volatile</code>, threads may read cached values. Does NOT provide atomicity.
+                        <strong>Ensures visibility of changes to a variable across threads.</strong> Without <code>volatile</code>, threads may read cached values. Does NOT provide atomicity.
                       </li>
                       <li>
                         <strong>Example:</strong>
@@ -1642,7 +1840,7 @@ System.out.println(sum);
                 <div id="flush-collapse-lambda" class="accordion-collapse collapse" aria-labelledby="flush-heading-lambda" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Anonymous functions (functions without a name).</li>
+                      <li><strong>Anonymous functions (functions without a name).</strong></li>
                       <li>Used to provide implementations of functional interfaces (interfaces with a single abstract method).</li>
                       <li><strong>Syntax:</strong> (parameters) -&gt; expression or (parameters) -&gt; { statements; }</li>
                       <li><strong>Example:</strong></li>
@@ -1662,7 +1860,7 @@ r.run();</code></pre>
                 <div id="flush-collapse-functional-interface" class="accordion-collapse collapse" aria-labelledby="flush-heading-functional-interface" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Interfaces with only one abstract method.</li>
+                      <li><strong>Interfaces with only one abstract method.</strong></li>
                       <li>Optionally marked with <code>@FunctionalInterface</code> annotation to help compiler checks.</li>
                       <li>Examples: <code>Runnable</code>, <code>Callable&lt;T&gt;</code>, <code>Comparator&lt;T&gt;</code>, and custom ones.</li>
                       <li><strong>Example:</strong></li>
@@ -1686,7 +1884,7 @@ func.execute("hello");</code></pre>
                 <div id="flush-collapse-method-references" class="accordion-collapse collapse" aria-labelledby="flush-heading-method-references" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Shorter way to write lambdas calling existing methods.</li>
+                      <li><strong>Shorter way to write lambdas calling existing methods.</strong></li>
                       <li><strong>Syntax:</strong></li>
                       <ul>
                         <li><code>ClassName::staticMethod</code></li>
@@ -1709,7 +1907,7 @@ list.forEach(System.out::println); // method reference instead of lambda (s -&gt
                 <div id="flush-collapse-streams-api" class="accordion-collapse collapse" aria-labelledby="flush-heading-streams-api" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Streams represent sequences of data with operations that can be lazy and chained.</li>
+                      <li><strong>Streams represent sequences of data with operations that can be lazy and chained.</strong></li>
                       <li><strong>Intermediate operations:</strong> return a stream (e.g. <code>filter()</code>, <code>map()</code>) and are lazy.</li>
                       <li><strong>Terminal operations:</strong> produce a result or side-effect (e.g. <code>collect()</code>, <code>forEach()</code>, <code>count()</code>) and trigger execution.</li>
                       <li><strong>Example:</strong></li>
@@ -1731,7 +1929,7 @@ System.out.println(count); // 3</code></pre>
                 <div id="flush-collapse-optional-class" class="accordion-collapse collapse" aria-labelledby="flush-heading-optional-class" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Container for optional (possibly missing) values.</li>
+                      <li><strong>Container for optional (possibly missing) values.</strong></li>
                       <li>Avoids <code>NullPointerException</code> and explicit null checks.</li>
                       <li>Common methods: <code>of()</code>, <code>ofNullable()</code>, <code>isPresent()</code>, <code>orElse()</code>, <code>ifPresent()</code>.</li>
                       <li><strong>Example:</strong></li>
@@ -1752,7 +1950,7 @@ opt.ifPresent(System.out::println); // no output since empty</code></pre>
                 <div id="flush-collapse-functional-interfaces" class="accordion-collapse collapse" aria-labelledby="flush-heading-functional-interfaces" data-bs-parent="#accordionFlushExampleFunctionalProgramming">
                   <div class="accordion-body">
                     <ul>
-                      <li>Common built-in functional interfaces in <code>java.util.function</code>.</li>
+                      <li><strong>Common built-in functional interfaces in </strong><code>java.util.function</code>.</li>
                       <li><strong>Interface / Method / Purpose / Example</strong></li>
                       <ul>
                         <li><code>Predicate&lt;T&gt;</code> - <code>boolean test(T t)</code> - Tests a condition - <code>x -&gt; x &gt; 10</code></li>
@@ -1788,7 +1986,7 @@ System.out.println(randomSupplier.get());</code></pre>
                 <div id="flush-collapse-default-static" class="accordion-collapse collapse" aria-labelledby="flush-heading-default-static" data-bs-parent="#accordionFlushExampleModernJava">
                   <div class="accordion-body">
                     <ul>
-                      <li>Default methods allow adding method implementations in interfaces without breaking existing classes.</li>
+                      <li><strong>Allow adding method implementations in interfaces without breaking existing classes.</strong></li>
                       <li>Static methods in interfaces behave like utility methods related to that interface.</li>
                       <li><strong>Example:</strong></li>
                       <pre><code>interface Vehicle {
@@ -1890,7 +2088,7 @@ public class CollectorExample {
                 <div id="flush-collapse-var" class="accordion-collapse collapse" aria-labelledby="flush-heading-var" data-bs-parent="#accordionFlushExampleModernJava">
                   <div class="accordion-body">
                     <ul>
-                      <li>Local variable type inference.</li>
+                      <li><strong>Local variable type inference.</strong></li>
                       <li>Compiler infers the type from the assigned value.</li>
                       <li>Only for local variables (inside methods, loops, etc.).</li>
                       <li><strong>Example:</strong></li>
@@ -1916,7 +2114,7 @@ public class CollectorExample {
                 <div id="flush-collapse-records" class="accordion-collapse collapse" aria-labelledby="flush-heading-records" data-bs-parent="#accordionFlushExampleModernJava">
                   <div class="accordion-body">
                     <ul>
-                      <li>Compact syntax for immutable data classes.</li>
+                      <li><strong>Compact syntax for immutable data classes.</strong></li>
                       <li>Automatically generates constructor, getters, <code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code>.</li>
                       <li><strong>Example:</strong></li>
                       <pre><code>public record Person(String name, int age) {}
@@ -1995,7 +2193,7 @@ public class RecordExample {
                 <div id="flush-collapse-sealed-classes" class="accordion-collapse collapse" aria-labelledby="flush-heading-sealed-classes" data-bs-parent="#accordionFlushExampleModernJava">
                   <div class="accordion-body">
                     <ul>
-                      <li>Restricts which classes can extend or implement a class/interface.</li>
+                      <li><strong>Restricts which classes can extend or implement a class/interface.</strong></li>
                       <li>Improves security and maintainability by controlling class hierarchy.</li>
                       <li><strong>Example:</strong></li>
                       <pre><code>public abstract sealed class Shape permits Circle, Rectangle {}
@@ -2074,7 +2272,7 @@ public class SealedExample {
                 <div id="flush-collapse-gc-basics" class="accordion-collapse collapse" aria-labelledby="flush-heading-gc-basics" data-bs-parent="#accordionFlushExampleMemoryManagement">
                   <div class="accordion-body">
                     <ul>
-                      <li>Java automatically frees heap memory for objects no longer referenced.</li>
+                      <li><strong>Java automatically frees heap memory for objects no longer referenced.</strong></li>
                       <li>Garbage Collector (GC) runs periodically.</li>
                       <li>GC algorithms include mark-and-sweep, generational, etc.</li>
                       <li>You can suggest GC with <code>System.gc()</code> (not guaranteed).</li>
@@ -2205,7 +2403,7 @@ public class CleanerExample {
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        Socket: Endpoint for communication between two machines.
+                        <strong>Socket:</strong> Endpoint for communication between two machines.
                       </li>
                       <li>
                         Java supports two main protocols:
