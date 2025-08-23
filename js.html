@@ -39,7 +39,7 @@
                 <div id="flush-vars-datatypes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJS">
                     <div class="accordion-body">
                     <ul>
-                        <li><strong>Purpose:</strong> Variables store data values.</li>
+                        <li>Variables store data values.</li>
                         <li><strong>Main data types:</strong>
                         <ul>
                             <li>Primitive: <code>string</code>, <code>number</code>, <code>boolean</code>, <code>null</code>, <code>undefined</code>, <code>symbol</code>, <code>bigint</code></li>
@@ -146,7 +146,7 @@ String(123);    // "123"
                 <div id="flush-nullish" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJS">
                     <div class="accordion-body">
                     <ul>
-                        <li><strong>Behaviour:</strong> returns the right-hand operand only when left is <code>null</code> or <code>undefined</code>.</li>
+                        <li>Returns the right-hand operand only when left is <code>null</code> or <code>undefined</code>.</li>
                         <li><strong>Example:</strong><pre><code class="language-js">let username = null;
 console.log(username ?? "Guest"); // "Guest"</code></pre>
                         </li>
@@ -163,7 +163,7 @@ console.log(username ?? "Guest"); // "Guest"</code></pre>
                 <div id="flush-optional-chaining" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleJS">
                     <div class="accordion-body">
                     <ul>
-                        <li><strong>Purpose:</strong> safely access deep properties without throwing if a part is <code>null</code> or <code>undefined</code>.</li>
+                        <li>Safely access deep properties without throwing if a part is <code>null</code> or <code>undefined</code>.</li>
                         <li>
                           <strong>Example:</strong><pre><code class="language-js">let user = { profile: { name: "Sam" } };
 console.log(user.profile?.name);   // "Sam"
@@ -282,7 +282,7 @@ console.log(counter()); // 2</code></pre>
                   <div id="flush-hoisting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedJS">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> JavaScript moves declarations to the top of the scope during compilation.</li>
+                        <li>JavaScript moves declarations to the top of the scope during compilation.</li>
                         <li><strong>Function declarations:</strong> fully hoisted (can be called before definition).</li>
                         <li><strong>var variables:</strong> hoisted but initialized as <code>undefined</code>.</li>
                         <li><strong>let / const:</strong> hoisted but in Temporal Dead Zone (cannot be accessed before declaration).</li>
@@ -447,11 +447,11 @@ obj.greet();</code></pre>
                   <div id="flush-this" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedJS">
                     <div class="accordion-body">
                       <ul>
-                        <li>Global scope: <code>this</code> is <code>window</code> (browser) or <code>global</code> (Node).</li>
-                        <li>Function (non-strict): <code>this</code> = global; strict mode → undefined.</li>
-                        <li>Method: <code>this</code> = object before dot.</li>
-                        <li>Arrow function: no own <code>this</code>, inherits from enclosing scope.</li>
-                        <li>Class: <code>this</code> refers to the instance.</li>
+                        <li><strong>Global scope:</strong> <code>this</code> is <code>window</code> (browser) or <code>global</code> (Node).</li>
+                        <li><strong>Function (non-strict):</strong> <code>this</code> = global; strict mode → undefined.</li>
+                        <li><strong>Method:</strong> <code>this</code> = object before dot.</li>
+                        <li><strong>Arrow function:</strong> no own <code>this</code>, inherits from enclosing scope.</li>
+                        <li><strong>Class:</strong> <code>this</code> refers to the instance.</li>
                       </ul>
                     </div>
                   </div>
@@ -794,7 +794,7 @@ element.addEventListener("click", handler, false); // bubbling</code></pre>
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>A callback is a function passed as an argument to another function, executed later (often after async work).</p>
+                          <p><strong>A function passed as an argument to another function, executed later (often after async work).</strong></p>
                       <pre><code>function fetchData(cb) {
   setTimeout(() => cb("Data loaded"), 1000);
 }
@@ -818,7 +818,7 @@ fetchData(result => console.log(result));</code></pre>
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>A Promise represents a value that will be available in the future.</p>
+                          <p><strong>Represents a value that will be available in the future.</strong></p>
                         </li>
                         <li>
                           <p><strong>States:</strong> pending → fulfilled or rejected.</p>
@@ -945,7 +945,7 @@ load();</code></pre>
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          Introduced in ES6, enclosed by backticks (<code>` `</code>) instead of quotes.<br>
+                          Introduced in ES6, <strong>enclosed by backticks</strong> (<code>` `</code>) instead of quotes.<br>
                         </li>
                         <li>
                           Supports string interpolation (<code>${expression}</code>) and multi-line strings.
@@ -976,7 +976,7 @@ Line 2`;
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          Modules help organize code into separate files.
+                          <strong>Help organize code into separate files.</strong>
                           <pre><code class="language-javascript">
 // math.js
 export const add = (a,b) => a + b;
@@ -1093,7 +1093,7 @@ console.log(m.get(1));
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          Safely access nested properties without throwing an error if a value is null or undefined.
+                          <strong>Safely access nested properties without throwing an error if a value is null or undefined.</strong>
                           <pre><code class="language-javascript">
 let user = { profile: { name: "Sam" } };
 console.log(user.profile?.name); // "Sam"
@@ -1117,7 +1117,7 @@ console.log(user.address?.street); // undefined (no error)
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          Returns right-hand value only if left-hand is <code>null</code> or <code>undefined</code> (unlike <code>||</code>, which treats <code>0</code>, <code>""</code>, and <code>false</code> as falsy).
+                          <strong>Returns right-hand value only if left-hand is </strong><code>null</code> or <code>undefined</code> (unlike <code>||</code>, which treats <code>0</code>, <code>""</code>, and <code>false</code> as falsy).
                           <pre><code class="language-javascript">
 let username = null;
 console.log(username ?? "Guest"); // "Guest"
@@ -1146,7 +1146,7 @@ console.log(count ?? 10); // 0 (keeps 0, unlike ||)
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          ES6 introduced <code>class</code> syntax as a cleaner way to create objects and handle inheritance (syntactic sugar over prototypes).
+                          ES6 introduced <code>class</code> syntax as <strong>a cleaner way to create objects and handle inheritance </strong>(syntactic sugar over prototypes).
                           <pre><code class="language-javascript">
 class Person {
   constructor(name) {
@@ -1263,10 +1263,10 @@ d.speak();
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          Public fields are accessible anywhere.<br>
+                          <strong>Public fields:</strong> accessible anywhere.<br>
                         </li>
                         <li>
-                          Private fields (ES2022) are prefixed with <code>#</code> and only accessible inside the class.
+                          <strong>Private fields:</strong> prefixed with <code>#</code> and only accessible inside the class.
                           <pre><code class="language-javascript">
 class BankAccount {
   #balance; // private
@@ -1307,7 +1307,7 @@ console.log(account.#balance); // SyntaxError
                         <div class="accordion-body">
                             <ul>
                               <li>
-                                <p>The <code>try...catch...finally</code> statement lets you handle runtime errors without stopping your program.</p>
+                                <p><code>try...catch...finally</code> statement lets you <strong>handle runtime errors without stopping your program.</strong></p>
                                 <ul>
                                     <li><strong>try:</strong> Place code that might throw an error.</li>
                                     <li><strong>catch:</strong> Handles the error if one occurs.</li>
@@ -1340,7 +1340,7 @@ console.log(account.#balance); // SyntaxError
                         <div class="accordion-body">
                           <ul>
                             <li>
-                              <p>You can extend the built-in <code>Error</code> class to create your own error types. This makes error handling more specific and organized in large applications.</p>
+                              <p><strong>Extend the built-in</strong> <code>Error</code> <strong>class to create your own error types.</strong> This makes error handling more specific and organized in large applications.</p>
               <pre><code class="language-js">class ValidationError extends Error {
   constructor(message) {
     super(message);
@@ -1420,7 +1420,7 @@ try {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Both are techniques to limit how often a function runs, improving performance when handling frequent events like scrolling or resizing.</p>
+                          <p>Both are techniques to <strong>limit how often a function runs, improving performance when handling frequent events like scrolling or resizing.</strong></p>
                         </li>
                         <li>
                           <p><strong>Debouncing</strong> delays execution until a certain time has passed since the last call. Useful to avoid multiple quick triggers.</p>
@@ -1472,7 +1472,7 @@ window.addEventListener('scroll', throttle(() => {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Loads resources (images, scripts, modules) only when needed, usually when they enter the viewport or just before usage.</p>
+                          <p><strong>Loads resources (images, scripts, modules) only when needed</strong>, usually when they enter the viewport or just before usage.</p>
                   <pre><code class="language-html">&lt;img src="placeholder.jpg" data-src="real-image.jpg" class="lazy"&gt;
                   </code></pre>
                         </li>
@@ -1518,13 +1518,13 @@ window.addEventListener('scroll', throttle(() => {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Memory leaks occur when your program retains references to objects no longer needed, preventing garbage collection.</p>
+                          <strong>Occur when your program retains references to objects no longer needed, preventing garbage collection.</strong>
                         </li>
                         <li>
-                          <p>Garbage collection is automatic in JavaScript; the engine frees memory by removing unreachable objects.</p>
+                          Garbage collection is automatic in JavaScript; the engine frees memory by removing unreachable objects.
                         </li>
                         <li>
-                          <p><strong>Common leak causes:</strong></p>
+                          Common leak causes:
                           <ul>
                             <li>Global variables</li>
                             <li>Forgotten timers or event listeners</li>
@@ -1551,16 +1551,16 @@ window.addEventListener('scroll', throttle(() => {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p><code>console.log</code> is the simplest way to output variable values, program flow, or errors to the console. It helps quickly identify where the problem is.</p>
+                          <code>console.log</code> is the simplest way to output variable values, program flow, or errors to the console. It helps quickly identify where the problem is.
                         </li>
                         <li>
-                          <p>Browser DevTools provide powerful debugging tools including:</p>
+                          Browser DevTools provide powerful debugging tools including:
                           <ul>
                             <li>Inspecting HTML/CSS</li>
                             <li>Setting breakpoints to pause execution</li>
                             <li>Step-by-step code execution (step over, step into)</li>
                             <li>Watching variables and call stacks</li>
-                            <li>Network requests monitoring</li>
+                            <li>Network requests monitoring</li><br>
                           </ul>
                   <pre><code class="language-js">console.log("Value of x:", x);
 debugger;  // Pauses execution if DevTools are open
@@ -1583,14 +1583,14 @@ debugger;  // Pauses execution if DevTools are open
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Unit testing verifies small parts of your code (functions, modules) work correctly in isolation.</p>
+                          <strong>Verifies small parts of code (functions, modules) work correctly in isolation.</strong>
                         </li>
                         <li>
-                          <p>Popular JavaScript testing frameworks:</p>
+                          Popular JavaScript testing frameworks:
                           <ul>
                             <li><strong>Jest:</strong> Zero-config, supports mocks and snapshots, widely used with React.</li>
                             <li><strong>Mocha:</strong> Flexible test runner often combined with assertion libraries like Chai.</li>
-                          </ul>
+                          </ul><br>
                   <pre><code class="language-js">test('adds 1 + 2 to equal 3', () => {
   expect(1 + 2).toBe(3);
 });
@@ -1613,21 +1613,16 @@ debugger;  // Pauses execution if DevTools are open
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>A stack trace is a report of the active function calls at the point an error occurred.</p>
+                          <strong>Report of the active function calls at the point an error occurred.</strong>
                         </li>
                         <li>
-                          <p>It shows the call sequence (from the current function back to where execution started), file names, and line numbers.</p>
+                          It shows the call sequence (from the current function back to where execution started), file names, and line numbers.
                         </li>
                         <li>
-                          <p>Helps pinpoint the exact location and chain of calls that led to an error.</p>
-                  <pre><code class="language-php">TypeError: Cannot read property 'foo' of undefined
-at bar (app.js:10:15)
-at baz (app.js:20:5)
-at main (app.js:30:3)
-                  </code></pre>
+                          Helps pinpoint the exact location and chain of calls that led to an error.
                         </li>
                         <li>
-                          <p><strong>Why useful:</strong> Speeds up debugging by showing the path the program took before crashing.</p>
+                          <strong>Why useful:</strong> Speeds up debugging by showing the path the program took before crashing.
                         </li>
                       </ul>
                     </div>
@@ -1646,13 +1641,13 @@ at main (app.js:30:3)
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Cross-Site Scripting (XSS) attacks happen when malicious scripts are injected into trusted websites, potentially stealing data or hijacking user sessions.</p>
+                          Happen when malicious scripts are injected into trusted websites, potentially stealing data or hijacking user sessions.
                         </li>
                         <li>
-                          <p>To prevent XSS, always sanitize and escape user input before inserting it into the DOM.</p>
+                          <strong>Prevention:</strong> sanitize and escape user input before inserting it into the DOM.
                         </li>
                         <li>
-                          <p>Avoid inserting raw HTML from untrusted sources.</p>
+                          Avoid inserting raw HTML from untrusted sources.
                   <pre><code class="language-js">const safeText = document.createTextNode(userInput);
 element.appendChild(safeText);
                   </code></pre>
@@ -1674,13 +1669,13 @@ element.appendChild(safeText);
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p><code>eval()</code> executes a string as JavaScript code, which can lead to serious security vulnerabilities if the string contains untrusted data.</p>
+                          <code>eval()</code> executes a string as JavaScript code, which can lead to serious security vulnerabilities if the string contains untrusted data.
                         </li>
                         <li>
-                          <p>Avoid <code>eval()</code> completely or replace it with safer alternatives like <code>JSON.parse()</code> or functions.</p>
+                          Avoid <code>eval()</code> completely or replace it with safer alternatives like <code>JSON.parse()</code> or functions.
                         </li>
                         <li>
-                          <p><strong>Why useful:</strong> Prevents execution of arbitrary, potentially harmful code.</p>
+                          <strong>Why useful:</strong> Prevents execution of arbitrary, potentially harmful code.
                         </li>
                       </ul>
                     </div>
@@ -1696,18 +1691,18 @@ element.appendChild(safeText);
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Using <code>innerHTML</code> to insert HTML content can open doors to XSS if the content isn’t sanitized.</p>
+                          Using <code>innerHTML</code> to insert HTML content can open doors to XSS if the content isn’t sanitized.
                         </li>
                         <li>
-                          <p>Prefer <code>textContent</code> for inserting text safely, or sanitize HTML strings before use.</p>
+                          Prefer <code>textContent</code> for inserting text safely, or sanitize HTML strings before use.
                         </li>
                         <li>
-                          <p>Use libraries like DOMPurify if you must insert HTML from external sources.</p>
+                          Use libraries like DOMPurify if you must insert HTML from external sources.
                   <pre><code class="language-js">element.textContent = userInput; // safer than innerHTML
                   </code></pre>
                         </li>
                         <li>
-                          <p><strong>Why useful:</strong> Prevents injecting unsafe HTML or scripts into the page.</p>
+                          <strong>Why useful:</strong> Prevents injecting unsafe HTML or scripts into the page.
                         </li>
                       </ul>
                     </div>
