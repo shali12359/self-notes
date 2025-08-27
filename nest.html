@@ -39,7 +39,7 @@
                   <div id="flush-what-is-nestjs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
                     <div class="accordion-body">
                       <ul>
-                        <li>Framework for building scalable, maintainable Node.js server apps</li>
+                        <li>Framework for building <strong>scalable, maintainable Node.js server apps</strong></li>
                         <li>Built with TypeScript, uses modern JavaScript features</li>
                         <li>Inspired by Angular (modular design, decorators, DI)</li>
                         <li>Helps organize code for large applications</li>
@@ -57,12 +57,12 @@
                   <div id="flush-advantages-nestjs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleNestJS">
                     <div class="accordion-body">
                       <ul>
-                        <li>Built-in architecture: Modules, controllers, providers ready out of the box</li>
-                        <li>TypeScript-first: Strong typing and better tooling</li>
-                        <li>Dependency Injection: Simplifies managing dependencies</li>
-                        <li>Extensible: Can run on Express or Fastify server engines</li>
-                        <li>More features: Validation, guards, interceptors, middleware included</li>
-                        <li>Better testing support: Modular design aids unit/integration testing</li>
+                        <li><strong>Built-in architecture:</strong> Modules, controllers, providers ready out of the box</li>
+                        <li><strong>TypeScript-first:</strong> Strong typing and better tooling</li>
+                        <li><strong>Dependency Injection:</strong> Simplifies managing dependencies</li>
+                        <li><strong>Extensible:</strong> Can run on Express or Fastify server engines</li>
+                        <li><strong>More features:</strong> Validation, guards, interceptors, middleware included</li>
+                        <li><strong>Better testing support:</strong> Modular design aids unit/integration testing</li>
                       </ul>
                     </div>
                   </div>
@@ -144,13 +144,13 @@ nest generate service users</code></pre>
     └── users.service.ts
                         </code></pre>
                         <li>
-                          <p>Organized by features/modules.</p>
+                          Organized by features/modules.
                         </li>
                         <li>
-                          <p>Each module encapsulates controllers and providers.</p>
+                          Each module encapsulates controllers and providers.
                         </li>
                         <li>
-                          <p><code>main.ts</code> starts the app with <code>NestFactory.create(AppModule)</code>.</p>
+                          <code>main.ts</code> starts the app with <code>NestFactory.create(AppModule)</code>.
                         </li>
                       </ul>
                     </div>
@@ -171,7 +171,7 @@ nest generate service users</code></pre>
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Fundamental building blocks of a NestJS app</p>
+                          <strong>Fundamental building blocks of a NestJS app</strong>
                           <ul>
                             <li>Organize related controllers and providers</li>
                             <li>Every app has at least one root module (AppModule)</li>
@@ -200,7 +200,7 @@ nest generate service users</code></pre>
                   <div id="flush-controllers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
                     <div class="accordion-body">
                       <ul>
-                        <li>Handle incoming HTTP requests and return responses</li>
+                        <li><strong>Handle incoming HTTP requests and return responses</strong></li>
                         <li>Define routes using decorators like <code>@Get()</code>, <code>@Post()</code></li>
                         <li>Inject services/providers to process logic</li>
                         <li>Decorated with <code>@Controller('route')</code></li><br>
@@ -228,7 +228,7 @@ export class UsersController {
                   <div id="flush-providers" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
                     <div class="accordion-body">
                       <ul>
-                        <li>Classes that can be injected via Dependency Injection</li>
+                        <li><strong>Classes that can be injected via Dependency Injection</strong></li>
                         <li>Used to encapsulate business logic, database calls, etc.</li>
                         <li>Decorated with <code>@Injectable()</code></li>
                         <li>Services are a common type of provider</li>
@@ -249,7 +249,7 @@ export class UsersController {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>A specific kind of provider focused on business logic</p>
+                          <strong>A specific kind of provider focused on business logic</strong>
                           <ul>
                             <li>Handles data processing, interacts with database or APIs</li>
                             <li>Injected into controllers or other providers</li>
@@ -276,7 +276,7 @@ export class UsersService {
                   <div id="flush-di" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCoreConcepts">
                     <div class="accordion-body">
                       <ul>
-                        <li>Design pattern where dependencies are provided rather than created internally</li>
+                        <li><strong>Design pattern where dependencies are provided rather than created internally</strong></li>
                         <li>Promotes loose coupling and easier testing</li>
                         <li>NestJS injects dependencies automatically when declared in constructor</li>
                         <li>Uses metadata and decorators to resolve dependencies</li>
@@ -296,10 +296,10 @@ export class UsersService {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Define providers with custom injection tokens or factory functions</p>
+                          <strong>Define providers with custom injection tokens or factory functions</strong>
                           <ul>
                             <li>Useful for injecting values, classes, or async providers</li>
-                            <li>Types: Class provider, value provider, factory provider, existing provider</li>
+                            <li><strong>Types:</strong> Class provider, value provider, factory provider, existing provider</li>
                           </ul>
                         </li>
                         <li>
@@ -325,10 +325,10 @@ export class UsersService {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Special methods called at specific points of provider lifecycle</p>
+                          <strong>Special methods called at specific points of provider lifecycle</strong>
                         </li>
                         <li>
-                          <p>Common hooks:</p>
+                          <strong>Common hooks:</strong>
                           <ul>
                             <li><code>onModuleInit()</code> — runs after module initialization</li>
                             <li><code>onApplicationBootstrap()</code> — runs after app bootstrap</li>
@@ -363,13 +363,13 @@ export class UsersService {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Routes are defined inside controllers using method decorators.</p>
+                          <strong>Routes are defined inside controllers using method decorators.</strong>
                         </li>
                         <li>
-                          <p>Common decorators: <code>@Get()</code>, <code>@Post()</code>, <code>@Put()</code>, <code>@Delete()</code>, <code>@Patch()</code></p>
+                          Common decorators: <code>@Get()</code>, <code>@Post()</code>, <code>@Put()</code>, <code>@Delete()</code>, <code>@Patch()</code>
                         </li>
                         <li>
-                          <p>Decorate methods with HTTP method and optional path</p>
+                          Decorate methods with HTTP method and optional path
                         </li>
                         <li>
                           <p>Example:</p>
@@ -402,26 +402,26 @@ export class UsersController {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p><strong>Route parameters:</strong> Dynamic parts of URL (e.g., /users/:id)</p>
+                          <strong>Route parameters:</strong> Dynamic parts of URL (e.g., /users/:id)
                         </li>
                         <li>
-                          <p>Access using <code>@Param()</code> decorator</p>
+                          Access using <code>@Param()</code> decorator
                         </li>
                         <li>
-                          <p>Example:</p>
+                          Example:
                           <pre><code class="language-typescript">@Get(':id')
 getUser(@Param('id') id: string) {
   return `User ${id}`;
 }</code></pre>
                         </li>
                         <li>
-                          <p><strong>Query parameters:</strong> Key-value pairs after ? in URL (e.g., /users?role=admin)</p>
+                          <strong>Query parameters:</strong> Key-value pairs after ? in URL (e.g., /users?role=admin)
                         </li>
                         <li>
-                          <p>Access using <code>@Query()</code> decorator</p>
+                          Access using <code>@Query()</code> decorator
                         </li>
                         <li>
-                          <p>Example:</p>
+                          Example:
                           <pre><code class="language-typescript">@Get()
 getUsers(@Query('role') role: string) {
   return `Role: ${role}`;
@@ -443,16 +443,16 @@ getUsers(@Query('role') role: string) {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Access the HTTP request body (usually JSON) with <code>@Body()</code> decorator</p>
+                          <strong>Access the HTTP request body (usually JSON) with</strong> <code>@Body()</code> <strong>decorator</strong>
                         </li>
                         <li>
-                          <p>Used mostly with POST, PUT, PATCH requests</p>
+                          Used mostly with POST, PUT, PATCH requests
                         </li>
                         <li>
-                          <p>Can use DTOs (Data Transfer Objects) to validate/define request shapes</p>
+                          Can use DTOs (Data Transfer Objects) to validate/define request shapes
                         </li>
                         <li>
-                          <p>Example:</p>
+                          Example:
                           <pre><code class="language-typescript">@Post()
 createUser(@Body() createUserDto: CreateUserDto) {
   return createUserDto;
@@ -498,19 +498,19 @@ createUser(@Body() createUserDto: CreateUserDto) {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Routes can have dynamic segments with <code>:param</code> syntax</p>
+                          <strong>Routes can have dynamic segments with</strong> <code>:param</code> <strong>syntax</strong>
                         </li>
                         <li>
-                          <p>Multiple parameters possible (e.g., /users/:userId/posts/:postId)</p>
+                          Multiple parameters possible (e.g., /users/:userId/posts/:postId)
                         </li>
                         <li>
-                          <p>NestJS extracts them with <code>@Param()</code></p>
+                          NestJS extracts them with <code>@Param()</code>
                         </li>
                         <li>
-                          <p>Useful for resource-specific endpoints</p>
+                          Useful for resource-specific endpoints
                         </li>
                         <li>
-                          <p>Example:</p>
+                          Example:
                           <pre><code class="language-typescript">@Get(':userId/posts/:postId')
 getPost(@Param('userId') userId: string, @Param('postId') postId: string) {
   return `User ${userId}, Post ${postId}`;
@@ -532,19 +532,19 @@ getPost(@Param('userId') userId: string, @Param('postId') postId: string) {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Control access to routes for authorization/authentication</p>
+                          <strong>Control access to routes for authorization/authentication</strong>
                         </li>
                         <li>
-                          <p>Implement <code>CanActivate</code> interface</p>
+                          Implement <code>CanActivate</code> interface
                         </li>
                         <li>
-                          <p>Return true to allow access or false to block</p>
+                          Return true to allow access or false to block
                         </li>
                         <li>
-                          <p>Use <code>@UseGuards()</code> decorator to apply guards to controllers or routes</p>
+                          Use <code>@UseGuards()</code> decorator to apply guards to controllers or routes
                         </li>
                         <li>
-                          <p>Example guard usage:</p>
+                          Example guard usage:
                           <pre><code class="language-typescript">@UseGuards(AuthGuard)
 @Get('profile')
 getProfile() {
@@ -569,13 +569,12 @@ getProfile() {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Middleware are functions executed before route handlers. Used for logging, authentication, request modification, etc.</p>
+                          <strong>Middleware are functions executed before route handlers.</strong> Used for logging, authentication, request modification, etc.
                         </li>
                         <li>
-                          <p>Implement the NestMiddleware interface with a <code>use(req, res, next)</code> method.</p>
+                          Implement the NestMiddleware interface with a <code>use(req, res, next)</code> method.
                         </li>
-                        <li>
-                          <p><strong>Example:</strong></p>
+                        <li><strong>Example:</strong>
                           <pre><code class="language-typescript">
 import { Injectable, NestMiddleware } from '@nestjs/common';
                   
@@ -603,13 +602,13 @@ export class LoggerMiddleware implements NestMiddleware {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p><strong>Globally:</strong> Applied to all routes using <code>app.use()</code> in <code>main.ts</code>.</p>
+                          <strong>Globally:</strong> Applied to all routes using <code>app.use()</code> in <code>main.ts</code>.
                           <pre><code class="language-typescript">
 app.use(LoggerMiddleware);
                           </code></pre>
                         </li>
                         <li>
-                          <p><strong>Per route or module:</strong> Use <code>configure()</code> method in a module implementing <code>NestModule</code>.</p>
+                          <strong>Per route or module:</strong> Use <code>configure()</code> method in a module implementing <code>NestModule</code>.
                           <pre><code class="language-typescript">
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
@@ -635,13 +634,13 @@ export class AppModule implements NestModule {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p><strong>Built-in middleware:</strong> Provided by NestJS (e.g., Logger, Helmet, Cors).</p>
+                          <strong>Built-in middleware:</strong> Provided by NestJS (e.g., Logger, Helmet, Cors).
                         </li>
                         <li>
-                          <p><strong>Custom middleware:</strong> User-defined, tailored for specific app needs (e.g., custom logging, auth checks).</p>
+                          <strong>Custom middleware:</strong> User-defined, tailored for specific app needs (e.g., custom logging, auth checks).
                         </li>
                         <li>
-                          <p>Built-in middleware are easy to use and configure; custom middleware gives full control.</p>
+                          Built-in middleware are easy to use and configure; custom middleware gives full control.
                         </li>
                       </ul>
                     </div>
@@ -658,17 +657,18 @@ export class AppModule implements NestModule {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>NestJS can use Express or Fastify middleware. Use <code>.apply()</code> method in <code>configure()</code> to integrate.</p>
+                          NestJS can use Express or Fastify middleware. Use <code>.apply()</code> method in <code>configure()</code> to integrate.
                         </li>
                         <li>
-                          <p><strong>Example integrating helmet middleware:</strong></p>
+                          <strong>Example integrating helmet middleware:</strong>
                           <pre><code class="language-typescript">import * as helmet from 'helmet';
-                  export class AppModule implements NestModule {
-configure(consumer: MiddlewareConsumer) {
-  consumer
-    .apply(helmet())
-    .forRoutes('*');
-}}
+export class AppModule implements NestModule {
+  configure(consumer: MiddlewareConsumer) {
+    consumer
+      .apply(helmet())
+      .forRoutes('*');
+  }
+}
                           </code></pre>
                         </li>
                         <li>
@@ -692,15 +692,13 @@ configure(consumer: MiddlewareConsumer) {
                     <div class="accordion-body">
                       <ul>
                         <li>
+                          NestJS provides common HTTP exceptions extending <code>HttpException</code>.
                           <ul>
                             <li>NotFoundException (404)</li>
                             <li>BadRequestException (400)</li>
                             <li>UnauthorizedException (401)</li>
-                            <li>ForbiddenException (403)</li>
+                            <li>ForbiddenException (403)</li><br>
                           </ul>
-                        </li>
-                        <li>
-                          <p>NestJS provides common HTTP exceptions extending <code>HttpException</code>.</p>
                         </li>
                         <li>
                           <p>Throw these in controllers/services to send proper HTTP error responses.</p>
@@ -725,13 +723,13 @@ configure(consumer: MiddlewareConsumer) {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Catch and handle exceptions thrown anywhere in the app globally.</p>
+                          Catch and handle exceptions thrown anywhere in the app globally.ß
                         </li>
                         <li>
-                          <p>Implement <code>ExceptionFilter</code> interface and use <code>@Catch()</code> decorator.</p>
+                          Implement <code>ExceptionFilter</code> interface and use <code>@Catch()</code> decorator.ß
                         </li>
                         <li>
-                          <p>Register globally using:</p>
+                          Register globally using:ß
                           <pre><code class="language-typescript">app.useGlobalFilters(new AllExceptionsFilter());
                           </code></pre>
                         </li>
@@ -753,13 +751,13 @@ configure(consumer: MiddlewareConsumer) {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Create filters to handle specific exceptions or customize responses.</p>
+                          Create filters to handle specific exceptions or customize responses.
                         </li>
                         <li>
-                          <p>Can catch multiple or single exception types via <code>@Catch(ExceptionType)</code>.</p>
+                          Can catch multiple or single exception types via <code>@Catch(ExceptionType)</code>.
                         </li>
                         <li>
-                          <p>Access exception, request, response objects to tailor handling.</p>
+                          Access exception, request, response objects to tailor handling.
                         </li>
                         <li>
                           <strong>Example:</strong>
@@ -793,10 +791,10 @@ export class HttpExceptionFilter implements ExceptionFilter {
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <p>Use try-catch blocks inside async methods to catch exceptions.</p>
+                          Use try-catch blocks inside async methods to catch exceptions.
                         </li>
                         <li>
-                          <p>Throw exceptions inside catch block for Nest to handle.</p>
+                          Throw exceptions inside catch block for Nest to handle.
                         </li>
                         <li>
                           <strong>Example:</strong>
@@ -828,7 +826,7 @@ export class HttpExceptionFilter implements ExceptionFilter {
                   <div id="flush-collapse-pipe-1" class="accordion-collapse collapse" aria-labelledby="flush-pipe-1" data-bs-parent="#accordionFlushPipes">
                     <div class="accordion-body">
                       <ul>
-                        <li>Pipes operate on incoming request data before handlers process it.</li>
+                        <li><strong>Pipes operate on incoming request data before handlers process it.</strong></li>
                         <li>Common built-in pipes:
                           <ul>
                             <li><strong>ValidationPipe:</strong> validates input data using class-validator decorators.</li>
@@ -892,7 +890,7 @@ export class MyCustomPipe implements PipeTransform {
                         <li>Can be applied:
                           <ul>
                             <li>Per-route or method parameter:</li>
-                          </ul>
+                          </ul><br>
                         </li>
                         <li>
                           <pre><code class="language-typescript">@Post()
@@ -918,7 +916,7 @@ createUser(@Body(new ValidationPipe()) createUserDto: CreateUserDto) {}
                   <div id="flush-collapse-guard-1" class="accordion-collapse collapse" aria-labelledby="flush-guard-1" data-bs-parent="#accordionFlushGuards">
                     <div class="accordion-body">
                       <ul>
-                        <li>Guards control access to routes by implementing the <code>CanActivate</code> interface.</li>
+                        <li><strong>Guards control access to routes by implementing the</strong> <code>CanActivate</code> <strong>interface.</strong></li>
                         <li><code>canActivate(context: ExecutionContext)</code> method returns <code>true</code> (allow) or <code>false</code> (deny).</li>
                         <li>Apply guards using the <code>@UseGuards()</code> decorator on routes or controllers.</li>
                         <li><strong>Example:</strong>
@@ -1158,7 +1156,7 @@ export class CreateUserDto {
                   <div id="flush-collapse-validation-2" class="accordion-collapse collapse" aria-labelledby="flush-validation-2" data-bs-parent="#accordionFlushValidation">
                     <div class="accordion-body">
                       <ul>
-                        <li>Classes defining the shape and validation rules of data sent over the network (request payloads).</li>
+                        <li><strong>Classes defining the shape and validation rules of data sent over the network (request payloads).</strong></li>
                         <li>Used as method parameters decorated with <code>@Body()</code>.</li>
                         <li>Improve code clarity, validation, and type safety.</li>
                         <li>
@@ -1314,7 +1312,7 @@ ConfigModule.forRoot({
                   <div id="flush-collapse-db-1" class="accordion-collapse collapse" aria-labelledby="flush-db-1" data-bs-parent="#accordionFlushDatabase">
                     <div class="accordion-body">
                       <ul>
-                        <li>TypeORM: popular ORM for SQL databases (Postgres, MySQL, etc.)</li>
+                        <li><strong>TypeORM:</strong> popular ORM for SQL databases (Postgres, MySQL, etc.)</li>
                         <li>Official NestJS package: <code>@nestjs/typeorm</code></li>
                         <li>Define entities as classes with decorators (<code>@Entity()</code>, <code>@Column()</code>)</li>
                         <li>Use <code>TypeOrmModule.forRoot()</code> to configure DB connection</li>
@@ -1347,7 +1345,7 @@ export class User {
                   <div id="flush-collapse-db-2" class="accordion-collapse collapse" aria-labelledby="flush-db-2" data-bs-parent="#accordionFlushDatabase">
                     <div class="accordion-body">
                       <ul>
-                        <li>Prisma: modern ORM for type-safe database access, supports SQL DBs</li>
+                        <li><strong>Prisma:</strong> modern ORM for type-safe database access, supports SQL DBs</li>
                         <li>Use Prisma Client inside Nest services for queries</li>
                         <li>Schema defined in <code>schema.prisma</code> file</li>
                         <li>Prisma doesn’t have official NestJS module but works well with Dependency Injection</li>
@@ -1427,7 +1425,7 @@ export const CatSchema = SchemaFactory.createForClass(Cat);
                   <div id="flush-collapse-db-5" class="accordion-collapse collapse" aria-labelledby="flush-db-5" data-bs-parent="#accordionFlushDatabase">
                     <div class="accordion-body">
                       <ul>
-                        <li>Transactions ensure multiple DB operations succeed or fail together</li>
+                        <li><strong>Transactions ensure multiple DB operations succeed or fail together</strong></li>
                         <li>Supported in TypeORM and Prisma</li>
                         <li>In TypeORM, use <code>@Transaction()</code> decorator or <code>queryRunner</code></li>
                         <li>
@@ -1478,7 +1476,7 @@ typeorm migration:run
                   <div id="flush-collapse-auth-1" class="accordion-collapse collapse" aria-labelledby="flush-auth-1" data-bs-parent="#accordionFlushAuthentication">
                     <div class="accordion-body">
                       <ul>
-                        <li>Uses JSON Web Tokens (JWT) to securely transmit user identity</li>
+                        <li><strong>Uses JSON Web Tokens (JWT) to securely transmit user identity</strong></li>
                         <li>Server issues JWT after login, client stores and sends it with requests (usually in Authorization header)</li>
                         <li>Stateless: no session stored on server</li>
                         <li>Verify token on each request via guard or middleware</li>
@@ -1505,7 +1503,7 @@ getProfile() {
                   <div id="flush-collapse-auth-2" class="accordion-collapse collapse" aria-labelledby="flush-auth-2" data-bs-parent="#accordionFlushAuthentication">
                     <div class="accordion-body">
                       <ul>
-                        <li>Passport.js is a popular authentication middleware integrated with NestJS</li>
+                        <li>A popular <strong> authentication middleware integrated with NestJS</strong></li>
                         <li>Strategies:
                           <ul>
                             <li>Local: username/password verification</li>
@@ -1538,7 +1536,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
                   <div id="flush-collapse-auth-3" class="accordion-collapse collapse" aria-labelledby="flush-auth-3" data-bs-parent="#accordionFlushAuthentication">
                     <div class="accordion-body">
                       <ul>
-                        <li>Long-lived tokens used to obtain new short-lived JWTs without re-login</li>
+                        <li><strong>Long-lived tokens used to obtain new short-lived JWTs without re-login</strong></li>
                         <li>Stored securely (httpOnly cookies or secure storage)</li>
                         <li>Helps maintain user sessions without compromising security</li>
                         <li>Refresh token endpoint verifies and issues new JWT</li>
@@ -1557,7 +1555,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
                   <div id="flush-collapse-auth-4" class="accordion-collapse collapse" aria-labelledby="flush-auth-4" data-bs-parent="#accordionFlushAuthentication">
                     <div class="accordion-body">
                       <ul>
-                        <li>Traditional authentication storing session state on server (memory, Redis)</li>
+                        <li><strong>Traditional authentication storing session state on server</strong> (memory, Redis)</li>
                         <li>Uses cookies to track sessions</li>
                         <li>Less scalable than JWT but easier for some use cases</li>
                         <li>Supported in NestJS via express-session and Passport</li>
@@ -1578,7 +1576,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
                   <div id="flush-collapse-auth-5" class="accordion-collapse collapse" aria-labelledby="flush-auth-5" data-bs-parent="#accordionFlushAuthentication">
                     <div class="accordion-body">
                       <ul>
-                        <li>OAuth-based login with third-party providers</li>
+                        <li><strong>OAuth-based login with third-party providers</strong></li>
                         <li>Use Passport OAuth strategies like <code>passport-google-oauth20</code></li>
                         <li>Users authenticate via provider; app receives user info and access tokens</li>
                         <li>Enables easy login without password management</li>
@@ -1602,7 +1600,7 @@ export class LocalStrategy extends PassportStrategy(Strategy) {
                   <div id="flush-collapse-fileupload-1" class="accordion-collapse collapse" aria-labelledby="flush-fileupload-1" data-bs-parent="#accordionFlushFileUploads">
                     <div class="accordion-body">
                       <ul>
-                        <li>NestJS uses Multer middleware (built-in integration via <code>@nestjs/platform-express</code>) for handling multipart/form-data</li>
+                        <li><strong>NestJS uses Multer middleware</strong> (built-in integration via <code>@nestjs/platform-express</code>) for handling multipart/form-data</li>
                         <li>Use <code>@UseInterceptors(FileInterceptor('fieldname'))</code> to intercept file uploads</li>
                         <li>Access uploaded file with <code>@UploadedFile()</code> decorator</li>
                         <li>
@@ -1682,7 +1680,7 @@ uploadFile(@UploadedFile() file: Express.Multer.File) {
                   <div id="flush-collapse-event-1" class="accordion-collapse collapse" aria-labelledby="flush-event-1" data-bs-parent="#accordionFlushEventDriven">
                     <div class="accordion-body">
                       <ul>
-                        <li>Built-in event bus for intra-application event handling</li>
+                        <li><strong>Built-in event bus for intra-application event handling</strong></li>
                         <li>Uses EventEmitter2 package integrated via <code>@nestjs/event-emitter</code></li>
                         <li>Emit events and subscribe with listeners</li>
                         <li>
@@ -1711,7 +1709,7 @@ handleUserCreatedEvent(payload: any) {
                   <div id="flush-collapse-event-2" class="accordion-collapse collapse" aria-labelledby="flush-event-2" data-bs-parent="#accordionFlushEventDriven">
                     <div class="accordion-body">
                       <ul>
-                        <li>Used for decoupled, scalable communication between microservices or distributed components</li>
+                        <li><strong>Used for decoupled, scalable communication between microservices or distributed components</strong></li>
                         <li>NestJS microservice package integrates RabbitMQ, Kafka, NATS</li>
                         <li>Supports publish-subscribe, message routing, durability</li>
                         <li>Use transport layers like <code>ClientsModule.register()</code> with config</li>
@@ -1743,7 +1741,7 @@ handleUserCreatedEvent(payload: any) {
                   <div id="flush-collapse-event-3" class="accordion-collapse collapse" aria-labelledby="flush-event-3" data-bs-parent="#accordionFlushEventDriven">
                     <div class="accordion-body">
                       <ul>
-                        <li>Real-time bidirectional communication protocol</li>
+                        <li><strong>Real-time bidirectional communication protocol</strong></li>
                         <li>Supported via <code>@WebSocketGateway()</code> decorator</li>
                         <li>Handle events with <code>@SubscribeMessage()</code></li>
                         <li>Used for chat apps, live notifications, etc.</li>
@@ -1772,7 +1770,7 @@ export class EventsGateway {
                   <div id="flush-collapse-event-4" class="accordion-collapse collapse" aria-labelledby="flush-event-4" data-bs-parent="#accordionFlushEventDriven">
                     <div class="accordion-body">
                       <ul>
-                        <li>Microservices communicate via events/messages instead of direct HTTP calls</li>
+                        <li><strong>Microservices communicate via events/messages instead of direct HTTP calls</strong></li>
                         <li>Use NestJS microservices package with transporters (TCP, Redis, NATS, RabbitMQ)</li>
                         <li>Supports request-response and event-driven patterns</li>
                         <li>Promotes loose coupling and scalability</li>
@@ -1799,7 +1797,7 @@ await app.listen();
                   <div id="flush-collapse-rest-1" class="accordion-collapse collapse" aria-labelledby="flush-rest-1" data-bs-parent="#accordionFlushRestApi">
                     <div class="accordion-body">
                       <ul>
-                        <li>Manage multiple API versions without breaking existing clients</li>
+                        <li><strong>Manage multiple API versions without breaking existing clients</strong></li>
                         <li>NestJS supports versioning via URL, header, or media type</li>
                         <li>Enable versioning in main app module:</li>
                           <pre><code class="language-typescript">app.enableVersioning({
@@ -1823,7 +1821,7 @@ await app.listen();
                   <div id="flush-collapse-rest-2" class="accordion-collapse collapse" aria-labelledby="flush-rest-2" data-bs-parent="#accordionFlushRestApi">
                     <div class="accordion-body">
                       <ul>
-                        <li>Handle large datasets by returning data in chunks (pagination)</li>
+                        <li><strong>Handle large datasets by returning data in chunks (pagination)</strong></li>
                         <li>Use query parameters for pagination (page, limit) and filtering (status, category)</li>
                         <li>Implement logic in service layer to fetch subset of data</li>
                         <li>Example query params:</li>
@@ -1843,7 +1841,7 @@ await app.listen();
                   <div id="flush-collapse-rest-3" class="accordion-collapse collapse" aria-labelledby="flush-rest-3" data-bs-parent="#accordionFlushRestApi">
                     <div class="accordion-body">
                       <ul>
-                        <li>REST principle where responses include links to related resources or next actions</li>
+                        <li><strong>REST principle where responses include links to related resources or next actions</strong></li>
                         <li>Helps clients navigate API dynamically</li>
                         <li>Example: returning a user with links to edit or delete</li>
                         <pre><code class="language-json">{
@@ -1895,7 +1893,7 @@ SwaggerModule.setup('api', app, document);
                   <div id="flush-collapse-rest-5" class="accordion-collapse collapse" aria-labelledby="flush-rest-5" data-bs-parent="#accordionFlushRestApi">
                     <div class="accordion-body">
                       <ul>
-                        <li>Customize API responses by transforming data</li>
+                        <li><strong>Customize API responses by transforming data</strong></li>
                         <li>Remove sensitive fields, add metadata, or format output</li>
                         <li>Use interceptors or DTO transformation</li>
                         <li>Example with interceptor to wrap response:</li>
@@ -1918,7 +1916,7 @@ SwaggerModule.setup('api', app, document);
                   <div id="flush-collapse-graphql-1" class="accordion-collapse collapse" aria-labelledby="flush-graphql-1" data-bs-parent="#accordionFlushGraphQL">
                     <div class="accordion-body">
                       <ul>
-                        <li>GraphQL is a query language for APIs and runtime for executing queries</li>
+                        <li><strong>A query language for APIs and runtime for executing queries</strong></li>
                         <li>NestJS supports GraphQL via <code>@nestjs/graphql</code> package</li>
                         <li>Enables flexible data fetching and avoids over/under-fetching</li>
                         <li>Integrate by importing <code>GraphQLModule</code> in app module</li>
@@ -1968,9 +1966,9 @@ SwaggerModule.setup('api', app, document);
                   <div id="flush-collapse-graphql-3" class="accordion-collapse collapse" aria-labelledby="flush-graphql-3" data-bs-parent="#accordionFlushGraphQL">
                     <div class="accordion-body">
                       <ul>
-                        <li>Queries: Read operations, fetch data</li>
-                        <li>Mutations: Write operations, create/update/delete data</li>
-                        <li>Subscriptions: Real-time data updates over WebSockets</li>
+                        <li><strong>Queries:</strong> Read operations, fetch data</li>
+                        <li><strong>Mutations:</strong> Write operations, create/update/delete data</li>
+                        <li><strong>Subscriptions:</strong> Real-time data updates over WebSockets</li>
                         <li>Define resolvers for each type</li>
                         <li>Example query resolver:</li>
                         <pre><code class="language-typescript">@Query(() => [User])
@@ -2014,7 +2012,7 @@ SwaggerModule.setup('api', app, document);
                   <div id="flush-collapse-testing-1" class="accordion-collapse collapse" aria-labelledby="flush-testing-1" data-bs-parent="#accordionFlushTesting">
                     <div class="accordion-body">
                       <ul>
-                        <li>Jest is the default testing framework used by NestJS</li>
+                        <li><strong>Jest is the default testing framework used by NestJS</strong></li>
                         <li>Tests individual units like services or controllers in isolation</li>
                         <li>Use <code>@nestjs/testing</code> module to create testing modules</li>
                         <li>Example basic test:</li>
@@ -2048,7 +2046,7 @@ SwaggerModule.setup('api', app, document);
                   <div id="flush-collapse-testing-2" class="accordion-collapse collapse" aria-labelledby="flush-testing-2" data-bs-parent="#accordionFlushTesting">
                     <div class="accordion-body">
                       <ul>
-                        <li>Tests the entire application flow including HTTP requests</li>
+                        <li><strong>Tests the entire application flow including HTTP requests</strong></li>
                         <li>Uses <code>supertest</code> package to simulate requests</li>
                         <li>Run with a real instance of the app</li>
                         <li>Usually placed in <code>test</code> or <code>e2e</code> folders</li>
@@ -2072,7 +2070,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-testing-3" class="accordion-collapse collapse" aria-labelledby="flush-testing-3" data-bs-parent="#accordionFlushTesting">
                     <div class="accordion-body">
                       <ul>
-                        <li>Replace real dependencies with mocks to isolate units</li>
+                        <li><strong>Replace real dependencies with mocks to isolate units</strong></li>
                         <li>Use Jest’s mocking features (<code>jest.fn()</code>, <code>jest.mock()</code>)</li>
                         <li>Inject mock providers in test modules</li>
                         <li>Example:</li>
@@ -2092,9 +2090,9 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-testing-4" class="accordion-collapse collapse" aria-labelledby="flush-testing-4" data-bs-parent="#accordionFlushTesting">
                     <div class="accordion-body">
                       <ul>
-                        <li>Controllers: test request handling, route responses</li>
-                        <li>Services: test business logic and data processing</li>
-                        <li>Guards: test authorization logic by mocking <code>ExecutionContext</code></li>
+                        <li><strong>Controllers:</strong> test request handling, route responses</li>
+                        <li><strong>Services:</strong> test business logic and data processing</li>
+                        <li><strong>Guards:</strong> test authorization logic by mocking <code>ExecutionContext</code></li>
                         <li>Use Nest’s testing utilities to instantiate modules with mocks for dependencies</li>
                         <li>Example guard test:</li>
                         <pre><code class="language-typescript">it('should allow access if user exists', () => {
@@ -2120,7 +2118,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-security-1" class="accordion-collapse collapse" aria-labelledby="flush-security-1" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
-                        <li>Cross-Site Request Forgery attacks trick users into submitting unauthorized requests</li>
+                        <li><strong>Trick users into submitting unauthorized requests</strong></li>
                         <li>Use CSRF tokens to validate legitimate requests</li>
                         <li>NestJS apps with sessions can use <code>csurf</code> middleware for CSRF protection</li>
                         <li>For stateless APIs (JWT), CSRF risk is lower but consider same-site cookies and CORS policies</li>
@@ -2138,7 +2136,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-security-2" class="accordion-collapse collapse" aria-labelledby="flush-security-2" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
-                        <li>Protect APIs from abuse and DoS attacks by limiting request rate</li>
+                        <li><strong>Protect APIs from abuse and DoS attacks by limiting request rate</strong></li>
                         <li>Use NestJS <code>@nestjs/throttler</code> package for easy rate limiting</li>
                         <li>Example setup:</li>
                         <pre><code class="language-typescript">ThrottlerModule.forRoot({ ttl: 60, limit: 10 }); // 10 requests per minute
@@ -2158,7 +2156,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-security-3" class="accordion-collapse collapse" aria-labelledby="flush-security-3" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
-                        <li>Clean incoming data to remove malicious input (e.g., scripts, HTML tags)</li>
+                        <li><strong>Clean incoming data to remove malicious input</strong> (e.g., scripts, HTML tags)</li>
                         <li>Prevent XSS and injection attacks</li>
                         <li>Use libraries like <code>class-sanitizer</code> alongside <code>class-validator</code></li>
                         <li>Sanitize user inputs before processing or saving</li>
@@ -2176,7 +2174,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-security-4" class="accordion-collapse collapse" aria-labelledby="flush-security-4" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
-                        <li>Use middleware like <code>helmet</code> to set HTTP headers for security (e.g., CSP, XSS protection)</li>
+                        <li><strong>Use middleware like</strong> <code>helmet</code> <strong>to set HTTP headers for security</strong> (e.g., CSP, XSS protection)</li>
                         <li>Easy integration in NestJS:</li>
                         <pre><code class="language-typescript">app.use(helmet());
                         </code></pre>
@@ -2195,7 +2193,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-security-5" class="accordion-collapse collapse" aria-labelledby="flush-security-5" data-bs-parent="#accordionFlushSecurity">
                     <div class="accordion-body">
                       <ul>
-                        <li>Avoid building queries with raw user input strings</li>
+                        <li><strong>Avoid building queries with raw user input strings</strong></li>
                         <li>Use parameterized queries or ORM query builders</li>
                         <li>Validate and sanitize inputs thoroughly</li>
                         <li>Example:</li>
@@ -2221,7 +2219,7 @@ await request(app.getHttpServer())
                   <div id="flush-collapse-performance-1" class="accordion-collapse collapse" aria-labelledby="flush-performance-1" data-bs-parent="#accordionFlushPerformance">
                     <div class="accordion-body">
                       <ul>
-                        <li>Store frequently accessed data to reduce database or API calls</li>
+                        <li><strong>Store frequently accessed data to reduce database or API calls</strong></li>
                         <li>In-memory cache (e.g., NestJS CacheModule with default memory store) for simple, fast caching</li>
                         <li>Redis cache for distributed, scalable caching across servers</li>
                         <li>Use <code>@Cacheable()</code>, manual cache management, or interceptors for caching responses</li>
@@ -2243,7 +2241,7 @@ getCachedData() { /* ... */ }
                   <div id="flush-collapse-performance-2" class="accordion-collapse collapse" aria-labelledby="flush-performance-2" data-bs-parent="#accordionFlushPerformance">
                     <div class="accordion-body">
                       <ul>
-                        <li>Reduce response payload size to speed up network transfer</li>
+                        <li><strong>Reduce response payload size to speed up network transfer</strong></li>
                         <li>Use compression middleware (e.g., gzip)</li>
                         <li>Easy integration in NestJS:</li>
                         <pre><code class="language-typescript">import * as compression from 'compression';
@@ -2263,7 +2261,7 @@ app.use(compression());
                   <div id="flush-collapse-performance-3" class="accordion-collapse collapse" aria-labelledby="flush-performance-3" data-bs-parent="#accordionFlushPerformance">
                     <div class="accordion-body">
                       <ul>
-                        <li>Use async factory providers to initialize resources like database connections asynchronously</li>
+                        <li><strong>Use async factory providers to initialize resources like database connections asynchronously</strong></li>
                         <li>Allows better startup control and resource management</li>
                         <li>Example:</li>
                         <pre><code class="language-typescript">{
@@ -2285,7 +2283,7 @@ app.use(compression());
                   <div id="flush-collapse-performance-4" class="accordion-collapse collapse" aria-labelledby="flush-performance-4" data-bs-parent="#accordionFlushPerformance">
                     <div class="accordion-body">
                       <ul>
-                        <li>Load modules only when needed instead of at app startup</li>
+                        <li><strong>Load modules only when needed instead of at app startup</strong></li>
                         <li>Improves startup time and memory usage</li>
                         <li>Supported via dynamic module imports and imports array in modules</li>
                         <li>Useful for rarely used features or heavy modules</li>
@@ -2324,7 +2322,7 @@ app.use(compression());
                   <div id="flush-collapse-deployment-2" class="accordion-collapse collapse" aria-labelledby="flush-deployment-2" data-bs-parent="#accordionFlushDeployment">
                     <div class="accordion-body">
                       <ul>
-                        <li>PM2 is a process manager for Node.js apps for production use</li>
+                        <li><strong>A process manager for Node.js apps for production use</strong></li>
                         <li>Supports process monitoring, auto-restart, clustering</li>
                         <li>Start NestJS app with PM2:
                           <pre><code class="language-bash">pm2 start dist/main.js --name my-nest-app
@@ -2348,7 +2346,7 @@ app.use(compression());
                   <div id="flush-collapse-deployment-3" class="accordion-collapse collapse" aria-labelledby="flush-deployment-3" data-bs-parent="#accordionFlushDeployment">
                     <div class="accordion-body">
                       <ul>
-                        <li>Create a Dockerfile to containerize your app</li>
+                        <li><strong>Create a Dockerfile to containerize your app</strong></li>
                         <li>Typical steps:</li>
                         <ul>
                           <li>Use Node base image</li>
@@ -2357,14 +2355,14 @@ app.use(compression());
                           <li>Expose port and start app with <code>node dist/main.js</code></li>
                         </ul>
                         <li>Example snippet:
-                          <pre><code class="language-dockerfile">FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 3000
-CMD ["node", "dist/main.js"]
+                          <pre><code class="language-dockerfile">  FROM node:18-alpine
+  WORKDIR /app
+  COPY package*.json ./
+  RUN npm install
+  COPY . .
+  RUN npm run build
+  EXPOSE 3000
+  CMD ["node", "dist/main.js"]
                           </code></pre>
                         </li>
                       </ul>
@@ -2381,7 +2379,7 @@ CMD ["node", "dist/main.js"]
                   <div id="flush-collapse-deployment-4" class="accordion-collapse collapse" aria-labelledby="flush-deployment-4" data-bs-parent="#accordionFlushDeployment">
                     <div class="accordion-body">
                       <ul>
-                        <li>Automate build, test, and deploy using tools like GitHub Actions, GitLab CI, Jenkins, CircleCI</li>
+                        <li><strong>Automate build, test, and deploy using tools like GitHub Actions, GitLab CI, Jenkins, CircleCI</strong></li>
                         <li>Typical steps:</li>
                         <ul>
                           <li>Install dependencies</li>
@@ -2427,7 +2425,7 @@ CMD ["node", "dist/main.js"]
                   <div id="flush-collapse-advanced-1" class="accordion-collapse collapse" aria-labelledby="flush-advanced-1" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Create reusable decorators to simplify code and add metadata</li>
+                        <li><strong>Create reusable decorators to simplify code and add metadata</strong></li>
                         <li>Use <code>createParamDecorator</code> or class/method decorators</li>
                         <li>Example custom param decorator:</li>
                         <pre><code class="language-typescript">export const User = createParamDecorator((data, ctx) => {
@@ -2449,7 +2447,7 @@ CMD ["node", "dist/main.js"]
                   <div id="flush-collapse-advanced-2" class="accordion-collapse collapse" aria-labelledby="flush-advanced-2" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Modules configured and imported with parameters at runtime</li>
+                        <li><strong>Modules configured and imported with parameters at runtime</strong></li>
                         <li>Return <code>DynamicModule</code> from static <code>forRoot()</code> or <code>forFeature()</code> methods</li>
                         <li>Useful for reusable, configurable libraries or features</li>
                         <li>Example:
@@ -2478,7 +2476,7 @@ export class ConfigurableModule {
                   <div id="flush-collapse-advanced-3" class="accordion-collapse collapse" aria-labelledby="flush-advanced-3" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Providers instantiated per incoming request (not singleton)</li>
+                        <li><strong>Providers instantiated per incoming request</strong> (not singleton)</li>
                         <li>Useful when provider holds request-specific state or data</li>
                         <li>Use <code>@Injectable({ scope: Scope.REQUEST })</code></li>
                         <li>Slightly impacts performance; use only when necessary</li>
@@ -2496,7 +2494,7 @@ export class ConfigurableModule {
                   <div id="flush-collapse-advanced-4" class="accordion-collapse collapse" aria-labelledby="flush-advanced-4" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Combine multiple communication protocols in one NestJS app</li>
+                        <li><strong>Combine multiple communication protocols in one NestJS app</strong></li>
                         <li>Import relevant modules (GraphQLModule, WebSocket gateways, REST controllers)</li>
                         <li>Share business logic/services across protocols</li>
                         <li>Example: REST for CRUD, GraphQL for flexible queries, WebSockets for real-time updates</li>
@@ -2514,7 +2512,7 @@ export class ConfigurableModule {
                   <div id="flush-collapse-advanced-5" class="accordion-collapse collapse" aria-labelledby="flush-advanced-5" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Support multiple isolated tenants (clients) within one app instance</li>
+                        <li><strong>Support multiple isolated tenants (clients) within one app instance</strong></li>
                         <li>Strategies:</li>
                         <ul>
                           <li>Separate databases per tenant</li>
@@ -2536,7 +2534,7 @@ export class ConfigurableModule {
                   <div id="flush-collapse-advanced-6" class="accordion-collapse collapse" aria-labelledby="flush-advanced-6" data-bs-parent="#accordionFlushAdvancedTopics">
                     <div class="accordion-body">
                       <ul>
-                        <li>Use HTTP modules like <code>HttpModule</code> to call external APIs</li>
+                        <li><strong>Use HTTP modules like</strong> <code>HttpModule</code> <strong>to call external APIs</strong></li>
                         <li>Handle authentication, rate limiting, error handling for APIs</li>
                         <li>Wrap API calls in services for clean separation</li>
                         <li>Example:

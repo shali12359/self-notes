@@ -41,7 +41,7 @@
                   <div id="flush-collapse-react-1" class="accordion-collapse collapse" aria-labelledby="flush-react-1" data-bs-parent="#accordionFlushReactFundamentals">
                     <div class="accordion-body">
                       <ul>
-                        <li>JavaScript library for building UI components (developed by Facebook)</li>
+                        <li><strong>JavaScript library for building UI components</strong> (developed by Facebook)</li>
                         <li>Declarative, component-based architecture</li>
                         <li>Focuses on the View in MVC</li>
                         <li>Uses Virtual DOM for efficient UI updates</li>
@@ -81,7 +81,7 @@
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <h6>Syntax & rules</h6>
+                          <strong>Syntax & rules</strong>
                           <ul>
                             <li>XML-like syntax for describing UI</li>
                             <li>Must return a single parent element</li>
@@ -90,14 +90,14 @@
                           </ul>
                         </li>
                         <li>
-                          <h6>Embedding expressions</h6>
+                          <strong>Embedding expressions</strong>
                           <ul>
                             <li><pre><code class="language-jsx">{user.name}</code></pre>
                             </li>
                           </ul>
                         </li>
                         <li>
-                          <h6>Differences from HTML</h6>
+                          <strong>Differences from HTML</strong>
                           <ul>
                             <li>Attribute names are camelCase (<code>tabIndex</code>)</li>
                             <li>JS expressions instead of string concatenation</li>
@@ -120,27 +120,27 @@
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <h6>Functional vs Class components</h6>
+                          <strong>Functional vs Class components</strong>
                           <ul>
                             <li><strong>Functional:</strong> Simpler, use hooks (<code>useState</code>, <code>useEffect</code>)</li>
                             <li><strong>Class:</strong> Use lifecycle methods (<code>componentDidMount</code>, etc.)</li><br>
                           </ul>
                         </li>
                         <li>
-                          <h6>Component composition</h6>
+                          <strong>Component composition</strong>
                           <pre><code class="language-jsx"><pre>&lt;Header /&gt;
 &lt;MainContent /&gt;
 &lt;Footer /&gt;</pre></code></pre>
                         </li>
                         <li>
-                          <h6>Props (passing data to components)</h6>
+                          <strong>Props (passing data to components)</strong>
                           <ul>
                             <li>Immutable data passed from parent to child</li>
                             <pre><code class="language-jsx">&lt;Greeting name="John" /&gt;</code></pre>
                           </ul>
                         </li>
                         <li>
-                          <h6>Default props & propTypes</h6>
+                          <strong>Default props & propTypes</strong>
                           <pre><code class="language-jsx">Greeting.defaultProps = { name: 'Guest' };
 Greeting.propTypes = { name: PropTypes.string };
                           </code></pre>
@@ -164,18 +164,18 @@ Greeting.propTypes = { name: PropTypes.string };
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <h6>useState hook</h6>
+                          <strong>useState hook</strong>
                           <pre><code class="language-jsx">const [count, setCount] = useState(0);</code></pre>
                         </li>
                         <li>
-                          <h6>Updating state correctly (immutability)</h6>
+                          <strong>Updating state correctly (immutability)</strong>
                           <ul>
                             <li>Never mutate state directly (<code>state.push()</code>)</li>
                             <li>Use new object/array instead (<code>[...state, newItem]</code>)</li>
                           </ul><br>
                         </li>
                         <li>
-                          <h6>State batching</h6>
+                          <strong>State batching</strong>
                           <ul>
                             <li>
                               <p>React batches multiple state updates for performance. In React 18+, batching happens in all contexts, not just events.</p>
@@ -198,17 +198,17 @@ Greeting.propTypes = { name: PropTypes.string };
                     <div class="accordion-body">
                       <ul>
                         <li>
-                          <h6>Conditional rendering</h6>
+                          <strong>Conditional rendering</strong>
                           <pre><code class="language-jsx">{isLoggedIn ? <Dashboard /> : <Login />}
                           </code></pre>
                         </li>
                         <li>
-                          <h6>Lists & keys</h6>
+                          <strong>Lists & keys</strong>
                           <pre><code class="language-jsx">{items.map(item =&gt; &lt;li key={item.id}&gt;{item.name}&lt;/li&gt;)}</code></pre>
                           </code></pre>
                         </li>
                         <li>
-                          <h6>Controlled vs uncontrolled components</h6>
+                          <strong>Controlled vs uncontrolled components</strong>
                           <ul>
                             <li>
                               <strong>Controlled:</strong> Form data managed by state
@@ -238,12 +238,12 @@ Greeting.propTypes = { name: PropTypes.string };
                   <div id="flush-usestate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Declares state variables in functional components.</li>
+                        <li><strong>Declares state variables in functional components.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const [count, setCount] = useState(0);
 setCount(prev =&gt; prev + 1);</code></pre>
                         </li>
-                        <li><strong>Notes:</strong> Updates are asynchronous and should be immutable.</li>
+                        <li>Updates are asynchronous and should be immutable.</li>
                       </ul>
                     </div>
                   </div>
@@ -259,7 +259,7 @@ setCount(prev =&gt; prev + 1);</code></pre>
                   <div id="flush-useeffect" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Handles side effects (data fetching, subscriptions, DOM manipulation). Runs after render.</li>
+                        <li><strong>Handles side effects (data fetching, subscriptions, DOM manipulation). Runs after render.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>useEffect(() =&gt; {
   fetchData();
@@ -288,13 +288,13 @@ setCount(prev =&gt; prev + 1);</code></pre>
                   <div id="flush-useref" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Stores a mutable value that doesn’t trigger re-renders. Access DOM nodes directly.</li>
+                        <li><strong>Stores a mutable value that doesn’t trigger re-renders. Access DOM nodes directly.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const inputRef = useRef();
 &lt;input ref={inputRef} /&gt;
 inputRef.current.focus();</code></pre>
                         </li>
-                        <li><strong>Notes:</strong> Persists values across renders without causing updates.</li>
+                        <li>Persists values across renders without causing updates.</li>
                       </ul>
                     </div>
                   </div>
@@ -310,11 +310,11 @@ inputRef.current.focus();</code></pre>
                   <div id="flush-usecontext" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Access shared data from a Context without passing props manually.</li>
+                        <li><strong>Access shared data from a Context without passing props manually.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const value = useContext(MyContext);</code></pre>
                         </li>
-                        <li><strong>Notes:</strong> Combine with <code>Context.Provider</code> at a higher level.</li>
+                        <li>Combine with <code>Context.Provider</code> at a higher level.</li>
                       </ul>
                     </div>
                   </div>
@@ -330,7 +330,7 @@ inputRef.current.focus();</code></pre>
                   <div id="flush-usereducer" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Manages complex state logic.</li>
+                        <li><strong>Manages complex state logic.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const [state, dispatch] = useReducer(reducer, initialState);
 function reducer(state, action) { /* ... */ }
@@ -351,7 +351,7 @@ dispatch({ type: 'INCREMENT' });</code></pre>
                   <div id="flush-usememo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Caches computed values until dependencies change. Prevents unnecessary recalculations.</li>
+                        <li><strong>Caches computed values until dependencies change. Prevents unnecessary recalculations.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const result = useMemo(() =&gt; heavyCalc(data), [data]);</code></pre>
                         </li>
@@ -370,7 +370,7 @@ dispatch({ type: 'INCREMENT' });</code></pre>
                   <div id="flush-usecallback" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Returns a memoized callback function. Useful for preventing unnecessary child re-renders.</li>
+                        <li><strong>Returns a memoized callback function. Useful for preventing unnecessary child re-renders.</strong></li>
                         <li><strong>Syntax:</strong>
                           <pre><code>const handleClick = useCallback(() =&gt; doSomething(), [dependency]);</code></pre>
                         </li>
@@ -389,7 +389,7 @@ dispatch({ type: 'INCREMENT' });</code></pre>
                   <div id="flush-customhooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHooks">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Functions starting with <code>use</code> that encapsulate hook logic.</li>
+                        <li><strong>Functions starting with</strong> <code>use</code> <strong>that encapsulate hook logic.</strong></li>
                         <li><strong>Example:</strong>
                           <pre><code>function useFetch(url) { /* ... */ }</code></pre>
                         </li>
@@ -478,7 +478,7 @@ dispatch({ type: 'INCREMENT' });</code></pre>
                   <div id="flush-useparams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRouter">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Define dynamic segments in path with <code>:paramName</code>. Access with <code>useParams()</code>.</li>
+                        <li><strong>Define dynamic segments in path with</strong> <code>:paramName</code>. <strong>Access with </strong><code>useParams()</code>.</li>
                         <li><strong>Example:</strong>
                           <pre><code>&lt;Route path="/users/:id" element={&lt;User /&gt;} /&gt; 
 
@@ -502,7 +502,7 @@ function User() {
                   <div id="flush-usesearchparams" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRouter">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Manage query strings.</li>
+                        <li><strong>Manage query strings.</strong></li>
                         <li><strong>Example:</strong>
                           <pre><code>import { useSearchParams } from "react-router-dom";
   
@@ -527,7 +527,7 @@ function Products() {
                   <div id="flush-nestedroutes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRouter">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Routes inside routes; <code>Outlet</code> renders child route content.</li>
+                        <li><strong>Routes inside routes; </strong><code>Outlet</code> renders child route content.</li>
                         <li><strong>Example:</strong>
                           <pre><code>&lt;Route path="/dashboard" element={&lt;Dashboard /&gt;}&gt;
   &lt;Route path="stats" element={&lt;Stats /&gt;} /&gt;
@@ -555,7 +555,7 @@ function Dashboard() {
                   <div id="flush-usenavigate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRouter">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Navigate in code instead of using <code>&lt;Link&gt;</code>.</li>
+                        <li><strong>Navigate in code instead of using </strong><code>&lt;Link&gt;</code>.</li>
                         <li><strong>Example:</strong>
                           <pre><code>const navigate = useNavigate();
 navigate("/login");</code></pre>
@@ -575,7 +575,7 @@ navigate("/login");</code></pre>
                   <div id="flush-protectedroutes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRouter">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Custom wrapper that checks auth before rendering.</li>
+                        <li><strong>Custom wrapper that checks auth before rendering.</strong></li>
                         <li><strong>Example:</strong>
                           <pre><code>function ProtectedRoute({ children }) {
   const isAuth = useAuth();
@@ -604,9 +604,9 @@ navigate("/login");</code></pre>
                   <div id="flush-contextapi" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleState">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Built-in React API for sharing state globally without prop drilling.</li>
-                        <li><strong>How it works:</strong> Uses <code>createContext()</code> and <code>Context.Provider</code> to pass data down the component tree.</li>
-                        <li><strong>Best for:</strong> Small-to-medium apps; not ideal for very complex state.</li>
+                        <li><strong>Built-in React API for sharing state globally without prop drilling.</strong></li>
+                        <li>Uses <code>createContext()</code> and <code>Context.Provider</code> to pass data down the component tree.</li>
+                        <li>Small-to-medium apps; not ideal for very complex state.</li>
                         <li><strong>Example:</strong>
                           <pre><code>const ThemeContext = React.createContext();
               
@@ -640,7 +640,7 @@ function ChildComponent() {
                   <div id="flush-reduxbasics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleState">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Predictable state container for JavaScript apps.</li>
+                        <li><strong>Predictable state container for JavaScript apps.</strong></li>
                         <li><strong>Key parts:</strong>
                           <ul>
                             <li><strong>Store:</strong> Holds the entire application state.</li>
@@ -713,8 +713,8 @@ function Counter() {
                   <div id="flush-rtk" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleState">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Official recommended way to write Redux logic.</li>
-                        <li><strong>Features:</strong> <code>createSlice()</code> combines reducers and actions in one place, less boilerplate, supports immutable updates internally.</li>
+                        <li><strong>Official recommended way to write Redux logic.</strong></li>
+                        <li><code>createSlice()</code> combines reducers and actions in one place, less boilerplate, supports immutable updates internally.</li>
                         <li><strong>Example:</strong>
                           <pre><code>import { configureStore, createSlice } from "@reduxjs/toolkit";
               
@@ -747,9 +747,9 @@ const store = configureStore({ reducer: counterSlice.reducer });</code></pre>
                 <div id="flush-controlled-inputs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Definition:</strong> React form inputs where the value is stored in component state.</li>
-                      <li><strong>Behavior:</strong> Every keystroke triggers <code>onChange</code> to update state, making React the single source of truth.</li>
-                      <li><strong>Advantages:</strong> Allows real-time validation and dynamic behavior.</li>
+                      <li>React form inputs where the value is stored in component state.</li>
+                      <li>Every keystroke triggers <code>onChange</code> to update state, making React the single source of truth.</li>
+                      <li>Allows real-time validation and dynamic behavior.</li>
                       <li><strong>Example:</strong>
                         <pre><code>import { useState } from "react";
             
@@ -783,8 +783,8 @@ function MyForm() {
                 <div id="flush-multiple-inputs" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleForms">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Definition:</strong> Use one state object to store multiple form field values.</li>
-                      <li><strong>Technique:</strong> Use the <code>name</code> attribute of inputs to update the correct field dynamically.</li>
+                      <li><strong>Use one state object to store multiple form field values.</strong></li>
+                      <li>Use the <code>name</code> attribute of inputs to update the correct field dynamically.</li>
                       <li><strong>Example:</strong>
                         <pre><code>function MyForm() {
   const [formData, setFormData] = useState({ username: "", email: "" });
@@ -908,8 +908,8 @@ function MyForm() {
                 <div id="flush-fetch-axios" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleDataFetching">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Description:</strong> Native Fetch API and Axios (popular HTTP client) are used to make HTTP requests.</li>
-                      <li><strong>Differences:</strong> Fetch returns promises and requires manual JSON parsing; Axios automatically parses JSON and handles errors better.</li>
+                      <li><strong>Native Fetch API and Axios (popular HTTP client) are used to make HTTP requests.</strong></li>
+                      <li>Fetch returns promises and requires manual JSON parsing; Axios automatically parses JSON and handles errors better.</li>
                       <li><strong>Example with Fetch:</strong>
                         <pre><code>fetch('https://api.example.com/data')
   .then(res =&gt; res.json())
@@ -1101,9 +1101,9 @@ function Todos() {
                 <div id="flush-react-memo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePerformance">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Description:</strong> Higher-order component that memoizes functional components.</li>
-                      <li><strong>Purpose:</strong> Prevents re-rendering if props haven’t changed (shallow comparison).</li>
-                      <li><strong>Use case:</strong> Optimizing pure components that receive the same props frequently.</li>
+                      <li><strong>Higher-order component that memoizes functional components.</strong></li>
+                      <li>Prevents re-rendering if props haven’t changed (shallow comparison).</li>
+                      <li>Optimizing pure components that receive the same props frequently.</li>
                       <li><strong>Example:</strong>
                         <pre><code>const MyComponent = React.memo(function MyComponent({ value }) {
   return &lt;div&gt;{value}&lt;/div&gt;;
