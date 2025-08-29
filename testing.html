@@ -82,13 +82,13 @@
                   <div id="flush-types-testing" class="accordion-collapse collapse" data-bs-parent="#accordionFlushTestingFundamentals">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>a) Manual vs Automated</strong>
+                        <li><strong>Manual vs Automated</strong>
                           <ul>
                             <li><strong>Manual testing:</strong> Executed by humans. Good for exploratory/usability/small projects. Slower, prone to errors.</li>
                             <li><strong>Automated testing:</strong> Uses scripts/tools. Good for regression, performance, large-scale testing. Faster, repeatable, requires setup/maintenance.</li>
                           </ul>
                         </li>
-                        <li><strong>b) Functional vs Non-functional</strong>
+                        <li><strong>Functional vs Non-functional</strong>
                           <ul>
                             <li><strong>Functional:</strong> What the system does. Verifies features against requirements.  
                               <em>Examples:</em> unit tests, integration tests, UAT.
@@ -98,7 +98,7 @@
                             </li>
                           </ul>
                         </li>
-                        <li><strong>c) White-box vs Black-box vs Grey-box</strong>
+                        <li><strong>White-box vs Black-box vs Grey-box</strong>
                           <ul>
                             <li><strong>White-box:</strong> Tester knows internal code/logic.  
                               <em>Example:</em> unit tests by developers.
@@ -149,7 +149,7 @@
                       <ul>
                         <li>Unit testing focuses on testing the smallest parts of the code (functions, methods, or classes) in isolation.</li>
                         <li><strong>Example:</strong> Testing a function that calculates the sum of two numbers without involving the database or UI.</li>
-                        <li><strong>Goal:</strong> Ensure each small unit works correctly before combining them into a bigger system.</li>
+                        <li>Ensure each small unit works correctly before combining them into a bigger system.</li>
                       </ul>
                     </div>
                   </div>
@@ -365,7 +365,7 @@
                       <ul>
                         <li>E2E testing verifies the entire user journey in an application, from start to finish.</li>
                         <li><strong>Example:</strong> For an e-commerce app, E2E testing would cover logging in, searching for a product, adding it to the cart, and completing checkout.</li>
-                        <li><strong>Goal:</strong> Ensure the system works as expected in a real-world scenario.</li>
+                        <li>Ensure the system works as expected in a real-world scenario.</li>
                       </ul>
                     </div>
                   </div>
@@ -480,7 +480,7 @@
                       <ul>
                         <li>Since regression testing needs to be repeated frequently, automation is highly effective.</li>
                         <li>Automated regression suites are a collection of tests that run automatically whenever changes are made.</li>
-                        <li><strong>Example tools:</strong> JUnit/TestNG (Java), Jest (JavaScript), Pytest (Python), Selenium/Cypress (UI).</li>
+                        <li><strong>Tools:</strong> JUnit/TestNG (Java), Jest (JavaScript), Pytest (Python), Selenium/Cypress (UI).</li>
                       </ul>
                     </div>
                   </div>
@@ -538,7 +538,7 @@
                         <li>Performance testing checks how fast, stable, and efficient the system is under different workloads.</li>
                         <li>Load testing checks how the system behaves when many users access it at the same time.</li>
                         <li>Scalability testing ensures the system can handle increased load by adding resources (e.g., more servers).</li>
-                        <li><strong>💡 Example:</strong> Making sure an e-commerce website works smoothly on Black Friday when traffic spikes.</li>
+                        <li><strong>Example:</strong> Making sure an e-commerce website works smoothly on Black Friday when traffic spikes.</li>
                       </ul>
                     </div>
                   </div>
@@ -576,7 +576,7 @@
                         <li><strong>Throughput:</strong> Number of requests the system can handle per second/minute.</li>
                         <li><strong>Latency:</strong> Delay between sending a request and receiving the first response.</li>
                         <li><strong>Resource usage:</strong> CPU, memory, disk, and network utilization under load.</li>
-                        <li><strong>💡 Note:</strong> These metrics help identify bottlenecks, like slow queries or insufficient server capacity.</li>
+                        <li><strong>Note:</strong> These metrics help identify bottlenecks, like slow queries or insufficient server capacity.</li>
                       </ul>
                     </div>
                   </div>
@@ -615,7 +615,7 @@
                       <ul>
                         <li>Security testing ensures the system is protected from potential attacks and data breaches.</li>
                         <li>Code-level checks often include input validation, avoiding hardcoded credentials, proper authentication, and safe handling of sensitive data.</li>
-                        <li><strong>💡 Example:</strong> Preventing SQL Injection by using parameterized queries instead of string concatenation.</li>
+                        <li><strong>Example:</strong> Preventing SQL Injection by using parameterized queries instead of string concatenation.</li>
                       </ul>
                     </div>
                   </div>
@@ -633,7 +633,7 @@
                       <ul>
                         <li>Penetration testing (pen testing) simulates real-world attacks to find weaknesses before hackers do.</li>
                         <li>It can involve testing login systems, APIs, session handling, and access controls to ensure no unauthorized access is possible.</li>
-                        <li><strong>💡 Example:</strong> Trying to access admin pages without proper login to test if the system blocks it.</li>
+                        <li><strong>Example:</strong> Trying to access admin pages without proper login to test if the system blocks it.</li>
                       </ul>
                     </div>
                   </div>
@@ -689,7 +689,7 @@
                       <ul>
                         <li>Automated test suites are collections of tests that run without manual intervention.</li>
                         <li>They can cover unit, integration, regression, and E2E tests to ensure consistent quality.</li>
-                        <li><strong>💡 Example:</strong> Writing a Jest suite for a React app that tests login, signup, and logout flows automatically.</li>
+                        <li><strong>Example:</strong> Writing a Jest suite for a React app that tests login, signup, and logout flows automatically.</li>
                       </ul>
                     </div>
                   </div>
@@ -707,7 +707,7 @@
                       <ul>
                         <li>Automated tests are integrated into CI/CD pipelines to run on every code change.</li>
                         <li>This ensures that new commits or deployments do not break existing functionality.</li>
-                        <li><strong>💡 Example:</strong> Using GitHub Actions to run unit and integration tests every time a pull request is opened.</li>
+                        <li><strong>Example:</strong> Using GitHub Actions to run unit and integration tests every time a pull request is opened.</li>
                       </ul>
                     </div>
                   </div>
@@ -771,7 +771,7 @@
                             <li>Follow consistent formatting and naming conventions.</li>
                           </ul>
                         </li>
-                        <li><strong>💡 Example:</strong> Instead of one big test for all user actions, create separate tests for login, signup, and logout.</li>
+                        <li><strong>Example:</strong> Instead of one big test for all user actions, create separate tests for login, signup, and logout.</li>
                       </ul>
                     </div>
                   </div>
@@ -795,7 +795,7 @@
                             <li>Include messages to clarify failures.</li>
                           </ul>
                         </li>
-                        <li><strong>💡 Example:</strong> <code>assertEquals(actualEmail, expectedEmail, "Email should match user input")</code></li>
+                        <li><strong>Example:</strong> <code>assertEquals(actualEmail, expectedEmail, "Email should match user input")</code></li>
                       </ul>
                     </div>
                   </div>
@@ -814,7 +814,7 @@
                         <li>Test coverage measures how much of your code is exercised by tests (lines, branches, functions).</li>
                         <li>Quality focuses on whether tests catch real issues and verify correct behavior.</li>
                         <li><strong>Best practice:</strong> High coverage does not guarantee quality. Aim for meaningful tests that cover critical paths.</li>
-                        <li><strong>💡 Example:</strong> A test may cover 90% of code but miss edge cases like empty inputs or invalid data.</li>
+                        <li><strong>Example:</strong> A test may cover 90% of code but miss edge cases like empty inputs or invalid data.</li>
                       </ul>
                     </div>
                   </div>
@@ -832,7 +832,7 @@
                       <ul>
                         <li>Tests should not depend on or affect each other; each test should run independently.</li>
                         <li>Use mocks, stubs, and setup/teardown methods to isolate environment and dependencies.</li>
-                        <li><strong>💡 Example:</strong> When testing a payment function, mock the database and API calls so one test doesn’t change the state for others.</li>
+                        <li><strong>Example:</strong> When testing a payment function, mock the database and API calls so one test doesn’t change the state for others.</li>
                       </ul>
                     </div>
                   </div>
