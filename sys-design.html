@@ -632,7 +632,7 @@
                     <div class="accordion-body">
                       <ul>
                         <li>Common architectural patterns help structure systems for scalability, maintainability, and reliability.</li>
-                        <li>Examples:
+                        <li><strong>Examples:</strong>
                           <ul>
                             <li>Client-server: Central server serves multiple clients.</li>
                             <li>Peer-to-peer (P2P): Each node can act as client and server.</li>
@@ -640,7 +640,7 @@
                             <li>Event sourcing: All state changes are stored as a sequence of events, allowing reconstruction of state at any point.</li>
                           </ul>
                         </li>
-                        <li><strong>Example:</strong> Chat apps often use pub-sub to broadcast messages to multiple users.</li>
+                        <li><strong>Use case:</strong> Chat apps often use pub-sub to broadcast messages to multiple users.</li>
                       </ul>
                     </div>
                   </div>
@@ -701,11 +701,11 @@
                     <div class="accordion-body">
                       <ul>
                         <li>Used to handle temporary failures in distributed systems.</li>
-                        <li>Types:
+                        <li><strong>Types:</strong>
                           <ul>
-                            <li>Simple retry: Try again after failure.</li>
-                            <li>Exponential backoff: Gradually increase delay between retries to reduce load.</li>
-                            <li>Jitter: Add randomness to prevent thundering herd problem.</li>
+                            <li><strong>Simple retry:</strong> Try again after failure.</li>
+                            <li><strong>Exponential backoff:</strong> Gradually increase delay between retries to reduce load.</li>
+                            <li><strong>Jitter:</strong> Add randomness to prevent thundering herd problem.</li>
                           </ul>
                         </li>
                         <li><strong>Example:</strong> If a service call fails due to network issues, retry after 1s, 2s, 4s… with small random jitter.</li>
@@ -763,13 +763,13 @@
                   <div id="flush-scalability-partitioning" class="accordion-collapse collapse" data-bs-parent="#accordionFlushScalabilityPerformance">
                     <div class="accordion-body">
                       <ul>
-                        <li>Partitioning (Sharding): Divide data across multiple databases or servers to reduce load per node.
+                        <li><strong>Partitioning (Sharding):</strong> Divide data across multiple databases or servers to reduce load per node.
                           <ul>
                             <li>Horizontal partitioning splits by rows (e.g., user ID ranges).</li>
                             <li>Vertical partitioning splits by columns (e.g., user info vs analytics).</li>
                           </ul>
                         </li>
-                        <li>Replication: Copy data to multiple nodes to improve read performance and provide high availability.</li>
+                        <li><strong>Replication:</strong> Copy data to multiple nodes to improve read performance and provide high availability.</li>
                         <li><strong>Example:</strong> User data is sharded by user ID across multiple database servers, with each shard replicated twice for redundancy.</li>
                       </ul>
                     </div>
@@ -787,10 +787,10 @@
                     <div class="accordion-body">
                       <ul>
                         <li>Temporarily store frequently accessed data closer to the application to reduce latency and database load.</li>
-                        <li>Types of caching:
+                        <li><strong>Types of caching:</strong>
                           <ul>
-                            <li>In-memory: Redis, Memcached</li>
-                            <li>CDN caching: For static content like images, scripts, and videos</li>
+                            <li><strong>In-memory:</strong> Redis, Memcached</li>
+                            <li><strong>CDN caching:</strong> For static content like images, scripts, and videos</li>
                           </ul>
                         </li>
                         <li><strong>Example:</strong> Cache product catalog in Redis to serve thousands of requests per second without hitting the database.</li>
@@ -866,9 +866,9 @@
                   <div id="flush-reliability-health" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
                     <div class="accordion-body">
                       <ul>
-                        <li>Health checks: Regularly check if servers, services, or databases are operational.</li>
+                        <li><strong>Health checks:</strong> Regularly check if servers, services, or databases are operational.</li>
                         <li>Can be simple HTTP endpoint checks or custom scripts.</li>
-                        <li>Failover strategies: Automatically switch traffic to backup systems if the primary system fails.</li>
+                        <li><strong>Failover strategies:</strong> Automatically switch traffic to backup systems if the primary system fails.</li>
                         <li>Improves system availability and fault tolerance.</li>
                         <li><strong>Example:</strong> Load balancer detects a downed server via health check and reroutes requests to healthy servers.</li>
                       </ul>
@@ -886,11 +886,11 @@
                   <div id="flush-reliability-logging" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
                     <div class="accordion-body">
                       <ul>
-                        <li>Logging: Record events, errors, and system activity for debugging and auditing.</li>
-                        <li>Best practice: Include timestamps, request IDs, and context.</li>
-                        <li>Monitoring: Track system health, performance, and resource usage in real-time.</li>
-                        <li>Prometheus: Collects and stores metrics from applications/services.</li>
-                        <li>Grafana: Visualizes metrics in dashboards for easy analysis.</li>
+                        <li><strong>Logging:</strong> Record events, errors, and system activity for debugging and auditing.</li>
+                        <li><strong>Best practice:</strong> Include timestamps, request IDs, and context.</li>
+                        <li><strong>Monitoring:</strong> Track system health, performance, and resource usage in real-time.</li>
+                        <li><strong>Prometheus:</strong> Collects and stores metrics from applications/services.</li>
+                        <li><strong>Grafana:</strong> Visualizes metrics in dashboards for easy analysis.</li>
                         <li><strong>Example:</strong> Track CPU/memory usage of all servers and display trends on a Grafana dashboard.</li>
                       </ul>
                     </div>
@@ -925,10 +925,10 @@
                   <div id="flush-reliability-metrics" class="accordion-collapse collapse" data-bs-parent="#accordionFlushReliabilityMonitoring">
                     <div class="accordion-body">
                       <ul>
-                        <li>Latency: Time to respond to a request.</li>
-                        <li>Throughput: Number of requests processed per unit time.</li>
-                        <li>Error rate: Percentage of failed requests.</li>
-                        <li>Resource utilization: CPU, memory, disk, and network usage.</li>
+                        <li><strong>Latency:</strong> Time to respond to a request.</li>
+                        <li><strong>Throughput:</strong> Number of requests processed per unit time.</li>
+                        <li><strong>Error rate:</strong> Percentage of failed requests.</li>
+                        <li><strong>Resource utilization:</strong> CPU, memory, disk, and network usage.</li>
                         <li><strong>Example:</strong> Monitoring error rates helps identify failing services before users notice.</li>
                       </ul>
                     </div>
@@ -1004,8 +1004,8 @@
                   <div id="flush-security-rate" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
                     <div class="accordion-body">
                       <ul>
-                        <li>Rate limiting: Restrict number of requests per client to prevent abuse.</li>
-                        <li>DDoS protection: Use load balancers, WAFs, and CDNs to absorb and mitigate traffic spikes.</li>
+                        <li><strong>Rate limiting:</strong> Restrict number of requests per client to prevent abuse.</li>
+                        <li><strong>DDoS protection:</strong> Use load balancers, WAFs, and CDNs to absorb and mitigate traffic spikes.</li>
                         <li><strong>Example:</strong> API allows 100 requests/minute per user; traffic beyond this is throttled to protect the system.</li>
                       </ul>
                     </div>
@@ -1022,8 +1022,8 @@
                   <div id="flush-security-encryption" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSecurityDesign">
                     <div class="accordion-body">
                       <ul>
-                        <li>In transit: Encrypt data sent between clients and servers using TLS/HTTPS.</li>
-                        <li>At rest: Encrypt stored data in databases or storage systems to prevent exposure if compromised.</li>
+                        <li><strong>In transit:</strong> Encrypt data sent between clients and servers using TLS/HTTPS.</li>
+                        <li><strong>At rest:</strong> Encrypt stored data in databases or storage systems to prevent exposure if compromised.</li>
                         <li><strong>Example:</strong> Customer payment info is encrypted in the database and all API requests use HTTPS to prevent interception.</li>
                       </ul>
                     </div>
@@ -1061,15 +1061,15 @@
                   <div id="flush-case-urlshortener" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Objective: Convert long URLs into short, unique links.</li>
-                        <li>Considerations:
+                        <li>Convert long URLs into short, unique links.</li>
+                        <li><strong>Considerations:</strong>
                           <ul>
                             <li>Generate unique keys (hashing, base62 encoding).</li>
                             <li>Store mappings efficiently in a database (key-value store like Redis or DynamoDB).</li>
                             <li>Handle high read traffic using caching.</li>
                           </ul>
                         </li>
-                        <li>Scaling strategies: Partition data by key ranges, replicate database for reliability.</li>
+                        <li><strong>Scaling strategies:</strong> Partition data by key ranges, replicate database for reliability.</li>
                         <li><strong>Example:</strong> bit.ly serves billions of short links with minimal latency.</li>
                       </ul>
                     </div>
@@ -1086,15 +1086,15 @@
                   <div id="flush-case-socialfeed" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Objective: Show users a personalized, timely feed.</li>
-                        <li>Considerations:
+                        <li>Show users a personalized, timely feed.</li>
+                        <li><strong>Considerations:</strong>
                           <ul>
                             <li>Feed generation: push (precompute) vs pull (compute on request).</li>
                             <li>Store user posts, likes, comments efficiently.</li>
                             <li>Handle millions of concurrent users and updates.</li>
                           </ul>
                         </li>
-                        <li>Scaling strategies: Caching popular feeds, sharding user data, using message queues for asynchronous feed updates.</li>
+                        <li><strong>Scaling strategies:</strong> Caching popular feeds, sharding user data, using message queues for asynchronous feed updates.</li>
                         <li><strong>Example:</strong> Twitter uses distributed storage and caching to serve feeds quickly.</li>
                       </ul>
                     </div>
@@ -1111,15 +1111,15 @@
                   <div id="flush-case-chatapp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Objective: Real-time messaging between users.</li>
-                        <li>Considerations:
+                        <li>Real-time messaging between users.</li>
+                        <li><strong>Considerations:</strong>
                           <ul>
                             <li>Low-latency delivery using WebSockets.</li>
                             <li>Message persistence in database or distributed log.</li>
                             <li>Presence and typing indicators.</li>
                           </ul>
                         </li>
-                        <li>Scaling strategies: Partition users across multiple servers, use pub-sub or message brokers (Kafka, RabbitMQ) for message delivery.</li>
+                        <li><strong>Scaling strategies:</strong> Partition users across multiple servers, use pub-sub or message brokers (Kafka, RabbitMQ) for message delivery.</li>
                         <li><strong>Example:</strong> WhatsApp uses Erlang servers for scalable, real-time messaging.</li>
                       </ul>
                     </div>
@@ -1136,15 +1136,15 @@
                   <div id="flush-case-videostream" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Objective: Deliver video content efficiently to users.</li>
-                        <li>Considerations:
+                        <li>Deliver video content efficiently to users.</li>
+                        <li><strong>Considerations:</strong>
                           <ul>
                             <li>Store and encode videos in multiple resolutions.</li>
                             <li>Use CDNs to reduce latency.</li>
                             <li>Adaptive bitrate streaming to adjust quality per user bandwidth.</li>
                           </ul>
                         </li>
-                        <li>Scaling strategies: Cache popular videos at edge servers, partition storage and replicate content.</li>
+                        <li><strong>Scaling strategies:</strong> Cache popular videos at edge servers, partition storage and replicate content.</li>
                         <li><strong>Example:</strong> YouTube serves billions of videos using distributed storage and global CDNs.</li>
                       </ul>
                     </div>
@@ -1161,15 +1161,15 @@
                   <div id="flush-case-rideapp" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Objective: Match riders with nearby drivers in real-time.</li>
-                        <li>Considerations:
+                        <li>Match riders with nearby drivers in real-time.</li>
+                        <li><strong>Considerations:</strong>
                           <ul>
                             <li>Real-time location tracking and geospatial queries.</li>
                             <li>Dynamic pricing and surge calculation.</li>
                             <li>High concurrency during peak hours.</li>
                           </ul>
                         </li>
-                        <li>Scaling strategies: Use sharded databases for trip and driver data, employ in-memory caches for nearby driver lookups, asynchronous queues for notifications and payment processing.</li>
+                        <li><strong>Scaling strategies:</strong> Use sharded databases for trip and driver data, employ in-memory caches for nearby driver lookups, asynchronous queues for notifications and payment processing.</li>
                         <li><strong>Example:</strong> Uber uses distributed services, caching, and real-time geolocation to handle millions of rides.</li>
                       </ul>
                     </div>
@@ -1186,10 +1186,10 @@
                   <div id="flush-case-bottlenecks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushCaseStudies">
                     <div class="accordion-body">
                       <ul>
-                        <li>Identify hotspots: database writes, API endpoints, or caching layers.</li>
-                        <li>Optimize data flow: asynchronous processing, message queues, caching.</li>
-                        <li>Plan scaling strategies: vertical/horizontal scaling, sharding, replication, CDNs.</li>
-                        <li>Monitor metrics: latency, throughput, error rates, and adjust system design accordingly.</li>
+                        <li><strong>Identify hotspots:</strong> database writes, API endpoints, or caching layers.</li>
+                        <li><strong>Optimize data flow:</strong> asynchronous processing, message queues, caching.</li>
+                        <li><strong>Plan scaling strategies:</strong> vertical/horizontal scaling, sharding, replication, CDNs.</li>
+                        <li><strong>Monitor metrics:</strong> latency, throughput, error rates, and adjust system design accordingly.</li>
                       </ul>
                     </div>
                   </div>
