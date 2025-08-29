@@ -220,8 +220,8 @@
                   <div id="flush-2xx-success" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> The client’s request was successfully received, understood, and accepted.</li>
-                        <li><strong>Common Examples:</strong>
+                        <li>The client’s request was successfully received, understood, and accepted.</li>
+                        <li><strong>Examples:</strong>
                           <ul>
                             <li><code>200 OK</code>: Request succeeded and response contains requested data.</li>
                             <li><code>201 Created</code>: Resource successfully created (usually after POST).</li>
@@ -242,8 +242,8 @@
                   <div id="flush-3xx-redirection" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Further action needed by the client to complete the request, usually to follow a redirect.</li>
-                        <li><strong>Common Examples:</strong>
+                        <li>Further action needed by the client to complete the request, usually to follow a redirect.</li>
+                        <li><strong>Examples:</strong>
                           <ul>
                             <li><code>301 Moved Permanently</code>: Resource permanently moved to new URL.</li>
                             <li><code>302 Found</code>: Resource temporarily resides under a different URL.</li>
@@ -264,8 +264,8 @@
                   <div id="flush-4xx-client-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Errors caused by invalid or incorrect client requests.</li>
-                        <li><strong>Common Examples:</strong>
+                        <li>Errors caused by invalid or incorrect client requests.</li>
+                        <li><strong>Examples:</strong>
                           <ul>
                             <li><code>400 Bad Request</code>: Invalid syntax in request.</li>
                             <li><code>401 Unauthorized</code>: Authentication required or failed.</li>
@@ -288,8 +288,8 @@
                   <div id="flush-5xx-server-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleHTTPStatus">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Server failed to fulfill a valid request due to internal issues.</li>
-                        <li><strong>Common Examples:</strong>
+                        <li>Server failed to fulfill a valid request due to internal issues.</li>
+                        <li><strong>Examples:</strong>
                           <ul>
                             <li><code>500 Internal Server Error</code>: Generic unexpected server error.</li>
                             <li><code>502 Bad Gateway</code>: Invalid response from upstream server.</li>
@@ -315,8 +315,8 @@
                   <div id="flush-json-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> JSON (JavaScript Object Notation) is the most common format for sending and receiving data in REST APIs.</li>
-                        <li><strong>Why it’s used:</strong> Lightweight, human-readable, easy for machines to parse, supported by most programming languages.</li>
+                        <li>JSON (JavaScript Object Notation) is the most common format for sending and receiving data in REST APIs.</li>
+                        <li>Lightweight, human-readable, easy for machines to parse, supported by most programming languages.</li>
                         <li><strong>Example:</strong>
                           <pre><code>{
     "id": 1,
@@ -339,8 +339,8 @@
                   <div id="flush-xml-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleRequestResponse">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> XML (Extensible Markup Language) is another format for data exchange.</li>
-                        <li><strong>Why it’s used:</strong> Useful for integrating with legacy systems or systems requiring structured markup.</li>
+                        <li>XML (Extensible Markup Language) is another format for data exchange.</li>
+                        <li>Useful for integrating with legacy systems or systems requiring structured markup.</li>
                         <li><strong>Example:</strong>
                           <pre><code>&lt;user&gt;
     &lt;id&gt;1&lt;/id&gt;
@@ -348,7 +348,7 @@
     &lt;email&gt;john@example.com&lt;/email&gt;
 &lt;/user&gt;</code></pre>
                         </li>
-                        <li><strong>Note:</strong> JSON is preferred today, but XML support can be optional.</li>
+                        <li>JSON is preferred today, but XML support can be optional.</li>
                       </ul>
                     </div>
                   </div>
@@ -416,7 +416,7 @@
                   <div id="flush-consistent-error-format" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> All API error responses should follow a standard structure so clients can easily parse and handle them.</li>
+                        <li>All API error responses should follow a standard structure so clients can easily parse and handle them.</li>
                         <li><strong>Example:</strong>
                           <pre><code>{
     "timestamp": "2025-08-09T12:34:56Z",
@@ -426,7 +426,7 @@
     "path": "/users"
 }</code></pre>
                         </li>
-                        <li><strong>Why:</strong> Improves debugging, ensures predictable client-side behavior, and makes integration smoother.</li>
+                        <li>Improves debugging, ensures predictable client-side behavior, and makes integration smoother.</li>
                       </ul>
                     </div>
                   </div>
@@ -442,8 +442,8 @@
                   <div id="flush-custom-exception-classes" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Create specific exception classes to represent different error scenarios in your application.</li>
-                        <li><strong>Why:</strong> Helps differentiate between types of errors (e.g., <code>UserNotFoundException</code>, <code>InvalidInputException</code>) and makes code more readable and maintainable.</li>
+                        <li>Create specific exception classes to represent different error scenarios in your application.</li>
+                        <li>Helps differentiate between types of errors (e.g., <code>UserNotFoundException</code>, <code>InvalidInputException</code>) and makes code more readable and maintainable.</li>
                       </ul>
                     </div>
                   </div>
@@ -459,9 +459,9 @@
                   <div id="flush-validation-errors" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleErrorHandling">
                     <div class="accordion-body">
                       <ul>
-                        <li><strong>Definition:</strong> Returned when the client sends data that fails validation rules.</li>
+                        <li>Returned when the client sends data that fails validation rules.</li>
                         <li><strong>Example:</strong> Missing required fields, invalid formats, or out-of-range values.</li>
-                        <li><strong>Why:</strong> Clearly informs the client what’s wrong so they can fix the request.</li>
+                        <li>Clearly informs the client what’s wrong so they can fix the request.</li>
                       </ul>
                     </div>
                   </div>
@@ -478,12 +478,12 @@
                     <div class="accordion-body">
                       <ul>
                         <li><strong>Spring Boot: <code>@ControllerAdvice</code></strong>
-                          <br><em>Definition:</em> A class annotated with <code>@ControllerAdvice</code> can catch and handle exceptions globally across all controllers.
-                          <br><em>Why:</em> Centralizes error handling, avoids duplicate try/catch blocks.
+                          <br>A class annotated with <code>@ControllerAdvice</code> can catch and handle exceptions globally across all controllers.
+                          <br>Centralizes error handling, avoids duplicate try/catch blocks.
                         </li>
                         <li><strong>NestJS: <code>ExceptionFilter</code></strong>
-                          <br><em>Definition:</em> A class implementing <code>ExceptionFilter</code> can intercept and format exceptions across the application.
-                          <br><em>Why:</em> Ensures consistent error responses and clean controller code.
+                          <br>A class implementing <code>ExceptionFilter</code> can intercept and format exceptions across the application.
+                          <br>Ensures consistent error responses and clean controller code.
                         </li>
                       </ul>
                     </div>
@@ -635,8 +635,8 @@
                 <div id="flush-pagination" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Pagination means splitting large sets of results into smaller, more manageable pages.</li>
-                      <li><strong>How it works:</strong> Send query parameters in the request URL to control which page and how many items per page are returned.</li>
+                      <li>Pagination means splitting large sets of results into smaller, more manageable pages.</li>
+                      <li>Send query parameters in the request URL to control which page and how many items per page are returned.</li>
                       <li><strong>Common parameters:</strong>
                         <ul>
                           <li><code>page</code> → Which page to fetch (starting from 1 or 0 depending on design).</li>
@@ -666,8 +666,8 @@
                 <div id="flush-sorting" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Sorting controls the order of returned results.</li>
-                      <li><strong>How it works:</strong> Pass a sort parameter in <code>field,direction</code> format.</li>
+                      <li>Sorting controls the order of returned results.</li>
+                      <li>Pass a sort parameter in <code>field,direction</code> format.</li>
                       <li><strong>Direction options:</strong>
                         <ul>
                           <li><code>asc</code> → Ascending order</li>
@@ -696,8 +696,8 @@
                 <div id="flush-filtering" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Filtering lets clients narrow results to only those matching specific criteria.</li>
-                      <li><strong>How it works:</strong> Query parameters represent filters, with each filter key matching a field in the dataset.</li>
+                      <li>Filtering lets clients narrow results to only those matching specific criteria.</li>
+                      <li>Query parameters represent filters, with each filter key matching a field in the dataset.</li>
                       <li><strong>Examples:</strong>
                         <ul>
                           <li><code>GET /orders?status=active</code> → Only active orders.</li>
@@ -720,9 +720,9 @@
                 <div id="flush-hateoas" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExamplePagination">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> A REST principle where the API provides links in responses to guide the client on possible next actions.</li>
-                      <li><strong>Why:</strong> Makes APIs more discoverable and removes the need for clients to hardcode URL paths.</li>
-                      <li><strong>How it works:</strong> The API returns hypermedia links (often in <code>_links</code> field) along with resource data.</li>
+                      <li>A REST principle where the API provides links in responses to guide the client on possible next actions.</li>
+                      <li>Makes APIs more discoverable and removes the need for clients to hardcode URL paths.</li>
+                      <li>The API returns hypermedia links (often in <code>_links</code> field) along with resource data.</li>
                       <li><strong>Example response:</strong>
                         <pre><code>{
   "id": 123,
@@ -735,7 +735,7 @@
   }
 }</code></pre>
                       </li>
-                      <li><strong>Benefit:</strong> Clients can follow these links to navigate or perform actions without knowing endpoint structure in advance.</li>
+                      <li>Clients can follow these links to navigate or perform actions without knowing endpoint structure in advance.</li>
                     </ul>
                   </div>
                 </div>
@@ -763,7 +763,7 @@
                           <li><code>Last-Modified</code> / <code>If-Modified-Since</code></li>
                         </ul>
                       </li>
-                      <li>Benefits: Improves performance, reduces bandwidth, and lowers server load.</li>
+                      <li>Improves performance, reduces bandwidth, and lowers server load.</li>
                     </ul>
                   </div>
                 </div>
@@ -779,7 +779,7 @@
                 <div id="flush-cache-control" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleCaching">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Purpose:</strong> Specifies caching rules for browsers and intermediaries (like CDNs).</li>
+                      <li>Specifies caching rules for browsers and intermediaries (like CDNs).</li>
                       <li><strong>Common directives:</strong>
                         <ul>
                           <li><code>max-age=3600</code> → Cache for 3600 seconds (1 hour).</li>
@@ -813,7 +813,7 @@
                         <pre><code>If-None-Match: "abc123"</code></pre>
                       </li>
                       <li>If unchanged → server returns <code>304 Not Modified</code> (no body sent).</li>
-                      <li><strong>Benefit:</strong> Saves bandwidth by only sending data when it’s changed.</li>
+                      <li>Saves bandwidth by only sending data when it’s changed.</li>
                     </ul>
                   </div>
                 </div>
@@ -1098,7 +1098,7 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                   <div class="accordion-body">
                     <ul>
                       <li>Good documentation includes real request/response examples for clarity.</li>
-                      <li><strong>Why:</strong> Helps developers understand input/output formats without guessing.</li>
+                      <li>Helps developers understand input/output formats without guessing.</li>
                       <li><strong>Example (Swagger):</strong>
                         <pre><code>{
   "id": 1,
@@ -1121,14 +1121,14 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-auto-generation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleOpenAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Benefit:</strong> Docs stay up-to-date automatically when code changes.</li>
+                      <li>Docs stay up-to-date automatically when code changes.</li>
                       <li><strong>How it works:</strong>
                         <ul>
                           <li>Annotate controllers, DTOs, and methods with metadata.</li>
                           <li>The tool scans the codebase and produces OpenAPI spec.</li>
                         </ul>
                       </li>
-                      <li><strong>Advantage:</strong> Avoids manually maintaining separate documentation files.</li>
+                      <li>Avoids manually maintaining separate documentation files.</li>
                     </ul>
                   </div>
                 </div>
@@ -1149,7 +1149,6 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                   <div class="accordion-body">
                     <ul>
                       <li>
-                        <strong>What it is:</strong>
                         <p>Postman is a GUI tool for sending HTTP requests and inspecting responses.</p>
                       </li>
                       <li>
@@ -1287,7 +1286,7 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-https-everywhere" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Use HTTPS (TLS/SSL encryption) for all API communication.</li>
+                      <li>Use HTTPS (TLS/SSL encryption) for all API communication.</li>
                       <li><strong>Why:</strong>
                         <ul>
                           <li>Encrypts data in transit to prevent eavesdropping or tampering.</li>
@@ -1310,11 +1309,9 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-input-validation" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Validate all incoming data from clients before processing.</li>
-                      <li><strong>Why:</strong>
-                        <ul>
-                          <li>Prevents malformed or malicious inputs from breaking the system.</li>
-                        </ul>
+                      <li>Validate all incoming data from clients before processing.</li>
+                      <li>
+                          Prevents malformed or malicious inputs from breaking the system.
                       </li>
                       <li><strong>Examples:</strong>
                         <ul>
@@ -1338,13 +1335,13 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-sql-injection" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> SQL injection happens when attackers inject SQL commands into input fields.</li>
-                      <li><strong>Solution:</strong> Always use prepared statements or ORM query builders (never string concatenation).</li>
+                      <li>SQL injection happens when attackers inject SQL commands into input fields.</li>
+                      <li>Always use prepared statements or ORM query builders (never string concatenation).</li>
                       <li><strong>Example:</strong>
                         <pre><code>String sql = "SELECT * FROM users WHERE id = ?";
             preparedStatement.setInt(1, userId);</code></pre>
                       </li>
-                      <li><strong>Benefit:</strong> Automatically escapes dangerous characters.</li>
+                      <li>Automatically escapes dangerous characters.</li>
                     </ul>
                   </div>
                 </div>
@@ -1397,7 +1394,7 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-sensitive-data" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>Rule:</strong> Never send confidential details (passwords, secret keys, internal IDs) in API responses.</li>
+                      <li>Never send confidential details (passwords, secret keys, internal IDs) in API responses.</li>
                       <li><strong>Examples:</strong></li>
                       <li>Bad:
                         <pre><code>{
@@ -1425,7 +1422,7 @@ getBook(@Param('id') id: string) { ... }</code></pre>
                 <div id="flush-payload-size" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleSecurity">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Restrict the maximum size of request bodies and responses.</li>
+                      <li>Restrict the maximum size of request bodies and responses.</li>
                       <li><strong>Why:</strong>
                         <ul>
                           <li>Prevents denial-of-service (DoS) attacks using huge payloads.</li>
@@ -1539,7 +1536,7 @@ useEffect(() =&gt; {
                 <div id="flush-cors-setup" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleReactAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What is CORS:</strong> Security feature that controls cross-origin requests.</li>
+                      <li>Security feature that controls cross-origin requests.</li>
                       <li><strong>Development example:</strong> React app on <code>localhost:3000</code> calling API on <code>localhost:8080</code> requires backend CORS enabled.</li>
                       <li><strong>Spring Boot example:</strong>
                         <pre><code>@CrossOrigin(origins = "http://localhost:3000")
@@ -1596,8 +1593,8 @@ public class BookController { ... }</code></pre>
                 <div id="flush-bulk-ops" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Allows creating or updating multiple resources in one request.</li>
-                      <li><strong>Why:</strong> Reduces network overhead and improves performance.</li>
+                      <li>Allows creating or updating multiple resources in one request.</li>
+                      <li>Reduces network overhead and improves performance.</li>
                       <li><strong>Example:</strong>
                         <pre><code>POST /users/bulk
 [
@@ -1626,7 +1623,7 @@ public class BookController { ... }</code></pre>
                 <div id="flush-partial-updates" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Update only certain fields of a resource instead of replacing the whole object.</li>
+                      <li>Update only certain fields of a resource instead of replacing the whole object.</li>
                       <li><strong>HTTP method:</strong> PATCH (different from PUT, which replaces entire resource).</li>
                       <li><strong>Example:</strong>
                         <pre><code>PATCH /users/123
@@ -1675,7 +1672,7 @@ public class BookController { ... }</code></pre>
                 <div id="flush-webhooks" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Server-to-server callbacks triggered by events.</li>
+                      <li>Server-to-server callbacks triggered by events.</li>
                       <li><strong>Flow:</strong>
                         <ul>
                           <li>Client registers a URL.</li>
@@ -1704,8 +1701,8 @@ public class BookController { ... }</code></pre>
                 <div id="flush-async-apis" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>When to use:</strong> For operations that take a long time (video processing, large reports).</li>
-                      <li><strong>Pattern:</strong> Client sends request → server returns 202 Accepted with status URL → client polls status endpoint until done.</li>
+                      <li>For operations that take a long time (video processing, large reports).</li>
+                      <li>Client sends request → server returns 202 Accepted with status URL → client polls status endpoint until done.</li>
                       <li><strong>Example:</strong>
                         <pre><code>POST /reports → 202 Accepted
 Location: /jobs/456
@@ -1727,7 +1724,7 @@ GET /jobs/456 → { "status": "in-progress" }</code></pre>
                 <div id="flush-api-gateway" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExampleAdvancedAPI">
                   <div class="accordion-body">
                     <ul>
-                      <li><strong>What it is:</strong> Single entry point for multiple backend services.</li>
+                      <li>Single entry point for multiple backend services.</li>
                       <li><strong>Responsibilities:</strong>
                         <ul>
                           <li>Routing requests to microservices.</li>
