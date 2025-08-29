@@ -61,7 +61,7 @@
                         <li><strong>Artificial Intelligence (AI):</strong> The broad field of making machines perform tasks that usually require human intelligence (e.g., reasoning, problem-solving, decision-making).</li>
                         <li><strong>Machine Learning (ML):</strong> A subset of AI where systems learn patterns from data instead of being explicitly programmed. <em>Example:</em> predicting house prices from past sales data.</li>
                         <li><strong>Deep Learning (DL):</strong> A subset of ML that uses neural networks with many layers to learn complex patterns, often from large amounts of data (e.g., image recognition, speech-to-text).</li>
-                        <li><strong>👉 Think of it as:</strong> AI is the big umbrella → ML is one approach under AI → DL is a powerful technique within ML.</li>
+                        <li><strong>Think of it as:</strong> AI is the big umbrella → ML is one approach under AI → DL is a powerful technique within ML.</li>
                       </ul>
                     </div>
                   </div>
@@ -115,7 +115,7 @@
                       <ul>
                         <li><strong>Overfitting:</strong> The model learns training data too well, including noise, and performs poorly on unseen data. <em>Example:</em> Memorizing exam questions instead of learning concepts.</li>
                         <li><strong>Underfitting:</strong> The model is too simple and fails to capture important patterns in the data. <em>Example:</em> Trying to fit a straight line to data that clearly curves.</li>
-                        <li><strong>👉 Goal:</strong> Find the right balance so the model generalizes well.</li>
+                        <li><strong>Goal:</strong> Find the right balance so the model generalizes well.</li>
                       </ul>
                     </div>
                   </div>
@@ -154,7 +154,7 @@
                         <li><strong>Validation set:</strong> Used to tune hyperparameters and check performance during training.</li>
                         <li><strong>Test set:</strong> Used to evaluate final performance on unseen data.</li>
                         <li><strong>Cross-validation:</strong> Instead of one validation split, data is split into k folds. Each fold gets a chance to be validation, and results are averaged → gives a more reliable performance estimate.</li>
-                        <li><strong>👉 Helps:</strong> Avoid bias from a single lucky/unlucky split of data.</li>
+                        <li><strong>Helps:</strong> Avoid bias from a single lucky/unlucky split of data.</li>
                       </ul>
                     </div>
                   </div>
@@ -278,7 +278,7 @@
                         <li>An agent learns by interacting with an environment.</li>
                         <li>Receives rewards/penalties for actions and learns a policy to maximize rewards.</li>
                         <li><strong>Example:</strong> Training a robot to walk or a game AI to play chess.</li>
-                        <li>Algorithms:</li>
+                        <li><strong>Algorithms:</strong></li>
                         <ol>
                             <li>Q-Learning & MDP</li>
                             <ul>
@@ -391,7 +391,7 @@
                       <ul>
                         <li>Specialized for image data.</li>
                         <li>Use <strong>convolution filters</strong> to detect edges, textures, shapes.</li>
-                        <li>Structure: Convolution → Pooling → Fully Connected → Output.</li>
+                        <li><strong>Structure:</strong> Convolution → Pooling → Fully Connected → Output.</li>
                         <li><strong>Applications:</strong> Image classification, object detection, face recognition.</li>
                       </ul>
                     </div>
@@ -409,7 +409,7 @@
                     <div class="accordion-body">
                       <ul>
                         <li><strong>RNN:</strong> For sequential data, remembers past context.</li>
-                        <li>Problem: <strong>Vanishing gradients</strong> → forgets long dependencies.</li>
+                        <li><strong>Problem:</strong> <strong>Vanishing gradients</strong> → forgets long dependencies.</li>
                         <li><strong>LSTM:</strong> Adds gates (input, forget, output) → solves long-term memory issue.</li>
                         <li><strong>Applications:</strong> Text, speech, stock prediction, time-series analysis.</li>
                       </ul>
@@ -517,7 +517,7 @@
                         <li>ML models need numeric input → categorical values must be encoded.</li>
                         <li><strong>Methods:</strong>
                           <ul>
-                            <li><strong>Label Encoding:</strong> Assign numbers (red=0, green=1, blue=2). ⚠️ Good for ordinal, risky for nominal.</li>
+                            <li><strong>Label Encoding:</strong> Assign numbers (red=0, green=1, blue=2). Good for ordinal, risky for nominal.</li>
                             <li><strong>One-Hot Encoding:</strong> Create binary columns (red → [1,0,0], green → [0,1,0], blue → [0,0,1]).</li>
                             <li><strong>Target Encoding:</strong> Replace categories with target mean (good for high-cardinality).</li>
                           </ul>
@@ -582,7 +582,7 @@
                           </ul>
                         </li>
                       </ul>
-                      <p><strong>✅ In short:</strong> Handle missing data → Encode categoricals → Scale → Engineer & select features.</p>
+                      <p><strong>In short:</strong> Handle missing data → Encode categoricals → Scale → Engineer & select features.</p>
                     </div>
                   </div>
                 </div>
@@ -664,7 +664,7 @@
               Actual +    TP          FN
               Actual -    FP          TN
                       </pre>
-                      <p>✔️ Helps visualize <strong>false positives vs. false negatives</strong>.</p>
+                      <p>Helps visualize <strong>false positives vs. false negatives</strong>.</p>
                     </div>
                   </div>
                 </div>
@@ -930,7 +930,7 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-reco" aria-expanded="false" aria-controls="flush-system-reco">
-                      a) Building Recommendation Systems
+                      1. Building Recommendation Systems
                     </button>
                   </h2>
                   <div id="flush-system-reco" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
@@ -949,7 +949,7 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-realtime" aria-expanded="false" aria-controls="flush-system-realtime">
-                      b) Real-time Prediction Systems
+                      2. Real-time Prediction Systems
                     </button>
                   </h2>
                   <div id="flush-system-realtime" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
@@ -968,7 +968,7 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-pipelines" aria-expanded="false" aria-controls="flush-system-pipelines">
-                      c) Batch vs Streaming Data Pipelines
+                      3. Batch vs Streaming Data Pipelines
                     </button>
                   </h2>
                   <div id="flush-system-pipelines" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
@@ -992,7 +992,7 @@
                 <div class="accordion-item">
                   <h2 class="accordion-header">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-system-scaling" aria-expanded="false" aria-controls="flush-system-scaling">
-                      d) Scaling ML Models
+                      4. Scaling ML Models
                     </button>
                   </h2>
                   <div id="flush-system-scaling" class="accordion-collapse collapse" data-bs-parent="#accordionFlushSystemDesign">
